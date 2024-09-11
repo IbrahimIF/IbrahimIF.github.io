@@ -25,11 +25,6 @@ body > main article {
     margin: auto;
 }
 
-body > footer {
-    background-color: orange;
-    display: flex;
-}
-
 
 img {
     border-radius: 50%;
@@ -37,6 +32,19 @@ img {
 
 
 */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+    font-size: 1.5vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 /*navbar css*/
 
@@ -48,12 +56,12 @@ img {
 
 #nav-ul {
     display: flex;
-    justify-content: space-around; /* Distribute evenly */
+    justify-content: space-around;
     list-style-type: none;
     background-color: #00000010;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
-    width: 60%; /* Full width of navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 60%;
     border-radius: 10px; 
     padding: 10px;
     overflow: hidden;
@@ -114,55 +122,27 @@ img {
 
 /* image section */
 
-/*
-.project-container { 
-    width: 100%;
-    height: auto; 
-    margin: 0 auto;
-    margin-top: 40px;
-    display: flex;
-display: -webkit-box;      
-display: -ms-flexbox;      
-display: -webkit-flex;     
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 3em;
-    padding-bottom: 40px;
-    overflow: hidden;
-}
-*/
-#image{
+
+#image {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 1%;
-}
-.image{
-    justify-content: center;
-    width: 40%;
-    border-radius: 15% 15% 0% 0%;
+    justify-content: space-between;
+    width: 60%;
+    gap: 10px;
 }
 
-/*specific styles to each image*/
-
-.image-Tleft{
-    height: 50%;
-    border-radius: 15% 15% 0% 0%;
+.image {
+    transition: transform 0.5s ease, width 0.5s ease;
+    position: relative; /* So we can adjust its position */
 }
 
-.image-Tright{
-    justify-content: center;
-    width: 50%;
-    border-radius: 15% 15% 0% 0%;
+.image:hover {
+    transform: scale(1.1) translate(-10px, -10px); /* Enlarge the image and move it */
 }
 
-.image-Tleft{
-    border-radius: 15% 15% 0% 0%;
-}
-
-.image-Tright{
-    border-radius: 15% 15% 0% 0%;
+/* Optional: Add a shadow effect to make the hover stand out */
+.image:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -172,6 +152,17 @@ form {
 
 h2 {
     text-align: center;
+}
+
+
+/*Footer */
+
+
+body > footer {
+    bottom: 50px;
+    display: flex;
+    background-color: #0000003e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 

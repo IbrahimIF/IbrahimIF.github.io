@@ -1,0 +1,190 @@
+/*body css*/
+/*
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+    font-size: 1.5vw;
+}
+
+ul {
+    margin: 0px;
+}
+body > header {
+    background-color: rgba(75, 75, 75, 0.25);
+    display: flex;
+    height: 12vh;
+}
+
+body > header > nav > ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+body > main article {
+    width: 80%;
+    margin: auto;
+}
+
+body > footer {
+    background-color: orange;
+    display: flex;
+}
+
+
+img {
+    border-radius: 50%;
+}
+
+
+*/
+
+/*navbar css*/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#nav-ul {
+    display: flex;
+    justify-content: space-around; /* Distribute evenly */
+    list-style-type: none;
+    background-color: #00000010;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    width: 60%; /* Full width of navbar */
+    border-radius: 10px; 
+    padding: 10px;
+    overflow: hidden;
+}
+
+#nav-ul > li {
+    text-align: center;
+}
+
+.navbutton {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 14px; 
+    position: relative; 
+    padding-bottom: 5px; 
+    display: inline-flex; 
+    align-items: center;
+}
+
+.navbutton i {
+    margin-right: 8px; 
+}
+
+.navbutton::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00000010;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.navbutton:hover::after {
+    width: 100%; 
+    background-color: rgb(0, 21, 255); 
+    transition: 0.3s;
+}
+
+.navbutton:hover {
+    color: rgb(0, 21, 255);
+    transition: 0.3s;
+}
+
+/* main-content */
+
+#main-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-content > div {
+    width: 80%;
+}
+
+
+/* image section */
+
+/*
+.project-container { 
+    width: 100%;
+    height: auto; 
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+display: -webkit-box;      
+display: -ms-flexbox;      
+display: -webkit-flex;     
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3em;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+*/
+#image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1%;
+}
+.image{
+    justify-content: center;
+    width: 40%;
+    border-radius: 15% 15% 0% 0%;
+}
+
+/*specific styles to each image*/
+
+.image-Tleft{
+    height: 50%;
+    border-radius: 15% 15% 0% 0%;
+}
+
+.image-Tright{
+    justify-content: center;
+    width: 50%;
+    border-radius: 15% 15% 0% 0%;
+}
+
+.image-Tleft{
+    border-radius: 15% 15% 0% 0%;
+}
+
+.image-Tright{
+    border-radius: 15% 15% 0% 0%;
+}
+
+
+form {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+#footer-ul{
+    display: flex;
+    list-style: none;
+}
+
+#footer-ul > div > li {
+    margin-left: 12px;
+}
+
+#footer-ul > div > li > a{
+    text-decoration: none;
+    color: white;
+}

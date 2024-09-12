@@ -33,12 +33,29 @@ img {
 
 */
 #main-header {
-    background-color: #161A30;
+    background-color: rgba(182,187,196,1);
 }
+
+
+#bar{
+    position: absolute;
+    width: 10%;
+    min-height: 110%;
+    left: calc(70% - 5%); /* Centers the bar */
+    background-color: rgba(22,26,48,1);
+}
+
+h2{
+    color: rgba(49,48,77,1);
+    position: relative;
+    z-index: 5;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0px;
     font-size: 1.5vw;
+    background-color: rgba(182,187,196,1);
 }
 
 main {
@@ -46,13 +63,32 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgba(182,187,196,1);
+    z-index: 5;
 }
 
+#first-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
 
-body:first-of-type {
+.text{
+    width: 80%;
+    z-index: 5;
+}
+
+#second-section {
     background: rgb(182,187,196);
-    background: linear-gradient(150deg, rgba(182,187,196,1) 0%, rgba(49,48,77,1) 43%, rgba(22,26,48,1) 73%);
-        color: #F0ECE5;
+    background-color: rgba(22,26,48,1);
+    color: #F0ECE5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 /*navbar css*/
@@ -67,13 +103,14 @@ body:first-of-type {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    background-color: #f0ece5;
+    background-color: #f0ece58f;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 60%;
     border-radius: 10px; 
     padding: 10px;
     overflow: hidden;
+    z-index: 5;
 }
 
 #nav-ul > li {
@@ -124,9 +161,7 @@ body:first-of-type {
     justify-content: space-around;
 }
 
-#main-content > div {
-    width: 80%;
-}
+
 
 
 /* image section */
@@ -138,6 +173,7 @@ body:first-of-type {
     justify-content: space-between;
     width: 60%;
     gap: 10px;
+    z-index: 5;
 }
 
 .image {
@@ -164,6 +200,7 @@ h2 {
 }
 
 /* button section */
+
 #button {
     display: flex;
     flex-wrap: wrap;
@@ -171,6 +208,8 @@ h2 {
     width: 30%;
     margin: 17px;
     padding-top: 22px;
+    z-index: 5;
+    padding-bottom: 150px;
 }
 
 .button {
@@ -207,16 +246,21 @@ h2 {
 
 
 body > footer {
-    bottom: 50px;
+    bottom: 20px;
     display: flex;
     background-color: #0000003e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 5;
 }
 
 
 #footer-ul{
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 70px;
 }
 
 #footer-ul > div > li {
@@ -227,3 +271,35 @@ body > footer {
     text-decoration: none;
     color: white;
 }
+
+#footer-ul > div > li > a:hover{
+    color: rgb(85, 85, 85);
+}
+
+
+#link{
+    display: flex;
+    flex-direction: row;
+}
+
+#policy{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/*Other page*/
+
+.fourpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+
+
+

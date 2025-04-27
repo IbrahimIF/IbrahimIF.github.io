@@ -80,3 +80,34 @@
 
 
 
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Font size for mobile devices */
+@media (max-width: 840px) {
+  .box {
+    width: 106%;
+    transition: 1s;
+  }
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+  .firstText {
+    font-size: 24px;
+    transition: 1s;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .firstText {
+    font-size: 20px;
+    transition: 1s;
+  }
+
+}

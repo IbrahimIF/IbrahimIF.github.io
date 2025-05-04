@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function navbar() {
 
   return (
-    <Navbar>
+    <Navbar id="Navbar">
             <ul id="nav-ul">
                 <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faHouse} /> Home</a></li>
                 <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faInfoCircle} /> About Us</a></li>
@@ -26,7 +26,8 @@ const Navbar = styled.nav`
   justify-content: center;
   width: 100%;
   bottom: 0px;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
 
 
 #nav-ul {

@@ -1,23 +1,27 @@
 import styled from 'styled-components';
 
-function About() {
+function Overview() {
   return (
-    <AboutSection>
+    <OverviewSection id="Overview">
       <div className="grid">
             <div className="row">
                 <div className="grid-container">
-                    
+                    <p>Overview</p>
                 </div>
             </div>
         </div>
-    </AboutSection>
+    </OverviewSection>
   )
 }
-export default About
+export default Overview
 
-const AboutSection = styled.section`
+const OverviewSection = styled.section`
+  display: flex;
   margin-top: 5rem;
   margin-bottom: 5rem; 
+  min-height: 100vh;
+  position: relative;
+  padding:2rem;
 
 .grid{
   display: grid;

@@ -1,53 +1,30 @@
 import styled from 'styled-components';
 
-import Social from '../Social/Social'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
-function main() {
+function Project() {
   return (
-  <MainSection>
-  <div className="box">
-    <div className="textContainer">
-      <br />
-      <br />
-      <div className="title">
-        <span className="block-title"></span>
-        <h1 className="firstText">Ibrahim Farrah</h1>
+    <ProjectSection id="Project">
+      <div className="box">
+        <div className="textContainer">
+          <br /> <br />
+          <div className="title">
+            <span className="block-title"></span>
+            <h1 className="firstText">Projects</h1>
+          </div>
+        </div>
       </div>
-
-      <div className="subTitle">
-        <div className="block-subTitle"></div>
-        <p className="subText">22-year-old (aspiring) software engineer from the United Kingdom</p>
-      </div>
-
-      <div className="icons">
-        <a className="icons" href="https://mail.google.com/mail/u/0/?zx=knxh55u8nye4#inbox">
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span className="icon-text">ibrahimfarrah30@</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <Social />
-  </MainSection>
+    </ProjectSection>
   )
 }
+export default Project
 
-export default main
-
-
-
-
-const MainSection = styled.section`
+const ProjectSection = styled.section`
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
   align-items: center;
-  overflow: hidden;
-
+  /*overflow: hidden;*/
 
 
 .box {
@@ -62,9 +39,9 @@ const MainSection = styled.section`
   transition: 1s;
   padding: 20px;
   margin: 10px;
-  margin-right: 50px;
+  margin-left: 50px;
   margin-bottom: 10px;
-  z-index: 1;
+  z-index: 0;
   background-color: black;
 }
 
@@ -134,31 +111,6 @@ const MainSection = styled.section`
   font-size: 16px;
   font-weight: bold;
 }
-
-.icons {
-  position: relative;
-  justify-content: center; /* added to align icons and text to the center */
-  animation: secFadeIn 3s forwards;
-  animation-delay: 5s;
-  opacity: 0;
-  font-family: 'Poppins';
-  font-size: 18px;
-  cursor: pointer;
-  text-decoration: none;
-  flex-wrap: nowrap;
-  display: flex;
-  color: rgb(196, 196, 196);
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 12px; /* added space between the icons and text */
-}.icon-text {
-  font-family: Arial, sans-serif;
-  margin-left: 8px; /* space between the icon and the text */
-}.icons:hover{
-  color: rgb(130, 130, 130);
-}
-
-
 
 @keyframes mainBlock {
   0% {
@@ -236,3 +188,4 @@ const MainSection = styled.section`
   }
 }
 `;
+

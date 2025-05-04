@@ -1,17 +1,39 @@
 
 import styled from 'styled-components';
-import Main from './Components/Main/Main'
-import Navbar from './Components/Navbar/Navbar'
-import About from './Components/About/About'
+import { GlobalStyle } from './Styles/GlobalStyle'
+
+import Home from './Components/Pages/Home/home'
+import Overview from './Components/Pages/Overview/overview'
+import Experience from './Components/Pages/Experience/experience'
+import Projects from './Components/Pages/Projects/projects'
+import Skills from './Components/Pages/Skills/skills'
+import Shows from './Components/Pages/Shows/shows'
+import Contact from './Components/Pages/Contact/contact'
+
+import Navbar from './Components/navbar'
+import Footer from './Components/footer'
+import Socials from './Components/socials'
+
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <Background>
-        <Main/>
-        <About/>
+      <GlobalStyle />
+      <FixedElementsWrapper>
+        <Navbar/>
+        <Socials />
+      </FixedElementsWrapper>
+
+      <Background id="Background">
+        <Home/>
+        <Overview/>
+        <Experience/>
+        <Projects/>
+        <Skills/>
+        <Shows/>
+        <Contact/>
+        <Footer/>
       </Background>
     </>
   )
@@ -19,19 +41,33 @@ function App() {
 
 export default App
 
+const FixedElementsWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 100;
+  
+  & > * {
+    pointer-events: auto;
+  }
+`;
 
 const Background = styled.div` 
-width: 100%;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   position: relative;
   background-color: #000000;
   border-radius: 0.5em;
-  overflow: hidden;
   box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
+  display:flex;
+  flex-direction:column;
 
   &::before {
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
     background:
       linear-gradient(

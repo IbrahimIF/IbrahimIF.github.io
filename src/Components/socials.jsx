@@ -5,7 +5,7 @@ import { faGithub, faDiscord, faSteam, faLinkedin } from '@fortawesome/free-bran
 function Social() {
     return (
       <>
-        <Skills>
+        <Socials id="Socials">
             <div className="social_icons" id="github">
               <div className="icon_wrapper">
                 <a href="https://github.com/IbrahimIF" aria-label="GitHub" className="icon_link github">
@@ -41,19 +41,22 @@ function Social() {
               </div>
             </div>
 
-        </Skills>
+        </Socials>
       </>
     )
 }
 export default Social
 
 
-const Skills = styled.div`
+const Socials = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    position: fixed;
+    left:0;
+    z-index: 1;
+    height:100%;
 
 .social_icons {
     display: flex;

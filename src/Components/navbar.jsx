@@ -6,14 +6,33 @@ function navbar() {
 
   return (
     <Navbar id="Navbar">
-            <ul id="nav-ul">
-                <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faHouse} /> Home</a></li>
-                <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faInfoCircle} /> About Us</a></li>
-                <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faBriefcase} /> Portfolio</a></li>
-                <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faEnvelope} /> Contact</a></li>
-                <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faTableColumns} /> Dashboard</a></li>
-                <li><a href="" className="navbutton"> <FontAwesomeIcon icon={faGear} /> Settings</a></li>
-            </ul>
+            <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+
+<nav class="navbar">
+  <label class="navbar-toggle" for="nav-toggle">
+    <div class="burger-menu">
+      <div class="bars" id="bar1"></div>
+      <div class="bars" id="bar2"></div>
+      <div class="bars" id="bar3"></div>
+    </div>
+  </label>
+
+  <div class="navbar-content">
+    <div class="navbar-circle">
+      <label class="checkBox">
+        <input id="ch1" type="checkbox" />
+        <div class="transition"></div>
+      </label>
+    </div>
+
+    <div class="navbar-items">
+      <a class="nav-item" href="#">Home</a>
+      <a class="nav-item" href="#">About</a>
+      <a class="nav-item rare" href="#">Projects</a>
+      <a class="nav-item" href="#">Contact</a>
+    </div>
+  </div>
+</nav>
     </Navbar>
   )
 }
@@ -30,60 +49,205 @@ const Navbar = styled.nav`
   z-index: 1;
 
 
-#nav-ul {
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  background-color: #ffffff;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 60%;
-  border-radius: 10px; 
-  padding: 10px;
-  overflow: hidden;
-  z-index: 5;
-}
-
-#nav-ul > li {
-  text-align: center;
-}
-
-.navbutton {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 14px; 
-  position: relative; 
-  padding-bottom: 5px; 
-  display: inline-flex; 
+  flex-direction: column;
   align-items: center;
 }
 
-.navbutton i {
-  margin-right: 8px; 
+.navbar-toggle {
+  width: 60px;
+  height: 60px;
+  background: #bababa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 2;
 }
 
-.navbutton::after {
-  content: '';
+.navbar-content {
+  display: flex;
+  align-items: center;
+  background: #181818;
+  border-radius: 50px;
+  padding: 10px 20px 10px 10px;
+  margin-top: -70px;
+  opacity: 0;
+  transform: translateY(100px) scale(0.8);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+}
+
+.nav-toggle:checked ~ .navbar .navbar-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+  margin-top: 20px;
+}
+
+.nav-toggle:checked ~ .navbar .icon {
+  transform: rotate(180deg);
+}
+
+.navbar-circle {
+  width: 50px;
+  height: 50px;
+  background: #3b3b3b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-items {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-item {
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-toggle:checked ~ .navbar .burger-menu {
+  transform: rotate(90deg);
+}
+
+.nav-toggle:checked ~ .navbar .navbar-toggle {
+  background: #000000;
+}
+
+.nav-toggle:checked ~ .navbar #bar1,
+.nav-toggle:checked ~ .navbar #bar3 {
+  width: 20px;
+}
+
+.nav-toggle:checked ~ .navbar .bars {
+  background-color: #ffffff;
+}
+
+#checkbox {
+  display: none;
+}
+
+.burger-menu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.5s ease;
+}
+
+.bars {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.checkBox {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0px 0px 0px 2px #fff;
+  transition: 200ms all;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.checkBox .transition {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+}
+
+.checkBox input[type="checkbox"]:checked + div {
+  left: -10px;
+  top: -10px;
+}
+
+.checkBox input[type="checkbox"] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+}
+
+.transition {
+  transition: 300ms ease;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item i {
+  margin-right: 8px;
+}
+.nav-item::after {
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #00000010;
+  background-color: #38383810;
   position: absolute;
   bottom: -10px;
   left: 0;
   transition: width 0.3s;
 }
 
-.navbutton:hover::after {
-  width: 100%; 
-  background-color: rgb(0, 21, 255); 
+.nav-item:hover::after {
+  width: 100%;
+  background-color: rgb(194, 194, 194);
   transition: 0.3s;
 }
 
-.navbutton:hover {
-  color: rgb(0, 21, 255);
-  transition: 0.3s;
-}
 `;
 
 /*

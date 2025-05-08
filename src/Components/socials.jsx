@@ -6,6 +6,7 @@ function Social() {
     return (
       <>
         <Socials id="Socials">
+          <div className="socials-container">
             <div className="social_icons" id="github">
               <div className="icon_wrapper">
                 <a href="https://github.com/IbrahimIF" aria-label="GitHub" className="icon_link github">
@@ -40,7 +41,7 @@ function Social() {
                 </a>
               </div>
             </div>
-
+          </div>
         </Socials>
       </>
     )
@@ -58,6 +59,12 @@ const Socials = styled.div`
     z-index: 1;
     height:100%;
 
+.socials-container{
+    background-color: black;
+    padding:10px;
+    border-radius: 0px 30px 30px 0px;
+    border: 2px solid white;
+}
 .social_icons {
     display: flex;
     justify-content: center;

@@ -3,6 +3,8 @@ import { faHouse, faInfoCircle, faBriefcase, faEnvelope, faTableColumns, faGear 
 import styled from 'styled-components';
 
 function navbar() {
+  const handleCheckClick = () => {
+  };
 
   return (
     <Navbar id="Navbar">
@@ -20,16 +22,19 @@ function navbar() {
   <div class="navbar-content">
     <div class="navbar-circle">
       <label class="checkBox">
-        <input id="ch1" type="checkbox" />
+        <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
         <div class="transition"></div>
       </label>
     </div>
 
     <div class="navbar-items">
-      <a class="nav-item" href="#">Home</a>
-      <a class="nav-item" href="#">About</a>
-      <a class="nav-item rare" href="#">Projects</a>
-      <a class="nav-item" href="#">Contact</a>
+      <a class="nav-item" href="#Home">Home</a>
+      <a class="nav-item" href="#Overview">Overview</a>
+      <a class="nav-item rare" href="#Experience">Experience</a>
+      <a class="nav-item" href="#Project">Projects</a>
+      <a class="nav-item rare" href="#Skills">Skills</a>
+      <a class="nav-item rare" href="#Shows">Shows</a>
+      <a class="nav-item" href="#Contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -82,7 +87,7 @@ const Navbar = styled.nav`
 .navbar-content {
   display: flex;
   align-items: center;
-  background: #181818;
+  background:rgb(0, 0, 0);
   border-radius: 50px;
   padding: 10px 20px 10px 10px;
   margin-top: -70px;
@@ -90,6 +95,8 @@ const Navbar = styled.nav`
   transform: translateY(100px) scale(0.8);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   pointer-events: none;
+  border: 2px solid white;
+
 }
 
 .nav-toggle:checked ~ .navbar .navbar-content {
@@ -106,7 +113,7 @@ const Navbar = styled.nav`
 .navbar-circle {
   width: 50px;
   height: 50px;
-  background: #3b3b3b;
+  background:rgb(29, 29, 29);
   border-radius: 50%;
   display: flex;
   justify-content: center;

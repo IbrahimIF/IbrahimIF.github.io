@@ -82,8 +82,8 @@ const Socials = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     color: #4d4d4d;
     background-color: #fff;
@@ -100,8 +100,8 @@ const Socials = styled.div`
 .icon {
     position: relative;
     z-index: 1;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
 }
 
 .filled {

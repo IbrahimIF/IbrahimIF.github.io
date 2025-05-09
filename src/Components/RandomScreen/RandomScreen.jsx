@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect,} from "react";
-import "./RandomScreen.css";
+import { useState, useEffect} from "react";
 import styled from 'styled-components';
 
 function RandomScreen() {
@@ -181,7 +180,7 @@ return(
   </RandomContainer>
 );
 }
-export default RandomScreen;
+export default RandomScreen
 
 
 

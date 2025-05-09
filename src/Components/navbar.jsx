@@ -1,51 +1,63 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faInfoCircle, faBriefcase, faEnvelope, faTableColumns, faGear } from '@fortawesome/free-solid-svg-icons'
+/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse, faInfoCircle, faBriefcase, faEnvelope, faTableColumns, faGear } from '@fortawesome/free-solid-svg-icons' */
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
-function navbar() {
+function Navbar() {
+  const navigate = useNavigate();
+  const [counter, setCounter] = useState(0);
+
   const handleCheckClick = () => {
+    setCounter(prevCounter => prevCounter + 1);
+
+    if (counter == 6){
+      navigate("/Random");
+      setCounter(0);
+    }
   };
 
   return (
-    <Navbar id="Navbar">
-            <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+    <Navigation id="Navbar">
+            <input className="nav-toggle" id="nav-toggle" type="checkbox" />
 
-<nav class="navbar">
-  <label class="navbar-toggle" for="nav-toggle">
-    <div class="burger-menu">
-      <div class="bars" id="bar1"></div>
-      <div class="bars" id="bar2"></div>
-      <div class="bars" id="bar3"></div>
+<nav className="navbar">
+  <label className="navbar-toggle" htmlFor="nav-toggle">
+    <div className="burger-menu">
+      <div className="bars" id="bar1"></div>
+      <div className="bars" id="bar2"></div>
+      <div className="bars" id="bar3"></div>
     </div>
   </label>
-
-  <div class="navbar-content">
-    <div class="navbar-circle">
-      <label class="checkBox">
+  
+  <div className="navbar-content">
+    <div className="navbar-circle">
+      <label className="checkBox">
         <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
-        <div class="transition"></div>
+        <div className="transition"></div>
       </label>
     </div>
 
-    <div class="navbar-items">
-      <a class="nav-item" href="#Home">Home</a>
-      <a class="nav-item" href="#Overview">Overview</a>
-      <a class="nav-item rare" href="#Experience">Experience</a>
-      <a class="nav-item" href="#Project">Projects</a>
-      <a class="nav-item rare" href="#Skills">Skills</a>
-      <a class="nav-item rare" href="#Shows">Shows</a>
-      <a class="nav-item" href="#Contact">Contact</a>
+    <div className="navbar-items">
+      <a className="nav-item" href="#Home">Home</a>
+      <a className="nav-item" href="#Overview">Overview</a>
+      <a className="nav-item rare" href="#Experience">Experience</a>
+      <a className="nav-item" href="#Project">Projects</a>
+      <a className="nav-item rare" href="#Skills">Skills</a>
+      <a className="nav-item rare" href="#Shows">Shows</a>
+      <a className="nav-item" href="#Contact">Contact</a>
+      <a className="nav-item" href="#Contact">{counter}</a>
     </div>
   </div>
 </nav>
-    </Navbar>
+    </Navigation>
   )
 }
 
-export default navbar
+export default Navbar
 
 
-const Navbar = styled.nav`
+const Navigation = styled.nav`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -136,10 +148,6 @@ const Navbar = styled.nav`
   font-weight: bold;
   text-decoration: none;
   transition: background 0.3s ease;
-}
-
-.nav-item:hover {
-  background: rgba(255, 255, 255, 0.2);
 }
 
 .nav-toggle:checked ~ .navbar .burger-menu {
@@ -256,6 +264,8 @@ const Navbar = styled.nav`
 }
 
 `;
+
+
 
 /*
 import React, { useRef } from 'react';

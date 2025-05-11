@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import { GlobalStyle } from './Styles/GlobalStyle'
 
-import Home from './Components/Pages/Home/home'
-import Overview from './Components/Pages/Overview/overview'
-import Experience from './Components/Pages/Experience/experience'
-import Projects from './Components/Pages/Projects/projects'
-import Skills from './Components/Pages/Skills/skills'
-import Shows from './Components/Pages/Shows/shows'
-import Contact from './Components/Pages/Contact/contact'
+import Home from './Components/Sections/Home/home'
+import Overview from './Components/Sections/Overview/overview'
+import Experience from './Components/Sections/Experience/experience'
+import Projects from './Components/Sections/Projects/projects'
+import Skills from './Components/Sections/Skills/skills'
+import Shows from './Components/Sections/Shows/shows'
+import Contact from './Components/Sections/Contact/contact'
 
 import Navbar from './Components/navbar'
 import Footer from './Components/footer'
@@ -17,8 +16,7 @@ import Socials from './Components/socials'
 function App() {
 
   return (
-    <>
-      <GlobalStyle />
+    <Fadein id="fade-in" className="fadein">
       <FixedElementsWrapper>
         <Navbar/>
         <Socials />
@@ -34,11 +32,21 @@ function App() {
         <Contact/>
         <Footer/>
       </Background>
-    </>
+    </Fadein>
   )
 }
 
 export default App
+
+const Fadein = styled.div`
+  opacity: 1;
+  animation: fadeIn 1s ease-in forwards;
+  
+  @keyframes fadeIn {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+`;
 
 const FixedElementsWrapper = styled.div`
   position: fixed;
@@ -134,8 +142,22 @@ const Background = styled.div`
   display: none;
 }
 
+      .fadein {
+        animation: fadeIn 5s;
+      }
+      
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+
 
 `;
+
+
+
+
+
 /*
     <>
     <div className="portfolio">

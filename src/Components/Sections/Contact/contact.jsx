@@ -1,191 +1,276 @@
 import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
+import SubmitMessage from '../SubmissionScreen/SubmitMessage';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import naughtyWords from 'naughty-words';
+import Globe from 'react-globe.gl';
+
 
 function Contact() {
+  const [fadeIn, setFadeIn] = useState(false);
+  const [showTick, setShowTick] = useState(false);
+  const [loader, setLoader] = useState(false);
+  const [fail, setFail] = useState(false);
+
+  useEffect(() => {
+    setFadeIn(true);
+  }, []);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const message = event.target.message.value.toLowerCase();
+    setLoader(true);
+    setFail(false);
+
+    const blacklist = [...new Set(naughtyWords.en)];
+
+    if (blacklist.some(word => message.includes(word))) {
+      alert("Message contains blocked terms");
+      setLoader(false);
+      return;
+    }
+
+    const formData = new FormData(event.target);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/9f4f21002394762265c7f94d735714d4", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setShowTick(true);
+        event.target.reset();
+        setTimeout(() => {
+          setShowTick(false);
+        }, 4000);
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setFail(true);
+      setTimeout(() => {
+        setFail(false);
+      }, 4000);
+    } finally {
+      setLoader(false);
+    }
+  };
+
   return (
-    <ContactSection id="Contact">
-      <div className="box">
-        <div className="textContainer">
-          <br /> <br />
-          <div className="title">
-            <span className="block-title"></span>
-            <h1 className="firstText">Contact</h1>
+    <ContactSection id="contact">
+      <ContactContainer>
+      <div className="globe-container">
+              <Globe
+                height={326}
+                width={326}
+                backgroundColor="rgba(0,0,0,0)"
+                showAtmosphere
+                showGraticules
+                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
+                labelsData={[{
+                  lat: 40, lng: -100,
+                  text: "I'm here!",
+                  color: 'white',
+                  size: 20,
+                }]}
+              />
           </div>
-        </div>
-      </div>
+        <ContactHeader>
+          <SectionSubText>Get in touch</SectionSubText>
+          <SectionHeadText>Contact.</SectionHeadText>
+        </ContactHeader>
+
+        <ContactForm className={fadeIn ? 'fade-in' : ''} onSubmit={handleSubmit}>
+          <input type="text" name="_honey" style={{ display: 'none' }} />
+
+          <FormGroup>
+            <FormLabel>
+              <LabelText>Your Name</LabelText>
+              <FormInput type="text" name="name" placeholder="Enter Name" required />
+            </FormLabel>
+
+            <FormLabel>
+              <LabelText>Your Email</LabelText>
+              <FormInput type="email" name="email" placeholder="Enter Email" required />
+            </FormLabel>
+          </FormGroup>
+
+          <FormLabel>
+            <LabelText>Message</LabelText>
+            <TextArea name="message" placeholder="Your message here..." rows="6" required />
+          </FormLabel>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <SubmitButton type="submit" disabled={loader}>
+              {loader ? (
+                <div className="loading-icon">
+                  <svg className="spin" viewBox="25 25 50 50">
+                    <circle r="20" cy="50" cx="50"></circle>
+                  </svg>
+                </div>
+              ) : fail ? (
+                <span>Failed - Try Again</span>
+              ) : (
+                <>
+                  <FontAwesomeIcon icon={faUpload} /> &nbsp; Send
+                </>
+              )}
+            </SubmitButton>
+            {showTick && <SubmitMessage />}
+          </div>
+
+          <input type="hidden" name="_next" value={window.location.origin} />
+          <input type="hidden" name="_captcha" value="false" />
+        </ContactForm>
+      </ContactContainer>
     </ContactSection>
-  )
+  );
 }
-export default Contact
+
+export default Contact;
+
+
 
 const ContactSection = styled.section`
-  height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
-  align-items: center;
-  /*overflow: hidden;*/
-
-
-.box {
-  width: 100%;
-  overflow: hidden;
-  min-height: 72vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-radius: 15px;
-  border: 4px solid rgb(134, 134, 134);
-  transition: 1s;
-  padding: 20px;
-  margin: 10px;
-  margin-left: 50px;
-  margin-bottom: 10px;
-  z-index: 0;
-  background-color: black;
-}
-
-.textContainer {
-  width: 250px;
-  height: 250px;
-  position: relative;
-  display: flex;
-  justify-content: center;
   flex-direction: column;
-}
-
-.title {
-  width: 100%;
-  display: flex;
   align-items: center;
-  height: 70px;
-  justify-content: space-around;
-    align-items: center;
-}.block-title {
-  width: 0%;
-  height: inherit;
-  background: #b6b6b6;
-  position: absolute;
-  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-  display: flex;
-}.firstText {
-  font-family: Arial, sans-serif;
-  color: #cfcfcf;
-  font-size: 32px;
-  animation: mainFadeIn 2s forwards;
-  animation-delay: 1.6s;
-  opacity: 0;
-  display: flex;
-  align-items: baseline;
-  position: relative;
-  text-decoration: underline;
-}
+  padding: 2rem;
 
-.subTitle {
-  width: 300%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 50px; /* increased height for better visual balance */
-  margin-top: -10px;
-  font-family: Arial, sans-serif; /* added font-family for consistency */
-}.block-subTitle {
-  width: 0%;
-  height: inherit;
-  background: #b6b6b6;
-  position: relative;
-  animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-  animation-delay: 2s;
-  display: flex;
-  margin-left: -80px;
-}.subText {
-  animation: secFadeIn 2s forwards;
-  animation-delay: 3.4s;
-  padding: 60px;
-  opacity: 0;
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
-  margin-left: -66.5px;
-  color: rgb(185, 185, 185);
-  font-size: 16px;
-  font-weight: bold;
-}
 
-@keyframes mainBlock {
-  0% {
-    width: 0%;
-    left: 0;
 
-  }
-
-  50% {
+    .globe-container {
+    border-radius: 1.5rem;
     width: 100%;
-    left: 0;
+    height: 326px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    @media (max-width: 640px) {
+      height: fit-content;
+    }
   }
-
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes secBlock {
-  0% {
-    width: 0%;
-    left: 0;
-
-  }
-
-  50% {
-    width: 300%;
-    left: 0;
-
-  }
-
-  100% {
-    width: 0;
-    left: 80%;
-  }
-}
-
-@keyframes mainFadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-
-@keyframes secFadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-
-
-/* Font size for tablets */
-@media (max-width: 625px) {
-  .subText {
-    padding: 110px;
-    font-size: 12px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .subText {
-    font-size: 5px;
-  }
-}
+    
 `;
 
+
+const ContactContainer = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+`;
+
+const ContactHeader = styled.div`
+  flex: 1;
+`;
+
+const SectionSubText = styled.p`
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+`;
+
+const SectionHeadText = styled.h3`
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+`;
+
+const ContactForm = styled.form`
+  flex: 2;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+const FormGroup = styled.div`
+  display: flex;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const FormLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+const LabelText = styled.span`
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1rem;
+`;
+
+const FormInput = styled.input`
+  background: #1f1f1f;
+  padding: 1rem 1.5rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+`;
+
+const TextArea = styled.textarea`
+  background: #1f1f1f;
+  padding: 1rem 1.5rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+`;
+
+const SubmitButton = styled.button`
+  background: linear-gradient(90deg, #13ADC7 0%, #945DD6 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+`;

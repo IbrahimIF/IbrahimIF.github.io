@@ -123,7 +123,6 @@ const OverviewSection = styled.section`
   @media (min-width: 1280px) {
     .grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: repeat(6, minmax(0, 1fr));
     }
   }
 

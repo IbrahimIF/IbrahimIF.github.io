@@ -6,53 +6,48 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 function Home() {
   return (
   <HomeSection id="Home">
-  <div className="box">
-    <div className="textContainer">
-      <br />
-      <br />
-      <div className="title">
-        <span className="block-title"></span>
-        <h1 className="firstText">Ibrahim Farrah</h1>
-      </div>
-
-      <div className="subTitle">
-        <div className="block-subTitle"></div>
-        <p className="subText">22-year-old (aspiring) software engineer from the United Kingdom</p>
-      </div>
-
-      <div className="icons">
-        <a className="icons" href="https://mail.google.com/mail/u/0/?zx=knxh55u8nye4#inbox">
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span className="icon-text">ibrahimfarrah30@</span>
-        </a>
-      </div>
+    <div className="box">
+    <Bars>
+      <div class="loader"></div>
+    </Bars>
+    <div className="infoSection">
+      <Title>
+        <div className="title">
+          <h1 className="firstText">Ibrahim Farrah</h1>
+        </div>
+      </Title>
+      <Button>
+        <div class="box-button">
+          <div class="button"><span>Button</span></div>
+        </div>
+        <div class="box-button">
+          <div class="button"><span>Button</span></div>
+        </div>
+      </Button>
     </div>
-  </div>
+    </div>
+
   </HomeSection>
   )
 }
 
 export default Home
 
-
-
-
 const HomeSection = styled.section`
-  height: 100%;
-  width: 100%;
-  display: flex;
+  display:flex;
   justify-content: center;
   flex-direction: row-reverse;
   align-items: center;
-  /*overflow: hidden;*/
+  height: 100%;
+  width: 100%;
 
-
-.box {
+  .box {
   width: 100%;
   overflow: hidden;
   min-height: 72vh;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   border-radius: 15px;
   border: 4px solid rgb(134, 134, 134);
@@ -65,30 +60,95 @@ const HomeSection = styled.section`
   background-color: black;
 }
 
-.textContainer {
-  width: 250px;
-  height: 250px;
+.infoSection{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+`;
+
+const Bars = styled.div`
+  display:flex;
+
+  .loader {
+  width: 12px;
+  height: 80px;
+  border-radius: 6px;
+  background-color: currentColor;
   position: relative;
-  display: flex;
+  color: #f2f2f2;
+  transition: all 0.3s ease;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  width: 12px;
+  height: 40px;
+  border-radius: 6px;
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  transition: all 0.3s ease;
+}
+
+.loader::before {
+  left: -30px;
+}
+
+.loader:hover::before,
+.loader:hover::after {
+  height: 80px;
+}
+
+
+.loader {
+  width: 24px; /* 12px × 2 */
+  height: 160px; /* 80px × 2 */
+  border-radius: 12px; /* 6px × 2 */
+  margin: 120px auto; /* 60px × 2 */
+}
+
+.loader::after,
+.loader::before {
+  width: 24px; /* 12px × 2 */
+  height: 80px; /* 40px × 2 */
+  border-radius: 12px; /* 6px × 2 */
+  left: 60px; /* 30px × 2 */
+}
+
+.loader::before {
+  left: -60px; /* -30px × 2 */
+}
+
+.loader:hover::before,
+.loader:hover::after {
+  height: 160px; /* 80px × 2 */
+}
+
+`;
+
+
+const Title = styled.div`
+  display:flex;
   justify-content: center;
   flex-direction: column;
-}
+  position: relative;
+  width: 250px;
+
 
 .title {
   width: 100%;
   display: flex;
   align-items: center;
-  height: 70px;
   justify-content: space-around;
-    align-items: center;
-}.block-title {
-  width: 0%;
-  height: inherit;
-  background: #b6b6b6;
-  position: absolute;
-  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-  display: flex;
-}.firstText {
+  align-items: center;
+}
+.firstText {
   font-family: Arial, sans-serif;
   color: #cfcfcf;
   font-size: 32px;
@@ -101,135 +161,39 @@ const HomeSection = styled.section`
   text-decoration: underline;
 }
 
-.subTitle {
-  width: 300%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 50px; /* increased height for better visual balance */
-  margin-top: -10px;
-  font-family: Arial, sans-serif; /* added font-family for consistency */
-}.block-subTitle {
-  width: 0%;
-  height: inherit;
-  background: #b6b6b6;
-  position: relative;
-  animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-  animation-delay: 2s;
-  display: flex;
-  margin-left: -80px;
-}.subText {
-  animation: secFadeIn 2s forwards;
-  animation-delay: 3.4s;
-  padding: 60px;
-  opacity: 0;
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
-  margin-left: -66.5px;
-  color: rgb(185, 185, 185);
-  font-size: 16px;
-  font-weight: bold;
-}
 
-.icons {
-  position: relative;
-  justify-content: center; /* added to align icons and text to the center */
-  animation: secFadeIn 3s forwards;
-  animation-delay: 5s;
-  opacity: 0;
-  font-family: 'Poppins';
-  font-size: 18px;
-  cursor: pointer;
-  text-decoration: none;
-  flex-wrap: nowrap;
-  display: flex;
-  color: rgb(196, 196, 196);
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 12px; /* added space between the icons and text */
-}.icon-text {
-  font-family: Arial, sans-serif;
-  margin-left: 8px; /* space between the icon and the text */
-}.icons:hover{
-  color: rgb(130, 130, 130);
-}
-
-
-
-@keyframes mainBlock {
-  0% {
-    width: 0%;
-    left: 0;
-
-  }
-
-  50% {
-    width: 100%;
-    left: 0;
-
-  }
-
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes secBlock {
-  0% {
-    width: 0%;
-    left: 0;
-
-  }
-
-  50% {
-    width: 300%;
-    left: 0;
-
-  }
-
-  100% {
-    width: 0;
-    left: 80%;
-  }
-}
-
-@keyframes mainFadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-
-@keyframes secFadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-
-
-/* Font size for tablets */
-@media (max-width: 625px) {
-  .subText {
-    padding: 110px;
-    font-size: 12px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .subText {
-    font-size: 5px;
-  }
-}
 `;
+
+const Button = styled.div`
+  display:flex;
+  flex-direction: row;
+
+
+.box-button {
+  cursor: pointer;
+  border: 4px solid black;
+  background-color: gray;
+  padding-bottom: 10px;
+  transition: 0.1s ease-in-out;
+  user-select: none;
+}
+
+.button {
+  background-color: #dddddd;
+  border: 4px solid #fff;
+  padding: 3px 8px;
+}
+
+.button span {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.box-button:active {
+  padding: 0;
+  margin-bottom: 10px;
+  transform: translateY(10px);
+}
+
+`;
+

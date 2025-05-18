@@ -61,11 +61,10 @@ function Contact() {
 
   return (
     <ContactSection id="contact">
-      <ContactContainer>
       <div className="globe-container">
               <Globe
-                height={326}
-                width={326}
+                height={400}
+                width={400}
                 backgroundColor="rgba(0,0,0,0)"
                 showAtmosphere
                 showGraticules
@@ -74,16 +73,16 @@ function Contact() {
                 labelsData={[{
                   lat: 40, lng: -100,
                   text: "I'm here!",
-                  color: 'white',
-                  size: 20,
+                  color: 'red',
+                  size: 50,
                 }]}
               />
           </div>
+        <div className="formContainer">
         <ContactHeader>
           <SectionSubText>Get in touch</SectionSubText>
           <SectionHeadText>Contact.</SectionHeadText>
         </ContactHeader>
-
         <ContactForm className={fadeIn ? 'fade-in' : ''} onSubmit={handleSubmit}>
           <input type="text" name="_honey" style={{ display: 'none' }} />
 
@@ -126,7 +125,7 @@ function Contact() {
           <input type="hidden" name="_next" value={window.location.origin} />
           <input type="hidden" name="_captcha" value="false" />
         </ContactForm>
-      </ContactContainer>
+      </div>
     </ContactSection>
   );
 }
@@ -136,18 +135,27 @@ export default Contact;
 
 
 const ContactSection = styled.section`
+margin-top: 3rem;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 2rem;
+  gap: 2.5rem;
+  max-width: 1200px;
+  justify-content: center;
+  
 
+  @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+    }
 
 
     .globe-container {
     border-radius: 1.5rem;
-    width: 100%;
-    height: 326px;
+    width: 40%;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,19 +164,16 @@ const ContactSection = styled.section`
       height: fit-content;
     }
   }
+
+  .formContainer{
+  display: flex;
+  flex-direction: column;
+
+  }
     
 `;
 
 
-const ContactContainer = styled.div`
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  width: 100%;
-  max-width: 1200px;
-  align-items: center;
-`;
 
 const ContactHeader = styled.div`
   flex: 1;

@@ -4,7 +4,6 @@ import Home from './Components/Sections/Home/home'
 import Overview from './Components/Sections/Overview/overview'
 import Experience from './Components/Sections/Experience/experience'
 import Projects from './Components/Sections/Projects/projects'
-import Skills from './Components/Sections/Skills/skills'
 import Shows from './Components/Sections/Shows/shows'
 import Contact from './Components/Sections/Contact/contact'
 
@@ -27,7 +26,6 @@ function App() {
         <Overview/>
         <Experience/>
         <Projects/>
-        <Skills/>
         <Shows/>
         <Contact/>
         <Footer/>

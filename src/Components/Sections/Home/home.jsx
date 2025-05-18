@@ -1,28 +1,28 @@
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 function Home() {
   return (
   <HomeSection id="Home">
+    <Logo>
+
+    </Logo>
     <div className="box">
-    <Bars>
-      <div class="loader"></div>
+    <Bars id="Bars">
+      <div className="loader"></div>
     </Bars>
     <div className="infoSection">
-      <Title>
+      <Title id="Title">
         <div className="title">
           <h1 className="firstText">Ibrahim Farrah</h1>
         </div>
-      </Title>
-      <Button>
-        <div class="box-button">
-          <div class="button"><span>Button</span></div>
-        </div>
-        <div class="box-button">
-          <div class="button"><span>Button</span></div>
-        </div>
+      </Title> 
+      <Button id="Button">
+        <button className="button3D">Download CV <FontAwesomeIcon icon={faDownload} className="icon" /></button>
+        <button className="button3D"> <FontAwesomeIcon icon={faGithub} className="icon" />  Repository </button>
       </Button>
     </div>
     </div>
@@ -33,44 +33,63 @@ function Home() {
 
 export default Home
 
+const Logo = styled.div`
+  
+`;
+
 const HomeSection = styled.section`
-  display:flex;
+  display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
   align-items: center;
   height: 100%;
   width: 100%;
 
   .box {
-  width: 100%;
-  overflow: hidden;
-  min-height: 72vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 15px;
-  border: 4px solid rgb(134, 134, 134);
-  transition: 1s;
-  padding: 20px;
-  margin: 10px;
-  margin-left: 50px;
-  margin-bottom: 10px;
-  z-index: 0;
-  background-color: black;
-}
+    width: 100%;
+    min-height: 72vh;
+    display: flex;
+    justify-content: center; 
+    border-radius: 15px;
+    border: 4px solid rgb(134, 134, 134);
+    transition: 1s;
+    padding: 20px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    z-index: 0;
+    background-color: black;
 
-.infoSection{
-  display:flex;
-  align-items: center;
-  flex-direction: column;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 
+  .infoSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    min-width: 300px;
+
+    @media (max-width: 768px) {
+      min-width:100%;
+    }
 }
 
 `;
 
 const Bars = styled.div`
-  display:flex;
+  display: flex;
+  width: 25%;
+  min-width: 170px;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+      min-width:100%;
+    }
 
   .loader {
   width: 12px;
@@ -139,6 +158,7 @@ const Title = styled.div`
   flex-direction: column;
   position: relative;
   width: 250px;
+  padding-bottom: 10px;
 
 
 .title {
@@ -158,7 +178,6 @@ const Title = styled.div`
   display: flex;
   align-items: baseline;
   position: relative;
-  text-decoration: underline;
 }
 
 
@@ -167,33 +186,46 @@ const Title = styled.div`
 const Button = styled.div`
   display:flex;
   flex-direction: row;
+  padding-top: 10px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 295px;
 
 
-.box-button {
+.button3D {
   cursor: pointer;
-  border: 4px solid black;
-  background-color: gray;
-  padding-bottom: 10px;
-  transition: 0.1s ease-in-out;
-  user-select: none;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  color:rgb(255, 255, 255);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-bottom: 4px solid rgb(255, 255, 255);
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
-.button {
-  background-color: #dddddd;
-  border: 4px solid #fff;
-  padding: 3px 8px;
+.button3D:hover {
+  brightness: 110%;
+  transform: translateY(-1px);
+  border-bottom: 6px solid rgb(255, 255, 255);
+  background-color: grey;
+  color: rgb(255, 255, 255);
 }
 
-.button span {
-  font-size: 1.2em;
-  letter-spacing: 1px;
+.button3D:active {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  brightness: 90%;
+  transform: translateY(2px);
+  animation-duration: 5s;
 }
 
-.box-button:active {
-  padding: 0;
-  margin-bottom: 10px;
-  transform: translateY(10px);
-}
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 
 `;
 

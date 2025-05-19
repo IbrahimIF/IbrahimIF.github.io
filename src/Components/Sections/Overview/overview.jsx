@@ -18,7 +18,9 @@ function Overview() {
       <div className="grid">
         <div className="row">
           <div className="grid-container">
-            <img src="" alt="grid-1" className="grid-image" />
+            <div className="Circle">
+              <img src="/src/assets/Profile placeholder.png" alt="grid-1" className="grid-image"/>
+            </div>
             <div>
               <p className="grid-headtext">Hi, I'm Ibrahim</p>
               <p className="grid-subtext">
@@ -40,7 +42,7 @@ function Overview() {
           </div>
         </div>
 
-        <div className="row row-span-4">
+        <div className="row row-span-5">
           <div className="grid-container">
             <div className="globe-container">
               <Globe
@@ -80,7 +82,7 @@ function Overview() {
           </div>
         </div>
 
-        <div className="row row-span-2">
+        <div className="row row-span-1">
           <div className="grid-container">
             <img src="assets/grid4.png" alt="grid-4" className="grid-image-small" />
             <div className="contact-container">
@@ -239,6 +241,17 @@ const OverviewSection = styled.section`
     &:hover {
       background: rgba(255, 255, 255, 0.1);
     }
+  }
+
+
+  .Circle{
+    display:flex;
+    align-items:center;
+    height: 250px;
+    width: 250px;
+    background-color: #000;
+    border-radius: 50%;
+
   }
 
   .email-text {

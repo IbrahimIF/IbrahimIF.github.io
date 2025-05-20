@@ -60,71 +60,71 @@ function Contact() {
   };
 
   return (
-    <ContactSection id="contact">
-      <div className="globe-container">
-              <Globe
-                height={400}
-                width={400}
-                backgroundColor="rgba(0,0,0,0)"
-                showAtmosphere
-                showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
-                labelsData={[{
-                  lat: 40, lng: -100,
-                  text: "I'm here!",
-                  color: 'red',
-                  size: 50,
-                }]}
-              />
-          </div>
-        <div className="formContainer">
-        <ContactHeader>
+    <ContactSection id="Contact">
+      <div className="box">
+        <div className="globe-container">
+                <Globe
+                  height={400}
+                  width={400}
+                  backgroundColor="rgba(0,0,0,0)"
+                  showAtmosphere
+                  showGraticules
+                  globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                  bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
+                  labelsData={[{
+                    lat: 40, lng: -100,
+                    text: "I'm here!",
+                    color: 'red',
+                    size: 50,
+                  }]}
+                />
+            </div>
+          <div className="formContainer">
           <SectionSubText>Get in touch</SectionSubText>
           <SectionHeadText>Contact.</SectionHeadText>
-        </ContactHeader>
-        <ContactForm className={fadeIn ? 'fade-in' : ''} onSubmit={handleSubmit}>
-          <input type="text" name="_honey" style={{ display: 'none' }} />
-
-          <FormGroup>
+          <ContactForm className={fadeIn ? 'fade-in' : ''} onSubmit={handleSubmit}>
+            <input type="text" name="_honey" style={{ display: 'none' }} />
+  
+            <FormGroup>
+              <FormLabel>
+                <LabelText>Your Name</LabelText>
+                <FormInput type="text" name="name" placeholder="Enter Name" required />
+              </FormLabel>
+  
+              <FormLabel>
+                <LabelText>Your Email</LabelText>
+                <FormInput type="email" name="email" placeholder="Enter Email" required />
+              </FormLabel>
+            </FormGroup>
+  
             <FormLabel>
-              <LabelText>Your Name</LabelText>
-              <FormInput type="text" name="name" placeholder="Enter Name" required />
+              <LabelText>Message</LabelText>
+              <TextArea name="message" placeholder="Your message here..." rows="6" required />
             </FormLabel>
-
-            <FormLabel>
-              <LabelText>Your Email</LabelText>
-              <FormInput type="email" name="email" placeholder="Enter Email" required />
-            </FormLabel>
-          </FormGroup>
-
-          <FormLabel>
-            <LabelText>Message</LabelText>
-            <TextArea name="message" placeholder="Your message here..." rows="6" required />
-          </FormLabel>
-
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <SubmitButton type="submit" disabled={loader}>
-              {loader ? (
-                <div className="loading-icon">
-                  <svg className="spin" viewBox="25 25 50 50">
-                    <circle r="20" cy="50" cx="50"></circle>
-                  </svg>
-                </div>
-              ) : fail ? (
-                <span>Failed - Try Again</span>
-              ) : (
-                <>
-                  <FontAwesomeIcon icon={faUpload} /> &nbsp; Send
-                </>
-              )}
-            </SubmitButton>
-            {showTick && <SubmitMessage />}
-          </div>
-
-          <input type="hidden" name="_next" value={window.location.origin} />
-          <input type="hidden" name="_captcha" value="false" />
-        </ContactForm>
+  
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <SubmitButton type="submit" disabled={loader}>
+                {loader ? (
+                  <div className="loading-icon">
+                    <svg className="spin" viewBox="25 25 50 50">
+                      <circle r="20" cy="50" cx="50"></circle>
+                    </svg>
+                  </div>
+                ) : fail ? (
+                  <span>Failed - Try Again</span>
+                ) : (
+                  <>
+                    <FontAwesomeIcon icon={faUpload} /> &nbsp; Send
+                  </>
+                )}
+              </SubmitButton>
+              {showTick && <SubmitMessage />}
+            </div>
+  
+            <input type="hidden" name="_next" value={window.location.origin} />
+            <input type="hidden" name="_captcha" value="false" />
+          </ContactForm>
+        </div>
       </div>
     </ContactSection>
   );
@@ -135,16 +135,31 @@ export default Contact;
 
 
 const ContactSection = styled.section`
-margin-top: 3rem;
+  height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding: 2rem;
-  gap: 2.5rem;
-  max-width: 1200px;
   justify-content: center;
-  
+  flex-direction: row;
+  align-items: center;
+  /*overflow: hidden;*/
+
+  .box {
+  width: 100%;
+  overflow: hidden;
+  min-height: 72vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 15px;
+  border: 4px solid rgb(134, 134, 134);
+  transition: 1s;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  z-index: 0;
+  background-color: black;
+  }
 
   @media (max-width: 768px) {
       flex-direction: column;
@@ -154,8 +169,8 @@ margin-top: 3rem;
 
     .globe-container {
     border-radius: 1.5rem;
-    width: 40%;
-    height: 400px;
+    width: 50%;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,9 +190,6 @@ margin-top: 3rem;
 
 
 
-const ContactHeader = styled.div`
-  flex: 1;
-`;
 
 const SectionSubText = styled.p`
   color: rgba(255, 255, 255, 0.6);

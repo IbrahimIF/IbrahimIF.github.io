@@ -32,6 +32,7 @@ function Overview() {
 
         <div className="row">
           <div className="grid-container">
+            <ball/>
             <img src="assets/grid2.png" alt="grid-2" className="grid-image" />
             <div>
               <p className="grid-headtext">Tech Stack</p>

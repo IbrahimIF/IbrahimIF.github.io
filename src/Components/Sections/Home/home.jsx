@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
@@ -8,7 +7,7 @@ function Home() {
   return (
   <HomeSection id="Home">
     <Logo>
-
+      <img src="/src/assets/Logo.png" alt="logo"  className="image"/>
     </Logo>
     <div className="box">
     <Bars id="Bars">
@@ -34,7 +33,16 @@ function Home() {
 export default Home
 
 const Logo = styled.div`
+  display:flex;
+  width: 50%;
+  top: 10px;
+  left: 50px;
+  position: absolute;
+
+  .image{
+    width: 30%;
   
+  }
 `;
 
 const HomeSection = styled.section`

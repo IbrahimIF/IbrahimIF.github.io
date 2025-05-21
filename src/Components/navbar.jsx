@@ -2,6 +2,7 @@
 import { faHouse, faInfoCircle, faBriefcase, faEnvelope, faTableColumns, faGear } from '@fortawesome/free-solid-svg-icons' */
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import confetti from "canvas-confetti";
 
 
 function Navbar({counter, setCounter }) {
@@ -11,7 +12,15 @@ function Navbar({counter, setCounter }) {
   const handleCheckClick = () => {
     setCounter(prevCounter => prevCounter + 1);
 
-    if (counter == 8 ){
+    if (counter % 4 == 0 ){
+      confetti({
+        particleCount: 20,
+        spread: 25,
+        origin: {x: 0.235,  y: 0.989},
+      });
+    }
+
+    if (counter == 10 ){
       navigate("/Random");
     }
   };
@@ -30,12 +39,14 @@ function Navbar({counter, setCounter }) {
   </label>
   
   <div className="navbar-content">
-    <div className="navbar-circle">
-      <label className="checkBox">
-        <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
-        <div className="transition"></div>
-      </label>
-    </div>
+  <Tooltip text={`Click count: ${counter}`}>
+      <div className="navbar-circle">
+        <label className="checkBox">
+          <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
+          <div className="transition"></div>
+        </label>
+      </div>
+    </Tooltip>
 
     <div className="navbar-items">
       <a className="nav-item" href="#Home">Home</a>
@@ -45,7 +56,6 @@ function Navbar({counter, setCounter }) {
       <a className="nav-item rare" href="#Skills">Skills</a>
       <a className="nav-item rare" href="#Shows">Shows</a>
       <a className="nav-item" href="#Contact">Contact</a>
-      <a className="nav-item" href="#Contact">{counter}</a>
     </div>
   </div>
 </nav>
@@ -262,9 +272,40 @@ const Navigation = styled.nav`
   transition: 0.3s;
 }
 
+
+
 `;
 
 
+const Tooltip = styled.div`
+  position: relative;
+  display: inline-flex;
+
+  &:hover::after {
+    content: '${props => props.text}';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    background: #1A1F2C;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.2s;
+    z-index: 100;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+`;
 
 /*
 import React, { useRef } from 'react';

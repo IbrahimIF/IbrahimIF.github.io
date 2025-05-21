@@ -216,7 +216,6 @@ iframe {
   overflow: hidden;
 }
 
-/* Ensure all content inside RandomScreen respects the overflow: hidden */
 .randomContainer * {
   overflow: hidden;
 }

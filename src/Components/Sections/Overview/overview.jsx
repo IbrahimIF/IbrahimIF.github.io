@@ -116,7 +116,8 @@ const OverviewSection = styled.section`
     gap: 1rem;
     height: 100%;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(134, 134, 134);
     border-radius: 1.5rem;
   }
 
@@ -211,9 +212,9 @@ const OverviewSection = styled.section`
   .Circle{
     display:flex;
     align-items:center;
-    height: 250px;
-    width: 250px;
-    background-color: #000;
+    height: 260px;
+    width: 260px;
+    background-color: #fff;
     border-radius: 50%;
 
   }

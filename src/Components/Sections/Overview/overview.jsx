@@ -1,17 +1,8 @@
 import styled from 'styled-components';
-import { useState } from 'react';
-import Globe from 'react-globe.gl';
+import { Canvas } from '@react-three/fiber';
+import TechBall from './3D Components/TechScene'
 
 function Overview() {
-  const [hasCopied, setHasCopied] = useState(false);
-  
-  const handleCopy = () => {
-    navigator.clipboard.writeText('test@gmail.com');
-    setHasCopied(true);
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-  };
 
   return (
     <OverviewSection id="Overview">
@@ -19,12 +10,12 @@ function Overview() {
         <div className="row">
           <div className="grid-container">
             <div className="Circle">
-              <img src="/src/assets/Profile placeholder.png" alt="grid-1" className="grid-image"/>
+              <img src="/src/assets/Profile portfolio.png" alt="grid-1" className="grid-image"/>
             </div>
             <div>
               <p className="grid-headtext">Hi, I'm Ibrahim</p>
               <p className="grid-subtext">
-                With 0 years of experience I have honed my skills in frontend and backend development.
+                Graduate in Computer Science specialised software engineering, with a passion for coding and developing stuff.
               </p>
             </div>
           </div>
@@ -32,66 +23,38 @@ function Overview() {
 
         <div className="row">
           <div className="grid-container">
-            <ball/>
-            <img src="assets/grid2.png" alt="grid-2" className="grid-image" />
+          <p className="grid-headtext">Tech Stack</p>
+                <TechBall/>
             <div>
-              <p className="grid-headtext">Tech Stack</p>
-              <p className="grid-subtext">
-                Javascript/Typescript with a focus on React and Next.js ecosystems.
-              </p>
             </div>
           </div>
         </div>
 
         <div className="row row-span-5">
           <div className="grid-container">
-            <div className="globe-container">
-              <Globe
-                height={326}
-                width={326}
-                backgroundColor="rgba(0,0,0,0)"
-                showAtmosphere
-                showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
-                labelsData={[{
-                  lat: 40, lng: -100,
-                  text: "I'm here!",
-                  color: 'white',
-                  size: 20,
-                }]}
-              />
-            </div>
-            <div>
-              <p className="grid-headtext">I don't work remotely across most timezones.</p>
-              <p className="grid-subtext">I am based in croatia</p>
-              <button name="Contact me" className="contact-button">Contact me</button>
-            </div>
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307746793004421121" height="100%" title="Embedded post"></iframe>
           </div>
         </div>
 
         <div className="row xl-col-span-2">
           <div className="grid-container">
-            <img src="assets/grid3.png" alt="grid-3" className="grid-image" />
-            <div>
-              <p className="grid-headtext">My Passion for coding is as passionate as a passion fruit</p>
-              <p className="grid-subtext">
-                I love solving problems and building things through code. 
-                Coding isn't just my profession - it is my passion.
-              </p>
-            </div>
+         
+          <img
+              src="https://raw.githubusercontent.com/ibrahimif/github-snake/output/github-snake-dark.svg"
+              alt="GitHub Contribution Snake"
+              style={{ width: "100%", maxWidth: "800px" }}
+            />
           </div>
         </div>
 
         <div className="row row-span-1">
           <div className="grid-container">
-            <img src="assets/grid4.png" alt="grid-4" className="grid-image-small" />
-            <div className="contact-container">
-              <p className="grid-subtext text-center">Contact Me</p>
-              <div className="copy-container" onClick={handleCopy}>
-                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="email-text">test@gmail.com</p>
-              </div>
+
+            <div>
+              <p className="grid-headtext">VERY NICE</p>
+              <p className="grid-subtext">
+                I like coding.
+              </p>
             </div>
           </div>
         </div>

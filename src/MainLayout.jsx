@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState } from "react";
 
 import Home from './Components/Sections/Home/home'
 import Overview from './Components/Sections/Overview/overview'
@@ -12,12 +13,13 @@ import Footer from './Components/footer'
 import Socials from './Components/socials'
 
 
-function App() {
+function MainLayout() {
+  const [counter, setCounter] = useState(0);
 
   return (
     <Fadein id="fade-in" className="fadein">
       <FixedElementsWrapper>
-        <Navbar/>
+        <Navbar counter={counter} setCounter={setCounter}/>
         <Socials />
       </FixedElementsWrapper>
 
@@ -26,7 +28,7 @@ function App() {
         <Overview/>
         <Experience/>
         <Projects/>
-        <Shows/>
+        {counter > 5 && <Shows/>}
         <Contact/>
         <Footer/>
       </Background>
@@ -34,7 +36,7 @@ function App() {
   )
 }
 
-export default App
+export default MainLayout
 
 const Fadein = styled.div`
   opacity: 1;

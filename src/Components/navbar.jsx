@@ -2,18 +2,17 @@
 import { faHouse, faInfoCircle, faBriefcase, faEnvelope, faTableColumns, faGear } from '@fortawesome/free-solid-svg-icons' */
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import { useState } from "react";
 
-function Navbar() {
+
+function Navbar({counter, setCounter }) {
   const navigate = useNavigate();
-  const [counter, setCounter] = useState(0);
+
 
   const handleCheckClick = () => {
     setCounter(prevCounter => prevCounter + 1);
 
-    if (counter == 6){
+    if (counter == 8 ){
       navigate("/Random");
-      setCounter(0);
     }
   };
 

@@ -26,40 +26,41 @@ function Navbar({counter, setCounter }) {
   };
 
   return (
-    <Navigation id="Navbar">
-            <input className="nav-toggle" id="nav-toggle" type="checkbox" />
-
-<nav className="navbar">
-  <label className="navbar-toggle" htmlFor="nav-toggle">
-    <div className="burger-menu">
-      <div className="bars" id="bar1"></div>
-      <div className="bars" id="bar2"></div>
-      <div className="bars" id="bar3"></div>
+    <div id="nav">
+      <Navigation id="Navbar">
+        <input className="nav-toggle" id="nav-toggle" type="checkbox" />
+        
+        <nav className="navbar">
+          <label className="navbar-toggle" htmlFor="nav-toggle">
+            <div className="burger-menu">
+              <div className="bars" id="bar1"></div>
+              <div className="bars" id="bar2"></div>
+              <div className="bars" id="bar3"></div>
+            </div>
+          </label>
+          
+          <div className="navbar-content">
+          <Tooltip text={`Click count: ${counter}`}>
+              <div className="navbar-circle">
+                <label className="checkBox">
+                  <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
+                  <div className="transition"></div>
+                </label>
+              </div>
+            </Tooltip>
+        
+            <div className="navbar-items">
+              <a className="nav-item" href="#Home">Home</a>
+              <a className="nav-item" href="#Overview">Overview</a>
+              <a className="nav-item rare" href="#Experience">Experience</a>
+              <a className="nav-item" href="#Project">Projects</a>
+              {counter > 5 && <a className="nav-item rare" href="#Shows">Shows</a>}
+              <a className="nav-item" href="#Contact">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </Navigation>
     </div>
-  </label>
-  
-  <div className="navbar-content">
-  <Tooltip text={`Click count: ${counter}`}>
-      <div className="navbar-circle">
-        <label className="checkBox">
-          <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
-          <div className="transition"></div>
-        </label>
-      </div>
-    </Tooltip>
-
-    <div className="navbar-items">
-      <a className="nav-item" href="#Home">Home</a>
-      <a className="nav-item" href="#Overview">Overview</a>
-      <a className="nav-item rare" href="#Experience">Experience</a>
-      <a className="nav-item" href="#Project">Projects</a>
-      <a className="nav-item rare" href="#Skills">Skills</a>
-      <a className="nav-item rare" href="#Shows">Shows</a>
-      <a className="nav-item" href="#Contact">Contact</a>
-    </div>
-  </div>
-</nav>
-    </Navigation>
   )
 }
 

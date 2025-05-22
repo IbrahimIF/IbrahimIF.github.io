@@ -10,7 +10,7 @@ function Overview() {
         <div className="row">
           <div className="grid-container">
             <div className="Circle">
-              <img src="/src/assets/Profile portfolio.png" alt="grid-1" className="grid-image"/>
+              <img src="/assets/Profile portfolio.png" alt="grid-1" className="grid-image"/>
             </div>
             <div>
               <p className="grid-headtext">Hi, I'm Ibrahim</p>
@@ -214,7 +214,7 @@ const OverviewSection = styled.section`
     align-items:center;
     height: 260px;
     width: 260px;
-    background-color: #fff;
+    border: 4px solid rgb(134, 134, 134);
     border-radius: 50%;
 
   }

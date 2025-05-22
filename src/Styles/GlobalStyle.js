@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
     --border-color: rgb(134, 134, 134);
   }
 
+  html {
+  scroll-behavior: smooth;
+}
+  
   * {
     box-sizing: border-box;
     margin: 0;

@@ -5,28 +5,38 @@ import TechBall from './TechBall'
 const techData = [
   {
     name: 'React',
-    imgUrl: '/src/assets/Profile placeholder.png',
-    position: [0, 0, 0]
+    imgUrl: '/assets/Tech/React-logo.png',
+    position: [0, 0, -5]
   },
   {
     name: 'JavaScript',
-    imgUrl: '/src/assets/Profile placeholder.png',
-    position: [2, 0, -2]
+    imgUrl: '/assets/Tech/JavaScript-logo.png',
+    position: [2, 0, -5]
   },
   {
     name: 'Node.js',
-    imgUrl: '/src/assets/Profile placeholder.png',
-    position: [-2, 0, -2]
+    imgUrl: '/assets/Tech/node-js-logo.png',
+    position: [-2, 0, -5]
   },
   {
-    name: 'Three.js',
-    imgUrl: '/src/assets/Profile placeholder.png',
-    position: [0, 2, -2]
+    name: 'Mongodb',
+    imgUrl: '/assets/Tech/mongodb-logo.png',
+    position: [0, 2, -5]
+  },
+  {
+    name: 'Python',
+    imgUrl: '/assets/Tech/Python-logo.png',
+    position: [2, 3, -5]
+  },
+  {
+    name: 'Java',
+    imgUrl: '/assets/Tech/Java-logo.png',
+    position: [-2, 3, -5]
   },
   {
     name: 'HTML/CSS',
-    imgUrl: '/src/assets/Profile placeholder.png',
-    position: [0, -2, -2]
+    imgUrl: '/assets/Tech/html and css-logo.png',
+    position: [0, -2.4, -5]
   }
 ]
 

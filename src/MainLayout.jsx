@@ -24,7 +24,7 @@ function MainLayout() {
       </FixedElementsWrapper>
 
       <Background id="Background">
-        <Home/>
+        <Home />
         <Overview/>
         <Experience/>
         <Projects/>

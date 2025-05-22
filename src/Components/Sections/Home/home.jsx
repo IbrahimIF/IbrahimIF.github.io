@@ -7,7 +7,7 @@ function Home() {
   return (
   <HomeSection id="Home">
     <Logo>
-      <img src="/src/assets/Logo.png" alt="logo"  className="image"/>
+      <img src="/assets/Logo.png" alt="logo"  className="image"/>
     </Logo>
     <div className="box">
     <Bars id="Bars">
@@ -34,9 +34,9 @@ export default Home
 
 const Logo = styled.div`
   display:flex;
-  width: 50%;
+  max-width: 600px;
   top: 10px;
-  left: 50px;
+  left: 20px;
   position: absolute;
 
   .image{

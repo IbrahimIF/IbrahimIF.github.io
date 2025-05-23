@@ -40,7 +40,7 @@ function Navbar({counter, setCounter }) {
           </label>
           
           <div className="navbar-content">
-          <Tooltip text={`Click count: ${counter}`}>
+          <Tooltip $text={`Click count: ${counter}`}>
               <div className="navbar-circle">
                 <label className="checkBox">
                   <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
@@ -283,7 +283,7 @@ const Tooltip = styled.div`
   display: inline-flex;
 
   &:hover::after {
-    content: '${props => props.text}';
+    content: '${props => props.$text}';
     position: absolute;
     bottom: 100%;
     left: 50%;

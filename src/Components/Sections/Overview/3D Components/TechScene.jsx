@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { Preload } from '@react-three/drei'
 import TechBall from './TechBall'
 
 const techData = [
@@ -21,7 +21,7 @@ const techData = [
   {
     name: 'Mongodb',
     imgUrl: '/assets/Tech/mongodb-logo.png',
-    position: [0, 2, -5]
+    position: [0, 3, -5]
   },
   {
     name: 'Python',
@@ -36,26 +36,25 @@ const techData = [
   {
     name: 'HTML/CSS',
     imgUrl: '/assets/Tech/html and css-logo.png',
-    position: [0, -2.4, -5]
+    position: [0, -3, -5]
   }
 ]
 
 export default function TechScene() {
   return (
     <div style={{ height: '50vh' }}>
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
+      <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+        <ambientLight intensity={0.15} />
+        <pointLight position={[-5, -5, -5 ]} intensity={20} />
         
-        {techData.map((tech, index) => (
+        {techData.map((tech) => (
           <TechBall
             key={tech.name}
             position={tech.position}
             imgUrl={tech.imgUrl}
           />
         ))}
-        
-        <OrbitControls enableZoom={true} />
+        <Preload all />
       </Canvas>
     </div>
   )

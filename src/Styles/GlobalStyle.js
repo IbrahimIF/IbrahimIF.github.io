@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --section-padding: 4rem;
     --section-gap: 2rem;
-    --border-color: rgb(134, 134, 134);
+    --border-color: rgb(0, 0, 0);
   }
 
   html {
@@ -28,7 +28,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: var(--section-padding);
     margin-bottom: var(--section-gap);
     position: relative;
-    
     &::after {
       content: '';
       position: absolute;
@@ -36,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
       left: 10%;
       right: 10%;
       height: 1px;
-      background: rgba(255,255,255,0.1);
+      background: rgb(255, 255, 255);
     }
   }
 `;

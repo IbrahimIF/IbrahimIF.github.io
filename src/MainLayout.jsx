@@ -66,11 +66,10 @@ const Background = styled.div`
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background-color: #000000;
   border-radius: 0.5em;
-  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
   display:flex;
   flex-direction:column;
+  background-color:black;
 
   &::before {
     content: "";
@@ -94,7 +93,7 @@ const Background = styled.div`
           transparent 47%,
           transparent 53%,
           #434343 53%,
-          #0a0a0a 100%
+rgb(0, 0, 0) 100%
         )
         0 0/2em 2em,
       linear-gradient(
@@ -105,16 +104,6 @@ const Background = styled.div`
           transparent 53%,
           #434343 53%,
           #434343 100%
-        )
-        0 0/2em 2em,
-      linear-gradient(
-          45deg,
-          transparent 0%,
-          transparent 47%,
-          #000000 47%,
-          #434343 53%,
-          transparent 53%,
-          transparent 100%
         )
         1em 1em/2em 2em;
     opacity: 0.5;

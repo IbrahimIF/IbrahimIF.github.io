@@ -71,6 +71,15 @@ const OverviewSection = styled.section`
   margin-bottom: 5rem;
   position: relative;
   padding-left: 100px;
+  background-image: radial-gradient(
+    circle at center,
+    rgb(0, 0, 2) 0%,
+    rgb(0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0.74) 95%,
+    rgb(0, 0, 0) 100%
+  );
 
 
   .grid {
@@ -116,8 +125,13 @@ const OverviewSection = styled.section`
     gap: 1rem;
     height: 100%;
     padding: 1.5rem;
-    background: rgb(0, 0, 0);
-    border: 2px solid rgb(134, 134, 134);
+    background-color: rgba(3, 1, 14, 0.2);
+    box-shadow: 
+  rgba(0, 24, 72, 0.2) 0px 54px 55px,  
+  rgba(40, 60, 110, 0.1) 0px -12px 30px,  
+  rgba(40, 60, 120, 0.1) 0px 4px 6px,  
+  rgba(24, 33, 53, 0.15) 0px 12px 13px,  
+  rgba(255, 255, 255, 0.08) 0px -3px 5px;
     border-radius: 1.5rem;
   }
 

@@ -63,7 +63,7 @@ const Socials = styled.div`
     background-color: black;
     padding:10px;
     border-radius: 0px 30px 30px 0px;
-    border: 2px solid white;
+    border: 3px solid rgb(25, 25, 25);
 }
 .social_icons {
     display: flex;

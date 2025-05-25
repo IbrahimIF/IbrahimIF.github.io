@@ -1,6 +1,6 @@
 
-import { Decal, Float, useTexture } from '@react-three/drei'
-import { useFrame} from '@react-three/fiber'
+import { Decal, Float, useTexture, Edges } from '@react-three/drei'
+import { useFrame, useLoader} from '@react-three/fiber'
 import { useRef, useState } from 'react'
 
 function TechBall({ position, imgUrl }) {
@@ -13,17 +13,16 @@ function TechBall({ position, imgUrl }) {
     if (meshRef.current) {
       if (isActive) {
         spinSpeed.current *= 0.92
+      } else {
+        spinSpeed.current *= 0.99
       }
       meshRef.current.rotation.y += spinSpeed.current
     }
   })
 
-
-
   return (
     <Float speed={0} rotationIntensity={1} floatIntensity={2}>
       <mesh ref={meshRef} position={position}  castShadow 
-      
       onPointerDown={() => {
         setIsActive(true)
         document.body.style.cursor = 'grabbing'
@@ -44,20 +43,28 @@ function TechBall({ position, imgUrl }) {
           spinSpeed.current = e.movementX * 0.01
         }
       }}
-
       >
         <icosahedronGeometry args={[1, 3]} />
-        <meshStandardMaterial
-          color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading
+        <meshPhysicalMaterial
+          color="#00aaff"
+          opacity={0.85}
+          transparent={true}
+          specularColor="#ffffff"
+          specularIntensity={0.5}
+        />
+        <Edges
+          scale={1.02} 
+          threshold={5}
+          color="#00ffff"
+          renderOrder={1}
         />
         <Decal
-          position={[0, 0, 1]}
-          rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1}
+          position={[0, 0, 1.05]}
+          rotation={[0, 0, 0]}
+          scale={1.25}
           map={decal}
+          polygonOffset
+          polygonOffsetFactor={-5}
         />
       </mesh>
     </Float>

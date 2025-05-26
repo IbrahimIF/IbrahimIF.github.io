@@ -32,7 +32,7 @@ function Overview() {
 
         <div className="row row-span-5">
           <div className="grid-container">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307746793004421121" height="100%" title="Embedded post"></iframe>
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307746793004421121" height="100%" width="100%" title="Embedded post"></iframe>
           </div>
         </div>
 
@@ -122,6 +122,7 @@ const OverviewSection = styled.section`
   .grid-container {
     display: flex;
     flex-direction: column;
+    align-items:center;
     gap: 1rem;
     height: 100%;
     padding: 1.5rem;

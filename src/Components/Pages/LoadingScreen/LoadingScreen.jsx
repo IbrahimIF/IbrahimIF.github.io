@@ -16,7 +16,7 @@ function LoadingScreen(){
   
       if (remaining <= 0) {
         setFadeout(true);
-        setTimeout(() => navigate('/main'), 1000);
+        setTimeout(() => navigate('/main'), 500);
       } else {
         requestAnimationFrame(update);
       }
@@ -50,12 +50,13 @@ const LoadingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color:black;
 
 .fade-container{
   height: 200px;
-  width: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper {

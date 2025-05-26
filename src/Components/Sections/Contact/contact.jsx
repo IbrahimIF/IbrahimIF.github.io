@@ -155,7 +155,7 @@ const ContactSection = styled.section`
   .box {
   width: 100%;
   overflow: hidden;
-  min-height: 72vh;
+  min-height: 55vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

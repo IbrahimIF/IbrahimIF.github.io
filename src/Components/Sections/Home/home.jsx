@@ -104,7 +104,7 @@ const HomeSection = styled.section`
 
 const Bars = styled.div`
   display: flex;
-  width: 25%;
+  width: 40%;
   min-width: 170px;
   justify-content: center;
   align-items: center;

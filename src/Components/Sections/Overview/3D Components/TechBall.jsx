@@ -46,16 +46,14 @@ function TechBall({ position, imgUrl }) {
       >
         <icosahedronGeometry args={[1, 3]} />
         <meshPhysicalMaterial
-          color="#00aaff"
-          opacity={0.85}
+          color="#5ca5c6"
+          opacity={0.90}
           transparent={true}
-          specularColor="#ffffff"
-          specularIntensity={0.5}
         />
         <Edges
-          scale={1.02} 
-          threshold={5}
-          color="#00ffff"
+          scale={1}
+          threshold={1}
+          color="#135983"
           renderOrder={1}
         />
         <Decal
@@ -63,6 +61,7 @@ function TechBall({ position, imgUrl }) {
           rotation={[0, 0, 0]}
           scale={1.25}
           map={decal}
+          color="#cd2ea1"
           polygonOffset
           polygonOffsetFactor={-5}
         />

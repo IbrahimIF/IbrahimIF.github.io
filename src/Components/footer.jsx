@@ -20,7 +20,7 @@ const Footer = styled.footer`
   background: rgb(0, 0, 0);
   margin-top: auto;
   z-index: 1;
-  height: 30vh;
+  height: 20vh;
   
   p {
     margin: 0 auto;

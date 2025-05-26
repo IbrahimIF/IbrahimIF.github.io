@@ -118,7 +118,6 @@ const Navigation = styled.nav`
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   pointer-events: none;
   border: 2px solid white;
-
 }
 
 .nav-toggle:checked ~ .navbar .navbar-content {
@@ -166,6 +165,7 @@ const Navigation = styled.nav`
 
 .nav-toggle:checked ~ .navbar .navbar-toggle {
   background: #000000;
+  border: 2px solid white;
 }
 
 .nav-toggle:checked ~ .navbar #bar1,

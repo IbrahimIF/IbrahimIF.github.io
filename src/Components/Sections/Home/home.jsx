@@ -109,16 +109,16 @@ const Bars = styled.div`
   justify-content: center;
   align-items: center;
   overflow: visible;
-  
 
   @media (max-width: 768px) {
       min-width:100%;
     }
 
   .loader {
-  width: 12px;
-  height: 80px;
-  border-radius: 6px;
+  margin: 120px auto;
+  width: 24px;
+  height: 160px;
+  border-radius: 12px;
   background-color: currentColor;
   position: relative;
   color: #f2f2f2;
@@ -128,23 +128,20 @@ const Bars = styled.div`
   rgba(255, 255, 255, 0.15) 0px 4px 6px,
   rgba(255, 255, 255, 0.2) 0px 12px 13px,
   rgba(255, 255, 255, 0.1) 0px -3px 5px;
-
   transition: all 0.3s ease;
-
-  
 }
 
 .loader::after,
 .loader::before {
   content: '';
-  width: 12px;
-  height: 40px;
-  border-radius: 6px;
+  width: 24px;
+  height: 80px;
+  border-radius: 12px;
   background: currentColor;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 30px;
+  left: 50px;
   transition: all 0.3s ease;
 
   box-shadow: 
@@ -158,37 +155,12 @@ const Bars = styled.div`
 }
 
 .loader::before {
-  left: -30px;
+  left: -50px;
 }
 
 .loader:hover::before,
 .loader:hover::after {
-  height: 80px;
-}
-
-
-.loader {
-  width: 24px; /* 12px × 2 */
-  height: 160px; /* 80px × 2 */
-  border-radius: 12px; /* 6px × 2 */
-  margin: 120px auto; /* 60px × 2 */
-}
-
-.loader::after,
-.loader::before {
-  width: 24px; /* 12px × 2 */
-  height: 80px; /* 40px × 2 */
-  border-radius: 12px; /* 6px × 2 */
-  left: 60px; /* 30px × 2 */
-}
-
-.loader::before {
-  left: -60px; /* -30px × 2 */
-}
-
-.loader:hover::before,
-.loader:hover::after {
-  height: 160px; /* 80px × 2 */
+  height: 160px;
 }
 
 `;

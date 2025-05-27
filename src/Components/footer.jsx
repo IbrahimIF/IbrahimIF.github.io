@@ -189,10 +189,10 @@ const Circle = styled.div`
   border: 4px solid white;
   background-color: rgb(0, 0, 0);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  position: relative;
-  top: 60px;
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  bottom: 23px;
   p {
     display:flex;
     align-items:center;

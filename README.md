@@ -1,7 +1,9 @@
 <div align="center">
-<h1> IbrahimIF.dev </h1>
-</div>
 
+![Banner](https://github.com/user-attachments/assets/d3b2a1c8-49ca-49ca-a8c4-abc254ff79f8)
+
+
+</div>
 
 ![Project Status](https://img.shields.io/badge/status-in_progress-green)
 
@@ -47,5 +49,9 @@ This project includes several exciting features for you to explore:
 -----
 ## Acknowledgment:
 - [Github project_3D_developer_portfolio](https://github.com/adrianhajdin/project_3D_developer_portfolio)
+- [React Vertical Timeline Component](https://www.npmjs.com/package/react-vertical-timeline-component)
+- [HextaUI](https://hextaui.com/)
+- [React Globe gl](https://github.com/vasturiano/react-globe.gl/tree/master)
+- [React Three.js Fiber](https://r3f.docs.pmnd.rs/getting-started/your-first-scene)
 
 ---

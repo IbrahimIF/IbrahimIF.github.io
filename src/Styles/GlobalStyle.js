@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --section-padding: 4rem;
-    --section-gap: 2rem;
+    --section-padding: 8rem;
+    --section-gap: 8rem;
     --border-color: rgb(0, 0, 0);
   }
 
@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
       right: 10%;
       height: 1px;
       background: rgb(255, 255, 255);
+      background-color: black;
     }
   }
 `;

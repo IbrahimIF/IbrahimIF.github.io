@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState } from "react";
+import CanvasBackground from './Styles/CanvasBackgroundAlt';
 
 import Home from './Components/Sections/Home/home'
 import Overview from './Components/Sections/Overview/overview'
@@ -24,11 +25,12 @@ function MainLayout() {
       </FixedElementsWrapper>
 
       <Background id="Background">
+        {counter > 6 && <CanvasBackground/>}
         <Home />
         <Overview/>
         <Experience/>
         <Projects/>
-        {counter > 5 && <Shows/>}
+        {counter > 8 && <Shows/>}
         <Contact/>
         <Footer/>
       </Background>
@@ -70,6 +72,7 @@ const Background = styled.div`
   display:flex;
   flex-direction:column;
   background-color:black;
+  z-index: -1;
 
   &::before {
     content: "";

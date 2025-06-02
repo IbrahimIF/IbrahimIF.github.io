@@ -62,7 +62,7 @@ const HomeSection = styled.section`
   );
 
   .box {
-    width: 50%;
+    width: 100%;
     min-height: 72vh;
     display: flex;
     justify-content: center; 
@@ -71,7 +71,6 @@ const HomeSection = styled.section`
     padding: 20px;
     margin: 10px;
     margin-left: 50px;
-    margin-bottom: 10px;
     z-index: 0;
     background-color: rgba(3, 1, 14, 0.2);
     box-shadow: 

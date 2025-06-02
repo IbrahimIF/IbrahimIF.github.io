@@ -20,7 +20,7 @@ function Navbar({counter, setCounter }) {
       });
     }
 
-    if (counter == 10 ){
+    if (counter == 15 ){
       navigate("/Random");
     }
   };

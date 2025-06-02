@@ -80,6 +80,8 @@ const Footer = styled.footer`
   z-index: 1;
   height: 35vh;
   padding: 50px;
+  padding: var(--section-padding);
+  margin-top: calc(-1 * var(--section-gap));
 
   .top_container{
     display: flex;

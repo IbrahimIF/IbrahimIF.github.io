@@ -64,15 +64,15 @@ function Contact() {
       <div className="box">
         <div className="globe-container">
                 <Globe
-                  height={400}
-                  width={400}
+                  height={600}
+                  width={600}
                   backgroundColor="rgba(0,0,0,0)"
                   showAtmosphere
                   showGraticules
                   globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                   bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
                   labelsData={[{
-                    lat: 40, lng: -100,
+                    lat: 51.5072, lng: 0.1276,
                     text: "I'm here!",
                     color: 'red',
                     size: 50,
@@ -135,13 +135,15 @@ export default Contact;
 
 
 const ContactSection = styled.section`
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  /*overflow: hidden;*/
+  padding: var(--section-padding);
+  margin-bottom: var(--section-gap);
+  margin-top: calc(-1 * var(--section-gap));
+  padding-bottom: 300px;
+  padding-top: 300px;
   background-image: radial-gradient(
     circle at center,
     rgb(0, 0, 2) 0%,
@@ -181,14 +183,14 @@ const ContactSection = styled.section`
       justify-content: center;
     }
 
-
     .globe-container {
     border-radius: 1.5rem;
     width: 50%;
     min-height: 400px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
 
     @media (max-width: 640px) {
       height: fit-content;

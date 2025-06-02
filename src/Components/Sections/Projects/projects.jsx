@@ -18,13 +18,13 @@ function Project() {
 export default Project
 
 const ProjectSection = styled.section`
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
   align-items: center;
-  /*overflow: hidden;*/
+  padding: var(--section-padding);
+  margin-bottom: var(--section-gap);
+  margin-top: calc(-1 * var(--section-gap));
   background-image: radial-gradient(
     circle at center,
     rgb(0, 0, 2) 0%,

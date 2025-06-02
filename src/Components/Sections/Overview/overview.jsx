@@ -67,10 +67,10 @@ export default Overview;
 
 const OverviewSection = styled.section`
   display: flex;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
   position: relative;
-  padding-left: 100px;
+  padding: var(--section-padding);
+  margin-bottom: var(--section-gap);
+  margin-top: calc(-1 * var(--section-gap));
   background-image: radial-gradient(
     circle at center,
     rgb(0, 0, 2) 0%,
@@ -80,7 +80,6 @@ const OverviewSection = styled.section`
     rgba(0, 0, 0, 0.74) 95%,
     rgb(0, 0, 0) 100%
   );
-
 
   .grid {
     display: grid;

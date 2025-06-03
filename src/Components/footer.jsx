@@ -97,7 +97,7 @@ const Footer = styled.footer`
     justify-content: space-between;
     align-items: center;
     min-width: 100%;
-    padding-top: 70px;
+    padding-top: 50px;
     padding-left: 10%;
     padding-right: 10%;
   }

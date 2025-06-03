@@ -1,18 +1,38 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 import Work from './Timeline/work';
 import Education from './Timeline/education';
 
 function Experience() {
+  const [toggleValue, setToggleValue] = useState(0);
+
+  const handleToggle = () => {
+    setToggleValue(prev => prev === 0 ? 1 : 0);
+  };
+
   return (
     <ExperienceSection id="Experience">
       <div className="box">
-        <button>placeholder button</button>
-        <Education/>
+        <ToggleSection>
+          <div className="radio-inputs">
+            <label className="radio">
+              <input type="radio" name="radio" checked={toggleValue === 0} onChange={handleToggle}/>
+              <span className="name">Work Experiance</span>
+            </label> 
+            <label className="radio">
+              <input type="radio" name="radio" checked={toggleValue === 1} onChange={handleToggle}/>
+              <span className="name">Education</span>
+            </label>  
+          </div>
+        </ToggleSection>
+        {toggleValue == 1 && <Education/>}
+        {toggleValue == 0 && <Work/>}
       </div>
     </ExperienceSection>
   )
 }
 export default Experience
+
 
 const ExperienceSection = styled.section`
   display: flex;
@@ -44,7 +64,6 @@ const ExperienceSection = styled.section`
   transition: 1s;
   padding: 20px;
   margin: 10px;
-  margin-left: 50px;
   margin-bottom: 10px;
   z-index: 0;
   
@@ -58,3 +77,49 @@ const ExperienceSection = styled.section`
 }
 `;
 
+const ToggleSection = styled.div`
+  display: 'flex';
+  position: relative;
+  width: 100%;
+
+
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  background-color: #EEE;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+}
+
+`;

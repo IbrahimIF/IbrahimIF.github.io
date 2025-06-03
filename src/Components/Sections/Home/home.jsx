@@ -70,7 +70,7 @@ const HomeSection = styled.section`
     transition: 1s;
     padding: 20px;
     margin: 10px;
-    margin-left: 50px;
+
     z-index: 0;
     background-color: rgba(3, 1, 14, 0.2);
     box-shadow: 

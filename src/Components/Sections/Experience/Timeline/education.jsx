@@ -7,94 +7,40 @@ function Education() {
     <EducationTimeline id="Education">
         <VerticalTimeline>
           <VerticalTimelineElement
-            contentStyle={{ background: "#5ca5c6" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="Sep 2021 - Jul 2024"
+            iconStyle={{ background: '#002b52', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/brunel.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Creative Director</h3>
-            <h4>Miami, FL</h4>
+            <h3> Brunel University London</h3>
+            <h4>London | 2:1</h4>
+            <p> BSc Computer Science (Software Engineering) </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            contentStyle={{ background: "#010017" }}
+            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
+            date="Sep 2019 - Jun 2021"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/ncc.jpg" alt="placeholder" className="img"/></div>}
+          >
+            <h3>New City College</h3>
+            <h4>London | Triple Distinction (144 UCAS Points)</h4>
             <p>
-              Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+              A-Level or equivalent in Level 3 Extended Diploma in Information Technology
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentStyle={{ background: "#5ca5c6" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
             date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/St_Pauls.png" alt="placeholder" className="img"/></div>}
           >
-            <h3>Art Director</h3>
-            <h4>San Francisco, CA</h4>
+            <h3>St Pauls Way Trust School</h3>
+            <h4>London | GCSE</h4>
             <p>
-              Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            contentStyle={{ background: "#5ca5c6" }}
-            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
-          >
-            <h3>Web Designer</h3>
-            <h4>Los Angeles, CA</h4>
-            <p>
-              User Experience, Visual Design
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            contentStyle={{ background: "#5ca5c6" }}
-            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
-          >
-            <h3>Web Designer</h3>
-            <h4>San Francisco, CA</h4>
-            <p>
-              User Experience, Visual Design
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            contentStyle={{ background: "#5ca5c6" }}
-            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
-          >
-            <h3>Content Marketing for Web, Mobile and Social Media</h3>
-            <h4>Online Course</h4>
-            <p>
-              Strategy, Social Media
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            contentStyle={{ background: "#5ca5c6" }}
-            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
-          >
-            <h3>Agile Development Scrum Master</h3>
-            <h4>Certification</h4>
-            <p>
-              Creative Direction, User Experience, Visual Design
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            contentStyle={{ background: "#5ca5c6" }}
-            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
-          >
-            <h3>Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-            <h4>Bachelor Degree</h4>
-            <p>
-              Creative Direction, Visual Design
+              10 GCSEs, including Digital Applications (ICT) (6)
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
@@ -120,7 +66,7 @@ const EducationTimeline = styled.div`
 }
 
 .img{
-  width: 80%;
+  width: 70%;
   object-fit: contain;
 }
 `;

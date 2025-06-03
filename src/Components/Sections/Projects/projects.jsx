@@ -47,7 +47,6 @@ const ProjectSection = styled.section`
   transition: 1s;
   padding: 20px;
   margin: 10px;
-  margin-left: 50px;
   margin-bottom: 10px;
   z-index: 0;
   

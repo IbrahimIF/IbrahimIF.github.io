@@ -54,7 +54,7 @@ function Navbar({counter, setCounter }) {
               <a className="nav-item" href="#Overview">Overview</a>
               <a className="nav-item rare" href="#Experience">Experience</a>
               <a className="nav-item" href="#Project">Projects</a>
-              {counter > 5 && <a className="nav-item rare" href="#Shows">Shows</a>}
+              {counter > 8 && <a className="nav-item rare" href="#Shows">Shows</a>}
               <a className="nav-item" href="#Contact">Contact</a>
             </div>
           </div>

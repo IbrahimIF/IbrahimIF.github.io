@@ -19,7 +19,7 @@ function MainLayout() {
 
   return (
     <Fadein id="fade-in" className="fadein">
-      <FixedElementsWrapper>
+      <FixedElementsWrapper id="FixedElementWrapper">
         <Navbar counter={counter} setCounter={setCounter}/>
         <Socials />
       </FixedElementsWrapper>

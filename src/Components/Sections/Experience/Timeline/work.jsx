@@ -7,94 +7,133 @@ function Work() {
     <WorkTimeline id="Work">
         <VerticalTimeline>
           <VerticalTimelineElement
-            contentStyle={{ background: "#1d1836" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
             date="2011 - present"
             iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
             icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
           >
-            <h3>Creative Director</h3>
-            <h4>Miami, FL</h4>
+            <h3>Uknown</h3>
+            <h4>London</h4>
             <p>
-              Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+              N/A
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentStyle={{ background: "#1d1836" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
             date="2011 - present"
             iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
             icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
           >
-            <h3>Art Director</h3>
-            <h4>San Francisco, CA</h4>
+            <h3>Uknown</h3>
+            <h4>London</h4>
             <p>
-              Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+              N/A
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentStyle={{ background: "#1d1836" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
             date="2011 - present"
             iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
             icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
           >
-            <h3>Web Designer</h3>
-            <h4>Los Angeles, CA</h4>
+            <h3>Uknown</h3>
+            <h4>London</h4>
             <p>
-              User Experience, Visual Design
+              N/A
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentStyle={{ background: "#1d1836" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="Oct 2022 -  Present"
+            iconStyle={{ background: '#faaf49', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/orange_trust.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Web Designer</h3>
-            <h4>San Francisco, CA</h4>
+            <h3>The Orange Trust</h3>
+            <h4>London | Volunteering</h4>
             <p>
-              User Experience, Visual Design
+              Volunteering Web Developer, Volunteer Software Developer
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentStyle={{ background: "#1d1836" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="Jan 2025 - Present"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/innovation_pod.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Content Marketing for Web, Mobile and Social Media</h3>
-            <h4>Online Course</h4>
+            <h3>Innovation Pod</h3>
+            <h4>London | Part-time</h4>
             <p>
-              Strategy, Social Media
+              Coding Teacher, Assistant Coding Teacher
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentStyle={{ background: "#1d1836" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="Nov 2024 - Feburary 2025"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/el_waterworks.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Agile Development Scrum Master</h3>
-            <h4>Certification</h4>
+            <h3>East London Waterworks Park</h3>
+            <h4>Online | Volunteering</h4>
             <p>
-              Creative Direction, User Experience, Visual Design
+              PHP, Web Applications, Volunteering Web Developer
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            contentStyle={{ background: "#1d1836" }}
+            contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="Jun 2024 - Jun 2024"
+            iconStyle={{ background: '#3d3c3a', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/bright_network.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-            <h4>Bachelor Degree</h4>
+            <h3>Bright Network</h3>
+            <h4>Online | Internship</h4>
             <p>
-              Creative Direction, Visual Design
+              IEUK 2024 Technology Internship, Couch to Coder | Software Developer Course
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            contentStyle={{ background: "#010017" }}
+            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
+            date="Nov 2023 - May 2024"
+            iconStyle={{ background: '#344f73', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/union_brunel.jpg" alt="placeholder" className="img"/></div>}
+          >
+            <h3>Union Of Brunel Students</h3>
+            <h4>London | Society</h4>
+            <p>
+              Orange Trust World Issues Soceity, Technical Secretary
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            contentStyle={{ background: "#010017" }}
+            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
+            date="Jun 2023 - Apr 2024"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/eep.jpg" alt="placeholder" className="img"/></div>}
+          >
+            <h3>EEP</h3>
+            <h4>London | Part-Time</h4>
+            <p>
+              Customer Service, Communication, Security, Steward
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            contentStyle={{ background: "#010017" }}
+            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
+            date="Nov 2020 - Feb 2021"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/ncc.jpg" alt="placeholder" className="img"/></div>}
+          >
+            <h3>New City Collegek</h3>
+            <h4>London | Volunteering</h4>
+            <p>
+              IT Help Desk, Customer Service
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
@@ -120,7 +159,7 @@ const WorkTimeline = styled.div`
 }
 
 .img{
-  width: 80%;
+  width: 70%;
   object-fit: contain;
 }
 `;

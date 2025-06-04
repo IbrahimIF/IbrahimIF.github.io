@@ -21,7 +21,7 @@ function Home() {
       </Title> 
       <Button id="Button">
         <button className="button3D">Download CV <FontAwesomeIcon icon={faDownload} className="icon" /></button>
-        <button className="button3D"> <FontAwesomeIcon icon={faGithub} className="icon" />  Repository </button>
+        <a href="https://github.com/IbrahimIF/IbrahimIF.github.io" className="button3D"> <FontAwesomeIcon icon={faGithub} className="icon" />  Repository </a>
       </Button>
     </div>
     </div>
@@ -206,32 +206,34 @@ const Button = styled.div`
 
 
 .button3D {
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background-color: transparent;
-  color:rgb(255, 255, 255);
   padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
-  border: 2px solid rgb(255, 255, 255);
-  border-bottom: 4px solid rgb(255, 255, 255);
-  font-size: 0.75rem;
-  font-weight: 600;
+  border-radius: 6px;
+
+
+  background-color: transparent;
+  color:rgb(212, 212, 212);
+  background-color:rgb(19, 19, 52);
+
+
+
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+  transition: box-shadow .15s,transform .15s;
 }
 
 .button3D:hover {
-  brightness: 110%;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,rgb(62, 62, 62) 0 -3px 0 inset;
   transform: translateY(-1px);
-  border-bottom: 6px solid rgb(255, 255, 255);
-  background-color: grey;
-  color: rgb(255, 255, 255);
 }
 
 .button3D:active {
-  border-bottom: 1px solid rgb(255, 255, 255);
-  brightness: 90%;
+  box-shadow:rgb(45, 45, 45) 0 3px 7px inset;
   transform: translateY(2px);
-  animation-duration: 5s;
 }
+
 
 
   @media (max-width: 480px) {

@@ -4,11 +4,7 @@ import Work from './Timeline/work';
 import Education from './Timeline/education';
 
 function Experience() {
-  const [toggleValue, setToggleValue] = useState(0);
-
-  const handleToggle = () => {
-    setToggleValue(prev => prev === 0 ? 1 : 0);
-  };
+  const [activeTab, setActiveTab] = useState('work');
 
   return (
     <ExperienceSection id="Experience">
@@ -16,17 +12,17 @@ function Experience() {
         <ToggleSection>
           <div className="radio-inputs">
             <label className="radio">
-              <input type="radio" name="radio" checked={toggleValue === 0} onChange={handleToggle}/>
+              <input type="radio" name="radio" checked={activeTab === 'work'} onChange={() => setActiveTab('work')}/>
               <span className="name">Work Experiance</span>
             </label> 
             <label className="radio">
-              <input type="radio" name="radio" checked={toggleValue === 1} onChange={handleToggle}/>
+              <input type="radio" name="radio" checked={activeTab === 'education'} onChange={() => setActiveTab('education')}/>
               <span className="name">Education</span>
             </label>  
           </div>
         </ToggleSection>
-        {toggleValue == 1 && <Education/>}
-        {toggleValue == 0 && <Work/>}
+        {activeTab == 'work' && <Education/>}
+        {activeTab == 'education' && <Work/>}
       </div>
     </ExperienceSection>
   )
@@ -88,12 +84,13 @@ const ToggleSection = styled.div`
   display: flex;
   flex-wrap: wrap;
   border-radius: 0.5rem;
-  background-color: #EEE;
   box-sizing: border-box;
   box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
   padding: 0.25rem;
   width: 300px;
   font-size: 14px;
+  color: #fff;
+  background-color:rgba(172, 167, 217, 0.8);
 }
 
 .radio-inputs .radio {
@@ -113,13 +110,13 @@ const ToggleSection = styled.div`
   border-radius: 0.5rem;
   border: none;
   padding: .5rem 0;
-  color: rgba(51, 65, 85, 1);
+  color: rgb(0, 0, 0);
   transition: all .15s ease-in-out;
 }
 
 .radio-inputs .radio input:checked + .name {
-  background-color: #fff;
+  color: #fff;
   font-weight: 600;
+  background-color: #010017;
 }
-
 `;

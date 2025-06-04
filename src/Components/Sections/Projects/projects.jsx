@@ -1,9 +1,28 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 
 function Project() {
+  const [activeTab, setActiveTab] = useState('completed');
+  
   return (
     <ProjectSection id="Project">
       <div className="box">
+      <ToggleSection>
+          <div className="radio-inputs">
+            <label className="radio">
+              <input type="radio" name="projectRadio" checked={activeTab === 'completed'} onChange={() => setActiveTab('completed')}/>
+              <span className="name">Completed</span>
+            </label> 
+            <label className="radio">
+              <input type="radio" name="projectRadio" checked={activeTab === 'inProgress'} onChange={() => setActiveTab('inProgress')}/>
+              <span className="name">in-progress</span>
+            </label>
+            <label className="radio">
+              <input type="radio" name="projectRadio" checked={activeTab === 'hidden'} onChange={() => setActiveTab('hidden')}/>
+              <span className="name">Hidden</span>
+            </label>    
+          </div>
+        </ToggleSection>
         <div className="textContainer">
           <br /> <br />
           <div className="title">
@@ -203,3 +222,51 @@ const ProjectSection = styled.section`
 }
 `;
 
+
+const ToggleSection = styled.div`
+  display: 'flex';
+  position: relative;
+  width: 100%;
+
+
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+  color: #fff;
+  background-color:rgba(172, 167, 217, 0.8);
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: rgb(0, 0, 0);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  color: #fff;
+  font-weight: 600;
+  background-color: #010017;
+}
+`;

@@ -111,8 +111,12 @@ const OverviewSection = styled.section`
   .row-span-4 {
     grid-row: span 4;
   }
+  .row-span-5{
+  height: 70vh;
+  }
 
   .xl-col-span-2 {
+    height: 10px;
     @media (min-width: 1280px) {
       grid-column: span 2;
     }

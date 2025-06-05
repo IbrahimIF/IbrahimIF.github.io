@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Canvas } from '@react-three/fiber';
 import TechBall from './3D Components/TechScene'
+import PostCarousel from './Linkedin Carousel/carousel.jsx'
 
 function Overview() {
 
@@ -32,13 +32,13 @@ function Overview() {
 
         <div className="row row-span-5">
           <div className="grid-container">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307746793004421121" height="100%" width="100%" title="Embedded post"></iframe>
+           <PostCarousel/>
           </div>
         </div>
 
         <div className="row xl-col-span-2">
           <div className="grid-container">
-         
+
           <img
               src="https://raw.githubusercontent.com/ibrahimif/github-snake/output/github-snake-dark.svg"
               alt="GitHub Contribution Snake"
@@ -88,89 +88,36 @@ const OverviewSection = styled.section`
     width: 100%;
   }
 
-  @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-
   .row {
     grid-column: span 1;
   }
 
-  .row-span-2 {
-    grid-row: span 2;
-  }
-
-  .row-span-4 {
-    grid-row: span 4;
-  }
-  .row-span-5{
-  height: 70vh;
-  }
-
-  .xl-col-span-2 {
-    height: 10px;
-    @media (min-width: 1280px) {
-      grid-column: span 2;
-    }
+  .row-span-5 {
+    height: 85vh;
   }
 
   .grid-container {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     gap: 1rem;
     height: 100%;
     padding: 1.5rem;
     background-color: rgba(3, 1, 14, 0.2);
     box-shadow: 
-  rgba(0, 24, 72, 0.2) 0px 54px 55px,  
-  rgba(40, 60, 110, 0.1) 0px -12px 30px,  
-  rgba(40, 60, 120, 0.1) 0px 4px 6px,  
-  rgba(24, 33, 53, 0.15) 0px 12px 13px,  
-  rgba(255, 255, 255, 0.08) 0px -3px 5px;
+      rgba(0, 24, 72, 0.2) 0px 54px 55px,  
+      rgba(40, 60, 110, 0.1) 0px -12px 30px,  
+      rgba(40, 60, 120, 0.1) 0px 4px 6px,  
+      rgba(24, 33, 53, 0.15) 0px 12px 13px,  
+      rgba(255, 255, 255, 0.08) 0px -3px 5px;
     border-radius: 1.5rem;
+    overflow: hidden;
   }
 
   .grid-image {
     width: 100%;
     height: 276px;
     object-fit: contain;
-
-    @media (max-width: 640px) {
-      height: fit-content;
-    }
-  }
-
-  .grid-image-small {
-    width: 100%;
-    height: 126px;
-    object-fit: cover;
-    object-position: top;
-
-    @media (max-width: 640px) {
-      height: fit-content;
-    }
-  }
-
-  .globe-container {
-    border-radius: 1.5rem;
-    width: 100%;
-    height: 326px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media (max-width: 640px) {
-      height: fit-content;
-    }
   }
 
   .grid-headtext {
@@ -186,72 +133,33 @@ const OverviewSection = styled.section`
     line-height: 1.5;
   }
 
-  .contact-button {
-    width: 100%;
-    margin-top: 2.5rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(90deg, #13ADC7 0%, #945DD6 100%);
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-
-  .copy-container {
+  .Circle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-  }
-
-
-  .Circle{
-    display:flex;
-    align-items:center;
     height: 260px;
     width: 260px;
     border: 4px solid rgb(134, 134, 134);
     border-radius: 50%;
-
   }
 
-  .email-text {
-    font-size: 1.5rem;
-    font-weight: 500;
-    background: linear-gradient(90deg, #13ADC7 0%, #945DD6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-
-    @media (max-width: 1024px) {
-      font-size: 1.25rem;
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+  }
 
-    @media (max-width: 768px) {
-      font-size: 1rem;
+  @media (min-width: 1280px) {
+    .grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .xl-col-span-2 {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .grid-image {
+      height: fit-content;
     }
   }
 `;

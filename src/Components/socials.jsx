@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faDiscord, faSteam, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-function Social() {
+function Social({counter}) {
     return (
       <>
         <Socials id="Socials">
@@ -23,7 +23,7 @@ function Social() {
                 </a>
               </div>
             </div>
-
+            { counter > 12 &&
             <div className="social_icons" id="steam">
               <div className="icon_wrapper">
                 <a href="https://steamcommunity.com/profiles/76561199003620198/" aria-label="Steam" className="icon_link steam">
@@ -32,7 +32,7 @@ function Social() {
                 </a>
               </div>
             </div>
-
+            }
             <div className="social_icons" id="linkedin">
               <div className="icon_wrapper">
                 <a href="https://www.linkedin.com/in/ibrahim-farrah-b742471a6/" aria-label="Linkedin" className="icon_link linkedin">

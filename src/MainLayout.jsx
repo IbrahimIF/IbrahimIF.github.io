@@ -21,7 +21,7 @@ function MainLayout() {
     <Fadein id="fade-in" className="fadein">
       <FixedElementsWrapper id="FixedElementWrapper">
         <Navbar counter={counter} setCounter={setCounter}/>
-        <Socials />
+        <Socials counter={counter} setCounter={setCounter} />
       </FixedElementsWrapper>
 
       <Background id="Background">
@@ -32,7 +32,7 @@ function MainLayout() {
         <Projects/>
         {counter > 8 && <Shows/>}
         <Contact/>
-        <Footer/>
+        <Footer counter={counter} setCounter={setCounter}/>
       </Background>
     </Fadein>
   )

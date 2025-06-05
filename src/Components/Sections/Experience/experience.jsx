@@ -21,8 +21,8 @@ function Experience() {
             </label>  
           </div>
         </ToggleSection>
-        {activeTab == 'work' && <Education/>}
-        {activeTab == 'education' && <Work/>}
+        {activeTab == 'work' && <Work/>}
+        {activeTab == 'education' && <Education/>}
       </div>
     </ExperienceSection>
   )

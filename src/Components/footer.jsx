@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faDiscord, faSteam, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-function Foot() {
+function Foot({counter}) {
 
   return (
       <Footer id="Footer">
@@ -41,7 +41,7 @@ function Foot() {
                   </a>
                 </div>
               </div>
-  
+            { counter > 12 &&
               <div className="social_icons" id="steam">
                 <div className="icon_wrapper">
                   <a href="https://steamcommunity.com/profiles/76561199003620198/" aria-label="Steam" className="icon_link steam">
@@ -50,6 +50,7 @@ function Foot() {
                   </a>
                 </div>
               </div>
+            }
   
               <div className="social_icons" id="linkedin">
                 <div className="icon_wrapper">
@@ -80,7 +81,6 @@ const Footer = styled.footer`
   z-index: 1;
   height: 35vh;
   padding: 50px;
-  padding: var(--section-padding);
   margin-top: calc(-1 * var(--section-gap));
 
   .top_container{

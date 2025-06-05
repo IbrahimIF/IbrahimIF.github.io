@@ -285,25 +285,35 @@ const TextArea = styled.textarea`
 `;
 
 const SubmitButton = styled.button`
-  background: linear-gradient(90deg, #13ADC7 0%, #945DD6 100%);
-  color: white;
+  display:flex;
+  color:rgb(212, 212, 212);
+  background-color:rgb(19, 19, 52);
   padding: 1rem 2rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: transform 0.3s ease;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  transition: box-shadow .15s,transform .15s;
 
-  &:hover {
-    transform: translateY(-2px);
-  }
+&:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,rgb(62, 62, 62) 0 -3px 0 inset;
+  transform: translateY(-1px);
+}
+& :active {
+box-shadow:rgb(45, 45, 45) 0 3px 7px inset;
+transform: translateY(2px);
+}
 
-  &:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
+&:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
 `;
+
+

@@ -62,9 +62,12 @@ function Overview() {
           <div className="grid-container">
 
             <div>
-              <p className="grid-headtext">VERY NICE</p>
-              <p className="grid-subtext">
-                I like coding.
+              <p className="grid-headtext">Current courses I am pursuing</p>
+              <p className="image-container">
+              <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
+              <img src="/assets/Courses/trailhead.png" style={{width: '140px'}} alt="grid-1" className="course-image"/>
+              <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
+              <img src="/assets/Courses/aws_Cloud-Practitioner.png" alt="grid-1" className="course-image"/>
               </p>
             </div>
           </div>
@@ -132,10 +135,12 @@ const OverviewSection = styled.section`
   }
 
   .grid-headtext {
+    display:flex;
+    justify-content:center;
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .grid-subtext {
@@ -172,5 +177,15 @@ const OverviewSection = styled.section`
     .grid-image {
       height: fit-content;
     }
+  }
+
+
+  .image-container{
+  display: flex;
+  flex-direction: row;
+  }
+
+  .course-image{
+  width:100px;
   }
 `;

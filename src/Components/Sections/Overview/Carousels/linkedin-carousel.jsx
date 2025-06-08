@@ -4,17 +4,16 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from 'styled-components';
 
 
-
 function central() {
     return (
         <CarouselSection>
             <Carousel infiniteLoop showStatus={false} set showThumbs={false}>
               <div>
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307746793004421121" height="992" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307746793004421121" height="992" width="504" title="Embedded post"></iframe>
               </div>
 
               <div>
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7239314455870803970" height="929" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7239314455870803970" height="929" width="504" title="Embedded post"></iframe>
               </div>
 
             </Carousel>

@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import TechBall from './3D Components/TechScene'
-import PostCarousel from './Linkedin Carousel/carousel.jsx'
+import PostCarousel from './Carousels/linkedin-carousel'
+import EventCarousel from './Carousels/events-carousel'
 
 function Overview() {
 
   return (
     <OverviewSection id="Overview">
       <div className="grid">
-        <div className="row">
+        <div className="top-row">
           <div className="grid-container">
             <div className="Circle">
-              <img src="/assets/Profile portfolio.png" alt="grid-1" className="grid-image"/>
+              <img src="/assets/Profile portfolio.png" alt="grid-1" className="grid-pfp"/>
             </div>
             <div>
               <p className="grid-headtext">Hi, I'm Ibrahim</p>
@@ -32,7 +33,7 @@ function Overview() {
           </div>
         </div>
 
-        <div className="row">
+        <div className="top-row">
           <div className="grid-container">
           <p className="grid-headtext">Tech Stack</p>
                 <TechBall/>
@@ -41,15 +42,14 @@ function Overview() {
           </div>
         </div>
 
-        <div className="row row-span-5">
+        <div className="top-row">
           <div className="grid-container">
-           <PostCarousel/>
+            <PostCarousel/>
           </div>
         </div>
 
-        <div className="row xl-col-span-2">
+        <div className="mid-col-xl">
           <div className="grid-container">
-
           <img
               src="https://raw.githubusercontent.com/ibrahimif/github-snake/output/github-snake-dark.svg"
               alt="GitHub Contribution Snake"
@@ -58,20 +58,28 @@ function Overview() {
           </div>
         </div>
 
-        <div className="row row-span-1">
+        <div className="mid-row">
           <div className="grid-container">
-
             <div>
               <p className="grid-headtext">Current courses I am pursuing</p>
               <p className="image-container">
               <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
-              <img src="/assets/Courses/trailhead.png" style={{width: '140px'}} alt="grid-1" className="course-image"/>
+              <img src="/assets/Courses/trailhead.png" style={{width: '130%'}} alt="grid-1" className="course-image"/>
               <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
               <img src="/assets/Courses/aws_Cloud-Practitioner.png" alt="grid-1" className="course-image"/>
               </p>
             </div>
           </div>
         </div>
+
+        
+        <div className="bottom-col-xl">
+          <div className="grid-container">
+            <p className="grid-headtext">Events</p>
+            <EventCarousel/>
+          </div>
+        </div>
+
       </div>
     </OverviewSection>
   );
@@ -102,18 +110,11 @@ const OverviewSection = styled.section`
     width: 100%;
   }
 
-  .row {
-    grid-column: span 1;
-  }
-
-  .row-span-5 {
-    height: 100%;
-  }
-
   .grid-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     height: 100%;
     padding: 1.5rem;
@@ -128,7 +129,46 @@ const OverviewSection = styled.section`
     overflow: hidden;
   }
 
-  .grid-image {
+
+
+  .top-row{
+    height: auto;
+  }
+
+
+  @media (min-width: 540px) {
+    .grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .mid-col-xl {
+      grid-column: span 2;
+    }
+    .bottom-col-xl{
+      grid-column: span 3;
+    }
+  }
+
+
+  @media (max-width: 640px) {
+    .grid-image {
+      height: fit-content;
+    }
+  }
+  
+
+  .grid-pfp {
     width: 100%;
     height: 276px;
     object-fit: contain;
@@ -158,27 +198,6 @@ const OverviewSection = styled.section`
     border-radius: 50%;
   }
 
-  @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .xl-col-span-2 {
-      grid-column: span 2;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .grid-image {
-      height: fit-content;
-    }
-  }
-
 
   .image-container{
   display: flex;
@@ -186,6 +205,6 @@ const OverviewSection = styled.section`
   }
 
   .course-image{
-  width:100px;
+  width:100%;
   }
 `;

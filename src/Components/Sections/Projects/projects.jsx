@@ -1,35 +1,34 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import Completed from './Cards/completed';
+import InProgress from './Cards/progress';
+import Hidden from './Cards/hidden';
 
 function Project() {
   const [activeTab, setActiveTab] = useState('completed');
-  
+
   return (
     <ProjectSection id="Project">
       <div className="box">
-      <ToggleSection>
-          <div className="radio-inputs">
-            <label className="radio">
-              <input type="radio" name="projectRadio" checked={activeTab === 'completed'} onChange={() => setActiveTab('completed')}/>
-              <span className="name">Completed</span>
-            </label> 
-            <label className="radio">
-              <input type="radio" name="projectRadio" checked={activeTab === 'inProgress'} onChange={() => setActiveTab('inProgress')}/>
-              <span className="name">in-progress</span>
-            </label>
-            <label className="radio">
-              <input type="radio" name="projectRadio" checked={activeTab === 'hidden'} onChange={() => setActiveTab('hidden')}/>
-              <span className="name">Hidden</span>
-            </label>    
-          </div>
-        </ToggleSection>
-        <div className="textContainer">
-          <br /> <br />
-          <div className="title">
-            <span className="block-title"></span>
-            <h1 className="firstText">Projects</h1>
-          </div>
-        </div>
+        <ToggleSection>
+            <div className="radio-inputs">
+              <label className="radio">
+                <input type="radio" name="projectRadio" checked={activeTab === 'completed'} onChange={() => setActiveTab('completed')}/>
+                <span className="name">Completed</span>
+              </label> 
+              <label className="radio">
+                <input type="radio" name="projectRadio" checked={activeTab === 'inProgress'} onChange={() => setActiveTab('inProgress')}/>
+                <span className="name">in-progress</span>
+              </label>
+              <label className="radio">
+                <input type="radio" name="projectRadio" checked={activeTab === 'hidden'} onChange={() => setActiveTab('hidden')}/>
+                <span className="name">Hidden</span>
+              </label>    
+            </div>
+          </ToggleSection>
+          {activeTab == 'completed' && <Completed/>}
+          {activeTab == 'inProgress' && <InProgress/>}
+          {activeTab == 'hidden' && <Hidden/>}
       </div>
     </ProjectSection>
   )

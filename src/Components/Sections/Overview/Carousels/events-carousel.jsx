@@ -122,7 +122,7 @@ function EventCarousel () {
         <div className="Track">
         {logos.map((logos, index) => (
         <div key={index} className="Logos">
-          <img src={logos.imgUrl} alt={logos.name} style={{ height: '50px' }} />
+          <img src={logos.imgUrl} alt={logos.name} style={{ height: '70px' }} />
         </div>
       ))}
         </div>

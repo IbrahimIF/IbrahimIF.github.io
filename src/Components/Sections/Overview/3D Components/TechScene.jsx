@@ -104,14 +104,14 @@ const techData = [
     position: [-2, -4.8, -5]
   },
   {
-    name: 'express',
-    imgUrl: '/assets/Tech/Express.png',
-    position: [2, -4.8, -5]
-  },
-  {
     name: 'vite.js',
     imgUrl: '/assets/Tech/Vitejs.png',
     position: [0, -4.8, -5]
+  },
+  {
+    name: 'express',
+    imgUrl: '/assets/Tech/expres.png',
+    position: [2, -4.8, -5]
   }
 ]
 

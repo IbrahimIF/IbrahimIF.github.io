@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faDiscord, faSteam, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faDiscord, faSteam, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function Social({counter}) {
     return (
@@ -63,7 +63,7 @@ const Socials = styled.div`
     background-color: black;
     padding:10px;
     border-radius: 0px 30px 30px 0px;
-    border: 3px solid rgb(25, 25, 25);
+    border: 3px solid rgb(105, 105, 105);
 }
 .social_icons {
     display: flex;

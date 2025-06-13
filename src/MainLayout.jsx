@@ -29,7 +29,7 @@ function MainLayout() {
         <Home />
         <Overview/>
         <Experience/>
-        <Projects/>
+        <Projects counter={counter} setCounter={setCounter}/>
         {counter > 8 && <Shows/>}
         <Contact/>
         <Footer counter={counter} setCounter={setCounter}/>

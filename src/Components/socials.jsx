@@ -82,8 +82,8 @@ const Socials = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 38px;
-    height: 38px;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 50%;
     color: #4d4d4d;
     background-color: #fff;

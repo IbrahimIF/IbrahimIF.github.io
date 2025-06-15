@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import React, { useEffect, useState } from 'react';
-import SubmitMessage from '../SubmissionScreen/SubmitMessage';
+import SubmitMessage from '../Messages/SubmissionScreen/SubmitMessage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 import naughtyWords from 'naughty-words';
 import Globe from 'react-globe.gl';
-
 
 function Contact() {
   const [fadeIn, setFadeIn] = useState(false);

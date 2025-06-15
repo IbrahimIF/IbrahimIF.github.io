@@ -4,6 +4,7 @@ import Completed from './Cards/completed';
 import InProgress from './Cards/progress';
 import Hidden from './Cards/hidden';
 
+
 function Project({counter }) {
   const [activeTab, setActiveTab] = useState('completed');
 

@@ -10,9 +10,9 @@ function SubmitMessage() {
 
   return (
     <SubmitMessageSection>
-      <div className={`fade-in ${fadeIn ? 'active' : ''} thankyou-overlay`}>
-      <div className="thankyou-container">
-        <span className='thankyou-message'>Thank you for your submission</span>
+      <div className={`fade-in ${fadeIn ? 'active' : ''} overlay`}>
+      <div className="container">
+        <span className='message'>Thank you for your submission</span>
       </div>
     </div>
     </SubmitMessageSection>
@@ -23,13 +23,13 @@ export default SubmitMessage;
 
 
 
-const SubmitMessageSection = styled.section`
+const SubmitMessageSection = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 35px;
 
-.thankyou-overlay {
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,19 +45,19 @@ const SubmitMessageSection = styled.section`
     transition: opacity 0.5s ease-in-out;
   }
   
-  .thankyou-overlay.active {
+  .overlay.active {
     opacity: 1;
     pointer-events: auto;
   }
   
-  .thankyou-container {
+  .container {
     background: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
   }
   
-  .thankyou-message {
+  .message {
     font-size: 1.5em;
     color: #333;
   }

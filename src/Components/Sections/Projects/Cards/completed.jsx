@@ -1,54 +1,68 @@
+import React, { useState } from 'react'; // Import useState
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import QuestionMessage from '../../Messages/QuestionScreen/QuestionMessage';
 
 function Completed() {
+  const [showQuestionMessage, setShowQuestionMessage] = useState(false);
+
   const projects = [
-    { 
-      id: 1, 
-      title: "Project 1", 
-      description: "Description of project 1 with details about what it does and technologies used.", 
+    {
+      id: 1,
+      banner: './assets/Projects/IbrahimIF-Banner.png',
+      title: "IbrahimIF.dev",
+      description: "The current website you on is this one",
       technologies: ["React", "Node.js", "MongoDB"],
-      demoLink: "#",
+      demoLink: "__question__",
       githubLink: "#"
     },
-    { 
-      id: 2, 
-      title: "Project 2", 
-      description: "Description of project 2 with details about what it does and technologies used.", 
+    {
+      id: 2,
+      title: "Project 2",
+      description: "Description of project 2 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
       demoLink: "#",
       githubLink: "#"
     },
-    { 
-      id: 3, 
-      title: "Project 3", 
-      description: "Description of project 3 with details about what it does and technologies used.", 
+    {
+      id: 3,
+      title: "Project 3",
+      description: "Description of project 3 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
       githubLink: "#"
     },
-    { 
-      id: 4, 
-      title: "Project 4", 
-      description: "Description of project 4 with details about what it does and technologies used.", 
+    {
+      id: 4,
+      title: "Project 4",
+      description: "Description of project 4 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
       githubLink: "#"
     },
-    { 
-      id: 5, 
-      title: "Project 5", 
-      description: "Description of project 5 with details about what it does and technologies used.", 
+    {
+      id: 5,
+      title: "Project 5",
+      description: "Description of project 5 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
       githubLink: "#"
     },
-    { 
-      id: 6, 
-      title: "Project 6", 
-      description: "Description of project 6 with details about what it does and technologies used.", 
+    {
+      id: 6,
+      title: "Project 6",
+      description: "Description of project 6 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
       githubLink: "#"
     },
   ];
+
+  const handleDemoClick = (demoLinkValue) => {
+    if (demoLinkValue === "__question__") {
+      setShowQuestionMessage(true);
+      setTimeout(() => {
+        setShowQuestionMessage(false);
+      }, 4000);
+    }
+  };
 
   return (
     <CompletedSection id="completed">
@@ -56,10 +70,10 @@ function Completed() {
         {projects.map((project) => (
           <ProjectCard key={project.id}>
             <div className="project-card">
-              <div className="image-placeholder">
-                {project.title}
+              <div className="banner-container">
+                <img src={project.banner} alt="" className="banner" />
               </div>
-              
+
               <div className="card-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
@@ -77,10 +91,17 @@ function Completed() {
 
                 <div className="action-buttons">
                   {project.demoLink && (
-                    <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                      Live Demo
-                    </a>
+                    project.demoLink === "__question__" ? (
+                      <StyledButton onClick={() => handleDemoClick(project.demoLink)}>
+                        Live Demo
+                      </StyledButton>
+                    ) : (
+                      <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                        Live Demo
+                      </a>
+                    )
                   )}
+
                   {project.githubLink && (
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon={faGithub} className="icon" /> &nbsp; <div> Github </div>
@@ -92,11 +113,13 @@ function Completed() {
           </ProjectCard>
         ))}
       </ProjectsGrid>
+      {showQuestionMessage && <QuestionMessage />}
     </CompletedSection>
   );
 }
 
 export default Completed;
+
 
 const CompletedSection = styled.section`
   display: flex;
@@ -117,7 +140,7 @@ const ProjectsGrid = styled.div`
   @media (max-width: 1234px) {
       grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (max-width: 928px) {
       grid-template-columns: 1fr;
   }
@@ -130,7 +153,7 @@ const ProjectCard = styled.div`
 
   &:hover {
     box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-  }  
+  }
 
 .project-card {
   width: 100%;
@@ -149,7 +172,7 @@ const ProjectCard = styled.div`
   border-radius: 12px;
 }
 
-.image-placeholder {
+.banner-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,6 +182,17 @@ const ProjectCard = styled.div`
   color: black;
   border: 2px solid rgb(90, 90, 90);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .card-content {
@@ -248,5 +282,25 @@ const ProjectCard = styled.div`
 .action-buttons a:last-child:hover {
   background: linear-gradient(to right, #1f2937, #111827);
 }
+`;
 
+const StyledButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+
+  &:hover {
+    transform: translateY(-0.125rem);
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+  }
 `;

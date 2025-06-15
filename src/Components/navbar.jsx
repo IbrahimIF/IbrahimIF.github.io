@@ -2,23 +2,13 @@
 import { faHouse, faInfoCircle, faBriefcase, faEnvelope, faTableColumns, faGear } from '@fortawesome/free-solid-svg-icons' */
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import confetti from "canvas-confetti";
 
 
 function Navbar({counter, setCounter }) {
   const navigate = useNavigate();
 
-
   const handleCheckClick = () => {
     setCounter(prevCounter => prevCounter + 1);
-
-    if (counter % 4 == 0 ){
-      confetti({
-        particleCount: 20,
-        spread: 25,
-        origin: {x: 0.235,  y: 0.989},
-      });
-    }
 
     if (counter == 15 ){
       navigate("/Random");
@@ -40,7 +30,10 @@ function Navbar({counter, setCounter }) {
           </label>
           
           <div className="navbar-content">
-          <Tooltip $text={`Click count: ${counter}`}>
+          <Tooltip $text={ (counter >= 0 && counter < 6)
+                  ? (counter % 2 === 0 ? "Dark Mode" : "Light Mode")
+                  : `Click count: ${counter}`
+              } >
               <div className="navbar-circle">
                 <label className="checkBox">
                   <input id="ch1" type="checkbox" onClick={handleCheckClick}/>
@@ -272,8 +265,6 @@ const Navigation = styled.nav`
   background-color: rgb(194, 194, 194);
   transition: 0.3s;
 }
-
-
 
 `;
 

@@ -10,15 +10,16 @@ function Completed() {
   const projects = [
     {
       id: 1,
-      banner: './assets/Projects/IbrahimIF-Banner.png',
+      banner: './assets/Projects/Banner-IIF',
       title: "IbrahimIF.dev",
-      description: "The current website you on is this one",
-      technologies: ["React", "Node.js", "MongoDB"],
+      description: "The current website you on now",
+      technologies: ["React", "Node.js", ""],
       demoLink: "__question__",
       githubLink: "#"
     },
     {
       id: 2,
+      banner: './assets/Projects/Banner-RB.png',
       title: "Project 2",
       description: "Description of project 2 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
@@ -27,6 +28,7 @@ function Completed() {
     },
     {
       id: 3,
+      banner: './assets/Projects/Banner-RB.png',
       title: "Project 3",
       description: "Description of project 3 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
@@ -34,6 +36,7 @@ function Completed() {
     },
     {
       id: 4,
+      banner: './assets/Projects/Banner-RB.png',
       title: "Project 4",
       description: "Description of project 4 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
@@ -41,6 +44,7 @@ function Completed() {
     },
     {
       id: 5,
+      banner: './assets/Projects/Banner-RB.png',
       title: "Project 5",
       description: "Description of project 5 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],
@@ -48,6 +52,7 @@ function Completed() {
     },
     {
       id: 6,
+      banner: './assets/Projects/Banner-RB.png',
       title: "Project 6",
       description: "Description of project 6 with details about what it does and technologies used.",
       technologies: ["Python", "Django", "PostgreSQL"],

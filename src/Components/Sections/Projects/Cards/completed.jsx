@@ -10,10 +10,10 @@ function Completed() {
   const projects = [
     {
       id: 1,
-      banner: './assets/Projects/Banner-IIF',
+      banner: './assets/Projects/Banner-IIF.png',
       title: "IbrahimIF.dev",
       description: "The current website you on now",
-      technologies: ["React", "Node.js", ""],
+      technologies: ["React", "Node.js", "Javascript", "Three.js"],
       demoLink: "__question__",
       githubLink: "#"
     },
@@ -68,6 +68,8 @@ function Completed() {
       }, 4000);
     }
   };
+
+  
 
   return (
     <CompletedSection id="completed">

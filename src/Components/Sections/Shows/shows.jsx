@@ -11,6 +11,116 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 function Show() {
+
+
+  const showsData = [
+    {
+      id: 1,
+      name: 'Fullmetal-Alchemist',
+      imageBg: 'https://i.postimg.cc/rmfNxD1H/full-metal-alchemistbg.jpg',
+      logo: 'https://i.postimg.cc/L4ZVn8qx/fullmetal.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood?q=fullmeta&cat=anime',
+    },
+    {
+      id: 2,
+      name: 'One=Punch-Man',
+      imageBg: 'https://i.postimg.cc/76ZQF8Xp/onepunchmanbg.jpg',
+      logo: 'https://i.postimg.cc/8PpsxyVL/one-punch-man-logo.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/30276/One_Punch_Man?q=one%20punch&cat=anime',
+    },
+    {
+      id: 3,
+      name: 'Attack-On-Titan',
+      imageBg: 'https://i.postimg.cc/ncgg6KcF/attackontitanbg.png',
+      logo: 'https://i.postimg.cc/xTztNwnQ/Attack-On-Titan-Logo.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/16498/Shingeki_no_Kyojin?q=attack%20on%20tit&cat=anime',
+    },
+    {
+      id: 4,
+      name: 'Steins-Gate',
+      imageBg: 'https://i.postimg.cc/Pr5Y1fNG/stiensgateclocks.jpg',
+      logo: 'https://i.postimg.cc/8zD5LtZ7/Steins-Gate.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/9253/Steins_Gate?q=steins%20gate&cat=anime',
+    },
+    {
+      id: 5,
+      name: 'Kekkei-Sensen',
+      imageBg: 'https://i.postimg.cc/brNgGQ4W/bloodblockadebattlefront.png',
+      logo: 'https://i.postimg.cc/MpCwJYLW/kekkeisensen.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/24439/Kekkai_Sensen?q=blood%20blockade&cat=anime',
+    },
+    {
+      id: 6,
+      name: 'Dr-Stone',
+      imageBg: 'https://i.postimg.cc/pT01RWdD/dr-stonebg.jpg',
+      logo: 'https://i.postimg.cc/k4tf3xkd/Dr-Stone-Logo.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/38691/Dr_Stone?q=dr%20stone&cat=anime',
+    },
+    {
+      id: 7,
+      name: 'Jujutsu-Kisen',
+      imageBg: 'https://i.postimg.cc/J007zz5m/Jujutsu-Kisenbg.png',
+      logo: 'https://i.postimg.cc/jS513JdR/jujutsu-Kisen.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/40748/Jujutsu_Kaisen?q=jujutsu&cat=anime',
+    },
+    {
+      id: 8,
+      name: 'Nichijou',
+      imageBg: 'https://i.postimg.cc/R00nH4Rs/nichijoubg.png',
+      logo: 'https://i.postimg.cc/vBBDchGp/Nichijou-logo.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/10165/Nichijou?q=nichi&cat=anime',
+    },
+    {
+      id: 9,
+      name: 'Jojos-Bizzare-Adventure',
+      imageBg: 'https://i.postimg.cc/FRWpLT3c/Stardust-Crusadersbg.png',
+      logo: 'https://i.postimg.cc/Bv8n36N0/bizarre-adventure-jojo-bizarre-adventure-title-removebg-preview.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV?q=jojo&cat=anime',
+    },
+    {
+      id: 10,
+      name: 'One-Piece',
+      imageBg: 'https://i.postimg.cc/1zTcR8Qc/Onepiecebg.avif',
+      logo: 'https://i.postimg.cc/bvbdbrnR/one-piece.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/21/One_Piece',
+    },
+    {
+      id: 11,
+      name: 'Demon-Slayer',
+      imageBg: 'https://i.postimg.cc/pLkMSHHt/demon-slayer.png',
+      logo: 'https://i.postimg.cc/Rh8NKHgX/demon-slayertitle.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba?q=demon&cat=anim',
+    },
+    {
+      id: 12,
+      name: 'Tokyo-Ghoul',
+      imageBg: 'https://i.postimg.cc/QCLMM3Cy/tokyo-ghoulbg.jpg',
+      logo: 'https://i.postimg.cc/fRbMDL5b/tokyo-ghoul-logo.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/1535/Death_Note?q=deathnote&cat=anime"',
+    },
+    {
+      id: 13,
+      name: 'Deathnote',
+      imageBg: 'https://i.postimg.cc/g09t4twP/Death-Notebg.png',
+      logo: 'https://i.postimg.cc/Hkt34WCb/death-note-removebg-preview.png',
+      audio: 'https://vocaroo.com/embed/11Mc3Atbo8hI',
+      link: 'https://myanimelist.net/anime/22319/Tokyo_Ghoul?q=tok&cat=anime',
+    }
+  ];
+
+
   return (
     <ShowSection id="Shows">
       <div className="box">
@@ -39,9 +149,24 @@ function Show() {
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="swiper_container"
         >
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <SwiperSlide key={item}>
-              <SlideContent>SHOW {item}</SlideContent>
+          {showsData.map((show) => (
+            <SwiperSlide key={show.id} onClick={() => window.open(show.link, '_blank')}
+            onMouseEnter={() => {
+              <audio controls src={show.audio} />
+              const audio = new Audio(show.audio);
+              audio.play();
+              show._audio = audio; // store for later use
+            }}
+            onMouseLeave={() => {
+              if (show._audio) {
+                show._audio.pause();
+                show._audio.currentTime = 0;
+              }
+            }}
+            >
+              <SlideContent style={{ backgroundImage: `url(${show.imageBg})` }}>
+                <Logo src={show.logo} alt={`Logo for Show ${show.id}`} />
+              </SlideContent>
             </SwiperSlide>
           ))}
 
@@ -126,6 +251,14 @@ const SlideContent = styled.p`
   color: white;
   font-size: 2rem;
   text-align: center;
+  width: 100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
 `;
 
 const SliderController = styled.div`
@@ -177,4 +310,12 @@ const SliderController = styled.div`
       font-size: 1.5rem;
     }
   }
+`;
+
+
+
+const Logo = styled.img`
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
 `;

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Work from './Timeline/work';
 import Education from './Timeline/education';
 
-function Experience() {
+function Experience({ counter, setCounter }) {
   const [activeTab, setActiveTab] = useState('work');
 
   return (
@@ -21,7 +21,7 @@ function Experience() {
             </label>  
           </div>
         </ToggleSection>
-        {activeTab == 'work' && <Work/>}
+        {activeTab == 'work' && <Work counter={counter} setCounter={setCounter} />}
         {activeTab == 'education' && <Education/>}
       </div>
     </ExperienceSection>

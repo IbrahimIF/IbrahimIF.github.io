@@ -2,62 +2,59 @@ import styled from 'styled-components';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-function Work() {
+function Work({ counter }) {
   return (
     <WorkTimeline id="Work">
         <VerticalTimeline>
+
+
+
+        {counter > 10 && 
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="Coming Soon"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/Google.png" alt="placeholder" className="img"/></div>}
           >
-            <h3>Uknown</h3>
-            <h4>London</h4>
+            <h3>Google</h3>
+            <h4>London | Shadowing</h4>
             <p>
-              N/A
+              Shadowing, Software Engineer
             </p>
           </VerticalTimelineElement>
+          }
+          {counter > 10 && 
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="Coming Soon"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/vodafone.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Uknown</h3>
-            <h4>London</h4>
+            <h3>Vodafone</h3>
+            <h4>London | Shadowing</h4>
             <p>
-              N/A
+              Shadowing, Software Engineer
             </p>
           </VerticalTimelineElement>
+          }
+          {counter > 6 && 
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(62, 62, 62)', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/favicon.png" alt="placeholder" className="img"/></div>}
+            date="May 2025 - present"
+            iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/offdays.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Uknown</h3>
-            <h4>London</h4>
+            <h3>Off-Days</h3>
+            <h4>London | Internship</h4>
             <p>
-              N/A
+              Software Engineering, Front-End, Typscript
             </p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            contentStyle={{ background: "#010017" }}
-            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="Oct 2022 -  Present"
-            iconStyle={{ background: '#faaf49', color: '#fff' }}
-            icon={ <div className="img-container"><img src="/assets/Company/orange_trust.jpg" alt="placeholder" className="img"/></div>}
-          >
-            <h3>The Orange Trust</h3>
-            <h4>London | Volunteering</h4>
-            <p>
-              Volunteering Web Developer, Volunteer Software Developer
-            </p>
-          </VerticalTimelineElement>
+          }
+
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
@@ -69,6 +66,20 @@ function Work() {
             <h4>London | Part-time</h4>
             <p>
               Coding Teacher, Assistant Coding Teacher
+            </p>
+          </VerticalTimelineElement>
+          
+          <VerticalTimelineElement
+            contentStyle={{ background: "#010017" }}
+            contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
+            date="Oct 2022 -  Present"
+            iconStyle={{ background: '#faaf49', color: '#fff' }}
+            icon={ <div className="img-container"><img src="/assets/Company/orange_trust.jpg" alt="placeholder" className="img"/></div>}
+          >
+            <h3>The Orange Trust</h3>
+            <h4>London | Volunteering</h4>
+            <p>
+              Volunteering Web Developer, Volunteer Software Developer
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement

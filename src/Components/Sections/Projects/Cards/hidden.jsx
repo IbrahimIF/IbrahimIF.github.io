@@ -4,49 +4,77 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Hidden() {
   const projects = [
-    { 
-      id: 1, 
-      title: "Project 1", 
-      description: "Description of project 1 with details about what it does and technologies used.", 
-      technologies: ["React", "Node.js", "MongoDB"],
-      demoLink: "#",
+    {
+      id: 1,
+      banner: 'Project Harvester',
+      title: "Project Harvester",
+      description: "A Full-Stack web scraper application that searches for vercel websites, filtering using keywords from the name.",
+      technologies: ["React.ts + Vite", "Python", "AWS"],
+      githubLink: "#"
+    },
+    {
+      id: 2,
+      banner: 'Proximity Map',
+      title: "Proximity Map",
+      description: "An interactive map to find the distance from a user's location to multiple other points, helping to identify the closest one.",
+      technologies: ["React.ts + Vite", "Python", "AWS"],
+      githubLink: "#"
+    },
+    {
+      id: 3,
+      banner: 'Project Scribe',
+      title: "Project Scribe",
+      description: "Project Scribe",
+      technologies: ["Python", "Discord"],
+      githubLink: "#"
+    },
+    {
+      id: 4,
+      banner: 'MoonBaseAlpha',
+      title: "MoonBaseAlpha",
+      description: "A Full-Stack application that converts text to speech.",
+      technologies: ["React.ts + Vite", "Python", "AWS"],
       githubLink: "#"
     },
     { 
-      id: 2, 
-      title: "Project 2", 
-      description: "Description of project 2 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      demoLink: "#",
+      id: 5,
+      banner: 'Prompt.exe', 
+      title: "Prompt.exe", 
+      description: " A game made with C#, speak to a computer giving prompts, with hidden secrets and achievments.", 
+      technologies: ["C#"],
       githubLink: "#"
     },
     { 
-      id: 3, 
+      id: 6,
+      banner: 'VisionNumReader',  
       title: "Project 3", 
-      description: "Description of project 3 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
+      description: "A Python application that uses computer vision to detect and read numbered cards from a camera feed, then converts the recognized numbers to speech.", 
+      technologies: ["Python"],
       githubLink: "#"
     },
     { 
-      id: 4, 
-      title: "Project 4", 
-      description: "Description of project 4 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
+      id: 7,
+      banner: 'Dhikr Project',  
+      title: "Dhikr Project", 
+      description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
+      technologies: ["React.js + Vite", "Javascript", "CSS"],
       githubLink: "#"
     },
     { 
-      id: 5, 
-      title: "Project 5", 
-      description: "Description of project 5 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      id: 8,
+      banner: 'PS2-Bios-Menu-Sounds',  
+      title: "PS2-Bios-Menu-Sounds", 
+      description: "Based on the Garry'sMod mod that adds a PS2 Bios sounds to the menu and buttons, this will be for VScode as an extension ", 
+      technologies: ["Typescript", "Vscode-extension"],
+      githubLink: "https://github.com/IbrahimIF/PS2-Bios-Menu-Sounds"
     },
     { 
-      id: 6, 
-      title: "Project 6", 
-      description: "Description of project 6 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      id: 9, 
+      banner: 'Not A Site', 
+      title: "Note A Site", 
+      description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site, A usless Website that does nothing but waste your time. ", 
+      technologies: ["React.js + Vite", "Javascript", "CSS"],
+      githubLink: "https://github.com/IbrahimIF/Not-A-Site"
     },
   ];
 

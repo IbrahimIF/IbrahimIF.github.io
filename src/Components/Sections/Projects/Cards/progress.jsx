@@ -5,48 +5,56 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 function InProgress() {
   const projects = [
     { 
-      id: 1, 
-      title: "Project 1", 
-      description: "Description of project 1 with details about what it does and technologies used.", 
-      technologies: ["React", "Node.js", "MongoDB"],
-      demoLink: "#",
-      githubLink: "#"
+      id: 1,
+      banner: 'Terminal Games',  
+      title: "Terminal Games", 
+      description: "Repository showcasing python made games that can be played in the terminal of an IDE .", 
+      technologies: ["Python", "tkinter", "Curses"],
+      githubLink: "https://github.com/IbrahimIF/Terminal-Games"
     },
     { 
-      id: 2, 
-      title: "Project 2", 
-      description: "Description of project 2 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      demoLink: "#",
-      githubLink: "#"
+      id: 2,
+      banner: './assets/Projects/Banner-TCC.png',   
+      title: "Twitch-Chat-Clone", 
+      description: "A twitch chat clone with React, Typescript, tailwindCSS and Socket.io ", 
+      technologies: ["Typescript", "Tailwindcss", "Socket.io"],
+      demoLink: "https://twitch-chat-clone-chi.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/Twitch-Chat-Clone"
     },
     { 
-      id: 3, 
-      title: "Project 3", 
-      description: "Description of project 3 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      id: 3,
+      banner: './assets/Projects/Banner-SERN.png', 
+      bgcolor: "#26c3a5",
+      title: "Full-Stack Chat-App", 
+      description: "A simple Full-stack chat app to send and receive messages", 
+      technologies: ["React.js + Vite", "Node.js", "Socket.io"],
+      demoLink: "https://fs-chat-app.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/FS-Chat-App"
     },
     { 
-      id: 4, 
-      title: "Project 4", 
-      description: "Description of project 4 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      id: 4,
+      banner: './assets/Projects/Banner-P.png', 
+      title: "Pokedex", 
+      description: "A replica of the pokedex from the pokemon anime.", 
+      technologies: ["React + Vite", "Tailwind CSS", "PokeAPI"],
+      demoLink: "https://pokedex-bice-zeta.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/Pokedex"
     },
     { 
-      id: 5, 
-      title: "Project 5", 
-      description: "Description of project 5 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      id: 5,
+      banner: 'Thermal-print-py',  
+      title: "Thermal-print-py", 
+      description: "A Python application that prints ASCII-ART to your local printer. Either bluetooth or usb.", 
+      technologies: ["Python"],
+      githubLink: "https://github.com/IbrahimIF/thermal-print-py"
     },
     { 
-      id: 6, 
-      title: "Project 6", 
-      description: "Description of project 6 with details about what it does and technologies used.", 
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      id: 6,
+      banner: './assets/Projects/Banner-TS.png',
+      title: "ToolShed",
+      description: "A Full-Stack application that organises my large folder of tools and resources",
+      technologies: ["React.ts + Vite", "Firebase", "Typescript"],
+      githubLink: "https://github.com/IbrahimIF/ToolShed"
     },
   ];
 
@@ -56,8 +64,8 @@ return (
          {projects.map((project) => (
           <ProjectCard key={project.id}>
             <div className="project-card">
-              <div className="image-placeholder">
-                {project.title}
+              <div className="banner-container" style={{background: project.bgcolor }}>
+                <img src={project.banner} alt={project.banner} className="banner" />
               </div>
               
               <div className="card-content">
@@ -148,7 +156,7 @@ const ProjectCard = styled.div`
   border-radius: 12px;
 }
 
-.image-placeholder {
+.banner-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,6 +166,15 @@ const ProjectCard = styled.div`
   color: black;
   border: 2px solid rgb(90, 90, 90);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-content {

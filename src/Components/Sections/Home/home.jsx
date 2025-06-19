@@ -97,6 +97,7 @@ const HomeSection = styled.section`
     @media (max-width: 768px) {
       min-width:100%;
     }
+
 }
 
 `;
@@ -185,9 +186,6 @@ const Title = styled.div`
   font-family: Arial, sans-serif;
   color: #cfcfcf;
   font-size: 32px;
-  animation: mainFadeIn 2s forwards;
-  animation-delay: 1.6s;
-  opacity: 0;
   display: flex;
   align-items: baseline;
   position: relative;

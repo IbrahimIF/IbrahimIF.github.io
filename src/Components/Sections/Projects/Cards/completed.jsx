@@ -12,51 +12,146 @@ function Completed() {
       id: 1,
       banner: './assets/Projects/Banner-IIF.png',
       title: "IbrahimIF.dev",
+      bgcolor: "black",
       description: "The current website you on now",
-      technologies: ["React", "Node.js", "Javascript", "Three.js"],
+      technologies: ["React + Vite", "Node.js", "Three.js"],
       demoLink: "__question__",
-      githubLink: "#"
+      githubLink: "https://github.com/IbrahimIF/IbrahimIF.github.io"
     },
     {
       id: 2,
-      banner: './assets/Projects/Banner-RB.png',
-      title: "Project 2",
-      description: "Description of project 2 with details about what it does and technologies used.",
-      technologies: ["Python", "Django", "PostgreSQL"],
-      demoLink: "#",
-      githubLink: "#"
+      banner: './assets/Projects/Banner-F.png',
+      bgcolor: "black",
+      title: "Frictionless",
+      description: "Frictionless - 'Reduce the friction between you and the code.'",
+      technologies: ["React + Vite", "MongoDB", "Node.js"],
+      demoLink: "https://frictionless-beta.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/Frictionless"
     },
     {
       id: 3,
-      banner: './assets/Projects/Banner-RB.png',
-      title: "Project 3",
-      description: "Description of project 3 with details about what it does and technologies used.",
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      banner: './assets/Projects/Banner-PSA.png',
+      title: "Pinnacle Studio Architecture",
+      description: "A private client project",
+      technologies: ["React + Vite", "Javascript", "CSS"],
+      demoLink: "https://pinnaclestudioarchitecture.co.uk/",
+      githubLink: "https://github.com/IbrahimIF/Architecture-Site"
     },
     {
       id: 4,
-      banner: './assets/Projects/Banner-RB.png',
-      title: "Project 4",
-      description: "Description of project 4 with details about what it does and technologies used.",
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      banner: './assets/Projects/Banner-Z.png',
+      bgcolor: "#2e3631",
+      title: "Ziphon-LTD",
+      description: "A website that helps save energy for residents.",
+      technologies: ["React", "MySQL", "Node.js"],
+      githubLink: "https://github.com/IbrahimIF/Ziphon-LTD"
     },
     {
       id: 5,
-      banner: './assets/Projects/Banner-RB.png',
-      title: "Project 5",
-      description: "Description of project 5 with details about what it does and technologies used.",
-      technologies: ["Python", "Django", "PostgreSQL"],
-      githubLink: "#"
+      banner: './assets/Projects/Banner-FRV.png',
+      bgcolor: "#fff4f4",
+      title: "F.R.V",
+      description: "A simple Full-Stack, serverless application that sends, receives and displays data.",
+      technologies: ["React + Vite", "FireBase", "Javascript"],
+      demoLink: "https://fern-delta.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/FRV"
     },
     {
       id: 6,
+      banner: './assets/Projects/Banner-MERN.png',
+      bgcolor: "black",
+      title: "M.E.R.N",
+      description: "A simple Full-Stack application that sends, receives and displays data.",
+      technologies: ["React + Vite", "MongoDB", "Node.js"],
+      demoLink: "https://mern-frontend-kappa-drab.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/MERN"
+    },
+    {
+      id: 7,
+      banner: './assets/Projects/Banner-DMY.png',
+      bgcolor: "#5864f2",
+      title: "Discord Mute Yourself",
+      description: "A python project that Mutes your microphone on discord, using voice detection from both input and output sources.",
+      technologies: ["Python", "Discord", "PyAudio"],
+      githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
+    },
+    {
+      id: 8,
+      banner: './assets/Projects/Banner-PC.png',
+      bgcolor: "#142446",
+      title: "Paradox-Chrono",
+      description: "My first games project created on unity game engine.",
+      technologies: ["C#", "Unity", "Blender"],
+      githubLink: "https://github.com/IbrahimIF/Paradox-Chrono"
+    },
+    {
+      id: 9,
+      banner: 'Pneumonia-Detection',
+      title: "pneumonia-detection",
+      description: "Detecting pneumonia based on xray images using AI and Iteration",
+      technologies: ["Python", "Jupiter-notebook"],
+      githubLink: "https://github.com/IbrahimIF/pneumonia-detection"
+    },
+    {
+      id: 10,
+      banner: 'CopyCat',
+      title: "CopyCat",
+      description: "A simple Python project, using Text to Speech to copy what is being said through the Microphone.",
+      technologies: ["Python", "ElevenLabs", "PyAudio"],
+      githubLink: "https://github.com/IbrahimIF/CopyCat"
+    },
+    {
+      id: 11,
+      banner: 'Seating-Plan',
+      title: "Seating-Plan",
+      description: "A 1st year of university group project.",
+      technologies: ["Java", "JFrame", "Eclipse"],
+      githubLink: "https://github.com/IbrahimIF/Seating-Plan"
+    },
+    {
+      id: 12,
+      banner: 'Car-Park-App',
+      title: "Car-Park-App",
+      description: "A multi-threaded Java client-server application demonstrating a car park management system for the CS3004 Network Computing module.",
+      technologies: ["Java", "Eclipse"],
+      githubLink: "https://github.com/IbrahimIF/Car-Park-App"
+    },
+    {
+      id: 13,
+      banner: 'Starship Canvas Animation',
+      title: "Starship-Canvas-Animation",
+      description: "An animated background full of Iconic Star Wars cruisers and Star Destroyers.",
+      technologies: ["Javascript", "HTML", "CSS"],
+      demoLink: "https://starship-canvas-animation.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/Starship-Canvas-Animation"
+    },
+    {
+      id: 14,
+      banner: './assets/Projects/Banner-SB.png',
+      title: "Switch-Board",
+      bgcolor: "white",
+      description: "A large display of light switches, based on an interactive site founded in 2006",
+      technologies: ["React + Vite", "Javascript", "CSS"],
+      demoLink: "https://switch-board.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/Switch-Board"
+    },
+    {
+      id: 15,
       banner: './assets/Projects/Banner-RB.png',
-      title: "Project 6",
-      description: "Description of project 6 with details about what it does and technologies used.",
-      technologies: ["Python", "Django", "PostgreSQL"],
+      title: "Red Button",
+      description: "Description of project 5 with details about what it does and technologies used.",
+      technologies: ["React", "Javascript", "PostgreSQL"],
+      demoLink: "https://switch-board.vercel.app/",
       githubLink: "#"
+    },
+    {
+      id: 16,
+      banner: './assets/Projects/Banner-GT.png',
+      title: "University Graduation Timer",
+      description: "A Countdown Timer to Graduation (Its way past)",
+      technologies: ["React + Vite", "Javascript", "CSS"],
+      demoLink: "https://university-graduation-timer.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/University-Graduation-Timer"
     },
   ];
 
@@ -77,8 +172,8 @@ function Completed() {
         {projects.map((project) => (
           <ProjectCard key={project.id}>
             <div className="project-card">
-              <div className="banner-container">
-                <img src={project.banner} alt="" className="banner" />
+              <div className="banner-container" style={{background: project.bgcolor }}>
+                <img src={project.banner} alt={project.banner} className="banner"/>
               </div>
 
               <div className="card-content">
@@ -196,10 +291,8 @@ const ProjectCard = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 50%;
   object-fit: cover;
   object-position: center;
-  border: 2px solid rgb(255, 255, 255);
 }
 
 .card-content {

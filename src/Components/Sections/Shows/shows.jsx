@@ -124,6 +124,7 @@ function Show() {
   return (
     <ShowSection id="Shows">
       <div className="box">
+      <h1 className="title"> Shows </h1>
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
@@ -139,7 +140,7 @@ function Show() {
           pagination={{ 
             el: '.swiper-pagination', 
             clickable: true,
-            dynamicBullets: true
+            dynamicBullets: true,
           }}
           navigation={{
             nextEl: '.swiper-button-next',
@@ -164,15 +165,15 @@ function Show() {
               }
             }}
             >
-              <SlideContent style={{ backgroundImage: `url(${show.imageBg})` }}>
+              <SlideContent style={{ backgroundImage: `url(${show.imageBg})` }} id="SlideContent">
                 <Logo src={show.logo} alt={`Logo for Show ${show.id}`} />
               </SlideContent>
             </SwiperSlide>
           ))}
 
-          <SliderController>
+          <SliderController id="SliderController">
             <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
+              <ion-icon name="arrow-back-outline" ></ion-icon>
             </div>
             <div className="swiper-button-next slider-arrow">
               <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -228,6 +229,10 @@ const ShowSection = styled.section`
       rgba(255, 255, 255, 0.08) 0px -3px 5px;
   }
 
+  .title{
+  padding-bottom: 10px;
+  }
+
   .swiper_container {
     width: 100%;
     height: 100%;
@@ -266,13 +271,14 @@ const SliderController = styled.div`
   bottom: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   margin-top: 2rem;
 
   .swiper-pagination {
     position: relative;
     width: auto;
     bottom: auto;
+    margin: 20px 0 0 0;
     
     .swiper-pagination-bullet {
       background: white;
@@ -290,8 +296,8 @@ const SliderController = styled.div`
 
   .slider-arrow {
     color: white;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
@@ -303,13 +309,17 @@ const SliderController = styled.div`
     transition: all 0.3s ease;
     
     &:hover {
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(0, 0, 113, 0.4);
     }
     
     ion-icon {
-      font-size: 1.5rem;
+      font-size: 0.5rem;
     }
   }
+
+
+  .swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 20px;
 `;
 
 

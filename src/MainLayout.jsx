@@ -25,12 +25,12 @@ function MainLayout() {
       </FixedElementsWrapper>
 
       <Background id="Background">
-        {counter > 6 && <CanvasBackground/>}
+        {counter > 10 && <CanvasBackground/>}
         <Home />
         <Overview/>
         <Experience counter={counter} setCounter={setCounter}/>
         <Projects counter={counter} setCounter={setCounter}/>
-        {counter > 8 && <Shows/>}
+        {counter > 15 && <Shows/>}
         <Contact/>
         <Footer counter={counter} setCounter={setCounter}/>
       </Background>

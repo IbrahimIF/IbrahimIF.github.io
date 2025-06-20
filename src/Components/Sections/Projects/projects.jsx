@@ -19,9 +19,9 @@ function Project({ counter }) {
               </label> 
               <label className="radio">
                 <input type="radio" name="projectRadio" checked={activeTab === 'inProgress'} onChange={() => setActiveTab('inProgress')}/>
-                <span className="name">in-progress</span>
+                <span className="name">In Progress</span>
               </label>
-              { counter > 5 && 
+              { counter > 10 && 
               <label className="radio">
                 <input type="radio" name="projectRadio" checked={activeTab === 'hidden'} onChange={() => setActiveTab('hidden')}/>
                 <span className="name">Concepts</span>
@@ -29,7 +29,7 @@ function Project({ counter }) {
               }    
             </div>
           </ToggleSection>
-          {activeTab == 'completed' && <Completed/>}
+          {activeTab == 'completed' && <Completed counter={counter}/>}
           {activeTab == 'inProgress' && <InProgress/>}
           {activeTab == 'hidden' && <Hidden/>}
       </div>

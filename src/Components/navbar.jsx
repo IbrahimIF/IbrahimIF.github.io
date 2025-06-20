@@ -1,19 +1,30 @@
-/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faInfoCircle, faBriefcase, faEnvelope, faTableColumns, faGear } from '@fortawesome/free-solid-svg-icons' */
+import { FaHouse,FaCircleInfo, FaTableColumns, FaEnvelope } from "react-icons/fa6";
+import { IoIosBriefcase, IoIosTv } from "react-icons/io";
+
+
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import {useState, useEffect} from "react";
 
 
 function Navbar({counter, setCounter }) {
   const navigate = useNavigate();
+  const [width, setWidth] = useState(window.innerWidth);
 
   const handleCheckClick = () => {
     setCounter(prevCounter => prevCounter + 1);
 
-    if (counter == 15 ){
+    if (counter == 17 ){
       navigate("/Random");
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div id="nav">
@@ -43,12 +54,12 @@ function Navbar({counter, setCounter }) {
             </Tooltip>
         
             <div className="navbar-items">
-              <a className="nav-item" href="#Home">Home</a>
-              <a className="nav-item" href="#Overview">Overview</a>
-              <a className="nav-item rare" href="#Experience">Experience</a>
-              <a className="nav-item" href="#Project">Projects</a>
-              {counter > 8 && <a className="nav-item rare" href="#Shows">Shows</a>}
-              <a className="nav-item" href="#Contact">Contact</a>
+              <a className="nav-item" href="#Home"> {width >= 700 ? ('Home') : (<FaHouse/>)}</a>
+              <a className="nav-item" href="#Overview">{width >= 700 ? ('Overview') : (<FaCircleInfo />)}</a>
+              <a className="nav-item rare" href="#Experience">{width >= 700 ? ('Experience') : (<IoIosBriefcase />)}</a>
+              <a className="nav-item" href="#Project">{width >= 700 ? ('Project') : (<FaTableColumns />)}</a>
+              {counter > 15 && <a className="nav-item rare" href="#Shows">{width >= 700 ? ('Shows') : (<IoIosTv />)}</a>}
+              <a className="nav-item" href="#Contact">{width >= 700 ? ('Contact') : (<FaEnvelope />)}</a>
             </div>
           </div>
         </nav>

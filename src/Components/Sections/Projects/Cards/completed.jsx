@@ -1,11 +1,13 @@
-import React, { useState } from 'react'; // Import useState
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import QuestionMessage from '../../Messages/QuestionScreen/QuestionMessage';
 
-function Completed() {
+function Completed({counter}) {
   const [showQuestionMessage, setShowQuestionMessage] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+  const toggleShowMore = () => setShowMore(!showMore);
+
 
   const projects = [
     {
@@ -13,7 +15,7 @@ function Completed() {
       banner: './assets/Projects/Banner-IIF.png',
       title: "IbrahimIF.dev",
       bgcolor: "black",
-      description: "The current website you on now",
+      description: "The current website you are on now.",
       technologies: ["React + Vite", "Node.js", "Three.js"],
       demoLink: "__question__",
       githubLink: "https://github.com/IbrahimIF/IbrahimIF.github.io"
@@ -32,7 +34,7 @@ function Completed() {
       id: 3,
       banner: './assets/Projects/Banner-PSA.png',
       title: "Pinnacle Studio Architecture",
-      description: "A private client project",
+      description: "A privated client project.",
       technologies: ["React + Vite", "Javascript", "CSS"],
       demoLink: "https://pinnaclestudioarchitecture.co.uk/",
       githubLink: "https://github.com/IbrahimIF/Architecture-Site"
@@ -116,6 +118,7 @@ function Completed() {
       technologies: ["Java", "Eclipse"],
       githubLink: "https://github.com/IbrahimIF/Car-Park-App"
     },
+    ...(counter > 12 ? [
     {
       id: 13,
       banner: 'Starship Canvas Animation',
@@ -130,7 +133,7 @@ function Completed() {
       banner: './assets/Projects/Banner-SB.png',
       title: "Switch-Board",
       bgcolor: "white",
-      description: "A large display of light switches, based on an interactive site founded in 2006",
+      description: "A large display of light switches, based on an interactive site founded in 2006.",
       technologies: ["React + Vite", "Javascript", "CSS"],
       demoLink: "https://switch-board.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Switch-Board"
@@ -148,12 +151,15 @@ function Completed() {
       id: 16,
       banner: './assets/Projects/Banner-GT.png',
       title: "University Graduation Timer",
-      description: "A Countdown Timer to Graduation (Its way past)",
+      description: "A Countdown Timer to Graduation (Its way past its limit).",
       technologies: ["React + Vite", "Javascript", "CSS"],
       demoLink: "https://university-graduation-timer.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/University-Graduation-Timer"
     },
+  ] : []),
   ];
+
+  const visibleProjects = showMore ? projects : projects.slice(0, 6);
 
   const handleDemoClick = (demoLinkValue) => {
     if (demoLinkValue === "__question__") {
@@ -168,8 +174,9 @@ function Completed() {
 
   return (
     <CompletedSection id="completed">
+      <div style={{ width: '100%' }}>
       <ProjectsGrid>
-        {projects.map((project) => (
+        {visibleProjects.map((project) => (
           <ProjectCard key={project.id}>
             <div className="project-card">
               <div className="banner-container" style={{background: project.bgcolor }}>
@@ -206,7 +213,7 @@ function Completed() {
 
                   {project.githubLink && (
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      <FontAwesomeIcon icon={faGithub} className="icon" /> &nbsp; <div> Github </div>
+                      <FaGithub className="icon" /> &nbsp; <div> Github </div>
                     </a>
                   )}
                 </div>
@@ -215,6 +222,14 @@ function Completed() {
           </ProjectCard>
         ))}
       </ProjectsGrid>
+       {projects.length > 6 && (
+                <ToggleButton onClick={toggleShowMore}>
+                  {showMore ? <FaChevronUp /> : <FaChevronDown />}
+                  <span>{showMore ? "Show Less" : "Show More"}</span>
+                </ToggleButton>
+              )}
+            </div>
+
       {showQuestionMessage && <QuestionMessage />}
     </CompletedSection>
   );
@@ -249,14 +264,14 @@ const ProjectsGrid = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  background-image: linear-gradient(163deg,rgb(0, 6, 86) 0%,rgb(33, 0, 153) 100%);
   border-radius: 12px;
   transition: all .3s;
 
   &:hover {
-    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-  }
-
+    box-shadow: 0px 0px 30px 1px rgba(0, 73, 198, 0.3);
+  }  
+    
 .project-card {
   width: 100%;
   height: 100%;
@@ -402,5 +417,34 @@ const StyledButton = styled.button`
   &:hover {
     transform: translateY(-0.125rem);
     background: linear-gradient(to right, #2563eb, #1d4ed8);
+  }
+`;
+
+
+
+
+const ToggleButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #1f2937;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  gap: 0.5rem;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #374151;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+    transform: ${props => (props.showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
   }
 `;

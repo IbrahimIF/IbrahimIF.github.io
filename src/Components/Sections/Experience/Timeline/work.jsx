@@ -9,7 +9,7 @@ function Work({ counter }) {
 
 
 
-        {counter > 10 && 
+        {counter > 16 && 
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
@@ -24,7 +24,7 @@ function Work({ counter }) {
             </p>
           </VerticalTimelineElement>
           }
-          {counter > 10 && 
+          {counter > 16 && 
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
@@ -65,7 +65,8 @@ function Work({ counter }) {
             <h3>Innovation Pod</h3>
             <h4>London | Part-time</h4>
             <p>
-              Coding Teacher, Assistant Coding Teacher
+              | Coding Teacher <br/>
+              | Assistant Coding Teacher
             </p>
           </VerticalTimelineElement>
           
@@ -79,7 +80,8 @@ function Work({ counter }) {
             <h3>The Orange Trust</h3>
             <h4>London | Volunteering</h4>
             <p>
-              Volunteering Web Developer, Volunteer Software Developer
+              | Volunteer Software Developer <br/>
+              | Volunteer Web Developer
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -92,7 +94,7 @@ function Work({ counter }) {
             <h3>East London Waterworks Park</h3>
             <h4>Online | Volunteering</h4>
             <p>
-              PHP, Web Applications, Volunteering Web Developer
+              Volunteering Web Developer, Web Applications, PHP
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -105,7 +107,8 @@ function Work({ counter }) {
             <h3>Bright Network</h3>
             <h4>Online | Internship</h4>
             <p>
-              IEUK 2024 Technology Internship, Couch to Coder | Software Developer Course
+              | IEUK 2024 Technology Internship <br/>
+              | Couch to Coder - Software Developer Course
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -118,7 +121,7 @@ function Work({ counter }) {
             <h3>Union Of Brunel Students</h3>
             <h4>London | Society</h4>
             <p>
-              Orange Trust World Issues Soceity, Technical Secretary
+              Orange Trust World Issues Society, Technical Secretary
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -131,7 +134,7 @@ function Work({ counter }) {
             <h3>EEP</h3>
             <h4>London | Part-Time</h4>
             <p>
-              Customer Service, Communication, Security, Steward
+              Customer Service, Communication, Security Guard
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -141,7 +144,7 @@ function Work({ counter }) {
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
             icon={ <div className="img-container"><img src="/assets/Company/ncc.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>New City Collegek</h3>
+            <h3>New City College</h3>
             <h4>London | Volunteering</h4>
             <p>
               IT Help Desk, Customer Service

@@ -1,8 +1,11 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 function Hidden() {
+    const [showMore, setShowMore] = useState(false);
+    const toggleShowMore = () => setShowMore(!showMore);
+
   const projects = [
     {
       id: 1,
@@ -24,15 +27,15 @@ function Hidden() {
       id: 3,
       banner: 'Project Scribe',
       title: "Project Scribe",
-      description: "Project Scribe",
+      description: "A discord bot assistnat toi help organise and sort links, messages and code snippets in privcate servers.",
       technologies: ["Python", "Discord"],
       githubLink: "#"
     },
     {
       id: 4,
-      banner: 'MoonBaseAlpha',
-      title: "MoonBaseAlpha",
-      description: "A Full-Stack application that converts text to speech.",
+      banner: 'MoonBaseAlpha-TS',
+      title: "MoonBaseAlpha-TS",
+      description: "A Full-Stack application that converts text to speech with the exact same tone as the NASA create program.",
       technologies: ["React.ts + Vite", "Python", "AWS"],
       githubLink: "#"
     },
@@ -47,15 +50,15 @@ function Hidden() {
     { 
       id: 6,
       banner: 'VisionNumReader',  
-      title: "Project 3", 
+      title: "VisionNumReader", 
       description: "A Python application that uses computer vision to detect and read numbered cards from a camera feed, then converts the recognized numbers to speech.", 
       technologies: ["Python"],
       githubLink: "#"
     },
     { 
       id: 7,
-      banner: 'Dhikr Project',  
-      title: "Dhikr Project", 
+      banner: './assets/Projects/Banner-AD.png',   
+      title: "Adhkar Daily", 
       description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
       technologies: ["React.js + Vite", "Javascript", "CSS"],
       githubLink: "#"
@@ -64,7 +67,7 @@ function Hidden() {
       id: 8,
       banner: 'PS2-Bios-Menu-Sounds',  
       title: "PS2-Bios-Menu-Sounds", 
-      description: "Based on the Garry'sMod mod that adds a PS2 Bios sounds to the menu and buttons, this will be for VScode as an extension ", 
+      description: "Based on the Garry'sMod mod that adds a PS2 Bios sounds to the menu and buttons, this will be for VScode as an extension.", 
       technologies: ["Typescript", "Vscode-extension"],
       githubLink: "https://github.com/IbrahimIF/PS2-Bios-Menu-Sounds"
     },
@@ -72,20 +75,46 @@ function Hidden() {
       id: 9, 
       banner: 'Not A Site', 
       title: "Note A Site", 
-      description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site, A usless Website that does nothing but waste your time. ", 
+      description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site, A usless Website that does nothing but waste your time.", 
       technologies: ["React.js + Vite", "Javascript", "CSS"],
       githubLink: "https://github.com/IbrahimIF/Not-A-Site"
     },
+    { 
+      id: 10, 
+      banner: 'Text2Cast', 
+      title: "Text2Cast", 
+      description: "A chrome Extension project that merges both Automatic Text to speech and A.I voice overs of different characters (using uberduck.ai api).", 
+      technologies: ["Unknown"],
+      githubLink: "https://github.com/IbrahimIF/Text2Cast"
+    },
+    { 
+      id: 11, 
+      banner: 'CV Mix and Match', 
+      title: "CV Mix and Match", 
+      description: "A way to mix and match the different sections of your CV to help with making your CV releveant to company.", 
+      technologies: ["React + Vite, Django, Postgres"],
+      githubLink: "https://github.com/IbrahimIF/Text2Cast"
+    },
+    { 
+      id: 12, 
+      banner: 'HijrLife', 
+      title: "HijrLife", 
+      description: "Similar to neal.fun life stats, it is islamic stats based on your lunar birth.", 
+      technologies: ["React + Vite, Javascript, CSS"],
+    },
   ];
+
+  const visibleProjects = showMore ? projects : projects.slice(0, 6);
 
 return (
     <HiddenSection id="Hidden">
+      <div style={{ width: '100%' }}>
         <ProjectsGrid>
-        {projects.map((project) => (
+        {visibleProjects.map((project) => (
           <ProjectCard key={project.id}>
             <div className="project-card">
-              <div className="image-placeholder">
-                {project.title}
+            <div className="banner-container" style={{background: project.bgcolor }}>
+                <img src={project.banner} alt={project.banner} className="banner" />
               </div>
               
               <div className="card-content">
@@ -111,7 +140,7 @@ return (
                   )}
                   {project.githubLink && (
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      <FontAwesomeIcon icon={faGithub} className="icon" /> &nbsp; <div> Github </div>
+                      <FaGithub className="icon" /> &nbsp; <div> Github </div>
                     </a>
                   )}
                 </div>
@@ -120,7 +149,14 @@ return (
           </ProjectCard>
         ))}
       </ProjectsGrid>
-    </HiddenSection>
+      {projects.length > 6 && (
+          <ToggleButton onClick={toggleShowMore}>
+            {showMore ? <FaChevronUp /> : <FaChevronDown />}
+            <span>{showMore ? "Show Less" : "Show More"}</span>
+          </ToggleButton>
+          )}
+    </div>
+  </HiddenSection>
   )
 }
 export default Hidden
@@ -152,12 +188,12 @@ const ProjectsGrid = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  background-image: linear-gradient(163deg,rgb(0, 6, 86) 0%, #3700ff 100%);
+  background-image: linear-gradient(163deg,rgb(0, 6, 86) 0%,rgb(33, 0, 153) 100%);
   border-radius: 12px;
   transition: all .3s;
 
   &:hover {
-    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+    box-shadow: 0px 0px 30px 1px rgba(0, 73, 198, 0.3);
   }  
 
 .project-card {
@@ -277,4 +313,31 @@ const ProjectCard = styled.div`
   background: linear-gradient(to right, #1f2937, #111827);
 }
 
+`;
+
+
+const ToggleButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #1f2937;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  gap: 0.5rem;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #374151;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+    transform: ${props => (props.showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
+  }
 `;

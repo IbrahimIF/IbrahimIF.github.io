@@ -1,14 +1,20 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
+import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+
 
 function InProgress() {
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => setShowMore(!showMore);
+
   const projects = [
     { 
       id: 1,
-      banner: 'Terminal Games',  
+      banner: './assets/Projects/Banner-TG.gif',
+      bgcolor: "#000",  
       title: "Terminal Games", 
-      description: "Repository showcasing python made games that can be played in the terminal of an IDE .", 
+      description: "Repository showcasing python made games that can be played in the terminal of an IDE.", 
       technologies: ["Python", "tkinter", "Curses"],
       githubLink: "https://github.com/IbrahimIF/Terminal-Games"
     },
@@ -16,7 +22,7 @@ function InProgress() {
       id: 2,
       banner: './assets/Projects/Banner-TCC.png',   
       title: "Twitch-Chat-Clone", 
-      description: "A twitch chat clone with React, Typescript, tailwindCSS and Socket.io ", 
+      description: "A twitch chat clone with React, Typescript, tailwindCSS and Socket.io.", 
       technologies: ["Typescript", "Tailwindcss", "Socket.io"],
       demoLink: "https://twitch-chat-clone-chi.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Twitch-Chat-Clone"
@@ -26,14 +32,15 @@ function InProgress() {
       banner: './assets/Projects/Banner-SERN.png', 
       bgcolor: "#26c3a5",
       title: "Full-Stack Chat-App", 
-      description: "A simple Full-stack chat app to send and receive messages", 
+      description: "A simple Full-stack chat app to send and receive messages.", 
       technologies: ["React.js + Vite", "Node.js", "Socket.io"],
       demoLink: "https://fs-chat-app.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/FS-Chat-App"
     },
     { 
       id: 4,
-      banner: './assets/Projects/Banner-P.png', 
+      banner: './assets/Projects/Banner-P.png',
+      bgcolor: "#ff474d", 
       title: "Pokedex", 
       description: "A replica of the pokedex from the pokemon anime.", 
       technologies: ["React + Vite", "Tailwind CSS", "PokeAPI"],
@@ -52,16 +59,19 @@ function InProgress() {
       id: 6,
       banner: './assets/Projects/Banner-TS.png',
       title: "ToolShed",
-      description: "A Full-Stack application that organises my large folder of tools and resources",
+      description: "A Full-Stack application that organises my large folder of tools and resources.",
       technologies: ["React.ts + Vite", "Firebase", "Typescript"],
       githubLink: "https://github.com/IbrahimIF/ToolShed"
     },
   ];
 
+  const visibleProjects = showMore ? projects : projects.slice(0, 6);
+
 return (
     <ProgressSection id="Progress">
+      <div style={{ width: '100%' }}>
       <ProjectsGrid>
-         {projects.map((project) => (
+         {visibleProjects.map((project) => (
           <ProjectCard key={project.id}>
             <div className="project-card">
               <div className="banner-container" style={{background: project.bgcolor }}>
@@ -91,7 +101,7 @@ return (
                   )}
                   {project.githubLink && (
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      <FontAwesomeIcon icon={faGithub} className="icon" /> &nbsp; <div> Github </div>
+                      <FaGithub /> &nbsp; <div> Github </div>
                     </a>
                   )}
                 </div>
@@ -100,6 +110,14 @@ return (
           </ProjectCard>
          ))}
        </ProjectsGrid>
+
+       {projects.length > 6 && (
+          <ToggleButton onClick={toggleShowMore}>
+            {showMore ? <FaChevronUp /> : <FaChevronDown />}
+            <span>{showMore ? "Show Less" : "Show More"}</span>
+          </ToggleButton>
+        )}
+      </div>
     </ProgressSection>
   )
 }
@@ -131,12 +149,12 @@ const ProjectsGrid = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  background-image: linear-gradient(163deg,rgb(0, 6, 86) 0%, #3700ff 100%);
+  background-image: linear-gradient(163deg,rgb(0, 6, 86) 0%,rgb(33, 0, 153) 100%);
   border-radius: 12px;
   transition: all .3s;
 
   &:hover {
-    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+    box-shadow: 0px 0px 30px 1px rgba(0, 73, 198, 0.3);
   }  
 
 .project-card {
@@ -265,4 +283,31 @@ const ProjectCard = styled.div`
   background: linear-gradient(to right, #1f2937, #111827);
 }
 
+`;
+
+
+const ToggleButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #1f2937;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  gap: 0.5rem;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #374151;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+    transform: ${props => (props.showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
+  }
 `;

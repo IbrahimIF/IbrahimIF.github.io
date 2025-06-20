@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faDiscord, faSteam, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FaGithub, FaDiscord, FaSteam, FaLinkedin } from "react-icons/fa6";
 
 function Social({counter}) {
     return (
@@ -11,24 +10,26 @@ function Social({counter}) {
               <div className="icon_wrapper">
                 <a href="https://github.com/IbrahimIF" aria-label="GitHub" className="icon_link github">
                   <div className="filled"></div>
-                  <FontAwesomeIcon icon={faGithub} className="icon" />
+                  <FaGithub className="icon" />
                 </a>
               </div>
             </div>
+            { counter > 14 &&
             <div className="social_icons" id="discord">
               <div className="icon_wrapper">
                 <a href="https://discordapp.com/users/431043132889628682" aria-label="Discord" className="icon_link discord">
                   <div className="filled"></div>
-                  <FontAwesomeIcon icon={faDiscord} className="icon" />
+                  <FaDiscord className="icon" />
                 </a>
               </div>
             </div>
-            { counter > 12 &&
+            }  
+            { counter > 16 &&
             <div className="social_icons" id="steam">
               <div className="icon_wrapper">
                 <a href="https://steamcommunity.com/profiles/76561199003620198/" aria-label="Steam" className="icon_link steam">
                   <div className="filled"></div>
-                  <FontAwesomeIcon icon={faSteam} className="icon" />
+                  <FaSteam className="icon" />
                 </a>
               </div>
             </div>
@@ -37,7 +38,15 @@ function Social({counter}) {
               <div className="icon_wrapper">
                 <a href="https://www.linkedin.com/in/ibrahim-farrah-b742471a6/" aria-label="Linkedin" className="icon_link linkedin">
                   <div className="filled"></div>
-                  <FontAwesomeIcon icon={faLinkedin} className="icon" />
+                  <FaLinkedin className="icon"/> 
+                </a>
+              </div>
+            </div>
+            <div className="social_icons" id="uiverse">
+              <div className="icon_wrapper">
+                <a href="https://uiverse.io/profile/IbrahimIF" aria-label="Uiverse" className="icon_link uiverse">
+                  <div className="filled"></div>
+                  <img src="/assets/Company/Uiverse.png" className="custom-icon"/>
                 </a>
               </div>
             </div>
@@ -95,7 +104,13 @@ const Socials = styled.div`
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
     border: 2px solid rgb(255, 255, 255);
     color: white;
+    
 }
+
+.custom-icon:hover {
+    filter: brightness(0) invert(1);
+}
+
 
 .icon {
     position: relative;
@@ -103,6 +118,14 @@ const Socials = styled.div`
     width: 22px;
     height: 22px;
 }
+
+.custom-icon {
+    position: relative;
+    z-index: 1;
+    width: 22px;
+    height: 22px;
+}
+
 
 .filled {
     position: absolute;
@@ -132,6 +155,10 @@ const Socials = styled.div`
 
 #linkedin .filled {
     background-color: #0A66C2;
+}
+
+#uiverse .filled {
+    background-color: #24262a;
 }
 
 `;

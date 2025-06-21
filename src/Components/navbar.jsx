@@ -1,7 +1,6 @@
 import { FaHouse,FaCircleInfo, FaTableColumns, FaEnvelope } from "react-icons/fa6";
 import { IoIosBriefcase, IoIosTv } from "react-icons/io";
 
-
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import {useState, useEffect} from "react";
@@ -275,6 +274,59 @@ const Navigation = styled.nav`
   width: 100%;
   background-color: rgb(194, 194, 194);
   transition: 0.3s;
+}
+
+
+@media (max-width: 650px) {
+  .navbar-content {
+    padding: 5px 10px 5px 5px;
+    border-radius: 30px;
+    margin-top: -60px;
+  }
+
+  .navbar-circle {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .checkBox {
+    width: 25px;
+    height: 25px;
+    box-shadow: 0px 0px 0px 1px #fff;
+  }
+
+  .checkBox .transition {
+    width: 50px;
+    height: 50px;
+    top: -45px;
+    left: -45px;
+  }
+
+  .navbar-items {
+    gap: 10px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .navbar-toggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .burger-menu .bars {
+    width: 25px;
+    height: 2px;
+    gap: 6px;
+  }
+
+  .nav-toggle:checked ~ .navbar #bar1,
+  .nav-toggle:checked ~ .navbar #bar3 {
+    width: 15px;
+  }
 }
 
 `;

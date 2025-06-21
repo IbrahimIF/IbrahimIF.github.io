@@ -39,6 +39,26 @@ export const GlobalStyle = createGlobalStyle`
       background-color: black;
     }
   }
+
+  @media (max-width: 650px) {
+    section {
+      padding: 4rem 1rem; 
+      margin-bottom: 8rem; 
+      
+      .section-content { width: 95%; max-width: 900px; }
+      &::after {
+        left: 5%; 
+        right: 5%;
+      }
+    }
+
+    @media (max-width: 650px) {
+        .box {
+            width: 95%; 
+        }
+    } *
+  }
+
 `;
 
 

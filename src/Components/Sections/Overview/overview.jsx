@@ -34,7 +34,7 @@ function Overview() {
         </div>
 
         <div className="top-row">
-          <div className="grid-container">
+          <div className="grid-container" style={{height:'1160px'}}>
           <p className="grid-headtext">Tech Stack</p>
                 <TechBall/>
             <div>

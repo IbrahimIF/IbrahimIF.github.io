@@ -161,4 +161,25 @@ const Socials = styled.div`
     background-color: #24262a;
 }
 
+@media (max-width: 650px) {
+  .socials-container {
+    padding: 5px;
+    border-radius: 0px 15px 15px 0px;
+  }
+
+  .icon_wrapper {
+    margin: 0 5px;
+  }
+
+  .icon_link {
+      width: 1.8rem;
+      height: 1.8rem;
+  }
+
+  .icon,
+  .custom-icon {
+      width: 18px;
+      height: 18px;
+  }
+}
 `;

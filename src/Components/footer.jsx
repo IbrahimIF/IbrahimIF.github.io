@@ -136,6 +136,36 @@ const Footer = styled.footer`
       top: 100%;
       background: rgb(120, 120, 120);
   }
+
+
+  @media (max-width: 750px) {
+    height: 25vh;
+    padding: 20px;
+
+    .bottom_container {
+        padding-top: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 15px;
+    }
+
+    .Bars_container,
+    .Text_container,
+    .Socials_container {
+        position: static;
+        transform: none;
+        margin: 0; 
+        text-align: center;  
+    }
+
+    .Text_container .text {
+        font-size: 0.8rem; 
+    }
+
+    .line {
+        width: 90%; 
+    }
+  }
 `;
 
 
@@ -191,8 +221,29 @@ const Bars = styled.div`
   left: -60px;
 }
 
-`;
 
+@media (max-width: 950px) {
+    width: 100px;
+    margin: 0;
+
+    .loader {
+        height: 100px;
+        width: 16px;
+    }
+
+    .loader::after,
+    .loader::before {
+        height: 50px;
+        width: 16px;
+        left: 40px;
+    }
+
+    .loader::before {
+        left: -40px;
+    }
+}
+
+`;
 
 
 const Circle = styled.div`
@@ -209,6 +260,12 @@ const Circle = styled.div`
     display:flex;
     align-items:center;
   }
+
+  @media (max-width: 650px){
+  width: 40px;
+  height: 40px;
+  }
+
 `;
 
 
@@ -266,6 +323,24 @@ const Socials = styled.div`
     z-index: 1;
     width: 22px;
     height: 22px;
+}
+
+
+@media (max-width: 950px) {
+    .icon_wrapper {
+        margin: 0 5px;
+    }
+
+    .icon_link {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon,
+    .custom-icon {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 

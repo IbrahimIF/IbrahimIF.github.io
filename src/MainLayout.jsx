@@ -142,45 +142,4 @@ rgb(0, 0, 0) 100%
         0% { opacity: 0; }
         50% { opacity: 1; }
       }
-
-
 `;
-
-
-
-
-
-/*
-    <>
-    <div className="portfolio">
-      <Navbar/>
-
-
-      <section ref={homeRef} className="section home-section">
-          <Main/>
-      </section>
-
-      <section ref={aboutRef} className="section about-section">
-        <div className="section-content">
-          <h2>About Me</h2>
-
-        </div>
-      </section>
-
-      <section ref={projectsRef} className="section projects-section">
-        <div className="section-content">
-          <h2>My Projects</h2>
-
-        </div>
-      </section>
-
-      <section ref={contactRef} className="section contact-section">
-        <div className="section-content">
-          <h2>Contact Me</h2>
-
-        </div>
-      </section>
-    </div>
-    </>
-
-*/

@@ -1,7 +1,6 @@
-import { Canvas } from '@react-three/fiber'
-import { Preload } from '@react-three/drei'
-import { Bloom, DepthOfField, EffectComposer, Noise, Vignette } from '@react-three/postprocessing'
-import TechBall from './TechBall'
+import { Canvas } from '@react-three/fiber';
+import { Preload } from '@react-three/drei';
+import TechBall from './TechBall';
 
 const techData = [
   {

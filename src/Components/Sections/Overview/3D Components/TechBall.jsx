@@ -1,6 +1,5 @@
-
 import { Decal, Float, useTexture, Edges } from '@react-three/drei'
-import { useFrame, useLoader} from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
 import { useRef, useState } from 'react'
 
 function TechBall({ position, imgUrl }) {

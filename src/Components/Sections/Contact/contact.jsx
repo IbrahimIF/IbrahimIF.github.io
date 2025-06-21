@@ -68,8 +68,8 @@ function Contact() {
                   backgroundColor="rgba(0,0,0,0)"
                   showAtmosphere
                   showGraticules
-                  globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                  bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
+                  globeImageUrl="/assets/three-globe/earth-night.jpg"
+
                   labelsData={[{
                     lat: 51.5072, lng: 0.1276,
                     text: "I'm here!",
@@ -135,11 +135,7 @@ export default Contact;
 
 const ContactSection = styled.section`
   display: flex;
-  justify-content: center;
-  flex-direction: row;
   align-items: center;
-  padding: var(--section-padding);
-  margin-bottom: var(--section-gap);
   margin-top: calc(-1 * var(--section-gap));
   padding-bottom: 300px;
   padding-top: 300px;
@@ -152,6 +148,10 @@ const ContactSection = styled.section`
     rgba(0, 0, 0, 0.74) 95%,
     rgb(0, 0, 0) 100%
   );
+
+    @media (max-width: 630px ) {
+
+  }
 
   .box {
   width: 100%;
@@ -174,7 +174,8 @@ const ContactSection = styled.section`
   rgba(40, 60, 120, 0.1) 0px 4px 6px,  
   rgba(24, 33, 53, 0.15) 0px 12px 13px,  
   rgba(255, 255, 255, 0.08) 0px -3px 5px;
-  }
+
+}
 
   @media (max-width: 768px) {
       flex-direction: column;
@@ -284,7 +285,9 @@ const TextArea = styled.textarea`
 `;
 
 const SubmitButton = styled.button`
-  display:flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color:rgb(212, 212, 212);
   background-color:rgb(19, 19, 52);
   padding: 1rem 2rem;
@@ -292,13 +295,9 @@ const SubmitButton = styled.button`
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
-  transition: all 0.2s ease;
-  transition: box-shadow .15s,transform .15s;
+  transition: all 0.2s ease, box-shadow .15s, transform .15s;
 
 &:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,rgb(62, 62, 62) 0 -3px 0 inset;

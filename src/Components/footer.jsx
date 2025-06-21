@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { FaGithub, FaDiscord, FaSteam, FaLinkedin } from "react-icons/fa6";
-import { FaGithubAlt } from 'react-icons/fa';
 
 function Foot({counter}) {
 

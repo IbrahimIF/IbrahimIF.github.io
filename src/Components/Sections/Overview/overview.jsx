@@ -90,8 +90,6 @@ export default Overview;
 const OverviewSection = styled.section`
   display: flex;
   position: relative;
-  padding: var(--section-padding);
-  margin-bottom: var(--section-gap);
   margin-top: calc(-1 * var(--section-gap));
   background-image: radial-gradient(
     circle at center,

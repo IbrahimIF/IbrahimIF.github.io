@@ -159,7 +159,7 @@ function RandomScreen() {
   useEffect(() => {
     if (timeoutDuration !== null) {
       const timer = setTimeout(() => {
-          navigate("/main");
+          navigate("/");
       }, timeoutDuration);
 
       // Cleanup function

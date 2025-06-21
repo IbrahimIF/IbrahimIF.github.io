@@ -309,38 +309,3 @@ const Tooltip = styled.div`
     pointer-events: none;
   }
 `;
-
-/*
-import React, { useRef } from 'react';
-import { useEffect } from 'react';
-
-function App() {
-
-    // Refs for each section
-    const homeRef = useRef(null);
-    const aboutRef = useRef(null);
-    const projectsRef = useRef(null);
-    const contactRef = useRef(null);
-  
-    // Scroll handler
-    const scrollToSection = (elementRef) => {
-      window.scrollTo({
-        top: elementRef.current.offsetTop,
-        behavior: 'smooth'
-      });
-    };
-  
-    // Optional: Highlight active nav item on scroll
-    useEffect(() => {
-      const handleScroll = () => {
-        // Logic to determine which section is in view
-        // and update active nav item accordingly
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-  
-
-  */

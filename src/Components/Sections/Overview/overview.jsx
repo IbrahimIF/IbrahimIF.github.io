@@ -62,12 +62,12 @@ function Overview() {
           <div className="grid-container">
             <div>
               <p className="grid-headtext">Current courses I am pursuing</p>
-              <p className="image-container">
-              <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
-              <img src="/assets/Courses/trailhead.png" style={{width: '130%'}} alt="grid-1" className="course-image"/>
-              <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
-              <img src="/assets/Courses/aws_Cloud-Practitioner.png" alt="grid-1" className="course-image"/>
-              </p>
+              <div className="image-container">
+                <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
+                <img src="/assets/Courses/trailhead.png" alt="grid-1" className="course-image trailhead"/>
+                <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
+                <img src="/assets/Courses/aws_Cloud-Practitioner.png" alt="grid-1" className="course-image"/>
+              </div>
             </div>
           </div>
         </div>
@@ -198,11 +198,30 @@ const OverviewSection = styled.section`
 
 
   .image-container{
-  display: flex;
-  flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
   }
 
+  @media (max-width: 450px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  }
+}
+
   .course-image{
-  width:100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    padding: 5px;
+  }
+
+  .course-image.trailhead {
+    max-width: 120%;
+    transform: scale(1.3);
   }
 `;

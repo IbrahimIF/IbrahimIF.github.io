@@ -51,7 +51,7 @@ function InProgress() {
       id: 5,
       banner: 'Thermal-print-py',  
       title: "Thermal-print-py", 
-      description: "A Python application that prints ASCII-ART to your local printer. Either bluetooth or usb.", 
+      description: "A Python application that prints ASCII art to your local printer, via either Bluetooth or USB.", 
       technologies: ["Python"],
       githubLink: "https://github.com/IbrahimIF/thermal-print-py"
     },
@@ -292,8 +292,9 @@ const ToggleButton = styled.button`
   justify-content: center;
   margin: 2rem auto 0 auto;
   padding: 0.75rem 1.5rem;
-  background-color: #1f2937;
-  color: white;
+  background-color: transparent;
+  color:rgb(212, 212, 212);
+  background-color:rgb(19, 19, 52);
   font-weight: 600;
   border: none;
   border-radius: 8px;
@@ -303,7 +304,8 @@ const ToggleButton = styled.button`
   font-size: 1rem;
 
   &:hover {
-    background-color: #374151;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,rgb(62, 62, 62) 0 -3px 0 inset;
+    transform: translateY(-1px);
   }
 
   svg {

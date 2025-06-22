@@ -18,7 +18,7 @@ function Foot({counter}) {
 
           <div className="Text_container">
             <p className="text">
-              Copywright &copy; 2025 <a href="/">IbrahimIF</a>. All rights reserved.
+              Copyright &copy; 2025 <a href="/"> IbrahimIF</a>. All rights reserved.
             </p>  
           </div>
 
@@ -166,6 +166,12 @@ const Footer = styled.footer`
         width: 90%; 
     }
   }
+
+    @media (max-width: 450px) {
+    .Text_container .text {
+      font-size: 0.7rem;
+    }
+  }
 `;
 
 
@@ -214,7 +220,6 @@ const Bars = styled.div`
   rgba(255, 255, 255, 0.2) 0px 12px 13px,
   rgba(255, 255, 255, 0.1) 0px -3px 5px;
 
-  
 }
 
 .loader::before {
@@ -243,8 +248,28 @@ const Bars = styled.div`
     }
 }
 
-`;
+@media (max-width: 450px) {
+  width: 80px;
+  margin: 0;
 
+  .loader {
+    height: 80px;
+    width: 12px;
+  }
+
+  .loader::after,
+  .loader::before {
+    height: 40px;
+    width: 12px;
+    left: 30px;
+  }
+
+  .loader::before {
+    left: -30px;
+  }
+}
+
+`;
 
 const Circle = styled.div`
   display:flex;
@@ -344,5 +369,21 @@ const Socials = styled.div`
 }
 
 
+@media (max-width: 450px) {
+    .icon_wrapper {
+        margin: 0 1px;
+    }
+
+    .icon_link {
+        width: 26px;
+        height: 26px;
+    }
+
+    .icon,
+    .custom-icon {
+        width: 15px;
+        height: 15px;
+    }
+}
 
 `;

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FaGithub, FaDownload } from "react-icons/fa6";
+
 
 function Home() {
   return (
@@ -20,8 +19,8 @@ function Home() {
         </div>
       </Title> 
       <Button id="Button">
-        <button className="button3D">Download CV <FontAwesomeIcon icon={faDownload} className="icon" /></button>
-        <a href="https://github.com/IbrahimIF/IbrahimIF.github.io" className="button3D"> <FontAwesomeIcon icon={faGithub} className="icon" />  Repository </a>
+        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="button3D"> Download CV &nbsp; <FaDownload className="icon" /></a>
+        <a href="https://github.com/IbrahimIF/IbrahimIF.github.io" className="button3D"> <FaGithub className="icon" /> &nbsp;  Repository </a>
       </Button>
     </div>
     </div>
@@ -200,26 +199,20 @@ const Button = styled.div`
   padding-top: 10px;
   justify-content: space-between;
   width: 100%;
-  max-width: 295px;
+  max-width: 395px;
+  gap:10px;
 
 
 .button3D {
+  text-align: center;
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
-
-
-  background-color: transparent;
   color:rgb(212, 212, 212);
   background-color:rgb(19, 19, 52);
-
-
-
   cursor: pointer;
   border: none;
   text-decoration: none;
-
-  transition: all 0.2s ease;
-  transition: box-shadow .15s,transform .15s;
+  transition: box-shadow 0.15s ease, transform 0.15s ease, all 0.2s ease;
 }
 
 .button3D:hover {
@@ -231,7 +224,6 @@ const Button = styled.div`
   box-shadow:rgb(45, 45, 45) 0 3px 7px inset;
   transform: translateY(2px);
 }
-
 
 
   @media (max-width: 480px) {

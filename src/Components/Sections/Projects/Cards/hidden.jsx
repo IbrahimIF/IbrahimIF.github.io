@@ -27,7 +27,7 @@ function Hidden() {
       id: 3,
       banner: 'Project Scribe',
       title: "Project Scribe",
-      description: "A discord bot assistnat toi help organise and sort links, messages and code snippets in privcate servers.",
+      description: "A discord bot assistant to help organise and sort links, messages and code snippets in privcate servers.",
       technologies: ["Python", "Discord"],
       githubLink: "#"
     },
@@ -35,11 +35,11 @@ function Hidden() {
       id: 4,
       banner: 'MoonBaseAlpha-TS',
       title: "MoonBaseAlpha-TS",
-      description: "A Full-Stack application that converts text to speech with the exact same tone as the NASA create program.",
+      description: "A full-stack application that converts text to speech, replicating the exact DECtalk tone of the NASA-developed program.",
       technologies: ["React.ts + Vite", "Python", "AWS"],
       githubLink: "#"
     },
-    { 
+    {
       id: 5,
       banner: 'Prompt.exe', 
       title: "Prompt.exe", 
@@ -57,15 +57,17 @@ function Hidden() {
     },
     { 
       id: 7,
-      banner: './assets/Projects/Banner-AD.png',   
+      banner: './assets/Projects/Banner-DD.png',
+      bgcolor: "#00b050",
       title: "Adhkar Daily", 
       description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
       technologies: ["React.js + Vite", "Javascript", "CSS"],
-      githubLink: "#"
+      githubLink: "https://github.com/IbrahimIF/Dhikr-Project"
     },
     { 
       id: 8,
-      banner: 'PS2-Bios-Menu-Sounds',  
+      banner: './assets/Projects/Banner-PVE.png',
+      bgcolor: "black",  
       title: "PS2-Bios-Menu-Sounds", 
       description: "Based on the Garry'sMod mod that adds a PS2 Bios sounds to the menu and buttons, this will be for VScode as an extension.", 
       technologies: ["Typescript", "Vscode-extension"],
@@ -213,7 +215,7 @@ const ProjectCard = styled.div`
   border-radius: 12px;
 }
 
-.image-placeholder {
+.banner-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,8 +225,16 @@ const ProjectCard = styled.div`
   color: black;
   border: 2px solid rgb(90, 90, 90);
   border-radius: 10px;
+  overflow: hidden;
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .card-content {
   padding: 1.5rem;
   display: flex;
@@ -322,8 +332,9 @@ const ToggleButton = styled.button`
   justify-content: center;
   margin: 2rem auto 0 auto;
   padding: 0.75rem 1.5rem;
-  background-color: #1f2937;
-  color: white;
+  background-color: transparent;
+  color:rgb(212, 212, 212);
+  background-color:rgb(19, 19, 52);
   font-weight: 600;
   border: none;
   border-radius: 8px;
@@ -333,7 +344,8 @@ const ToggleButton = styled.button`
   font-size: 1rem;
 
   &:hover {
-    background-color: #374151;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,rgb(62, 62, 62) 0 -3px 0 inset;
+    transform: translateY(-1px);
   }
 
   svg {

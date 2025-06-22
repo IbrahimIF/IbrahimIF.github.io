@@ -83,7 +83,7 @@ function Show() {
       name: "Jojo's Bizzare Adventure",
       imageBg: 'https://i.postimg.cc/FRWpLT3c/Stardust-Crusadersbg.png',
       logo: 'https://i.postimg.cc/Bv8n36N0/bizarre-adventure-jojo-bizarre-adventure-title-removebg-preview.png',
-      audio: '/assets/Audio/Jojos-Bizzare-Adventure.mp3',
+      audio: "/assets/Audio/Jojo's-Bizzare-Adventure.mp3",
       link: 'https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV?q=jojo&cat=anime',
     },
     {
@@ -255,6 +255,7 @@ const SlideContent = styled.p`
   text-align: center;
   width: 100%;
   height:100%;
+  border-radius: 10px;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -322,7 +323,9 @@ const SliderController = styled.div`
 
 
 const Logo = styled.img`
-  width: 200px;
+  width: 220px;
   height: auto;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
+
 `;

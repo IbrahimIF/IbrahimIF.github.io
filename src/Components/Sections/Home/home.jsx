@@ -19,7 +19,7 @@ function Home() {
         </div>
       </Title> 
       <Button id="Button">
-        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="button3D"> Download CV &nbsp; <FaDownload className="icon" /></a>
+        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="button3D"> Download CV &nbsp; <FaDownload className="icon" /></a>
         <a href="https://github.com/IbrahimIF/IbrahimIF.github.io" className="button3D"> <FaGithub className="icon" /> &nbsp;  Repository </a>
       </Button>
     </div>

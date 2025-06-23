@@ -61,7 +61,7 @@ function Overview() {
         <div className="mid-row">
           <div className="grid-container">
             <div>
-              <p className="grid-headtext">Current courses I am pursuing</p>
+              <p className="grid-headtext">Current Courses</p>
               <div className="image-container">
                 <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
                 <img src="/assets/Courses/trailhead.png" alt="grid-1" className="course-image trailhead"/>
@@ -75,7 +75,7 @@ function Overview() {
         
         <div className="bottom-col-xl">
           <div className="grid-container">
-            <p className="grid-headtext">Events</p>
+            <p className="grid-headtext">Attended Events</p>
             <EventCarousel/>
           </div>
         </div>
@@ -127,12 +127,9 @@ const OverviewSection = styled.section`
     overflow: hidden;
   }
 
-
-
   .top-row{
     height: auto;
   }
-
 
   @media (min-width: 540px) {
     .grid {
@@ -175,11 +172,20 @@ const OverviewSection = styled.section`
   .grid-headtext {
     display:flex;
     justify-content:center;
+    align-items:center;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     margin-bottom: 1rem;
+    text-align:center;
   }
+
+  @media (max-width: 1428px) and (min-width: 1279px) {
+  .grid-headtext {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
 
   .grid-subtext {
     font-size: 1rem;

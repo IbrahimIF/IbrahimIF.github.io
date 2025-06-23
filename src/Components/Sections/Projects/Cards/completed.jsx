@@ -15,7 +15,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-IIF.png',
       title: "IbrahimIF.dev",
       bgcolor: "black",
-      description: "The current website you are on now.",
+      description: "The current website you are on now.", /* A dynamic 3D interactive portfolio, showcasing my skills and expertise with immersive elements.\nThis site blends creativity and technical finesse, bringing my projects to life. */
       technologies: ["React + Vite", "Node.js", "Three.js"],
       demoLink: "__question__",
       githubLink: "https://github.com/IbrahimIF/IbrahimIF.github.io"
@@ -25,7 +25,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-F.png',
       bgcolor: "black",
       title: "Frictionless",
-      description: "Frictionless - 'Reduce the friction between you and the code.'",
+      description: "A tool designed to reduce code friction, ensuring consistent structure and identifying syntax errors.\nIt analyses and improves code snippets across multiple programming languages.",
       technologies: ["React + Vite", "MongoDB", "Node.js"],
       demoLink: "https://frictionless-beta.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Frictionless"
@@ -34,7 +34,7 @@ function Completed({counter}) {
       id: 3,
       banner: './assets/Projects/Banner-PSA.png',
       title: "Pinnacle Studio Architecture",
-      description: "A privated client project.",
+      description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
       technologies: ["React + Vite", "Javascript", "CSS"],
       demoLink: "https://pinnaclestudioarchitecture.co.uk/",
       githubLink: "https://github.com/IbrahimIF/Architecture-Site"
@@ -44,7 +44,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-Z.png',
       bgcolor: "#2e3631",
       title: "Ziphon-LTD",
-      description: "A website that helps save energy for residents.",
+      description: "A full-stack application providing feedback on energy consumption reduction for residents.\nThis project targets UN Sustainable Development Goals for quality education and clean energy.",
       technologies: ["React", "MySQL", "Node.js"],
       githubLink: "https://github.com/IbrahimIF/Ziphon-LTD"
     },
@@ -53,7 +53,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-FRV.png',
       bgcolor: "#fff4f4",
       title: "F.R.V",
-      description: "A simple Full-Stack, serverless application that sends, receives and displays data.",
+      description: "A serverless full-stack application handling real-time data flow between React and Firestore.\nIt allows users to send and view data instantly without a traditional backend setup.",
       technologies: ["React + Vite", "FireBase", "Javascript"],
       demoLink: "https://fern-delta.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/FRV"
@@ -63,7 +63,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-MERN.png',
       bgcolor: "black",
       title: "M.E.R.N",
-      description: "A simple Full-Stack application that sends, receives and displays data.",
+      description: "A simple full-stack application built with the MERN stack, sending and receiving data.\nUtilising MongoDB, Express, React, and Node.js, this project demonstrates data handling.",
       technologies: ["React + Vite", "MongoDB", "Node.js"],
       demoLink: "https://mern-frontend-kappa-drab.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/MERN"
@@ -73,85 +73,93 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-DMY.png',
       bgcolor: "#5864f2",
       title: "Discord Mute Yourself",
-      description: "A python project that Mutes your microphone on discord, using voice detection from both input and output sources.",
+      description: "A Python project that automatically mutes Discord users based on detected keywords.\nPerfect for streamers and moderators, it helps maintain a controlled voice channel environment.",
       technologies: ["Python", "Discord", "PyAudio"],
       githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
     },
     {
       id: 8,
+      banner: './assets/Events/the_orange_trust.png',
+      title: "The Orange Trust Site",
+      bgcolor: "Orange",
+      description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
+      technologies: ["React", "Figma", "Trello"],
+    },
+    {
+      id: 9,
       banner: './assets/Projects/Banner-PC.png',
       bgcolor: "#142446",
       title: "Paradox-Chrono",
-      description: "My first games project created on unity game engine.",
+      description: "My first game project, a vibrant 3D platformer developed using Unity and C#.\nThis old assignment evolved into a personal project with custom-created assets.",
       technologies: ["C#", "Unity", "Blender"],
       githubLink: "https://github.com/IbrahimIF/Paradox-Chrono"
     },
     {
-      id: 9,
+      id: 10,
       banner: 'Pneumonia-Detection',
       title: "pneumonia-detection",
-      description: "Detecting pneumonia based on xray images using AI and Iteration",
+      description: "An AI module university assignment focused on accurately detecting pneumonia from X-ray images.\nThis project trains and optimises a deep learning model to differentiate between images.",
       technologies: ["Python", "Jupiter-notebook"],
       githubLink: "https://github.com/IbrahimIF/pneumonia-detection"
     },
     {
-      id: 10,
+      id: 11,
       banner: 'CopyCat',
       title: "CopyCat",
-      description: "A simple Python project, using Text to Speech to copy what is being said through the Microphone.",
+      description: "A Python project that listens to microphone input, processes speech, and responds via Text-to-Speech.\nIt records audio, converts it to text, and generates spoken replies using the ElevenLabs API.",
       technologies: ["Python", "ElevenLabs", "PyAudio"],
       githubLink: "https://github.com/IbrahimIF/CopyCat"
     },
     {
-      id: 11,
-      banner: 'Seating-Plan',
-      title: "Seating-Plan",
-      description: "A 1st year of university group project.",
+      id: 12,
+      banner: 'Airport System',
+      title: "Airport System",
+      description: "A first-year university group project developing an Airport System, including a seating-plan component.\nThis project enhanced Java expertise, testing, and collaborative workflow using Git.",
       technologies: ["Java", "JFrame", "Eclipse"],
       githubLink: "https://github.com/IbrahimIF/Seating-Plan"
     },
     {
-      id: 12,
+      id: 13,
       banner: 'Car-Park-App',
       title: "Car-Park-App",
-      description: "A multi-threaded Java client-server application demonstrating a car park management system for the CS3004 Network Computing module.",
+      description: "A multi-threaded Java client-server application demonstrating a car park management system.\nIt showcases robust network computing, including concurrent access control and socket communication.",
       technologies: ["Java", "Eclipse"],
       githubLink: "https://github.com/IbrahimIF/Car-Park-App"
     },
     ...(counter > 12 ? [
     {
-      id: 13,
+      id: 14,
       banner: 'Starship Canvas Animation',
       title: "Starship-Canvas-Animation",
-      description: "An animated background full of Iconic Star Wars cruisers and Star Destroyers.",
+      description: "An animated background featuring iconic Star Wars cruisers and Star Destroyers.\nThis project creates an engaging visual effect using Javascript",
       technologies: ["Javascript", "HTML", "CSS"],
       demoLink: "https://starship-canvas-animation.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Starship-Canvas-Animation"
     },
     {
-      id: 14,
+      id: 15,
       banner: './assets/Projects/Banner-SB.png',
       title: "Switch-Board",
       bgcolor: "white",
-      description: "A large display of light switches, based on an interactive site founded in 2006.",
+      description: "A large interactive display of light switches, inspired by a classic 2006 interactive site.\nBuilt with React, Javascript, and CSS, it offers an engaging user experience.",
       technologies: ["React + Vite", "Javascript", "CSS"],
       demoLink: "https://switch-board.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Switch-Board"
     },
     {
-      id: 15,
+      id: 16,
       banner: './assets/Projects/Banner-RB.png',
       title: "Red Button",
-      description: "Description of project 5 with details about what it does and technologies used.",
-      technologies: ["React", "Javascript", "PostgreSQL"],
-      demoLink: "https://switch-board.vercel.app/",
-      githubLink: "#"
+      description: "An interactive website game inspired by Bored Button, where users find and press ten red buttons.\nThe project features a complex loading screen, randomised YouTube videos, and hidden secrets.",
+      technologies: ["React", "Javascript", "CSS"],
+      demoLink: "https://mystery-button.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/Red-Button"
     },
     {
-      id: 16,
+      id: 17,
       banner: './assets/Projects/Banner-GT.png',
       title: "University Graduation Timer",
-      description: "A Countdown Timer to Graduation (Its way past its limit).",
+      description: "A Countdown Timer to university graduation, now past its original limit.\nThis project, built with React and Javascript",
       technologies: ["React + Vite", "Javascript", "CSS"],
       demoLink: "https://university-graduation-timer.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/University-Graduation-Timer"

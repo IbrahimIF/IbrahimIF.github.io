@@ -138,7 +138,6 @@ const ContactSection = styled.section`
   align-items: center;
   margin-top: calc(-1 * var(--section-gap));
   padding-bottom: 300px;
-  padding-top: 300px;
   background-image: radial-gradient(
     circle at center,
     rgb(0, 0, 2) 0%,

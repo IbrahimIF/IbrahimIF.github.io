@@ -72,6 +72,7 @@ const ExperienceSection = styled.section`
 `;
 
 const ToggleSection = styled.div`
+  display: flex;
   position: relative;
   width: 100%;
 

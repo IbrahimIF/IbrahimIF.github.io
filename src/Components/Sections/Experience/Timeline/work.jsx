@@ -7,8 +7,6 @@ function Work({ counter }) {
     <WorkTimeline id="Work">
         <VerticalTimeline>
 
-
-
         {counter > 16 && 
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}

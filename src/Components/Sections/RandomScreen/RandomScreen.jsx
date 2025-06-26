@@ -28,49 +28,49 @@ function RandomScreen() {
               { type: 'specialShort', url: 'https://www.youtube.com/embed/ddWJatRxfz8?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
 
               { type: 'EvenLongerVideo', url: 'https://www.youtube.com/embed/OnFYspZag28?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'EvenLongerVideo', url: 'https://www.youtube.com/embed/w56X_U9TZ-s?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'EvenLongerVideo', url: 'https://www.youtube.com/embed/PGfhtLrwiKo?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
 
+              { type: 'LongerVideo', url: 'https://www.youtube.com/embed/w56X_U9TZ-s?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'LongerVideo', url: 'https://www.youtube.com/embed/Z93msbCiHnM?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'LongerVideo', url: 'https://www.youtube.com/embed/PGfhtLrwiKo?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1&start=7'},
-              { type: 'LongerVideo', url: 'https://www.youtube.com/embed/fjCOot3CApc?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'LongerVideo', url: 'https://www.youtube.com/embed/vzcGtJ2TC3I?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'LongerVideo', url: 'https://www.youtube.com/embed/04u2ctimwss?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'LongerVideo', url: 'https://www.youtube.com/embed/gDul8BcdeNk?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'LongerVideo', url: 'https://www.youtube.com/embed/S6eqqOhETeM?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'LongerVideo', url: 'https://www.youtube.com/embed/4LeTZRKRE8Q?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=&start=22'},
 
 
-              { type: 'NormalVideo', url: 'https://www.youtube.com/embed/RxW4EhTXBaI?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'NormalVideo', url: 'https://www.youtube.com/embed/h7FJ9ddRNdA?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'NormalVideo', url: 'https://www.youtube.com/embed/fjCOot3CApc?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'NormalVideo', url: 'https://www.youtube.com/embed/v3Sj7T9D1_Q?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'NormalVideo', url: 'https://www.youtube.com/embed/19DY8iNYXSs?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'NormalVideo', url: 'https://www.youtube.com/embed/Sj10ELmeJL8?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1&start=151'},
-              { type: 'NormalVideo', url: 'https://www.youtube.com/embed/tPsJPtrMpKA?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1&start=4'},
 
+              { type: 'Shorts', url: 'https://www.youtube.com/embed/19DY8iNYXSs?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'Shorts', url: 'https://www.youtube.com/embed/RxW4EhTXBaI?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'Shorts', url: 'https://www.youtube.com/embed/iBF_mDFgtH4?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'Shorts', url: 'https://www.youtube.com/embed/K-bP87jsrW4?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'Shorts', url: 'https://www.youtube.com/embed/IzV-EoGxtME?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'Shorts', url: 'https://www.youtube.com/embed/08XyCs4yVEU?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'Shorts', url: 'https://www.youtube.com/embed/-fgL_rNwa5Y?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'Shorts', url: 'https://www.youtube.com/embed/2dz6YhII_x4?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'Shorts', url: 'https://www.youtube.com/embed/4LeTZRKRE8Q?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=30'},
+              { type: 'Shorts', url: 'https://www.youtube.com/embed/tPsJPtrMpKA?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1&start=4'},
               
-              { type: 'ShorterVideo', url: 'https://www.youtube.com/embed/SqE2J9V3a8A?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'ShorterVideo', url: 'https://www.youtube.com/embed/1iG_d0tgZEY?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1&start=05'},
+              { type: 'ShorterVideo', url: 'https://www.youtube.com/embed/2gMemLkfYWY?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'ShorterVideo', url: 'https://www.youtube.com/embed/qJmDZ4h3Im0?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
 
+              { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/1iG_d0tgZEY?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1&start=05'},
+              { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/SqE2J9V3a8A?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/2dz6YhII_x4?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/08XyCs4yVEU?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/HX0DDigasd0?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/2gMemLkfYWY?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
-              { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/iRTNUTcPZL4?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/MfA6NAha2K0?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/zOYJDdqDhR8?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/aq_UO_ttn-k?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/iNXel1vG8Sw?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/aH56oeU5soo?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/6eA4YXjOEnQ?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/SmJkh0-0j6s?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'EvenShorterVideo', url: 'https://www.youtube.com/embed/Mi8za2kTJDs?si=jZMPlxAouzCeaZ9rautoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
 
               { type: 'AsShortAsPossibleVideo', url: 'https://www.youtube.com/embed/zoMiYklHvjk?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
               { type: 'AsShortAsPossibleVideo', url: 'https://www.youtube.com/embed/YrBP0XhEpWo?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1'},
+              { type: 'AsShortAsPossibleVideo', url: 'https://www.youtube.com/embed/SmJkh0-0j6s?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=1&start=54'},
 
-              // Add more images and YouTube links to the list
       ];
 
       const randomIndex = Math.floor(Math.random() * mediaList.length);

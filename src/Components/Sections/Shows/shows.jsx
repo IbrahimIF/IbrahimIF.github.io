@@ -1,16 +1,16 @@
+import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// Import Swiper modules correctly (for Swiper v8+)
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 function Show() {
+  const audioRefs = useRef({});
 
 
   const showsData = [
@@ -120,22 +120,49 @@ function Show() {
     }
   ];
 
+  
+useEffect(() => {
+  return () => {
+    Object.values(audioRefs.current).forEach(audio => {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    });
+  };
+}, []);
+
+const handleMouseEnter = (show) => {
+  if (!audioRefs.current[show.id]) {
+    audioRefs.current[show.id] = new Audio(show.audio);
+  }
+  audioRefs.current[show.id].play();
+};
+
+const handleMouseLeave = (show) => {
+  if (audioRefs.current[show.id]) {
+    audioRefs.current[show.id].pause();
+    audioRefs.current[show.id].currentTime = 0;
+  }
+};
 
   return (
     <ShowSection id="Shows">
       <div className="box">
-      <h1 className="title"> Shows </h1>
+        <h1 className="title">Shows</h1>
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
           slidesPerView={'auto'}
+          speed={800}
           coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
+            rotate: 5,
+            stretch: -20,
+            depth: 150,
+            modifier: 2,
+            slideShadows: true,
           }}
           pagination={{ 
             el: '.swiper-pagination', 
@@ -151,28 +178,21 @@ function Show() {
           className="swiper_container"
         >
           {showsData.map((show) => (
-            <SwiperSlide key={show.id} onClick={() => window.open(show.link, '_blank')}
-            onMouseEnter={() => {
-              const audio = new Audio(show.audio);
-              audio.play();
-              show._audio = audio; // store for later use
-            }}
-            onMouseLeave={() => {
-              if (show._audio) {
-                show._audio.pause();
-                show._audio.currentTime = 0;
-              }
-            }}
+            <SwiperSlide 
+              key={show.id} 
+              onClick={() => window.open(show.link, '_blank')}
+              onMouseEnter={() => handleMouseEnter(show)}
+              onMouseLeave={() => handleMouseLeave(show)}
             >
-              <SlideContent style={{ backgroundImage: `url(${show.imageBg})` }} id="SlideContent">
-                <Logo src={show.logo} alt={`Logo for Show ${show.id}`} />
+              <SlideContent style={{ backgroundImage: `url(${show.imageBg})` }}>
+                <Logo src={show.logo} alt={show.name} loading="lazy" />
               </SlideContent>
             </SwiperSlide>
           ))}
 
-          <SliderController id="SliderController">
+          <SliderController>
             <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline" ></ion-icon>
+              <ion-icon name="arrow-back-outline"></ion-icon>
             </div>
             <div className="swiper-button-next slider-arrow">
               <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -230,9 +250,11 @@ const ShowSection = styled.section`
   padding-bottom: 10px;
   }
 
+
   .swiper_container {
     width: 100%;
     height: 100%;
+    padding: 2rem 0;
     
     .swiper-slide {
       width: 300px;
@@ -242,9 +264,40 @@ const ShowSection = styled.section`
       align-items: center;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
-      border-radius: 10px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      transform-style: preserve-3d;
+      
+      &:hover {
+        transform: scale(1.05) translateY(-10px);
+        box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+        z-index: 10;
+        
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+      }
+      
+      &-active {
+        transform: scale(1.05);
+        z-index: 5;
+      }
     }
   }
 `;
@@ -262,6 +315,14 @@ const SlideContent = styled.p`
   justify-content: center;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  
+
+    &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const SliderController = styled.div`
@@ -328,4 +389,7 @@ const Logo = styled.img`
   margin-bottom: 10px;
   transition: all 0.3s ease;
 
+  &:hover {
+    transform: scale(1.05);
+  }
 `;

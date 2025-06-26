@@ -35,9 +35,8 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-PSA.png',
       title: "Pinnacle Studio Architecture",
       description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
-      technologies: ["React + Vite", "Javascript", "CSS"],
+      technologies: ["React + Vite", "JavaScript", "CSS"],
       demoLink: "https://pinnaclestudioarchitecture.co.uk/",
-      githubLink: "https://github.com/IbrahimIF/Architecture-Site"
     },
     {
       id: 4,
@@ -54,7 +53,7 @@ function Completed({counter}) {
       bgcolor: "#fff4f4",
       title: "F.R.V",
       description: "A serverless full-stack application handling real-time data flow between React and Firestore.\nIt allows users to send and view data instantly without a traditional backend setup.",
-      technologies: ["React + Vite", "FireBase", "Javascript"],
+      technologies: ["React + Vite", "Firestore", "JavaScript"],
       demoLink: "https://fern-delta.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/FRV"
     },
@@ -68,14 +67,13 @@ function Completed({counter}) {
       demoLink: "https://mern-frontend-kappa-drab.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/MERN"
     },
-    {
+    { 
       id: 7,
-      banner: './assets/Projects/Banner-DMY.png',
-      bgcolor: "#5864f2",
-      title: "Discord Mute Yourself",
-      description: "A Python project that automatically mutes Discord users based on detected keywords.\nPerfect for streamers and moderators, it helps maintain a controlled voice channel environment.",
-      technologies: ["Python", "Discord", "PyAudio"],
-      githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
+      banner: './assets/Projects/Banner-OS.png',   
+      title: "Offdays-Shareables", 
+      description: "A project developed as part of my work with OffDays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office dates. ", 
+      technologies: ["React + Vite", "TypeScript"],
+      demoLink: "https://stirring-croissant-44c2eb.netlify.app/",
     },
     {
       id: 8,
@@ -85,8 +83,26 @@ function Completed({counter}) {
       description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
       technologies: ["React", "Figma", "Trello"],
     },
-    {
+    { 
       id: 9,
+      banner: './assets/Projects/Banner-TCC.png',   
+      title: "Twitch-Chat-Clone", 
+      description: "A twitch chat clone with React, TypeScript, Tailwind CSS and Socket.io.", 
+      technologies: ["TypeScript", "Tailwind CSS", "Socket.io"],
+      demoLink: "https://twitch-chat-clone-chi.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/Twitch-Chat-Clone"
+    },
+    {
+      id: 10,
+      banner: './assets/Projects/Banner-DMY.png',
+      bgcolor: "#5864f2",
+      title: "Discord Mute Yourself",
+      description: "A Python project that automatically mutes Discord users based on detected keywords.\nPerfect for streamers and moderators, it helps maintain a controlled voice channel environment.",
+      technologies: ["Python", "Discord", "Pyaudio"],
+      githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
+    },
+    {
+      id: 11,
       banner: './assets/Projects/Banner-PC.png',
       bgcolor: "#142446",
       title: "Paradox-Chrono",
@@ -95,23 +111,23 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Paradox-Chrono"
     },
     {
-      id: 10,
+      id: 12,
       banner: 'Pneumonia-Detection',
       title: "pneumonia-detection",
       description: "An AI module university assignment focused on accurately detecting pneumonia from X-ray images.\nThis project trains and optimises a deep learning model to differentiate between images.",
-      technologies: ["Python", "Jupiter-notebook"],
+      technologies: ["Python", "Jupyter Notebook"],
       githubLink: "https://github.com/IbrahimIF/pneumonia-detection"
     },
     {
-      id: 11,
+      id: 13,
       banner: 'CopyCat',
       title: "CopyCat",
       description: "A Python project that listens to microphone input, processes speech, and responds via Text-to-Speech.\nIt records audio, converts it to text, and generates spoken replies using the ElevenLabs API.",
-      technologies: ["Python", "ElevenLabs", "PyAudio"],
+      technologies: ["Python", "ElevenLabs", "Pyaudio"],
       githubLink: "https://github.com/IbrahimIF/CopyCat"
     },
     {
-      id: 12,
+      id: 14,
       banner: 'Airport System',
       title: "Airport System",
       description: "A first-year university group project developing an Airport System, including a seating-plan component.\nThis project enhanced Java expertise, testing, and collaborative workflow using Git.",
@@ -119,7 +135,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Seating-Plan"
     },
     {
-      id: 13,
+      id: 15,
       banner: 'Car-Park-App',
       title: "Car-Park-App",
       description: "A multi-threaded Java client-server application demonstrating a car park management system.\nIt showcases robust network computing, including concurrent access control and socket communication.",
@@ -128,39 +144,39 @@ function Completed({counter}) {
     },
     ...(counter > 12 ? [
     {
-      id: 14,
+      id: 16,
       banner: 'Starship Canvas Animation',
       title: "Starship-Canvas-Animation",
-      description: "An animated background featuring iconic Star Wars cruisers and Star Destroyers.\nThis project creates an engaging visual effect using Javascript",
-      technologies: ["Javascript", "HTML", "CSS"],
+      description: "An animated background featuring iconic Star Wars cruisers and Star Destroyers.\nThis project creates an engaging visual effect using JavaScript",
+      technologies: ["JavaScript", "HTML", "CSS"],
       demoLink: "https://starship-canvas-animation.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Starship-Canvas-Animation"
     },
     {
-      id: 15,
+      id: 17,
       banner: './assets/Projects/Banner-SB.png',
       title: "Switch-Board",
       bgcolor: "white",
-      description: "A large interactive display of light switches, inspired by a classic 2006 interactive site.\nBuilt with React, Javascript, and CSS, it offers an engaging user experience.",
-      technologies: ["React + Vite", "Javascript", "CSS"],
+      description: "A large interactive display of light switches, inspired by a classic 2006 interactive site.\nBuilt with React, JavaScript, and CSS, it offers an engaging user experience.",
+      technologies: ["React + Vite", "JavaScript", "CSS"],
       demoLink: "https://switch-board.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Switch-Board"
     },
     {
-      id: 16,
+      id: 18,
       banner: './assets/Projects/Banner-RB.png',
       title: "Red Button",
       description: "An interactive website game inspired by Bored Button, where users find and press ten red buttons.\nThe project features a complex loading screen, randomised YouTube videos, and hidden secrets.",
-      technologies: ["React", "Javascript", "CSS"],
+      technologies: ["React", "JavaScript", "CSS"],
       demoLink: "https://mystery-button.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Red-Button"
     },
     {
-      id: 17,
+      id: 19,
       banner: './assets/Projects/Banner-GT.png',
       title: "University Graduation Timer",
-      description: "A Countdown Timer to university graduation, now past its original limit.\nThis project, built with React and Javascript",
-      technologies: ["React + Vite", "Javascript", "CSS"],
+      description: "A Countdown Timer to university graduation, now past its original limit.\nThis project, built with React and JavaScript",
+      technologies: ["React + Vite", "JavaScript", "CSS"],
       demoLink: "https://university-graduation-timer.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/University-Graduation-Timer"
     },
@@ -188,7 +204,11 @@ function Completed({counter}) {
           <ProjectCard key={project.id}>
             <div className="project-card">
               <div className="banner-container" style={{background: project.bgcolor }}>
-                <img src={project.banner} alt={project.banner} className="banner"/>
+                {project.banner && project.banner.startsWith('./assets/') ? (
+                    <img src={project.banner} alt={project.title} className="banner" />
+                  ) : (
+                    <NoBannerText>{project.title}</NoBannerText>
+                )}
               </div>
 
               <div className="card-content">
@@ -213,14 +233,14 @@ function Completed({counter}) {
                         Live Demo
                       </StyledButton>
                     ) : (
-                      <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                      <a className="LiveButton" href={project.demoLink} target="_blank" rel="noopener noreferrer">
                         Live Demo
                       </a>
                     )
                   )}
 
                   {project.githubLink && (
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                    <a className="GithubButton" href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <FaGithub className="icon" /> &nbsp; <div> Github </div>
                     </a>
                   )}
@@ -373,8 +393,8 @@ const ProjectCard = styled.div`
   margin-top: 1rem;
 }
 
-.action-buttons a {
-  display: inline-flex;
+.LiveButton{
+display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
   color: white;
@@ -384,26 +404,36 @@ const ProjectCard = styled.div`
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   transition: all 300ms;
-}
-
-.action-buttons a:hover {
-  transform: translateY(-0.125rem);
-}
-
-.action-buttons a:first-child {
+  cursor: pointer;
+  border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #3b82f6, #2563eb);
-}
 
-.action-buttons a:first-child:hover {
+  &:hover {
   background: linear-gradient(to right, #2563eb, #1d4ed8);
+    transform: translateY(-0.125rem);
+  }
 }
 
-.action-buttons a:last-child {
+.GithubButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #374151, #1f2937);
-}
+  
 
-.action-buttons a:last-child:hover {
+  &:hover {
   background: linear-gradient(to right, #1f2937, #111827);
+    transform: translateY(-0.125rem);
+  }
 }
 `;
 
@@ -457,4 +487,18 @@ const ToggleButton = styled.button`
     transition: transform 0.3s ease;
     transform: ${props => (props.showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
   }
+`;
+
+
+
+const NoBannerText = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12rem;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 `;

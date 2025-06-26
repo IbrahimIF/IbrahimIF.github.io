@@ -19,15 +19,15 @@ function Overview() {
               I’ve recently graduated with a 2:1 BSc in Computer Science, specialising in Software Engineering.
               <br/>
               <br/>
-              Throughout my self-studying and academic journey, I've gained experience in python, Java and React.js.
-              With practical expertise and a solid foundation in databases such as MySQL and MongoDB. 
+              Throughout my self-studying and academic journey, I've gained experience in **Python**, Java, and React.js,
+              with practical expertise and a solid foundation in databases such as MySQL and MongoDB.
               <br/>
               <br/>
               I have completed a few personal and client projects, all of which demonstrate my ability to develop and optimise software.
-              I am passionate about innovation, learning and technology's potential to solve complex problems. My drive for continuous learning, makes me eager to contribute to impactful solutions.
+              I am passionate about innovation, learning, and technology's potential to solve complex problems. My drive for continuous learning makes me eager to contribute to impactful solutions.
               <br/>
               <br/>
-              I am currently looking for a graduate, junior, or entry-level position in software engineering, Full-stack, software development, frontend or consultant to further apply my skills in a professional environment and contribute to meaningful projects.
+              I am currently looking for a graduate, junior, or entry-level position in software engineering, **full-stack**, software development, **front-end**, or **consulting** to further apply my skills in a professional environment and contribute to meaningful projects.
               </p>
             </div>
           </div>

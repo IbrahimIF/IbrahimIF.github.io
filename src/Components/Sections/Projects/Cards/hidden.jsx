@@ -25,10 +25,10 @@ function Hidden() {
     },
     {
       id: 3,
-      banner: 'Project Scribe',
-      title: "Project Scribe",
-      description: "A discord bot assistant to help organise and sort links, messages and code snippets in privcate servers.",
-      technologies: ["Python", "Discord"],
+      banner: 'Arduino-Sound-Player',
+      title: "8-Bit-Arduino-Sound-Player",
+      description: "A hardware project using an Arduino to control a speaker or buzzer to generate 8-bit, chiptune-style melodies.",
+      technologies: ["C#", "Arduino"],
       githubLink: "#"
     },
     {
@@ -43,7 +43,7 @@ function Hidden() {
       id: 5,
       banner: 'Prompt.exe', 
       title: "Prompt.exe", 
-      description: " A game made with C#, speak to a computer giving prompts, with hidden secrets and achievments.", 
+      description: " A game made with C#, speak to a computer giving prompts, with hidden secrets and achievements.", 
       technologies: ["C#"],
       githubLink: "#"
     },
@@ -61,7 +61,7 @@ function Hidden() {
       bgcolor: "#00b050",
       title: "Adhkar Daily", 
       description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
-      technologies: ["React.js + Vite", "Javascript", "CSS"],
+      technologies: ["React.js + Vite", "JavaScript", "CSS"],
       githubLink: "https://github.com/IbrahimIF/Dhikr-Project"
     },
     { 
@@ -70,7 +70,7 @@ function Hidden() {
       bgcolor: "black",  
       title: "PS2-Bios-Menu-Sounds", 
       description: "Based on the Garry'sMod mod that adds a PS2 Bios sounds to the menu and buttons, this will be for VScode as an extension.", 
-      technologies: ["Typescript", "Vscode-extension"],
+      technologies: ["TypeScript", "VS Code extension"],
       githubLink: "https://github.com/IbrahimIF/PS2-Bios-Menu-Sounds"
     },
     { 
@@ -78,7 +78,7 @@ function Hidden() {
       banner: 'Not A Site', 
       title: "Note A Site", 
       description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site, A usless Website that does nothing but waste your time.", 
-      technologies: ["React.js + Vite", "Javascript", "CSS"],
+      technologies: ["React.js + Vite", "JavaScript", "CSS"],
       githubLink: "https://github.com/IbrahimIF/Not-A-Site"
     },
     { 
@@ -102,7 +102,8 @@ function Hidden() {
       banner: 'HijrLife', 
       title: "HijrLife", 
       description: "Similar to neal.fun life stats, it is islamic stats based on your lunar birth.", 
-      technologies: ["React + Vite, Javascript, CSS"],
+      technologies: ["React + Vite, JavaScript, CSS"],
+      githubLink: "#"
     },
   ];
 
@@ -116,7 +117,11 @@ return (
           <ProjectCard key={project.id}>
             <div className="project-card">
             <div className="banner-container" style={{background: project.bgcolor }}>
-                <img src={project.banner} alt={project.banner} className="banner" />
+              {project.banner && project.banner.startsWith('./assets/') ? (
+                  <img src={project.banner} alt={project.title} className="banner" />
+                ) : (
+                  <NoBannerText>{project.title}</NoBannerText>
+              )}
               </div>
               
               <div className="card-content">
@@ -136,12 +141,12 @@ return (
 
                 <div className="action-buttons">
                   {project.demoLink && (
-                    <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                    <a className="LiveButton" href={project.demoLink} target="_blank" rel="noopener noreferrer">
                       Live Demo
                     </a>
                   )}
                   {project.githubLink && (
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                    <a className="GithubButton" href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <FaGithub className="icon" /> &nbsp; <div> Github </div>
                     </a>
                   )}
@@ -290,8 +295,8 @@ const ProjectCard = styled.div`
   margin-top: 1rem;
 }
 
-.action-buttons a {
-  display: inline-flex;
+.LiveButton{
+display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
   color: white;
@@ -301,26 +306,36 @@ const ProjectCard = styled.div`
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   transition: all 300ms;
-}
-
-.action-buttons a:hover {
-  transform: translateY(-0.125rem);
-}
-
-.action-buttons a:first-child {
+  cursor: pointer;
+  border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #3b82f6, #2563eb);
-}
 
-.action-buttons a:first-child:hover {
+  &:hover {
   background: linear-gradient(to right, #2563eb, #1d4ed8);
+    transform: translateY(-0.125rem);
+  }
 }
 
-.action-buttons a:last-child {
+.GithubButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #374151, #1f2937);
-}
+  
 
-.action-buttons a:last-child:hover {
+  &:hover {
   background: linear-gradient(to right, #1f2937, #111827);
+    transform: translateY(-0.125rem);
+  }
 }
 
 `;
@@ -352,4 +367,17 @@ const ToggleButton = styled.button`
     transition: transform 0.3s ease;
     transform: ${props => (props.showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
   }
+`;
+
+
+const NoBannerText = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12rem;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 `;

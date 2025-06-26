@@ -39,21 +39,20 @@ function Work({ counter }) {
             </p>
           </VerticalTimelineElement>
           }
-          {counter > 6 && 
+
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="May 2025 - present"
+            date="May 2025 - Present"
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
             icon={ <div className="img-container"><img src="/assets/Company/offdays.jpg" alt="placeholder" className="img"/></div>}
           >
-            <h3>Off-Days</h3>
+            <h3>OffDays</h3>
             <h4>London | Internship</h4>
             <p>
-              Software Engineering, Front-End, Typscript
+              Software Engineering, Front-End, TypeScript
             </p>
           </VerticalTimelineElement>
-          }
 
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
@@ -87,7 +86,7 @@ function Work({ counter }) {
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="Nov 2024 - Feburary 2025"
+            date="Nov 2024 - February 2025"
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
             icon={ <div className="img-container"><img src="/assets/Company/el_waterworks.jpg" alt="placeholder" className="img"/></div>}
           >
@@ -100,7 +99,7 @@ function Work({ counter }) {
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="Jun 2024 - Jun 2024"
+            date="Jun 2024"
             iconStyle={{ background: '#3d3c3a', color: '#fff' }}
             icon={ <div className="img-container"><img src="/assets/Company/bright_network.jpg" alt="placeholder" className="img"/></div>}
           >

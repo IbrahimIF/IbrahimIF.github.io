@@ -67,16 +67,8 @@ function Completed({counter}) {
       demoLink: "https://mern-frontend-kappa-drab.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/MERN"
     },
-    { 
-      id: 7,
-      banner: './assets/Projects/Banner-OS.png',   
-      title: "Offdays-Shareables", 
-      description: "A project developed as part of my work with OffDays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office dates. ", 
-      technologies: ["React + Vite", "TypeScript"],
-      demoLink: "https://stirring-croissant-44c2eb.netlify.app/",
-    },
     {
-      id: 8,
+      id: 7,
       banner: './assets/Events/the_orange_trust.png',
       title: "The Orange Trust Site",
       bgcolor: "Orange",
@@ -84,7 +76,7 @@ function Completed({counter}) {
       technologies: ["React", "Figma", "Trello"],
     },
     { 
-      id: 9,
+      id: 8,
       banner: './assets/Projects/Banner-TCC.png',   
       title: "Twitch-Chat-Clone", 
       description: "A twitch chat clone with React, TypeScript, Tailwind CSS and Socket.io.", 
@@ -93,7 +85,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Twitch-Chat-Clone"
     },
     {
-      id: 10,
+      id: 9,
       banner: './assets/Projects/Banner-DMY.png',
       bgcolor: "#5864f2",
       title: "Discord Mute Yourself",
@@ -102,7 +94,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
     },
     {
-      id: 11,
+      id: 10,
       banner: './assets/Projects/Banner-PC.png',
       bgcolor: "#142446",
       title: "Paradox-Chrono",
@@ -111,7 +103,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Paradox-Chrono"
     },
     {
-      id: 12,
+      id: 11,
       banner: 'Pneumonia-Detection',
       title: "pneumonia-detection",
       description: "An AI module university assignment focused on accurately detecting pneumonia from X-ray images.\nThis project trains and optimises a deep learning model to differentiate between images.",
@@ -119,7 +111,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/pneumonia-detection"
     },
     {
-      id: 13,
+      id: 12,
       banner: 'CopyCat',
       title: "CopyCat",
       description: "A Python project that listens to microphone input, processes speech, and responds via Text-to-Speech.\nIt records audio, converts it to text, and generates spoken replies using the ElevenLabs API.",
@@ -127,7 +119,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/CopyCat"
     },
     {
-      id: 14,
+      id: 13,
       banner: 'Airport System',
       title: "Airport System",
       description: "A first-year university group project developing an Airport System, including a seating-plan component.\nThis project enhanced Java expertise, testing, and collaborative workflow using Git.",
@@ -135,7 +127,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Seating-Plan"
     },
     {
-      id: 15,
+      id: 14,
       banner: 'Car-Park-App',
       title: "Car-Park-App",
       description: "A multi-threaded Java client-server application demonstrating a car park management system.\nIt showcases robust network computing, including concurrent access control and socket communication.",
@@ -143,6 +135,14 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Car-Park-App"
     },
     ...(counter > 12 ? [
+    { 
+      id: 15,
+      banner: './assets/Projects/Banner-OS.png',   
+      title: "Offdays-Shareables", 
+      description: "A project developed as part of my work with OffDays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office dates. ", 
+      technologies: ["React + Vite", "TypeScript"],
+      demoLink: "https://stirring-croissant-44c2eb.netlify.app/",
+    },
     {
       id: 16,
       banner: 'Starship Canvas Animation',

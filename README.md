@@ -9,12 +9,9 @@
 
 ![Static Badge](https://img.shields.io/badge/made_with-React_+_Vite-blue)
 
-A portfolio website showcasing my expertise, skills and about me, leveraging three.js and react + vite for a dynamic 3D interactive site.
-The React framework ensures a responsive and modular structure, while Vite provides fast development and optimized performance.
-Showing a blend of creativity and technical expertise. the site features immersive 3D elements, smooth animations and engaging visual effetcs. that shows my personality and brings my project to life.
+This portfolio website is a personal project, a creative space to showcase my personality, skills, and journey. Built with React + Vite, it leverages Three.js for a dynamic, 3D interactive experience. Showing a blend of creativity and technical expertise, the site features immersive 3D elements, smooth animations, and engaging visual effects. It's packed with unique, unconventional features, hidden secrets, and surprises.
 
-This project has been years in the making countless iterations, experiments, and refinements have all led to this final, polished version.
-The site is packed with unique, unconventional features, hidden secrets and suprises.
+This project has been years in the making, with countless iterations, experiments, and refinements that have all led to this final, polished version.
 
 ----
 ## Getting started:
@@ -30,13 +27,20 @@ To run this project locally, you'll need to have Node.js and npm installed on yo
 -----
 ## Features:
 
-This project includes several exciting features for you to explore:
+This project includes several features to explore:
 
-- **3D graphics**: Stunning 3D graphics taken from the ThreeJS library.
-- **Hidden Secrets**: Discover hidden elements and secrets within the project for added fun and challenge.
-- **Links**: Links to other pages, my accounts (such as GitHub) and so on.
-- **About me**:  Showcase of who I am and what my preferences.
-- **Projects I have done**: Showcasing what my Achievements have been and projects I have completed, what programming languages I know etc.
+- **Interactive 3D Elements**: The site features 3D interactive elements including a 3D globe and individual tech balls. Also includes an alternative hidden animated background.
+- **Bento Grid:**: The "Overview" section uses a bento grid layout for presenting visual information about me.
+- **Navigation & Content:
+   - **Responsive Navigation**: An animated navbar with icons  that adapts to differen screen sizes.
+   - **Social Links**: Dedicated sections for various social media accounts.
+   - **CV Download**: A functional button to download my CV.
+   - **Carousel Displays**: Variety of carousels, a Linkedin post carousel and for attended events.
+- **Timeline Display**: Presented using a vertical timeline component, with a toggle to switch between work and education.
+- **Projects**: Projects are showcased using a card design, featuring banners, descriptions, technology tags, and links to GitHub repositories and live demos.
+- **Contact Form**: A functional contact form is included, with profanity detection for messages.
+- **Hidden Secrets**: Discover over 20 hidden elements and secrets within the project for added fun and challenge.
+
 
 
 
@@ -53,5 +57,7 @@ This project includes several exciting features for you to explore:
 - [HextaUI](https://hextaui.com/)
 - [React Globe gl](https://github.com/vasturiano/react-globe.gl/tree/master)
 - [React Three.js Fiber](https://r3f.docs.pmnd.rs/getting-started/your-first-scene)
-
+- [Swiperjs](https://swiperjs.com/get-started)
+- [Styled Components](https://styled-components.com/docs/basics)
+- [Motion (framer-motion)](https://www.framer.com/motion/)
 ---

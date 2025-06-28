@@ -1,74 +1,55 @@
-import React from "react";
-import { Carousel } from 'react-responsive-carousel';
+import { useEffect } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from 'styled-components';
 
 
-function central() {
+function Linkedin() {
+  setTimeout(() => {
+    const elfsightLink = document.querySelector('a[href*="elfsight.com"]');
+    if (elfsightLink) elfsightLink.remove();
+}, 1000);
+  useEffect(() => {
+    const elfsightLink = document.querySelector('a[href*="elfsight.com"]');
+    if (elfsightLink) elfsightLink.remove();
+    if (elfsightLink) elfsightLink.style.display = 'none';
+  }, []);
+
     return (
-        <CarouselSection>
-            <Carousel infiniteLoop showStatus={false} set showThumbs={false}>
-              <div>
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7307746793004421121" height="992" width="504" title="Embedded post"></iframe>
-              </div>
-
-              <div>
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7239314455870803970" height="929" width="504" title="Embedded post"></iframe>
-              </div>
-
-            </Carousel>
-        </CarouselSection>
+      <CarouselSection>
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div className="elfsight-app-4b26e22d-a2e5-410a-851b-03e546d81dcf" data-elfsight-app-lazy></div>
+      </CarouselSection>
     );
 }
-export default central
+export default Linkedin
 
 
-const CarouselSection = styled.div` 
+const CarouselSection = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     position: relative;
 
-  .carousel-root{
-    width: 100%;
-    height: 500%;
-  }
-  .carousel{
-    width: 100%;
-    height: 100%;
-  }
+.WidgetBackground__Content-sc-1ho7q3r-2.jkIBsh a[href*="elfsight.com"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
-  .carousel .slider-wrapper {
-    overflow:hidden;
-    height: 100%;
-  }
+.ShortenedText__Container-sc-1x39ulp-0.brTBJP.es-text-shortener-container,
+.ShortenedText__ShortenedTextComponent-sc-1x39ulp-1.gksSyl.es-text-shortener {
+    max-height: unset !important;
+    height: 600px !important;
+}
 
-  .buttons {
-    cursor: pointer;
-    background-color: transparent;
-    border: 10px solid transparent;
-  }
-
-  .hover {
-    background-color: transparent;
-    border: 10px solid transparent;
-  }
-
-  .carousel .control-next.control-arrow:before {
-    position: relative;
-    content: '}'; /*changes arrow to a }*/
-    font-size: 40px; 
-    color:rgb(255, 255, 255); 
-    border: none; 
-    top: -50px;
-  }
-.carousel .control-prev.control-arrow:before {
-    position: relative;
-    content: '{'; /*changes arrow to a }*/
-    font-size: 40px; 
-    color:rgb(255, 255, 255); 
-    border: none; 
-    top: -50px;
-  }
+.ShortenedText__Container-sc-1x39ulp-0.brTBJP.es-text-shortener-container {
+    overflow-y: auto !important;
+}
 
 `;

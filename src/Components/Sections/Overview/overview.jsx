@@ -19,23 +19,22 @@ function Overview() {
               I’ve recently graduated with a 2:1 BSc in Computer Science, specialising in Software Engineering.
               <br/>
               <br/>
-              Throughout my self-studying and academic journey, I've gained experience in **Python**, Java, and React.js,
-              with practical expertise and a solid foundation in databases such as MySQL and MongoDB.
+              Throughout my self-studying and academic journey, I've gained experience in Python, Java, Javascript and React.js,
+              with practical expertise and a solid foundation in databases such as MySQL, Firestore and MongoDB.
               <br/>
               <br/>
               I have completed a few personal and client projects, all of which demonstrate my ability to develop and optimise software.
               I am passionate about innovation, learning, and technology's potential to solve complex problems. My drive for continuous learning makes me eager to contribute to impactful solutions.
               <br/>
               <br/>
-              I am currently looking for a graduate, junior, or entry-level position in software engineering, **full-stack**, software development, **front-end**, or **consulting** to further apply my skills in a professional environment and contribute to meaningful projects.
+              I am currently looking for a graduate, junior, or entry-level position in software engineering, full-stack, software development, front-end, or consulting to further apply my skills in a professional environment and contribute to meaningful projects.
               </p>
             </div>
           </div>
         </div>
 
         <div className="top-row">
-          <div className="grid-container" style={{height:'1160px'}}>
-          <p className="grid-headtext">Tech Stack</p>
+          <div className="grid-container" style={{height:'1160px', paddingTop:'110px'}}>
                 <TechBall/>
             <div>
             </div>

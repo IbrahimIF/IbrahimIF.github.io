@@ -5,7 +5,7 @@
 
 </div>
 
-![Project Status](https://img.shields.io/badge/status-in_progress-green)
+![Project Status](https://img.shields.io/badge/status-completed-darkgreen)
 
 ![Static Badge](https://img.shields.io/badge/made_with-React_+_Vite-blue)
 

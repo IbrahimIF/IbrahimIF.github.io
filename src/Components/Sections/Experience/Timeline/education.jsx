@@ -33,7 +33,7 @@ function Education() {
           <VerticalTimelineElement
             contentStyle={{ background: "#010017" }}
             contentArrowStyle={{ borderRight: '10px solid  rgb(255, 255, 255)' }}
-            date="2011 - present"
+            date="2015 - 2019"
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
             icon={ <div className="img-container"><img src="/assets/Company/St_Pauls.png" alt="placeholder" className="img"/></div>}
           >

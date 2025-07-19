@@ -51,7 +51,7 @@ function Show() {
       name: 'Kekkei Sensen',
       imageBg: 'https://i.postimg.cc/brNgGQ4W/bloodblockadebattlefront.png',
       logo: 'https://i.postimg.cc/MpCwJYLW/kekkeisensen.png',
-      audio: '/assets/Audio/Kekkei-Sensen.mp3',
+      audio: '/assets/Audio/Kekkai-Sensen.mp3',
       link: 'https://myanimelist.net/anime/24439/Kekkai_Sensen?q=blood%20blockade&cat=anime',
     },
     {
@@ -67,7 +67,7 @@ function Show() {
       name: 'Jujutsu Kisen',
       imageBg: 'https://i.postimg.cc/J007zz5m/Jujutsu-Kisenbg.png',
       logo: 'https://i.postimg.cc/jS513JdR/jujutsu-Kisen.png',
-      audio: '/assets/Audio/Jujutsu-Kisen.mp3',
+      audio: '/assets/Audio/Jujutsu-Kaisen.mp3',
       link: 'https://myanimelist.net/anime/40748/Jujutsu_Kaisen?q=jujutsu&cat=anime',
     },
     {
@@ -83,7 +83,7 @@ function Show() {
       name: "Jojo's Bizzare Adventure",
       imageBg: 'https://i.postimg.cc/FRWpLT3c/Stardust-Crusadersbg.png',
       logo: 'https://i.postimg.cc/Bv8n36N0/bizarre-adventure-jojo-bizarre-adventure-title-removebg-preview.png',
-      audio: "/assets/Audio/Jojo's-Bizzare-Adventure.mp3",
+      audio: "/assets/Audio/JoJo's-Bizzare-Adventure.mp3",
       link: 'https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV?q=jojo&cat=anime',
     },
     {
@@ -108,7 +108,7 @@ function Show() {
       imageBg: 'https://i.postimg.cc/QCLMM3Cy/tokyo-ghoulbg.jpg',
       logo: 'https://i.postimg.cc/fRbMDL5b/tokyo-ghoul-logo.png',
       audio: '/assets/Audio/Tokyo-Ghoul.mp3',
-      link: 'https://myanimelist.net/anime/1535/Death_Note?q=deathnote&cat=anime"',
+      link: 'https://myanimelist.net/anime/22319/Tokyo_Ghoul?q=tok&cat=anime',
     },
     {
       id: 13,
@@ -116,8 +116,32 @@ function Show() {
       imageBg: 'https://i.postimg.cc/g09t4twP/Death-Notebg.png',
       logo: 'https://i.postimg.cc/Hkt34WCb/death-note-removebg-preview.png',
       audio: '/assets/Audio/Death-Note.mp3',
-      link: 'https://myanimelist.net/anime/22319/Tokyo_Ghoul?q=tok&cat=anime',
-    }
+      link: 'https://myanimelist.net/anime/1535/Death_Note?q=deathnote&cat=anime',
+    },
+    {
+      id: 14,
+      name: 'Code Geass',
+      imageBg: 'https://i.postimg.cc/1XXPB168/Code-geass-background.png',
+      logo: 'https://i.postimg.cc/B6YfX7y4/Code-Geass.png' ,
+      audio: '/assets/Audio/Code-Geass.mp3',
+      link: 'https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch?q=code&cat=anime',
+    },
+    {
+      id: 15,
+      name: 'Vinalnd Saga',
+      imageBg: 'https://i.postimg.cc/0ygZdd1v/Vinland-Saga-bg.jpg',
+      logo: 'https://i.postimg.cc/TP096zL2/vinland-saga-lg.png',
+      audio: '/assets/Audio/Vinland-Saga.mp3',
+      link: 'https://myanimelist.net/anime/37521/Vinland_Saga?q=vinland%20saga&cat=anime',
+    },
+    {
+      id: 16,
+      name: 'Mob Psycho 100',
+      imageBg: 'https://i.postimg.cc/0jFn476p/Mob-Psycho-bg.jpg',
+      logo: 'https://i.postimg.cc/9fh8VPLb/Mob-Psycho-100-logo.webp',
+      audio: '/assets/Audio/Mob-Psycho.mp3',
+      link: 'https://myanimelist.net/anime/32182/Mob_Psycho_100?q=mob%20ps&cat=anime',
+    },
   ];
 
   

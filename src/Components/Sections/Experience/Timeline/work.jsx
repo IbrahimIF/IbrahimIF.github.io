@@ -42,7 +42,7 @@ function Work({ counter }) {
     <VerticalTimelineElement
       contentStyle={{ background: "#010017", color: "#fff" }}
       contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-      date="May 2025 - Present"
+      date="June 2025 - Present"
       iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
       icon={ <div className="img-container"><img src="/assets/Company/offdays.jpg" alt="OffDays Logo" className="img"/></div>}
     >
@@ -57,7 +57,7 @@ function Work({ counter }) {
     <VerticalTimelineElement
       contentStyle={{ background: "#010017", color: "#fff" }}
       contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-      date="Jan 2025 - Present"
+      date="Jan 2025 - July 2025"
       iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
       icon={ <div className="img-container"><img src="/assets/Company/innovation_pod.jpg" alt="Innovation Pod Logo" className="img"/></div>}
     >

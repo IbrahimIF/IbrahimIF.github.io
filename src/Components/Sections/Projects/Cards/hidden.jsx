@@ -57,15 +57,6 @@ function Hidden() {
     },
     { 
       id: 7,
-      banner: './assets/Projects/Banner-DD.png',
-      bgcolor: "#00b050",
-      title: "Adhkar Daily", 
-      description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
-      technologies: ["React.js + Vite", "JavaScript", "CSS"],
-      githubLink: "https://github.com/IbrahimIF/Dhikr-Project"
-    },
-    { 
-      id: 8,
       banner: './assets/Projects/Banner-PVE.png',
       bgcolor: "black",  
       title: "PS2-Bios-Menu-Sounds", 
@@ -74,7 +65,7 @@ function Hidden() {
       githubLink: "https://github.com/IbrahimIF/PS2-Bios-Menu-Sounds"
     },
     { 
-      id: 9, 
+      id: 8, 
       banner: 'Not A Site', 
       title: "Note A Site", 
       description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site, A usless Website that does nothing but waste your time.", 
@@ -82,7 +73,7 @@ function Hidden() {
       githubLink: "https://github.com/IbrahimIF/Not-A-Site"
     },
     { 
-      id: 10, 
+      id: 9, 
       banner: 'Text2Cast', 
       title: "Text2Cast", 
       description: "A chrome Extension project that merges both Automatic Text to speech and A.I voice overs of different characters (using uberduck.ai api).", 
@@ -90,15 +81,7 @@ function Hidden() {
       githubLink: "https://github.com/IbrahimIF/Text2Cast"
     },
     { 
-      id: 11, 
-      banner: 'CV Mix and Match', 
-      title: "CV Mix and Match", 
-      description: "A way to mix and match the different sections of your CV to help with making your CV releveant to company.", 
-      technologies: ["React + Vite, Django, Postgres"],
-      githubLink: "https://github.com/IbrahimIF/Text2Cast"
-    },
-    { 
-      id: 12, 
+      id: 10, 
       banner: 'HijrLife', 
       title: "HijrLife", 
       description: "Similar to neal.fun life stats, it is islamic stats based on your lunar birth.", 

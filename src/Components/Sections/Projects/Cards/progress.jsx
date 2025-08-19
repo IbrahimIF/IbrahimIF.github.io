@@ -11,15 +11,6 @@ function InProgress() {
   const projects = [
     { 
       id: 1,
-      banner: './assets/Projects/Banner-TG.gif',
-      bgcolor: "#000",  
-      title: "Terminal Games", 
-      description: "Repository showcasing python made games that can be played in the terminal of an IDE.", 
-      technologies: ["Python", "tkinter", "Curses"],
-      githubLink: "https://github.com/IbrahimIF/Terminal-Games"
-    },
-    { 
-      id: 2,
       banner: './assets/Projects/Banner-SERN.png', 
       bgcolor: "#26c3a5",
       title: "Full-Stack Chat-App", 
@@ -29,15 +20,15 @@ function InProgress() {
       githubLink: "https://github.com/IbrahimIF/FS-Chat-App"
     },
     { 
-      id: 3,
-      banner: './assets/Projects/Banner-TS.png',
-      title: "ToolShed",
-      description: "A Full-Stack application that organises my large folder of tools and resources.",
-      technologies: ["React.ts + Vite", "Firestore", "TypeScript"],
-      githubLink: "https://github.com/IbrahimIF/ToolShed"
+      id: 2, 
+      banner: 'CV Mix and Match', 
+      title: "CV Mix and Match", 
+      description: "A way to mix and match the different sections of your CV to help with making your CV releveant to company.", 
+      technologies: ["React + Vite, Django, Postgres"],
+      githubLink: "#"
     },
     { 
-      id: 4,
+      id: 3,
       banner: './assets/Projects/Banner-P.png',
       bgcolor: "#ff474d", 
       title: "Pokedex", 
@@ -47,12 +38,21 @@ function InProgress() {
       githubLink: "https://github.com/IbrahimIF/Pokedex"
     },
     {
-      id: 5,
+      id: 4,
       banner: 'Project Scribe',
       title: "Project Scribe",
       description: "A discord bot assistant to help organise and sort links, messages and code snippets in private servers.",
       technologies: ["Python", "Discord"],
       githubLink: "#"
+    },
+    { 
+      id: 5,
+      banner: './assets/Projects/Banner-DD.png',
+      bgcolor: "#00b050",
+      title: "Adhkar Daily", 
+      description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
+      technologies: ["React.js + Vite", "JavaScript", "CSS"],
+      githubLink: "https://github.com/IbrahimIF/Dhikr-Project"
     },
     { 
       id: 6,

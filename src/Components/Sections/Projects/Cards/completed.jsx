@@ -102,8 +102,26 @@ function Completed({counter}) {
       technologies: ["Python", "Discord", "Pyaudio"],
       githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
     },
-    {
+    { 
       id: 11,
+      banner: './assets/Projects/Banner-TG.gif',
+      bgcolor: "#000",  
+      title: "Terminal Games", 
+      description: "Repository showcasing python made games that can be played in the terminal of an IDE.", 
+      technologies: ["Python", "tkinter", "Curses"],
+      githubLink: "https://github.com/IbrahimIF/Terminal-Games"
+    },
+    { 
+      id: 12,
+      banner: './assets/Projects/Banner-TS.png',
+      title: "ToolShed",
+      description: "A Full-Stack application that organises my large folder of tools and resources.",
+      technologies: ["React + Vite", "Firestore", "Javascript"],
+      demoLink: "https://tool-shed.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/ToolShed"
+    },
+    {
+      id: 13,
       banner: './assets/Projects/Banner-PC.png',
       bgcolor: "#142446",
       title: "Paradox-Chrono",
@@ -112,7 +130,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Paradox-Chrono"
     },
     {
-      id: 12,
+      id: 14,
       banner: 'Pneumonia-Detection',
       title: "pneumonia-detection",
       description: "An AI module university assignment focused on accurately detecting pneumonia from X-ray images.\nThis project trains and optimises a deep learning model to differentiate between images.",
@@ -120,7 +138,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/pneumonia-detection"
     },
     {
-      id: 13,
+      id: 15,
       banner: 'CopyCat',
       title: "CopyCat",
       description: "A Python project that listens to microphone input, processes speech, and responds via Text-to-Speech.\nIt records audio, converts it to text, and generates spoken replies using the ElevenLabs API.",
@@ -128,7 +146,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/CopyCat"
     },
     {
-      id: 14,
+      id: 16,
       banner: 'Airport System',
       title: "Airport System",
       description: "A first-year university group project developing an Airport System, including a seating-plan component.\nThis project enhanced Java expertise, testing, and collaborative workflow using Git.",
@@ -136,7 +154,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Seating-Plan"
     },
     {
-      id: 15,
+      id: 17,
       banner: 'Car-Park-App',
       title: "Car-Park-App",
       description: "A multi-threaded Java client-server application demonstrating a car park management system.\nIt showcases robust network computing, including concurrent access control and socket communication.",
@@ -145,7 +163,7 @@ function Completed({counter}) {
     },
     ...(counter > 12 ? [
     {
-      id: 16,
+      id: 18,
       banner: 'Starship Canvas Animation',
       title: "Starship-Canvas-Animation",
       description: "An animated background featuring iconic Star Wars cruisers and Star Destroyers.\nThis project creates an engaging visual effect using JavaScript",
@@ -154,7 +172,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Starship-Canvas-Animation"
     },
     {
-      id: 17,
+      id: 19,
       banner: './assets/Projects/Banner-SB.png',
       title: "Switch-Board",
       bgcolor: "white",
@@ -164,7 +182,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Switch-Board"
     },
     {
-      id: 18,
+      id: 20,
       banner: './assets/Projects/Banner-RB.png',
       title: "Red Button",
       description: "An interactive website game inspired by Bored Button, where users find and press ten red buttons.\nThe project features a complex loading screen, randomised YouTube videos, and hidden secrets.",
@@ -173,7 +191,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Red-Button"
     },
     {
-      id: 19,
+      id: 21,
       banner: './assets/Projects/Banner-GT.png',
       title: "University Graduation Timer",
       description: "A Countdown Timer to university graduation, now past its original limit.\nThis project, built with React and JavaScript",

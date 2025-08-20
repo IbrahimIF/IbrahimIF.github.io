@@ -15,7 +15,7 @@ function InProgress() {
       bgcolor: "#26c3a5",
       title: "Full-Stack Chat-App", 
       description: "A simple Full-stack chat app to send and receive messages.", 
-      technologies: ["React.js + Vite", "Node.js", "Socket.io"],
+      technologies: ["React + Vite", "Node.js", "Socket.io"],
       demoLink: "https://fs-chat-app.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/FS-Chat-App"
     },
@@ -51,7 +51,7 @@ function InProgress() {
       bgcolor: "#00b050",
       title: "Adhkar Daily", 
       description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
-      technologies: ["React.js + Vite", "JavaScript", "CSS"],
+      technologies: ["React + Vite", "JavaScript", "Electron"],
       githubLink: "https://github.com/IbrahimIF/Dhikr-Project"
     },
     { 

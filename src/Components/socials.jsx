@@ -14,7 +14,6 @@ function Social({counter}) {
                 </a>
               </div>
             </div>
-            { counter > 14 &&
             <div className="social_icons" id="discord">
               <div className="icon_wrapper">
                 <a href="https://discordapp.com/users/431043132889628682" aria-label="Discord" className="icon_link discord">
@@ -23,7 +22,6 @@ function Social({counter}) {
                 </a>
               </div>
             </div>
-            }  
             { counter > 16 &&
             <div className="social_icons" id="steam">
               <div className="icon_wrapper">

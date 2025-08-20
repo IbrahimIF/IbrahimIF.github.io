@@ -86,6 +86,7 @@ const ToggleSection = styled.div`
   box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
   padding: 0.25rem;
   width: 300px;
+  height: 41px;
   font-size: 14px;
   color: #fff;
   background-color:rgba(172, 167, 217, 0.8);

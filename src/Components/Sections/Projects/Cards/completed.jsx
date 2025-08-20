@@ -8,7 +8,6 @@ function Completed({counter}) {
   const [showMore, setShowMore] = useState(false);
   const toggleShowMore = () => setShowMore(!showMore);
 
-
   const projects = [
     {
       id: 1,
@@ -35,7 +34,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-OS.png',   
       title: "Offdays-Shareables", 
       description: "A project developed as part of my work with OffDays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office status. ", 
-      technologies: ["React + Vite", "TypeScript"],
+      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
       demoLink: "https://offdays.co.uk/",
     },
     {
@@ -52,7 +51,7 @@ function Completed({counter}) {
       title: "The Orange Trust Site",
       bgcolor: "Orange",
       description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
-      technologies: ["React", "Figma", "Trello"],
+      technologies: ["Figma", "Trello"],
       demoLink: "https://www.orangetrust.co.uk/",
     },
     {

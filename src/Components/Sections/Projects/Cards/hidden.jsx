@@ -69,7 +69,7 @@ function Hidden() {
       banner: 'Not A Site', 
       title: "Note A Site", 
       description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site, A usless Website that does nothing but waste your time.", 
-      technologies: ["React.js + Vite", "JavaScript", "CSS"],
+      technologies: ["React + Vite", "JavaScript", "CSS"],
       githubLink: "https://github.com/IbrahimIF/Not-A-Site"
     },
     { 

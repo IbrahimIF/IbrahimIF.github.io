@@ -18,31 +18,29 @@ const techData = [
     imgUrl: '/assets/Tech/typescript.png',
     position: [2, 9, -5]
   },
-
+  {
+    name: 'Python',
+    imgUrl: '/assets/Tech/python.png',
+    position: [-2, 6.7, -5]
+  },
   {
     name: 'Java',
     imgUrl: '/assets/Tech/java.png',
-    position: [-2, 6.7, -5]
+    position: [0, 6.7, -5]
+  },
+  {
+    name: 'C++',
+    imgUrl: '/assets/Tech/C++.png',
+    position: [2, 6.7, -5]
   },
   {
     name: 'csharp',
     imgUrl: '/assets/Tech/csharp.png',
-    position: [0, 6.7, -5]
-  },
-  {
-    name: 'Python',
-    imgUrl: '/assets/Tech/python.png',
-    position: [2, 6.7, -5]
-  },
-
-  {
-    name: 'HTML',
-    imgUrl: '/assets/Tech/html.png',
     position: [-2, 4.4, -5]
   },
   {
-    name: 'Node.js',
-    imgUrl: '/assets/Tech/nodejs.png',
+    name: 'HTML',
+    imgUrl: '/assets/Tech/html.png',
     position: [0, 4.4, -5]
   },
   {
@@ -50,7 +48,6 @@ const techData = [
     imgUrl: '/assets/Tech/css.png',
     position: [2, 4.4, -5]
   },
-
   {
     name: 'Mongodb',
     imgUrl: '/assets/Tech/mongodb.png',
@@ -66,50 +63,49 @@ const techData = [
     imgUrl: '/assets/Tech/mysql.png',
     position: [2, 2.1, -5]
   },
-
   {
-    name: 'Git',
-    imgUrl: '/assets/Tech/git.png',
+    name: 'Node.js',
+    imgUrl: '/assets/Tech/nodejs.png',
     position: [-2, -0.2, -5]
-  },
-  {
-    name: 'Threejs',
-    imgUrl: '/assets/Tech/threejs.png',
-    position: [0, -0.2, -5]
-  },
-  {
-    name: 'Figma',
-    imgUrl: '/assets/Tech/figma.png',
-    position: [2, -0.2, -5]
-  },
-  {
-    name: 'C++',
-    imgUrl: '/assets/Tech/C++.png',
-    position: [-2, -2.5, -5]
-  },
-  {
-    name: 'Socket.io',
-    imgUrl: '/assets/Tech/socket-io.png',
-    position: [0, -2.5, -5]
-  },
-  {
-    name: 'tailwind',
-    imgUrl: '/assets/Tech/tailwind.png',
-    position: [2, -2.5, -5]
-  },
-  {
-    name: 'vercel',
-    imgUrl: '/assets/Tech/vercel.png',
-    position: [-2, -4.8, -5]
   },
   {
     name: 'vite.js',
     imgUrl: '/assets/Tech/Vitejs.png',
-    position: [0, -4.8, -5]
+    position: [0, -0.2, -5]
   },
   {
     name: 'express',
     imgUrl: '/assets/Tech/expres.png',
+    position: [2, -0.2, -5]
+  },
+  {
+    name: 'vercel',
+    imgUrl: '/assets/Tech/vercel.png',
+    position: [-2, -2.5, -5]
+  },
+  {
+    name: 'Figma',
+    imgUrl: '/assets/Tech/figma.png',
+    position: [0, -2.5, -5]
+  },
+  {
+    name: 'Git',
+    imgUrl: '/assets/Tech/git.png',
+    position: [2, -2.5, -5]
+  },
+  {
+    name: 'tailwind',
+    imgUrl: '/assets/Tech/tailwind.png',
+    position: [-2, -4.8, -5]
+  },
+  {
+    name: 'Threejs',
+    imgUrl: '/assets/Tech/threejs.png',
+    position: [0, -4.8, -5]
+  },
+  {
+    name: 'Socket.io',
+    imgUrl: '/assets/Tech/socket-io.png',
     position: [2, -4.8, -5]
   }
 ]

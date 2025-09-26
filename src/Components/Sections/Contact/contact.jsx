@@ -137,7 +137,7 @@ const ContactSection = styled.section`
   display: flex;
   align-items: center;
   margin-top: calc(-1 * var(--section-gap));
-  padding-bottom: 300px;
+  padding-bottom: 250px;
   background-image: radial-gradient(
     circle at center,
     rgb(0, 0, 2) 0%,
@@ -149,6 +149,7 @@ const ContactSection = styled.section`
   );
 
     @media (max-width: 630px ) {
+      padding-bottom: 150px;
 
   }
 
@@ -174,12 +175,15 @@ const ContactSection = styled.section`
   rgba(24, 33, 53, 0.15) 0px 12px 13px,  
   rgba(255, 255, 255, 0.08) 0px -3px 5px;
 
+    @media (min-width: 1200px) {
+      flex-wrap: nowrap;
+  }
 }
 
   @media (max-width: 768px) {
       flex-direction: column;
       justify-content: center;
-    }
+  }
 
     .globe-container {
     border-radius: 1.5rem;
@@ -193,14 +197,19 @@ const ContactSection = styled.section`
     @media (max-width: 640px) {
       height: fit-content;
     }
+
+    @media (max-width: 660px) {
+      display: none;
+    }
   }
 
   .formContainer{
   display: flex;
   flex-direction: column;
-
+    @media (max-width: 769px) {
+      width: 100%;
+    }
   }
-    
 `;
 
 

@@ -284,11 +284,12 @@ function Completed({counter}) {
 export default Completed;
 
 
-const CompletedSection = styled.section`
+const CompletedSection = styled.div`
   display: flex;
   justify-content: center;
   padding: 0;
   padding-top: 4rem;
+  margin-bottom: 20px;
   height: 100%;
 `;
 

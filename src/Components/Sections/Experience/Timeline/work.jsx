@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import React, { useState } from 'react';
 
 function Work({ counter }) {
+  const [showMore, setShowMore] = useState(false);
+  const toggleShowMore = () => setShowMore(!showMore);
+
   return (
     <WorkTimeline id="Work">
       <VerticalTimeline>
@@ -55,6 +60,21 @@ function Work({ counter }) {
         </VerticalTimelineElement>
       }
   
+      <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="Sep 2025 - Present"
+        iconStyle={{ background: '#161d27', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/aws.jpg" alt="AWS Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">Amazon Web Services (AWS)</h3>
+        <h4 className="vertical-timeline-element-subtitle">London, England | Trainee</h4>
+        <p>
+          <strong>Position</strong> | AWS re/Start Program Trainee <br />
+          <strong>Skills</strong> | AWS, Linux, Python
+        </p>
+      </VerticalTimelineElement>
+
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
@@ -114,68 +134,76 @@ function Work({ counter }) {
           <strong>Skills</strong> | Web Applications, PHP, SQL
         </p>
       </VerticalTimelineElement>
-  
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Jun 2024"
-        iconStyle={{ background: '#3d3c3a', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/bright_network.jpg" alt="Bright Network Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">Bright Network</h3>
-        <h4 className="vertical-timeline-element-subtitle">Online | Internship</h4>
-        <p>
-          <strong>Position</strong> | IEUK 2024 Technology Intern <br />
-          <strong>Skills</strong> | Technology, Career Development, Networking
-        </p>
-      </VerticalTimelineElement>
-  
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Nov 2023 - May 2024"
-        iconStyle={{ background: '#344f73', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/union_brunel.jpg" alt="Union Of Brunel Students Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">Union Of Brunel Students</h3>
-        <h4 className="vertical-timeline-element-subtitle">London | Society</h4>
-        <p>
-          <strong>Position</strong> | Technical Secretary <br />
-          <strong>Skills</strong> | Society Management, Documentation, Coordination
-        </p>
-      </VerticalTimelineElement>
-  
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Jun 2023 - Apr 2024"
-        iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/eep.jpg" alt="EEP Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">EEP</h3>
-        <h4 className="vertical-timeline-element-subtitle">London | Part-Time</h4>
-        <p>
-          <strong>Position</strong> | Customer Service & Security Guard <br />
-          <strong>Skills</strong> | Customer Service, Communication, Security
-        </p>
-      </VerticalTimelineElement>
-  
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Nov 2020 - Feb 2021"
-        iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/ncc.jpg" alt="New City College Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">New City College</h3>
-        <h4 className="vertical-timeline-element-subtitle">London | Volunteering</h4>
-        <p>
-          <strong>Position</strong> | IT Help Desk <br />
-          <strong>Skills</strong> | IT Support, Customer Service, Troubleshooting
-        </p>
-      </VerticalTimelineElement>
+      
+      {showMore && (
+        <>
+        <VerticalTimelineElement
+          contentStyle={{ background: "#010017", color: "#fff" }}
+          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+          date="Jun 2024"
+          iconStyle={{ background: '#3d3c3a', color: '#fff' }}
+          icon={ <div className="img-container"><img src="/assets/Company/bright_network.jpg" alt="Bright Network Logo" className="img"/></div>}
+        >
+          <h3 className="vertical-timeline-element-title">Bright Network</h3>
+          <h4 className="vertical-timeline-element-subtitle">Online | Internship</h4>
+          <p>
+            <strong>Position</strong> | IEUK 2024 Technology Intern <br />
+            <strong>Skills</strong> | Technology, Career Development, Networking
+          </p>
+        </VerticalTimelineElement>
+    
+        <VerticalTimelineElement
+          contentStyle={{ background: "#010017", color: "#fff" }}
+          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+          date="Nov 2023 - May 2024"
+          iconStyle={{ background: '#344f73', color: '#fff' }}
+          icon={ <div className="img-container"><img src="/assets/Company/union_brunel.jpg" alt="Union Of Brunel Students Logo" className="img"/></div>}
+        >
+          <h3 className="vertical-timeline-element-title">Union Of Brunel Students</h3>
+          <h4 className="vertical-timeline-element-subtitle">London | Society</h4>
+          <p>
+            <strong>Position</strong> | Technical Secretary <br />
+            <strong>Skills</strong> | Society Management, Documentation, Coordination
+          </p>
+        </VerticalTimelineElement>
+    
+        <VerticalTimelineElement
+          contentStyle={{ background: "#010017", color: "#fff" }}
+          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+          date="Jun 2023 - Apr 2024"
+          iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+          icon={ <div className="img-container"><img src="/assets/Company/eep.jpg" alt="EEP Logo" className="img"/></div>}
+        >
+          <h3 className="vertical-timeline-element-title">EEP</h3>
+          <h4 className="vertical-timeline-element-subtitle">London | Part-Time</h4>
+          <p>
+            <strong>Position</strong> | Customer Service & Security Guard <br />
+            <strong>Skills</strong> | Customer Service, Communication, Security
+          </p>
+        </VerticalTimelineElement>
+    
+        <VerticalTimelineElement
+          contentStyle={{ background: "#010017", color: "#fff" }}
+          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+          date="Nov 2020 - Feb 2021"
+          iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+          icon={ <div className="img-container"><img src="/assets/Company/ncc.jpg" alt="New City College Logo" className="img"/></div>}
+        >
+          <h3 className="vertical-timeline-element-title">New City College</h3>
+          <h4 className="vertical-timeline-element-subtitle">London | Volunteering</h4>
+          <p>
+            <strong>Position</strong> | IT Help Desk <br />
+            <strong>Skills</strong> | IT Support, Customer Service, Troubleshooting
+          </p>
+        </VerticalTimelineElement>
+        </>
+      )}
 
       </VerticalTimeline>
+      <ToggleButton onClick={toggleShowMore} showMore={showMore}>
+          {showMore ? <FaChevronUp /> : <FaChevronDown />}
+          <span>{showMore ? "Show Less" : "Show More"}</span>
+      </ToggleButton>
     </WorkTimeline>
   )
 }
@@ -186,7 +214,7 @@ const WorkTimeline = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
 
 .img-container{
@@ -203,3 +231,30 @@ const WorkTimeline = styled.div`
 }
 `;
 
+const ToggleButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: rgb(212, 212, 212);
+  background-color: rgb(19, 19, 52);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  gap: 0.5rem;
+  font-size: 1rem;
+
+  &:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(62, 62, 62) 0 -3px 0 inset;
+    transform: translateY(-1px);
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+    transform: ${props => (props.showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
+  }
+`;

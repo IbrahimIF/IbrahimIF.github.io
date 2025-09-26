@@ -4,28 +4,32 @@ import { FaGithub, FaDownload } from "react-icons/fa6";
 
 function Home() {
   return (
-  <HomeSection id="Home">
-    <Logo>
-      <img src="/assets/Logo.png" alt="logo"  className="image"/>
-    </Logo>
-    <div className="box">
-    <Bars id="Bars">
-      <div className="loader"></div>
-    </Bars>
-    <div className="infoSection">
-      <Title id="Title">
-        <div className="title">
-          <h1 className="firstText">Ibrahim Farrah</h1>
+    <HomeSection id="Home">
+      <Logo>
+        <img src="/assets/Logo.png" alt="logo" className="image" />
+      </Logo>
+      <div className="box">
+        <div className="profileSection">
+          <div className="Circle">
+            <img src="/assets/Profile portfolio.png" alt="grid-1" className="img-pfp" />
+          </div>
         </div>
-      </Title> 
-      <Button id="Button">
-        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="button3D"> Download CV &nbsp; <FaDownload className="icon" /></a>
-        <a href="https://github.com/IbrahimIF/IbrahimIF.github.io" className="button3D"> <FaGithub className="icon" /> &nbsp;  Repository </a>
-      </Button>
-    </div>
-    </div>
-
-  </HomeSection>
+        <div className="infoSection">
+          <Title id="Title">
+            <div className="title">
+              <h1 className="firstText">Ibrahim Farrah</h1>
+            </div>
+          </Title>
+          <Subtitle id="Subtitle">
+            <p>Software Developer | TypeScript, Python and React</p>
+          </Subtitle>
+          <Button id="Button">
+            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="button3D"> Download CV &nbsp; <FaDownload className="icon" /></a>
+            <a href="https://github.com/IbrahimIF/IbrahimIF.github.io" className="button3D"> <FaGithub className="icon" /> &nbsp;  Repository </a>
+          </Button>
+        </div>
+      </div>
+    </HomeSection>
   )
 }
 
@@ -40,7 +44,6 @@ const Logo = styled.div`
 
   .image{
     width: 30%;
-  
   }
 `;
 
@@ -79,7 +82,7 @@ const HomeSection = styled.section`
   rgba(24, 33, 53, 0.15) 0px 12px 13px,  
   rgba(255, 255, 255, 0.08) 0px -3px 5px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       flex-direction: column;
       justify-content: center;
     }
@@ -90,15 +93,65 @@ const HomeSection = styled.section`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
+    width: 40%;
     min-width: 300px;
+    gap: 3%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       min-width:100%;
+      height: 300px;
+      gap: 20px;
     }
 
 }
 
+  .profileSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    min-width: 300px;
+
+    @media (max-width: 900px) {
+      min-width:100%;
+    }
+  }
+
+  .Circle {
+    display: flex;
+    align-items: center;
+    height: 260px;
+    width: 260px;
+    border: 4px solid rgb(134, 134, 134);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .Circle > .img-pfp {
+  position: absolute;
+  top: 0;
+  left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  @media (max-width: 450px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  }
+}
 `;
 
 const Bars = styled.div`
@@ -189,8 +242,13 @@ const Title = styled.div`
   align-items: baseline;
   position: relative;
 }
+`;
 
-
+const Subtitle = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `;
 
 const Button = styled.div`

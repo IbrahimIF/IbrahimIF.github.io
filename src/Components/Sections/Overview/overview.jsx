@@ -10,31 +10,25 @@ function Overview() {
       <div className="grid">
         <div className="top-row">
           <div className="grid-container">
-            <div className="Circle">
-              <img src="/assets/Profile portfolio.png" alt="grid-1" className="grid-pfp"/>
-            </div>
             <div>
-              <p className="grid-headtext">Hi, I'm Ibrahim</p>
+              <h2 className="grid-headtext">Summary</h2>
               <p className="grid-subtext">
-              I’ve recently graduated with a 2:1 BSc in Computer Science, specialising in Software Engineering.
+              Actively pursuing a graduate, junior, or entry-level software engineering role where I can apply my passion for technology to solve real-world problems. 
+              As a recent Computer Science graduate with a 2:1 Honours degree from Brunel University London, I have a strong technical foundation and practical expertise in Python, Java, TypeScript, JavaScript, and React.
               <br/>
               <br/>
-              Throughout my self-studying and academic journey, I've gained experience in Python, Java, Javascript and React.js,
-              with practical expertise and a solid foundation in databases such as MySQL, Firestore and MongoDB.
+              My hands-on experience includes developing, optimising, and delivering high-quality software solutions through a professional internship at Offdays, personal projects, and client work. 
+              I am proficient in utilising databases like MySQL, MongoDB, and Firebase, and am currently enhancing my skills in cloud computing and AWS technologies through the AWS re/Start Program.
               <br/>
               <br/>
-              I have completed a few personal and client projects, all of which demonstrate my ability to develop and optimise software.
-              I am passionate about innovation, learning, and technology's potential to solve complex problems. My drive for continuous learning makes me eager to contribute to impactful solutions.
-              <br/>
-              <br/>
-              I am currently looking for a graduate, junior, or entry-level position in software engineering, full-stack, software development, front-end, or consulting to further apply my skills in a professional environment and contribute to meaningful projects.
+              I am a driven learner, eager to contribute to meaningful projects and collaborate with experienced experts to create impactful software solutions.
               </p>
             </div>
           </div>
         </div>
 
         <div className="top-row">
-          <div className="grid-container" style={{height:'1160px', paddingTop:'110px'}}>
+          <div className="grid-container" style={{height:'800px', width:'100%'}}>
                 <TechBall/>
             <div>
             </div>
@@ -142,7 +136,7 @@ const OverviewSection = styled.section`
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1200px) {
     .grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -162,26 +156,21 @@ const OverviewSection = styled.section`
   }
   
 
-  .grid-pfp {
-    width: 100%;
-    height: 276px;
-    object-fit: contain;
-  }
-
   .grid-headtext {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size: 1.5rem;
-    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 2rem;
+    font-weight: 600;
     color: white;
     margin-bottom: 1rem;
-    text-align:center;
+    text-align: center;
   }
 
   @media (max-width: 1428px) and (min-width: 1279px) {
   .grid-headtext {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 500;
   }
 }
@@ -191,7 +180,13 @@ const OverviewSection = styled.section`
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
   }
-
+  
+  @media (max-width: 1428px) and (min-width: 1200px) {
+  .grid-subtext {
+    font-size: 0.9rem;
+  }
+}
+  
   .Circle {
     display: flex;
     align-items: center;

@@ -151,11 +151,12 @@ return (
 }
 export default Hidden
 
-const HiddenSection = styled.section`
+const HiddenSection = styled.div`
   display: flex;
   justify-content: center;
   padding: 0;
   padding-top: 4rem;
+  margin-bottom: 30px;
   height: 100%;
 `;
 

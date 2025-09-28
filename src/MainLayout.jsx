@@ -27,9 +27,9 @@ function MainLayout() {
       <Background id="Background">
         {counter > 10 && <CanvasBackground/>}
         <Home />
+        <Projects counter={counter} setCounter={setCounter}/>
         <Overview/>
         <Experience counter={counter} setCounter={setCounter}/>
-        <Projects counter={counter} setCounter={setCounter}/>
         {counter > 15 && <Shows/>}
         <Contact/>
         <Footer counter={counter} setCounter={setCounter}/>

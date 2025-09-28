@@ -43,23 +43,7 @@ function Work({ counter }) {
           </p>
         </VerticalTimelineElement>
       }
-      {counter > 12 &&
-        <VerticalTimelineElement
-          contentStyle={{ background: "#010017", color: "#fff" }}
-          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-          date="June 2025 - Present"
-          iconStyle={{ background: 'rgb(0, 36, 57)', color: '#fff' }}
-          icon={ <div className="img-container"><img src="/assets/Company/Covelopers.png" alt="Vodafone Logo" className="img"/></div>}
-        >
-          <h3 className="vertical-timeline-element-title">Covelopers</h3>
-          <h4 className="vertical-timeline-element-subtitle">London | Startup</h4>
-          <p>
-            <strong>Position</strong> | Co-Founder <br />
-            <strong>Skills</strong> | Software Engineering, AWS, AI
-          </p>
-        </VerticalTimelineElement>
-      }
-  
+
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
@@ -72,6 +56,21 @@ function Work({ counter }) {
         <p>
           <strong>Position</strong> | AWS re/Start Program Trainee <br />
           <strong>Skills</strong> | AWS, Linux, Python
+        </p>
+      </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="June 2025 - Present"
+        iconStyle={{ background: 'rgb(0, 36, 57)', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/Covelopers.png" alt="Vodafone Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">Covelopers</h3>
+        <h4 className="vertical-timeline-element-subtitle">London | Startup</h4>
+        <p>
+          <strong>Position</strong> | Co-Founder <br />
+          <strong>Skills</strong> | Software Engineering, AWS, AI
         </p>
       </VerticalTimelineElement>
 
@@ -120,6 +119,8 @@ function Work({ counter }) {
         </p>
       </VerticalTimelineElement>
   
+      {showMore && (
+        <>
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
@@ -135,8 +136,6 @@ function Work({ counter }) {
         </p>
       </VerticalTimelineElement>
       
-      {showMore && (
-        <>
         <VerticalTimelineElement
           contentStyle={{ background: "#010017", color: "#fff" }}
           contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}

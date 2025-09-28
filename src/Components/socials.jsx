@@ -59,35 +59,32 @@ export default Social
 
 
 const Socials = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    left:0;
-    z-index: 1;
-    height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  height: 100%;
 
-.socials-container{
+  .socials-container{
     background-color: black;
-    padding:10px;
+    padding: 10px;
     border-radius: 0px 30px 30px 0px;
-    border: 3px solid rgb(105, 105, 105);
-}
-.social_icons {
+    border: 3px solid #cfcfcf;
+  }
+  .social_icons {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.icon_wrapper {
+  .icon_wrapper {
     margin: 0 10px;
-    position: relative;
-}
+  }
 
-.icon_link {
-    position: relative;
-    overflow: hidden;
+  .icon_link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,36 +95,35 @@ const Socials = styled.div`
     background-color: #fff;
     border: 2px solid rgb(0, 0, 0);
     transition: all 0.3s ease-in-out;
-}
+    position: relative;
+    overflow: hidden;
+  }
 
-.icon_link:hover {
+  .icon_link:hover {
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
     border: 2px solid rgb(255, 255, 255);
     color: white;
-    
-}
+  }
 
-.custom-icon:hover {
+  .icon {
+    position: relative;
+    z-index: 1;
+    width: 22px;
+    height: 22px;
+  }
+
+  .custom-icon {
+    position: relative;
+    z-index: 1;
+    width: 22px;
+    height: 22px;
+  }
+
+  .custom-icon:hover {
     filter: brightness(0) invert(1);
-}
+  }
 
-
-.icon {
-    position: relative;
-    z-index: 1;
-    width: 22px;
-    height: 22px;
-}
-
-.custom-icon {
-    position: relative;
-    z-index: 1;
-    width: 22px;
-    height: 22px;
-}
-
-
-.filled {
+  .filled {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -136,50 +132,51 @@ const Socials = styled.div`
     height: 0;
     background-color: #000;
     transition: all 0.3s ease-in-out;
-}
+  }
 
-.icon_link:hover .filled {
+  .icon_link:hover .filled {
     height: 100%;
-}
+  }
 
-#github .filled {
+  #github .filled {
     background-color: #24262a;
-}
-#discord .filled {
+  }
+
+  #discord .filled {
     background-color: #5865F2;
-}
+  }
 
-#steam .filled {
+  #steam .filled {
     background-color: #1B2838;
-}
+  }
 
-#linkedin .filled {
+  #linkedin .filled {
     background-color: #0A66C2;
-}
+  }
 
-#uiverse .filled {
+  #uiverse .filled {
     background-color: #24262a;
-}
-
-@media (max-width: 650px) {
-  .socials-container {
-    padding: 5px;
-    border-radius: 0px 15px 15px 0px;
   }
 
-  .icon_wrapper {
-    margin: 0 5px;
-  }
+  @media (max-width: 650px) {
+    .socials-container {
+      padding: 5px;
+      border-radius: 0px 15px 15px 0px;
+    }
 
-  .icon_link {
+    .icon_wrapper {
+      margin: 0 5px;
+    }
+
+    .icon_link {
       width: 1.8rem;
       height: 1.8rem;
-  }
+    }
 
-  .icon,
-  .custom-icon {
+    .icon,
+    .custom-icon {
       width: 18px;
       height: 18px;
+    }
   }
-}
 `;

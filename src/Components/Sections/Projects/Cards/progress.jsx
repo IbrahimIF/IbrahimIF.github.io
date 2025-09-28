@@ -21,9 +21,10 @@ function InProgress() {
     },
     { 
       id: 2, 
-      banner: 'CV Mix and Match', 
+      banner: './assets/Projects/Banner-CVMM.png',
+      bgcolor: "#ffffffff",  
       title: "CV Mix and Match", 
-      description: "A way to mix and match the different sections of your CV to help with making your CV releveant to company.", 
+      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.", 
       technologies: ["React + Vite, Django, Postgres"],
       githubLink: "#"
     },

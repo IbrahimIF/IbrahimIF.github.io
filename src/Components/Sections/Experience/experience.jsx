@@ -14,7 +14,7 @@ function Experience({ counter, setCounter }) {
   return (
      <ExperienceSection id="Experience">
       <div className="box">
-      <Title>Work Experience</Title>
+      <Title>Professional Experience</Title>
         <Work counter={counter} setCounter={setCounter} showMore={showMoreWork} toggleShowMore={toggleShowMoreWork} />
       </div>
       <div className="box">
@@ -27,12 +27,20 @@ function Experience({ counter, setCounter }) {
 export default Experience
 
 const Title = styled.h1`
-  font-size: 2rem;
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 1rem;
-  text-align: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
 
   @media (max-width: 1170px) {
     text-align: left;

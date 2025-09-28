@@ -11,7 +11,7 @@ function Overview() {
         <div className="top-row">
           <div className="grid-container">
             <div>
-              <h2 className="grid-headtext">Summary</h2>
+              <h2 className="grid-headtext">Professional Overview</h2>
               <p className="grid-subtext">
               Actively pursuing a graduate, junior, or entry-level software engineering role where I can apply my passion for technology to solve real-world problems. 
               As a recent Computer Science graduate with a 2:1 Honours degree from Brunel University London, I have a strong technical foundation and practical expertise in Python, Java, TypeScript, JavaScript, and React.
@@ -54,7 +54,7 @@ function Overview() {
         <div className="mid-row">
           <div className="grid-container">
             <div>
-              <p className="grid-headtext">Current Courses</p>
+              <h2 className="grid-headtext">Currently Learning</h2>
               <div className="image-container">
                 <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
                 <img src="/assets/Courses/trailhead.png" alt="grid-1" className="course-image trailhead"/>
@@ -68,7 +68,7 @@ function Overview() {
         
         <div className="bottom-col-xl">
           <div className="grid-container">
-            <p className="grid-headtext">Attended Events</p>
+            <h2 className="grid-headtext">Attended Events</h2>
             <EventCarousel/>
           </div>
         </div>
@@ -160,12 +160,16 @@ const OverviewSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: auto;
     font-size: 2rem;
     font-weight: 600;
-    color: white;
-    margin-bottom: 1rem;
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
     text-align: center;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.5rem;
   }
 
   @media (max-width: 1428px) and (min-width: 1279px) {

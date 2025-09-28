@@ -11,7 +11,7 @@ function Home() {
       <div className="box">
         <div className="profileSection">
           <div className="Circle">
-            <img src="/assets/Profile portfolio.png" alt="grid-1" className="img-pfp" />
+            <img src="/assets/Profile portfolio.png" alt="Picture" className="img-pfp" />
           </div>
         </div>
         <div className="infoSection">
@@ -69,18 +69,15 @@ const HomeSection = styled.section`
     display: flex;
     justify-content: center; 
     border-radius: 15px;
-    transition: 1s;
     padding: 20px;
     margin: 10px;
-
-    z-index: 0;
     background-color: rgba(3, 1, 14, 0.2);
     box-shadow: 
-  rgba(0, 24, 72, 0.2) 0px 54px 55px,  
-  rgba(40, 60, 110, 0.1) 0px -12px 30px,  
-  rgba(40, 60, 120, 0.1) 0px 4px 6px,  
-  rgba(24, 33, 53, 0.15) 0px 12px 13px,  
-  rgba(255, 255, 255, 0.08) 0px -3px 5px;
+    rgba(0, 24, 72, 0.2) 0px 54px 55px,  
+    rgba(40, 60, 110, 0.1) 0px -12px 30px,  
+    rgba(40, 60, 120, 0.1) 0px 4px 6px,  
+    rgba(24, 33, 53, 0.15) 0px 12px 13px,  
+    rgba(255, 255, 255, 0.08) 0px -3px 5px;
 
     @media (max-width: 900px) {
       flex-direction: column;
@@ -102,7 +99,6 @@ const HomeSection = styled.section`
       height: 300px;
       gap: 20px;
     }
-
 }
 
   .profileSection {
@@ -123,100 +119,21 @@ const HomeSection = styled.section`
     align-items: center;
     height: 260px;
     width: 260px;
-    border: 4px solid rgb(134, 134, 134);
+    border: 4px solid #cfcfcf;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
   }
 
   .Circle > .img-pfp {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
-  .image-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 1rem;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-  }
-
-  @media (max-width: 450px) {
-  .image-container {
-    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
-  }
-}
 `;
-
-const Bars = styled.div`
-  display: flex;
-  width: 40%;
-  min-width: 170px;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-
-  @media (max-width: 768px) {
-      min-width:100%;
-    }
-
-  .loader {
-  margin: 120px auto;
-  width: 24px;
-  height: 160px;
-  border-radius: 12px;
-  background-color: currentColor;
-  position: relative;
-  color: #f2f2f2;
-  box-shadow: 
-  rgba(255, 255, 255, 0.25) 0px 54px 55px,
-  rgba(255, 255, 255, 0.15) 0px -12px 30px,
-  rgba(255, 255, 255, 0.15) 0px 4px 6px,
-  rgba(255, 255, 255, 0.2) 0px 12px 13px,
-  rgba(255, 255, 255, 0.1) 0px -3px 5px;
-  transition: all 0.3s ease;
-}
-
-.loader::after,
-.loader::before {
-  content: '';
-  width: 24px;
-  height: 80px;
-  border-radius: 12px;
-  background: currentColor;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 50px;
-  transition: all 0.3s ease;
-
-  box-shadow: 
-  rgba(255, 255, 255, 0.25) 0px 54px 55px,
-  rgba(255, 255, 255, 0.15) 0px -12px 30px,
-  rgba(255, 255, 255, 0.15) 0px 4px 6px,
-  rgba(255, 255, 255, 0.2) 0px 12px 13px,
-  rgba(255, 255, 255, 0.1) 0px -3px 5px;
-
-  
-}
-
-.loader::before {
-  left: -50px;
-}
-
-.loader:hover::before,
-.loader:hover::after {
-  height: 160px;
-}
-
-`;
-
 
 const Title = styled.div`
   display:flex;
@@ -226,22 +143,22 @@ const Title = styled.div`
   width: 250px;
   padding-bottom: 10px;
 
+  .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-.title {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  align-items: center;
-}
-.firstText {
-  font-family: Arial, sans-serif;
-  color: #cfcfcf;
-  font-size: 32px;
-  display: flex;
-  align-items: baseline;
-  position: relative;
-}
+  .firstText {
+    font-family: Arial, sans-serif;
+    color: #cfcfcf;
+    font-size: 32px;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
 `;
 
 const Subtitle = styled.div`
@@ -252,43 +169,39 @@ const Subtitle = styled.div`
 `;
 
 const Button = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: row;
   padding-top: 10px;
   justify-content: space-between;
   width: 100%;
   max-width: 395px;
-  gap:10px;
+  gap: 10px;
 
+  .button3D {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    color: #cfcfcf;
+    background-color: rgb(19, 19, 52);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, all 0.2s ease;
+  }
 
-.button3D {
-  text-align: center;
-  padding: 0.5rem 1.5rem;
-  border-radius: 6px;
-  color:rgb(212, 212, 212);
-  background-color:rgb(19, 19, 52);
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  transition: box-shadow 0.15s ease, transform 0.15s ease, all 0.2s ease;
-}
+  .button3D:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,rgb(62, 62, 62) 0 -3px 0 inset;
+    transform: translateY(-1px);
+  }
 
-.button3D:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,rgb(62, 62, 62) 0 -3px 0 inset;
-  transform: translateY(-1px);
-}
-
-.button3D:active {
-  box-shadow:rgb(45, 45, 45) 0 3px 7px inset;
-  transform: translateY(2px);
-}
-
+  .button3D:active {
+    box-shadow:rgb(45, 45, 45) 0 3px 7px inset;
+    transform: translateY(2px);
+  }
 
   @media (max-width: 480px) {
     flex-direction: column;
     gap: 10px;
     align-items: center;
   }
-
 `;
-

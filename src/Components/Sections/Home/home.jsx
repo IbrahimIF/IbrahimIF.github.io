@@ -71,6 +71,7 @@ const HomeSection = styled.section`
     border-radius: 15px;
     padding: 20px;
     margin: 10px;
+    gap: 20px;
     background-color: rgba(3, 1, 14, 0.2);
     box-shadow: 
     rgba(0, 24, 72, 0.2) 0px 54px 55px,  
@@ -117,8 +118,8 @@ const HomeSection = styled.section`
   .Circle {
     display: flex;
     align-items: center;
-    height: 260px;
-    width: 260px;
+    height: 300px;
+    width: 300px;
     border: 4px solid #cfcfcf;
     border-radius: 50%;
     overflow: hidden;

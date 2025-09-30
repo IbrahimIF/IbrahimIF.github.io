@@ -104,11 +104,11 @@ const SM_MOBILE_FOV = 65;
 export default function TechScene() {
   const [cameraFov, setCameraFov] = useState(DEFAULT_FOV);
   const updateFov = () => {
-    if (window.innerWidth <= 480) {
-      setCameraFov(MOBILE_FOV);
-    } if (window.innerWidth <= 380) {
+    if (window.innerWidth <= 390) {
       setCameraFov(SM_MOBILE_FOV);
-    } if (window.innerWidth <= 1467 && window.innerWidth > 1200) {
+    } else if (window.innerWidth <= 480) {
+      setCameraFov(MOBILE_FOV);
+    } else if (window.innerWidth <= 1467 && window.innerWidth > 1200) {
       setCameraFov(WIDE_FOV);
     } else {
       setCameraFov(DEFAULT_FOV);

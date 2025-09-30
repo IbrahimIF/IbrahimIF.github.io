@@ -89,7 +89,8 @@ const Footer = styled.footer`
   align-items: center;
   background: rgb(0, 0, 0);
   z-index: 1;
-  height: 35vh;
+  height: auto;
+  min-height: 200px;
   padding: 50px;
   margin-top: calc(-1 * var(--section-gap));
 

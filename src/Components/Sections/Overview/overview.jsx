@@ -13,15 +13,19 @@ function Overview() {
             <div>
               <h2 className="grid-headtext">Professional Overview</h2>
               <p className="grid-subtext">
-              Actively pursuing a graduate, junior, or entry-level software engineering role where I can apply my passion for technology to solve real-world problems. 
-              As a recent Computer Science graduate with a 2:1 Honours degree from Brunel University London, I have a strong technical foundation and practical expertise in Python, Java, TypeScript, JavaScript, and React.
+              Recent Computer Science graduate with a BSc in Software Engineering, skilled in Python, Java and TypeScript. I focus on building functional, reliable software that solves real-world problems.
               <br/>
               <br/>
-              My hands-on experience includes developing, optimising, and delivering high-quality software solutions through a professional internship at Offdays, personal projects, and client work. 
-              I am proficient in utilising databases like MySQL, MongoDB, and Firebase, and am currently enhancing my skills in cloud computing and AWS technologies through the AWS re/Start Program.
+              My experience covers a range of technical and collaborative roles. As a Software Engineering Intern at Offdays, I took ownership of a key application, managing everything from planning and development through to deployment. I have also worked closely with clients in a non-profit setting, refining requirements and delivering features using Agile and Scrum practices.
               <br/>
               <br/>
-              I am a driven learner, eager to contribute to meaningful projects and collaborate with experienced experts to create impactful software solutions.
+              I am confident using Git and GitHub for version control and collaborative workflows. I have also taught coding to beginners, which helped me develop the ability to explain complex ideas in simple and practical ways.
+              <br/>
+              <br/>
+              Currently expanding my knowledge of cloud computing, Linux and networking through the AWS re/Start programme, with a focus on core AWS services.
+              <br/>
+              <br/>
+              Looking for a graduate or entry level technical role where I can contribute to meaningful projects, continue learning and work within a collaborative team environment.
               </p>
             </div>
           </div>
@@ -56,10 +60,10 @@ function Overview() {
             <div>
               <h2 className="grid-headtext">Currently Learning</h2>
               <div className="image-container">
-                <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
-                <img src="/assets/Courses/trailhead.png" alt="grid-1" className="course-image trailhead"/>
-                <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
                 <img src="/assets/Courses/aws_Cloud-Practitioner.png" alt="grid-1" className="course-image"/>
+                <img src="/assets/Courses/trailhead.png" alt="grid-1" className="course-image trailhead"/>
+                <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
+                <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
               </div>
             </div>
           </div>

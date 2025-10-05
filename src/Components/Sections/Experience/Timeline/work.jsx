@@ -70,7 +70,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London | Startup</h4>
         <p>
           <strong>Position</strong> | Co-Founder <br />
-          <strong>Skills</strong> | Software Engineering, AWS, AI
+          <strong>Skills</strong> | Leadership, AWS, AI
         </p>
       </VerticalTimelineElement>
 
@@ -85,7 +85,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London, England | Internship</h4>
         <p>
           <strong>Position</strong> | Software Engineer Intern <br />
-          <strong>Skills</strong> | TypeScript, React.js, Software Engineering
+          <strong>Skills</strong> | TypeScript, Git, Software Engineering
         </p>
       </VerticalTimelineElement>
   
@@ -107,15 +107,15 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Oct 2022 - Present"
+        date="Oct 2022 - Mar 2025"
         iconStyle={{ background: '#faaf49', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/orange_trust.jpg" alt="The Orange Trust Logo" className="img"/></div>}
       >
         <h3 className="vertical-timeline-element-title">The Orange Trust</h3>
         <h4 className="vertical-timeline-element-subtitle">London | Volunteering</h4>
         <p>
-          <strong>Position</strong> | Volunteer Software Developer <br />
-          <strong>Skills</strong> | Web Development, Collaboration, Problem Solving
+          <strong>Position</strong> | Software Developer <br />
+          <strong>Skills</strong> | Client Communication, Collaboration, Problem Solving
         </p>
       </VerticalTimelineElement>
   

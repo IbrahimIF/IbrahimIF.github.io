@@ -60,8 +60,8 @@ function Overview() {
             <div>
               <h2 className="grid-headtext">Currently Learning</h2>
               <div className="image-container">
-                <img src="/assets/Courses/aws_Cloud-Practitioner.png" alt="grid-1" className="course-image"/>
-                <img src="/assets/Courses/trailhead.png" alt="grid-1" className="course-image trailhead"/>
+                <img src="/assets/Courses/aws_cloud_practitioner.png" alt="grid-1" className="course-image"/>
+                <img src="/assets/Courses/platform_administrator.png" alt="grid-1" className="course-image"/>
                 <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
                 <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
               </div>

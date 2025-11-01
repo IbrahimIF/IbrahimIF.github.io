@@ -8,9 +8,10 @@ function Linkedin() {
       posts.forEach(post => {
         const textContainer = post.querySelector('.eapps-linkedin-feed-post-text, [class*="text"], [class*="content"]');
         if (textContainer && !post.querySelector('.custom-read-more')) {
-          if (textContainer.scrollHeight > 380) {
-            textContainer.style.maxHeight = '380px';
+          if (textContainer.scrollHeight > 800) {
+            textContainer.style.maxHeight = '800px';
             textContainer.style.overflow = 'hidden';
+            textContainer.style.transition = 'max-height 0.3s ease';
             
             const readMoreBtn = document.createElement('button');
             readMoreBtn.textContent = 'Read more';
@@ -27,12 +28,14 @@ function Linkedin() {
             `;
             
             readMoreBtn.onclick = () => {
-              if (textContainer.style.maxHeight === '800px') {
-                textContainer.style.maxHeight = 'none';
-                readMoreBtn.textContent = 'Read less';
-              } else {
+              if (textContainer.style.maxHeight === 'none') {
                 textContainer.style.maxHeight = '800px';
+                textContainer.style.overflow = 'hidden';
                 readMoreBtn.textContent = 'Read more';
+              } else {
+                textContainer.style.maxHeight = 'none';
+                textContainer.style.overflow = 'visible';
+                readMoreBtn.textContent = 'Read less';
               }
             };
             
@@ -41,7 +44,6 @@ function Linkedin() {
         }
       });
     };
-
     setTimeout(applyFixes, 3000);
   }, []);
 
@@ -74,14 +76,24 @@ const CarouselSection = styled.div`
     margin: 0 !important;
   }
 
+  /* Remove fixed height, allow auto expansion */
   .ShortenedText__Container-sc-1x39ulp-0.brTBJP.es-text-shortener-container,
   .ShortenedText__ShortenedTextComponent-sc-1x39ulp-1.gksSyl.es-text-shortener {
-    max-height: unset !important;
-    height: 230px !important;
+    max-height: none !important;
+    height: auto !important;
   }
 
   .ShortenedText__Container-sc-1x39ulp-0.brTBJP.es-text-shortener-container {
-    overflow-y: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Allow posts to expand */
+  .eapps-linkedin-feed-posts-item {
+    height: auto !important;
+  }
+
+  .custom-read-more {
+    transition: background 0.2s ease;
   }
 
   .custom-read-more:hover {

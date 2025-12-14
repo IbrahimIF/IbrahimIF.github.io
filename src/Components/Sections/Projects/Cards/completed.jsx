@@ -31,22 +31,39 @@ function Completed({counter}) {
     },
     { 
       id: 3,
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",   
+      title: "Client Database Application", 
+      description: "Built an offline client database application using TypeScript and SQLite. \nEnabaling secure local storage of client information and Designed as an MVP ensuring scalability for future development.", 
+      technologies: ["T3", "TypeScript", "SQLite"],
+      githubLink: "https://github.com/Covelopers/Client-Database-Application",
+    },
+    { 
+      id: 4,
+      banner: './assets/Projects/Banner-OA.png',   
+      title: "Offdays-Accrual", 
+      description: "A project developed as part of my work with Offdays, where I built Accrual. \nHelps users calculate their accrued annual leave and pro-rata entitlement quickly and easily.", 
+      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
+      demoLink: "https://offdays.co.uk/",
+    },
+    { 
+      id: 5,
+      banner: './assets/Projects/Banner-OT.png',   
+      title: "Offdays-Toolkit", 
+      description: "A project developed as part of my work with Offdays, where I built Toolkit. \nServes as a central hub to showcase and access various Offdays tools, improving discoverability and usability for users.", 
+      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
+      demoLink: "https://offdays-toolkit.vercel.app/",
+    },
+    { 
+      id: 6,
       banner: './assets/Projects/Banner-OS.png',   
       title: "Offdays-Shareables", 
-      description: "A project developed as part of my work with OffDays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office status. ", 
+      description: "A project developed as part of my work with Offdays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office status.", 
       technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
       demoLink: "https://offdays.co.uk/",
     },
     {
-      id: 4,
-      banner: './assets/Projects/Banner-PSA.png',
-      title: "Pinnacle Studio Architecture",
-      description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
-      technologies: ["React + Vite", "JavaScript", "CSS"],
-      demoLink: "https://pinnaclestudioarchitecture.co.uk/",
-    },
-    {
-      id: 5,
+      id: 7,
       banner: './assets/Events/the_orange_trust.png',
       title: "The Orange Trust Site",
       bgcolor: "Orange",
@@ -55,7 +72,14 @@ function Completed({counter}) {
       demoLink: "https://www.orangetrust.co.uk/",
     },
     {
-      id: 6,
+      id: 8,
+      banner: './assets/Projects/Banner-PSA.png',
+      title: "Pinnacle Studio Architecture",
+      description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
+      technologies: ["React + Vite", "JavaScript", "CSS"],
+    },
+    {
+      id: 9,
       banner: './assets/Projects/Banner-Z.png',
       bgcolor: "#2e3631",
       title: "Ziphon-LTD",
@@ -63,8 +87,17 @@ function Completed({counter}) {
       technologies: ["React", "MySQL", "Node.js"],
       githubLink: "https://github.com/IbrahimIF/Ziphon-LTD"
     },
+    { 
+      id: 10,
+      banner: './assets/Projects/Banner-TS.png',
+      title: "ToolShed",
+      description: "A Full-Stack application that organises my large folder of tools and resources.",
+      technologies: ["React + Vite", "Firestore", "Javascript"],
+      demoLink: "https://tool-shed.vercel.app/",
+      githubLink: "https://github.com/IbrahimIF/ToolShed"
+    },
     {
-      id: 7,
+      id: 11,
       banner: './assets/Projects/Banner-FRV.png',
       bgcolor: "#fff4f4",
       title: "F.R.V",
@@ -74,7 +107,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/FRV"
     },
     {
-      id: 8,
+      id: 12,
       banner: './assets/Projects/Banner-MERN.png',
       bgcolor: "black",
       title: "M.E.R.N",
@@ -84,7 +117,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/MERN"
     },
     { 
-      id: 9,
+      id: 13,
       banner: './assets/Projects/Banner-TCC.png',   
       title: "Twitch-Chat-Clone", 
       description: "A twitch chat clone with React, TypeScript, Tailwind CSS and Socket.io.", 
@@ -93,7 +126,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Twitch-Chat-Clone"
     },
     {
-      id: 10,
+      id: 14,
       banner: './assets/Projects/Banner-DMY.png',
       bgcolor: "#5864f2",
       title: "Discord Mute Yourself",
@@ -102,7 +135,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
     },
     { 
-      id: 11,
+      id: 15,
       banner: './assets/Projects/Banner-TG.gif',
       bgcolor: "#000",  
       title: "Terminal Games", 
@@ -110,17 +143,8 @@ function Completed({counter}) {
       technologies: ["Python", "tkinter", "Curses"],
       githubLink: "https://github.com/IbrahimIF/Terminal-Games"
     },
-    { 
-      id: 12,
-      banner: './assets/Projects/Banner-TS.png',
-      title: "ToolShed",
-      description: "A Full-Stack application that organises my large folder of tools and resources.",
-      technologies: ["React + Vite", "Firestore", "Javascript"],
-      demoLink: "https://tool-shed.vercel.app/",
-      githubLink: "https://github.com/IbrahimIF/ToolShed"
-    },
     {
-      id: 13,
+      id: 16,
       banner: './assets/Projects/Banner-PC.png',
       bgcolor: "#142446",
       title: "Paradox-Chrono",
@@ -129,7 +153,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Paradox-Chrono"
     },
     {
-      id: 14,
+      id: 17,
       banner: 'Pneumonia-Detection',
       title: "pneumonia-detection",
       description: "An AI module university assignment focused on accurately detecting pneumonia from X-ray images.\nThis project trains and optimises a deep learning model to differentiate between images.",
@@ -137,7 +161,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/pneumonia-detection"
     },
     {
-      id: 15,
+      id: 18,
       banner: 'CopyCat',
       title: "CopyCat",
       description: "A Python project that listens to microphone input, processes speech, and responds via Text-to-Speech.\nIt records audio, converts it to text, and generates spoken replies using the ElevenLabs API.",
@@ -145,7 +169,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/CopyCat"
     },
     {
-      id: 16,
+      id: 19,
       banner: 'Airport System',
       title: "Airport System",
       description: "A first-year university group project developing an Airport System, including a seating-plan component.\nThis project enhanced Java expertise, testing, and collaborative workflow using Git.",
@@ -153,7 +177,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Seating-Plan"
     },
     {
-      id: 17,
+      id: 20,
       banner: 'Car-Park-App',
       title: "Car-Park-App",
       description: "A multi-threaded Java client-server application demonstrating a car park management system.\nIt showcases robust network computing, including concurrent access control and socket communication.",
@@ -162,7 +186,7 @@ function Completed({counter}) {
     },
     ...(counter > 12 ? [
     {
-      id: 18,
+      id: 21,
       banner: 'Starship Canvas Animation',
       title: "Starship-Canvas-Animation",
       description: "An animated background featuring iconic Star Wars cruisers and Star Destroyers.\nThis project creates an engaging visual effect using JavaScript",
@@ -171,7 +195,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Starship-Canvas-Animation"
     },
     {
-      id: 19,
+      id: 22,
       banner: './assets/Projects/Banner-SB.png',
       title: "Switch-Board",
       bgcolor: "white",
@@ -181,7 +205,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Switch-Board"
     },
     {
-      id: 20,
+      id: 23,
       banner: './assets/Projects/Banner-RB.png',
       title: "Red Button",
       description: "An interactive website game inspired by Bored Button, where users find and press ten red buttons.\nThe project features a complex loading screen, randomised YouTube videos, and hidden secrets.",
@@ -190,7 +214,7 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/Red-Button"
     },
     {
-      id: 21,
+      id: 24,
       banner: './assets/Projects/Banner-GT.png',
       title: "University Graduation Timer",
       description: "A Countdown Timer to university graduation, now past its original limit.\nThis project, built with React and JavaScript",

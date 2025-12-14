@@ -16,10 +16,12 @@ function EventCarousel () {
         { name: 'Snowflake', imgUrl: '/assets/Events/Snowflake.png' },
         { name: 'Somalis In Tech', imgUrl: '/assets/Events/somalis_in_tech.png' },
         { name: 'TECHEX', imgUrl: '/assets/Events/TECHEX.png' },
-        { name: 'The Orange Trust', imgUrl: '/assets/Events/the_orange_trust.png' },
+        { name: 'The Orange Trust', imgUrl: '/assets/Events/The_Orange_Trust.png' },
         { name: 'AI for the rest of us', imgUrl: '/assets/Events/AI_For_The_Rest_Of_Us.png' },
         { name: '01 Founders', imgUrl: '/assets/Events/01_Founders.png' },
         { name: '10000 Interns Foundation', imgUrl: '/assets/Events/10k_Interns_Foundation.png' },
+        { name: 'Grad Fest London', imgUrl: '/assets/Events/Grad_Fest_London.png' },
+        { name: 'BlackHat Europe 2025', imgUrl: '/assets/Events/BlackHat_Europe.png' },
       ]
   return (
     <Carousel>

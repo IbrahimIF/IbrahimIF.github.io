@@ -77,12 +77,12 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Jun 2025 - Present"
+        date="Jun 2025 - Dec 2025"
         iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/offdays.jpg" alt="OffDays Logo" className="img"/></div>}
       >
         <h3 className="vertical-timeline-element-title">OffDays</h3>
-        <h4 className="vertical-timeline-element-subtitle">London, England | Internship</h4>
+        <h4 className="vertical-timeline-element-subtitle">London | Internship</h4>
         <p>
           <strong>Position</strong> | Software Engineer Intern <br />
           <strong>Skills</strong> | TypeScript, Git, Software Engineering

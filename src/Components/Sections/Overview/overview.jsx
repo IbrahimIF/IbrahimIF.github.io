@@ -13,19 +13,18 @@ function Overview() {
             <div>
               <h2 className="grid-headtext">Professional Overview</h2>
               <p className="grid-subtext">
-              Recent Computer Science graduate with a BSc in Software Engineering, skilled in Python, Java and TypeScript. I focus on building functional, reliable software that solves real-world problems.
-              <br/>
-              <br/>
-              My experience covers a range of technical and collaborative roles. As a Software Engineering Intern at Offdays, I took ownership of a key application, managing everything from planning and development through to deployment. I have also worked closely with clients in a non-profit setting, refining requirements and delivering features using Agile and Scrum practices.
-              <br/>
-              <br/>
-              I am confident using Git and GitHub for version control and collaborative workflows. I have also taught coding to beginners, which helped me develop the ability to explain complex ideas in simple and practical ways.
-              <br/>
-              <br/>
-              Currently expanding my knowledge of cloud computing, Linux and networking through the AWS re/Start programme, with a focus on core AWS services.
-              <br/>
-              <br/>
-              Looking for a graduate or entry level technical role where I can contribute to meaningful projects, continue learning and work within a collaborative team environment.
+                BSc Computer Science graduate specialising in Software Engineering, with a focus on Python, Java and TypeScript. I turn complex requirements into working solutions.
+                <br/>
+                <br/>
+                During my Software Engineering internship at Offdays, I delivered three projects and managed the full lifecycle of applications, from planning to deployment. I also worked directly with clients to translate requirements into features using Agile.
+                <br/>
+                <br/>
+                I am comfortable using Git and GitHub for version control and collaboration. Teaching coding to beginners strengthened my ability to explain technical concepts clearly.
+                <br/>
+                <br/>
+                I have recently developed hands-on experience with Linux, networking and core AWS services through the AWS re/Start programme.
+                <br/>
+                I am seeking a graduate or junior role where I can contribute to a technical team, continue developing my software and cloud skills, and work on real-world problems.
               </p>
             </div>
           </div>
@@ -57,15 +56,22 @@ function Overview() {
 
         <div className="mid-row">
           <div className="grid-container">
-            <div>
-              <h2 className="grid-headtext">Currently Learning</h2>
-              <div className="image-container">
-                <img src="/assets/Courses/aws_cloud_practitioner.png" alt="grid-1" className="course-image"/>
-                <img src="/assets/Courses/platform_administrator.png" alt="grid-1" className="course-image"/>
-                <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
-                <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
+            <a
+              href="https://www.credly.com/users/ibrahimif"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="credly-container"
+            >
+              <div>
+                <h2 className="grid-headtext">Currently Learning</h2>
+                <div className="image-container">
+                  <img src="/assets/Courses/aws_cloud_practitioner.png" alt="grid-1" className="course-image"/>
+                  <img src="/assets/Courses/platform_administrator.png" alt="grid-1" className="course-image"/>
+                  <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
+                  <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -228,8 +234,27 @@ const OverviewSection = styled.section`
     padding: 5px;
   }
 
-  .course-image.trailhead {
-    max-width: 120%;
-    transform: scale(1.3);
+  .credly-container {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  cursor: pointer;
   }
+
+  .credly-container:hover {
+    border-color: #001848ff;
+    background-color: rgba(2, 0, 46, 0.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+  }
+
+  .credly-container:focus-visible {
+    outline: 3px solid #001848ff;
+    outline-offset: 4px;
+  }
+
 `;

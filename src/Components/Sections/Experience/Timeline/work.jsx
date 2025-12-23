@@ -47,22 +47,7 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Sep 2025 - Present"
-        iconStyle={{ background: '#161d27', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/aws.jpg" alt="AWS Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">Amazon Web Services (AWS)</h3>
-        <h4 className="vertical-timeline-element-subtitle">London, England | Trainee</h4>
-        <p>
-          <strong>Position</strong> | AWS re/Start Program Trainee <br />
-          <strong>Skills</strong> | AWS, Linux, Python
-        </p>
-      </VerticalTimelineElement>
-
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Jun 2025 - Present"
+        date="Jul 2025 - Present"
         iconStyle={{ background: 'rgb(0, 36, 57)', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/Covelopers.png" alt="Vodafone Logo" className="img"/></div>}
       >
@@ -71,6 +56,21 @@ function Work({ counter }) {
         <p>
           <strong>Position</strong> | Software Engineer <br />
           <strong>Skills</strong> | Leadership, AWS, AI
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="Sep 2025 - Dec 2025"
+        iconStyle={{ background: '#161d27', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/aws.jpg" alt="AWS Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">Amazon Web Services (AWS)</h3>
+        <h4 className="vertical-timeline-element-subtitle">London, England | Trainee</h4>
+        <p>
+          <strong>Position</strong> | AWS re/Start Program Trainee <br />
+          <strong>Skills</strong> | AWS, Linux, Python
         </p>
       </VerticalTimelineElement>
 

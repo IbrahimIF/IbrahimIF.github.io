@@ -22,6 +22,8 @@ function EventCarousel () {
         { name: '10000 Interns Foundation', imgUrl: '/assets/Events/10k_Interns_Foundation.png' },
         { name: 'Grad Fest London', imgUrl: '/assets/Events/Grad_Fest_London.png' },
         { name: 'BlackHat Europe 2025', imgUrl: '/assets/Events/BlackHat_Europe.png' },
+        { name: 'AWS Breaking Barriers', imgUrl: '/assets/Events/AWS_Breaking_Barriers.png' },
+        { name: 'Association Of Somali Engineers', imgUrl: '/assets/Events/Association_Of_Somali_Engineers.png' }
       ]
   return (
     <Carousel>

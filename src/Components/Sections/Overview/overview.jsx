@@ -78,7 +78,7 @@ function Overview() {
         
         <div className="bottom-col-xl">
           <div className="grid-container">
-            <h2 className="grid-headtext">Attended Events</h2>
+            <h2 className="grid-headtext">Events & Hackathons</h2>
             <EventCarousel/>
           </div>
         </div>

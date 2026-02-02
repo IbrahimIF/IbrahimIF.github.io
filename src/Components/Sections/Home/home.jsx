@@ -21,7 +21,7 @@ function Home() {
             </div>
           </Title>
           <Subtitle id="Subtitle">
-            <p>Software Developer | TypeScript, Python and React</p>
+            <p>Software Engineer | TypeScript, Python, Java and React</p>
           </Subtitle>
           <Button id="Button">
             <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="button3D"> Download CV &nbsp; <FaDownload className="icon" /></a>

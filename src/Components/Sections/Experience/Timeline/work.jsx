@@ -11,51 +11,34 @@ function Work({ counter }) {
   return (
     <WorkTimeline id="Work">
       <VerticalTimeline>
-      {counter > 16 &&
-        <VerticalTimelineElement
-          contentStyle={{ background: "#010017", color: "#fff" }}
-          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-          date="Coming Soon"
-          iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
-          icon={ <div className="img-container"><img src="/assets/Company/Google.png" alt="Google Logo" className="img"/></div>}
-        >
-          <h3 className="vertical-timeline-element-title">Google</h3>
-          <h4 className="vertical-timeline-element-subtitle">London | Shadowing</h4>
-          <p>
-            <strong>Position</strong> | Software engineer Shadowing <br />
-            <strong>Skills</strong> | Software Engineering, Observation
-          </p>
-        </VerticalTimelineElement>
-      }
-      {counter > 16 &&
-        <VerticalTimelineElement
-          contentStyle={{ background: "#010017", color: "#fff" }}
-          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-          date="Coming Soon"
-          iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
-          icon={ <div className="img-container"><img src="/assets/Company/vodafone.jpg" alt="Vodafone Logo" className="img"/></div>}
-        >
-          <h3 className="vertical-timeline-element-title">Vodafone</h3>
-          <h4 className="vertical-timeline-element-subtitle">London | Shadowing</h4>
-          <p>
-            <strong>Position</strong> | Software engineer Shadowing <br />
-            <strong>Skills</strong> | Software Engineering, Industry Insights
-          </p>
-        </VerticalTimelineElement>
-      }
 
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
         date="Jul 2025 - Present"
         iconStyle={{ background: 'rgb(0, 36, 57)', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/Covelopers.png" alt="Vodafone Logo" className="img"/></div>}
+        icon={ <div className="img-container"><img src="/assets/Company/covelopers.png" alt="Covelopers Logo" className="img"/></div>}
       >
-        <h3 className="vertical-timeline-element-title">Covelopers</h3>
+        <h3 className="vertical-timeline-element-title">covelopers</h3>
         <h4 className="vertical-timeline-element-subtitle">London | Startup</h4>
         <p>
           <strong>Position</strong> | Software Engineer <br />
           <strong>Skills</strong> | Leadership, AWS, AI
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="Jun 2025 - Present"
+        iconStyle={{ background: 'rgb(30, 49, 97)', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/salesforce.png" alt="Salesforce Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">Salesforce</h3>
+        <h4 className="vertical-timeline-element-subtitle">London | Trainee</h4>
+        <p>
+          <strong>Position</strong> | Salesforce Trainee <br />
+          <strong>Skills</strong> | Salesforce, CRM, Cloud Computing
         </p>
       </VerticalTimelineElement>
 

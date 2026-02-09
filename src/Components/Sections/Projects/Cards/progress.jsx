@@ -10,58 +10,55 @@ function InProgress() {
 
   const projects = [
     { 
-      id: 1,
-      banner: './assets/Projects/Banner-SERN.png', 
-      bgcolor: "#26c3a5",
-      title: "Full-Stack Chat-App", 
-      description: "A simple Full-stack chat app to send and receive messages.", 
-      technologies: ["React + Vite", "Node.js", "Socket.io"],
-      demoLink: "https://fs-chat-app.vercel.app/",
-      githubLink: "https://github.com/IbrahimIF/FS-Chat-App"
-    },
-    { 
-      id: 2, 
+      id: 1, 
       banner: './assets/Projects/Banner-CVMM.png',
       bgcolor: "#ffffffff",  
       title: "CV Mix and Match", 
       description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.", 
-      technologies: ["React + Vite, Django, Postgres"],
+      technologies: ["React + Vite", "Django", "Postgres"],
       githubLink: "#"
     },
-    { 
+    {   
+      id: 2,
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",   
+      title: "InterviewAI", 
+      description: "An AI-powered tool to help users prepare for interviews by generating questions and providing feedback.", 
+      technologies: ["T3", "AWS", "Python"],
+      githubLink: "https://github.com/Covelopers/interviewai-frontend",
+    },
+    {   
       id: 3,
-      banner: './assets/Projects/Banner-P.png',
-      bgcolor: "#ff474d", 
-      title: "Pokedex", 
-      description: "A replica of the pokedex from the pokemon anime.", 
-      technologies: ["React + Vite", "Tailwind CSS", "PokeAPI"],
-      demoLink: "https://pokedex-bice-zeta.vercel.app/",
-      githubLink: "https://github.com/IbrahimIF/Pokedex"
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",   
+      title: "Covelopers Landing Page", 
+      description: "A responsive website for Covelopers, showcasing their services and projects.", 
+      technologies: ["React + Vite", "TypeScript", "Tailwind CSS"],
+      githubLink: "https://github.com/Covelopers/Main-Site",
+      demoLink: "https://covelopers.com/",
     },
     {
       id: 4,
       banner: 'Project Scribe',
       title: "Project Scribe",
       description: "A discord bot assistant to help organise and sort links, messages and code snippets in private servers.",
-      technologies: ["Python", "Discord"],
-      githubLink: "#"
+      technologies: ["Python", "Discord"]
     },
     { 
       id: 5,
-      banner: './assets/Projects/Banner-DD.png',
-      bgcolor: "#00b050",
-      title: "Adhkar Daily", 
-      description: "Dhikr is a form of Islamic worship where phrases or prayers are repeatedly recited to remember God.", 
-      technologies: ["React + Vite", "JavaScript", "Electron"],
-      githubLink: "https://github.com/IbrahimIF/Dhikr-Project"
-    },
-    { 
-      id: 6,
       banner: 'Thermal-print-py',  
       title: "Thermal-print-py", 
       description: "A Python application that prints ASCII art to your local printer, via either Bluetooth or USB.", 
       technologies: ["Python"],
       githubLink: "https://github.com/IbrahimIF/thermal-print-py"
+    },
+    {
+      id: 6,
+      banner: 'Reels-Catcher',
+      title: "Reels-Catcher",
+      description: "A Python application that uses OpenCV to detect and capture's the user's face when they are watching their phone, alarming them if they are spending too much time on social media.",
+      technologies: ["Python", "OpenCV"],
+      githubLink: "https://github.com/IbrahimIF/Reels-Catcher"
     },
   ];
 

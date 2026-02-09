@@ -63,12 +63,12 @@ function Overview() {
               className="credly-container"
             >
               <div>
-                <h2 className="grid-headtext">Currently Learning</h2>
+                <h2 className="grid-headtext">Certificates</h2>
                 <div className="image-container">
                   <img src="/assets/Courses/aws_cloud_practitioner.png" alt="grid-1" className="course-image"/>
                   <img src="/assets/Courses/platform_administrator.png" alt="grid-1" className="course-image"/>
-                  <img src="/assets/Courses/azure.png" alt="grid-1" className="course-image"/>
-                  <img src="/assets/Courses/istqb.png" alt="grid-1" className="course-image"/>
+                  <img src="/assets/Courses/aws_ai_practitioner.png" alt="grid-1" className="course-image"/>
+                  <img src="/assets/Courses/aws_restart.png" alt="grid-1" className="course-image"/>
                 </div>
               </div>
             </a>

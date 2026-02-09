@@ -17,9 +17,9 @@ function Work({ counter }) {
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
         date="Jul 2025 - Present"
         iconStyle={{ background: 'rgb(0, 36, 57)', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/covelopers.png" alt="covelopers Logo" className="img"/></div>}
+        icon={ <div className="img-container"><img src="/assets/Company/coveloper.png" alt="covelopers Logo" className="img"/></div>}
       >
-        <h3 className="vertical-timeline-element-title">covelopers</h3>
+        <h3 className="vertical-timeline-element-title">Covelopers</h3>
         <h4 className="vertical-timeline-element-subtitle">London | Startup</h4>
         <p>
           <strong>Position</strong> | Software Engineer <br />

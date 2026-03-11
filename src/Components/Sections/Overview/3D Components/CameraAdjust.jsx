@@ -5,7 +5,7 @@ export function CameraAdjust() {
   const { camera } = useThree()
 
   useEffect(() => {
-    camera.position.set(0, -1.85, 13.5)
+    camera.position.set(0, -1.85, 13.544)
     camera.lookAt(0, -1.85, 0)
   }, [camera])
 

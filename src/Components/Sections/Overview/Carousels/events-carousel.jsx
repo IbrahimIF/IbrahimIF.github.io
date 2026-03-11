@@ -10,6 +10,7 @@ function EventCarousel () {
         { name: 'Brunel university Careers Event', imgUrl: '/assets/Events/Brunel_University.png' },
         { name: 'Black Tech Fest', imgUrl: '/assets/Events/BTF.png' },
         { name: 'DeenEngineers', imgUrl: '/assets/Events/DeenEngineers.png' },
+        { name: 'DeenDevelopers', imgUrl: '/assets/Events/DeenDevelopers.png' },
         { name: 'Kings College Events', imgUrl: '/assets/Events/Kings_College_London.png' },
         { name: 'London Tech Week', imgUrl: '/assets/Events/London_Tech_Week.png' },
         { name: 'Salesforce Tower', imgUrl: '/assets/Events/Salesforce.png' },

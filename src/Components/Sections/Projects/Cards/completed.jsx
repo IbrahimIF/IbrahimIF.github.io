@@ -31,9 +31,9 @@ function Completed({counter}) {
     { 
       id: 3,
       banner: './assets/Projects/Banner-CDS.png',
-      bgcolor: "#002439",   
-      title: "Client Database Application", 
-      description: "Built an offline client database application using TypeScript and SQLite. \nEnabaling secure local storage of client information and Designed as an MVP ensuring scalability for future development.", 
+      bgcolor: "#002439",
+      title: "Client Medical Database", 
+      description: "Built an offline patient database application using TypeScript and SQLite for remote healthcare delivery. \nImplemented secure local persistence and a modular MVP architecture to ensure field-ready scalability.", 
       technologies: ["T3", "TypeScript", "SQLite"],
       githubLink: "https://github.com/Covelopers/Client-Database-Application",
     },
@@ -74,7 +74,7 @@ function Completed({counter}) {
     {
       id: 8,
       banner: './assets/Projects/Banner-ATS.png',
-      bgcolor: "black",
+      bgcolor: "#1f2937",
       title: "Application Tracking System",
       description: "A desktop solution designed to replace spreadsheets for tracking and analysing job applications.\nIt helps visualise trends and manage recruitment metrics through a robust local database.",
       technologies: ["React + Vite", "Electron", "SQLite"],

@@ -43,7 +43,7 @@ export default MainLayout
 const Fadein = styled.div`
   opacity: 1;
   animation: fadeIn 1s ease-in forwards;
-  
+
   @keyframes fadeIn {
     from { opacity: 1; }
     to { opacity: 0; }
@@ -58,13 +58,13 @@ const FixedElementsWrapper = styled.div`
   bottom: 0;
   pointer-events: none;
   z-index: 100;
-  
+
   & > * {
     pointer-events: auto;
   }
 `;
 
-const Background = styled.div` 
+const Background = styled.div`
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -137,7 +137,7 @@ rgb(0, 0, 0) 100%
       .fadein {
         animation: fadeIn 5s;
       }
-      
+
       @keyframes fadeIn {
         0% { opacity: 0; }
         50% { opacity: 1; }

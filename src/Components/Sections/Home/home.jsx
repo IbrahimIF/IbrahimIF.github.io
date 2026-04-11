@@ -81,17 +81,17 @@ const HomeSection = styled.section`
     width: 100%;
     min-height: 72vh;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     border-radius: 15px;
     padding: 20px;
     margin: 10px;
     gap: 20px;
     background-color: rgba(3, 1, 14, 0.2);
-    box-shadow: 
-    rgba(0, 24, 72, 0.2) 0px 54px 55px,  
-    rgba(40, 60, 110, 0.1) 0px -12px 30px,  
-    rgba(40, 60, 120, 0.1) 0px 4px 6px,  
-    rgba(24, 33, 53, 0.15) 0px 12px 13px,  
+    box-shadow:
+    rgba(0, 24, 72, 0.2) 0px 54px 55px,
+    rgba(40, 60, 110, 0.1) 0px -12px 30px,
+    rgba(40, 60, 120, 0.1) 0px 4px 6px,
+    rgba(24, 33, 53, 0.15) 0px 12px 13px,
     rgba(255, 255, 255, 0.08) 0px -3px 5px;
 
     @media (max-width: 900px) {

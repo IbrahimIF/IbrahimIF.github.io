@@ -24,7 +24,7 @@ function InProgress() {
       bgcolor: "#002439",   
       title: "InterviewAI", 
       description: "An AI-powered tool to help users prepare for interviews by generating questions and providing feedback.", 
-      technologies: ["T3", "AWS", "Python"],
+      technologies: ["React + Django", "AWS", "Python"],
       githubLink: "https://github.com/Covelopers/interviewai-frontend",
     },
     {   

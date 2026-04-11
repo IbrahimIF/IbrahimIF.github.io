@@ -23,7 +23,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London | Startup</h4>
         <p>
           <strong>Position</strong> | Software Engineer <br />
-          <strong>Skills</strong> | Leadership, AWS, AI
+          <strong>Skills</strong> | TypeScript, Agile, AWS
         </p>
       </VerticalTimelineElement>
 
@@ -38,7 +38,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London | Trainee</h4>
         <p>
           <strong>Position</strong> | Salesforce Trainee <br />
-          <strong>Skills</strong> | Salesforce, CRM, Cloud Computing
+          <strong>Skills</strong> | Salesforce, CRM, Apex
         </p>
       </VerticalTimelineElement>
 
@@ -68,7 +68,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London | Internship</h4>
         <p>
           <strong>Position</strong> | Software Engineer Intern <br />
-          <strong>Skills</strong> | TypeScript, Git, Software Engineering
+          <strong>Skills</strong> | TypeScript, Git, Agile / Scrum
         </p>
       </VerticalTimelineElement>
   
@@ -83,7 +83,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London | Part-time</h4>
         <p>
           <strong>Position</strong> | Coding Teacher <br />
-          <strong>Skills</strong> | Teaching, Python, Coding
+          <strong>Skills</strong> | Teaching, Python, Lesson Delivery
         </p>
       </VerticalTimelineElement>
 
@@ -98,7 +98,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London | Part-time</h4>
         <p>
           <strong>Position</strong> | Coding Teaching Assistant <br />
-          <strong>Skills</strong> | Teaching, Python, Coding
+          <strong>Skills</strong> | Teaching, Python, Lesson Delivery
         </p>
       </VerticalTimelineElement>
   
@@ -113,7 +113,7 @@ function Work({ counter }) {
         <h4 className="vertical-timeline-element-subtitle">London | Volunteering</h4>
         <p>
           <strong>Position</strong> | Software Developer <br />
-          <strong>Skills</strong> | Client Communication, Collaboration, Problem Solving
+          <strong>Skills</strong> | Client Communication, Collaboration, React Development
         </p>
       </VerticalTimelineElement>
 

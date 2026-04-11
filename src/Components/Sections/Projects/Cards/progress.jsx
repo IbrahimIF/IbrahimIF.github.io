@@ -27,15 +27,12 @@ function InProgress() {
       technologies: ["React + Django", "AWS", "Python"],
       githubLink: "https://github.com/Covelopers/interviewai-frontend",
     },
-    {   
+    {
       id: 3,
-      banner: './assets/Projects/Banner-CDS.png',
-      bgcolor: "#002439",   
-      title: "Covelopers Landing Page", 
-      description: "A responsive website for Covelopers, showcasing their services and projects.", 
-      technologies: ["React + Vite", "TypeScript", "Tailwind CSS"],
-      githubLink: "https://github.com/Covelopers/Main-Site",
-      demoLink: "https://covelopers.com/",
+      banner: 'HijrLife',
+      title: "HijrLife",
+      description: "Similar to neal.fun life stats, it is Islamic stats based on your lunar birth date.",
+      technologies: ["React + Vite", "JavaScript", "CSS"],
     },
     {
       id: 4,

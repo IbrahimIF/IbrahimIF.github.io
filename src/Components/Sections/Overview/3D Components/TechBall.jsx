@@ -60,7 +60,6 @@ function TechBall({ position, imgUrl }) {
           rotation={[0, 0, 0]}
           scale={1.25}
           map={decal}
-          color="#cd2ea1"
           polygonOffset
           polygonOffsetFactor={-5}
         />

@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import { FaGithub, FaDownload } from "react-icons/fa6";
+import { useState } from 'react';
 
 
-function Home() {
+function Home({ counter }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const easterEggUnlocked = counter > 12;
+
   return (
     <HomeSection id="Home">
       <Logo>
@@ -10,8 +14,18 @@ function Home() {
       </Logo>
       <div className="box">
         <div className="profileSection">
-          <div className="Circle">
+          <div
+            className="Circle"
+            onMouseEnter={() => easterEggUnlocked && setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <img src="/assets/Profile portfolio.png" alt="Picture" className="img-pfp" />
+            <img
+              src="/assets/Profile Portfolio 2.png"
+              alt="Picture"
+              className="img-pfp img-pfp-hover"
+              style={{ opacity: easterEggUnlocked && isHovered ? 1 : 0 }}
+            />
           </div>
         </div>
         <div className="infoSection">
@@ -133,6 +147,10 @@ const HomeSection = styled.section`
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .Circle > .img-pfp-hover {
+    transition: opacity 0.5s ease;
   }
 `;
 

@@ -54,9 +54,9 @@ function Navbar({counter, setCounter }) {
         
             <div className="navbar-items">
               <a className="nav-item" href="#Home"> {width >= 700 ? ('Home') : (<FaHouse/>)}</a>
+              <a className="nav-item" href="#Project">{width >= 700 ? ('Project') : (<FaTableColumns />)}</a>
               <a className="nav-item" href="#Overview">{width >= 700 ? ('Overview') : (<FaCircleInfo />)}</a>
               <a className="nav-item rare" href="#Experience">{width >= 700 ? ('Experience') : (<IoIosBriefcase />)}</a>
-              <a className="nav-item" href="#Project">{width >= 700 ? ('Project') : (<FaTableColumns />)}</a>
               {counter > 15 && <a className="nav-item rare" href="#Shows">{width >= 700 ? ('Shows') : (<IoIosTv />)}</a>}
               <a className="nav-item" href="#Contact">{width >= 700 ? ('Contact') : (<FaEnvelope />)}</a>
             </div>

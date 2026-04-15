@@ -22,7 +22,7 @@ function Overview() {
                 I am comfortable using Git and GitHub for version control and collaboration. Teaching coding to beginners strengthened my ability to explain technical concepts clearly.
                 <br/>
                 <br/>
-                I have recently developed hands-on experience with Linux, networking and core AWS services through the AWS re/Start programme.
+                I have developed hands-on experience with Linux, networking and core AWS services through the AWS re/Start programme. Alongside my studies, I am currently working as a Software Engineer at Covelopers, building real products for clients, and as a Salesforce Trainee, developing CRM and Apex skills.
                 <br/>
                 I am seeking a graduate or junior role where I can contribute to a technical team, continue developing my software and cloud skills, and work on real-world problems.
               </p>

@@ -52,7 +52,7 @@ function Completed({counter}) {
       bgcolor: "black",
       title: "Qiyaas",
       description: "Daily number game — a logic-driven take on Hangman. Contributed through bug fixing and code quality review, and was recognised as a contributor by the team.",
-      technologies: ["React + Vite", "JavaScript"],
+      technologies: ["Next.js", "TypeScript", "Tailwind"],
       demoLink: "https://www.qiyaasgame.com/"
     },
     {

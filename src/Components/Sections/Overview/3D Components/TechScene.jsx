@@ -51,8 +51,8 @@ const techData = [
     position: [0, 1.3, -5]
   },
   {
-    name: 'vite.js',
-    imgUrl: '/assets/Tech/Vitejs.png',
+    name: 'django',
+    imgUrl: '/assets/Tech/django.png',
     position: [2, 1.3, -5]
   },
 

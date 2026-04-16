@@ -24,7 +24,8 @@ function EventCarousel () {
         { name: 'Grad Fest London', imgUrl: '/assets/Events/Grad_Fest_London.png' },
         { name: 'BlackHat Europe 2025', imgUrl: '/assets/Events/BlackHat_Europe.png' },
         { name: 'AWS Breaking Barriers', imgUrl: '/assets/Events/AWS_Breaking_Barriers.png' },
-        { name: 'Association Of Somali Engineers', imgUrl: '/assets/Events/Association_Of_Somali_Engineers.png' }
+        { name: 'Association Of Somali Engineers', imgUrl: '/assets/Events/Association_Of_Somali_Engineers.png' },
+        { name: 'Encode Hub', imgUrl: '/assets/Events/Encode_Hub.jpg' }
       ]
   return (
     <Carousel>

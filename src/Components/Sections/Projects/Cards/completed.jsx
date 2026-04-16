@@ -29,6 +29,14 @@ function Completed({counter}) {
       githubLink: "https://github.com/djoguns/breakingbarrier-catalyst-lon23"
     },
     {
+      id: 33,
+      banner: './assets/Projects/Banner-EC.png',
+      bgcolor: "#f0f0f0",
+      title: "Encode AI Hackathon",
+      description: "Autonomous ML Optimisation Platform (AutoResearch) built at the Encode Club AI Hackathon, Mar 2026.\nAn agent-driven system automating the machine learning development lifecycle end-to-end.",
+      technologies: ["Python", "Machine Learning", "AutoML"],
+    },
+    {
       id: 3,
       banner: './assets/Projects/Banner-CDS.png',
       bgcolor: "#002439",
@@ -64,6 +72,16 @@ function Completed({counter}) {
       technologies: ["React + Vite", "JavaScript", "Electron"],
       githubLink: "https://github.com/IbrahimIF/Dhikr-Project",
       demoLink: "https://adkhardaily.netlify.app/"
+    },
+    {
+      id: 34,
+      banner: './assets/Projects/Banner-TC.png',
+      bgcolor: "#0d2b1a",
+      title: "Trump Card",
+      description: "A visual card deck for tracking everything you have going for you — plans, opportunities, connections, credentials and resources.\nBuilt so you never forget what's in your hand.",
+      technologies: ["React + Vite", "TypeScript", "PWA"],
+      demoLink: "https://trump1card.netlify.app/",
+      githubLink: "https://github.com/IbrahimIF/trump-card",
     },
     {
       id: 7,

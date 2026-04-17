@@ -9,14 +9,6 @@ function Hidden() {
   const projects = [
     {
       id: 1,
-      banner: 'Project Harvester',
-      title: "Project Harvester",
-      description: "A Full-Stack web scraper application that searches for vercel websites, filtering using keywords from the name.",
-      technologies: ["React.ts + Vite", "Python", "AWS"],
-      githubLink: "#"
-    },
-    {
-      id: 2,
       banner: 'Proximity Map',
       title: "Proximity Map",
       description: "An interactive map to find the distance from a user's location to multiple other points, helping to identify the closest one.",
@@ -24,7 +16,7 @@ function Hidden() {
       githubLink: "#"
     },
     {
-      id: 3,
+      id: 2,
       banner: 'Arduino-Sound-Player',
       title: "8-Bit-Arduino-Sound-Player",
       description: "A hardware project using an Arduino to control a speaker or buzzer to generate 8-bit, chiptune-style melodies.",
@@ -32,7 +24,7 @@ function Hidden() {
       githubLink: "#"
     },
     {
-      id: 4,
+      id: 3,
       banner: 'MoonBaseAlpha-TS',
       title: "MoonBaseAlpha-TS",
       description: "A full-stack application that converts text to speech, replicating the exact DECtalk tone of the NASA-developed program.",
@@ -40,53 +32,61 @@ function Hidden() {
       githubLink: "#"
     },
     {
-      id: 5,
-      banner: 'Prompt.exe', 
-      title: "Prompt.exe", 
-      description: " A game made with C#, speak to a computer giving prompts, with hidden secrets and achievements.", 
+      id: 4,
+      banner: 'Prompt.exe',
+      title: "Prompt.exe",
+      description: "A game made with C#, speak to a computer giving prompts, with hidden secrets and achievements.",
       technologies: ["C#"],
       githubLink: "#"
     },
-    { 
-      id: 6,
-      banner: 'VisionNumReader',  
-      title: "VisionNumReader", 
-      description: "A Python application that uses computer vision to detect and read numbered cards from a camera feed, then converts the recognized numbers to speech.", 
+    {
+      id: 5,
+      banner: 'VisionNumReader',
+      title: "VisionNumReader",
+      description: "A Python application that uses computer vision to detect and read numbered cards from a camera feed, then converts the recognised numbers to speech.",
       technologies: ["Python"],
       githubLink: "#"
     },
-    { 
-      id: 7,
+    {
+      id: 6,
       banner: './assets/Projects/Banner-PVE.png',
-      bgcolor: "black",  
-      title: "PS2-Bios-Menu-Sounds", 
-      description: "Based on the Garry'sMod mod that adds a PS2 Bios sounds to the menu and buttons, this will be for VScode as an extension.", 
+      bgcolor: "black",
+      title: "PS2-Bios-Menu-Sounds",
+      description: "Based on the Garry's Mod mod that adds PS2 Bios sounds to the menu and buttons, this will be for VS Code as an extension.",
       technologies: ["TypeScript", "VS Code extension"],
       githubLink: "https://github.com/IbrahimIF/PS2-Bios-Menu-Sounds"
     },
-    { 
-      id: 8, 
-      banner: 'Not A Site', 
-      title: "Note A Site", 
-      description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site, A usless Website that does nothing but waste your time.", 
+    {
+      id: 7,
+      banner: 'Not A Site',
+      title: "Note A Site",
+      description: "Remake of a 2016 idea and a 2019 project named This-Is-Not-A-Web-Site. A useless website that does nothing but waste your time.",
       technologies: ["React + Vite", "JavaScript", "CSS"],
       githubLink: "https://github.com/IbrahimIF/Not-A-Site"
     },
-    { 
-      id: 9, 
-      banner: 'Text2Cast', 
-      title: "Text2Cast", 
-      description: "A chrome Extension project that merges both Automatic Text to speech and A.I voice overs of different characters (using uberduck.ai api).", 
+    {
+      id: 8,
+      banner: 'Text2Cast',
+      title: "Text2Cast",
+      description: "A Chrome extension project that merges automatic text-to-speech and AI voice overs of different characters (using uberduck.ai api).",
       technologies: ["Unknown"],
       githubLink: "https://github.com/IbrahimIF/Text2Cast"
     },
-    { 
-      id: 10, 
-      banner: 'HijrLife', 
-      title: "HijrLife", 
-      description: "Similar to neal.fun life stats, it is islamic stats based on your lunar birth.", 
-      technologies: ["React + Vite, JavaScript, CSS"],
-      githubLink: "#"
+    {
+      id: 9,
+      banner: 'Reels-Catcher',
+      title: "Reels-Catcher",
+      description: "A Python application that uses OpenCV to detect and capture the user's face when watching their phone, alarming them if they are spending too much time on social media.",
+      technologies: ["Python", "OpenCV"],
+      githubLink: "https://github.com/IbrahimIF/Reels-Catcher"
+    },
+    {
+      id: 10,
+      banner: 'Thermal-print-py',
+      title: "Thermal-print-py",
+      description: "A Python application that prints ASCII art to your local printer, via either Bluetooth or USB.",
+      technologies: ["Python"],
+      githubLink: "https://github.com/IbrahimIF/thermal-print-py"
     },
   ];
 

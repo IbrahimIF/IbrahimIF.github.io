@@ -5,25 +5,25 @@ import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 function InProgress() {
   const [showMore, setShowMore] = useState(false);
-
+  const [activeVideo, setActiveVideo] = useState(null);
   const toggleShowMore = () => setShowMore(!showMore);
 
   const projects = [
-    { 
-      id: 1, 
+    {
+      id: 1,
       banner: './assets/Projects/Banner-CVMM.png',
-      bgcolor: "#ffffffff",  
-      title: "CV Mix and Match", 
-      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.", 
+      bgcolor: "#ffffffff",
+      title: "CV Mix and Match",
+      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
       technologies: ["React + Vite", "Django", "Postgres"],
       githubLink: "#"
     },
-    {   
+    {
       id: 2,
       banner: './assets/Projects/Banner-CDS.png',
-      bgcolor: "#002439",   
-      title: "InterviewAI", 
-      description: "An AI-powered tool to help users prepare for interviews by generating questions and providing feedback.", 
+      bgcolor: "#002439",
+      title: "InterviewAI",
+      description: "An AI-powered tool to help users prepare for interviews by generating questions and providing feedback.",
       technologies: ["React + Django", "AWS", "Python"],
       githubLink: "https://github.com/Covelopers/interviewai-frontend",
     },
@@ -41,21 +41,20 @@ function InProgress() {
       description: "A discord bot assistant to help organise and sort links, messages and code snippets in private servers.",
       technologies: ["Python", "Discord"]
     },
-    { 
+    {
       id: 5,
-      banner: 'Thermal-print-py',  
-      title: "Thermal-print-py", 
-      description: "A Python application that prints ASCII art to your local printer, via either Bluetooth or USB.", 
-      technologies: ["Python"],
-      githubLink: "https://github.com/IbrahimIF/thermal-print-py"
+      banner: 'Project Harvester',
+      title: "Project Harvester",
+      description: "A Full-Stack web scraper application that searches for Vercel websites, filtering using keywords from the name.",
+      technologies: ["React.ts + Vite", "Python", "AWS"],
+      githubLink: "#"
     },
     {
       id: 6,
-      banner: 'Reels-Catcher',
-      title: "Reels-Catcher",
-      description: "A Python application that uses OpenCV to detect and capture's the user's face when they are watching their phone, alarming them if they are spending too much time on social media.",
-      technologies: ["Python", "OpenCV"],
-      githubLink: "https://github.com/IbrahimIF/Reels-Catcher"
+      banner: 'Project Tracking System',
+      title: "Project Tracking System",
+      description: "A desktop application for tracking and managing personal projects, tasks, and development goals with a clean local-first interface.",
+      technologies: ["React + Vite", "Electron", "SQLite"]
     },
   ];
 
@@ -102,6 +101,11 @@ return (
                       <FaGithub /> &nbsp; <div> Github </div>
                     </a>
                   )}
+                  {project.videoLink && (
+                    <button className="VideoButton" onClick={() => setActiveVideo(project.videoLink)}>
+                      Video
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -116,6 +120,15 @@ return (
           </ToggleButton>
         )}
       </div>
+
+      {activeVideo && (
+        <VideoOverlay onClick={() => setActiveVideo(null)}>
+          <VideoModal onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setActiveVideo(null)}>✕</button>
+            <video src={activeVideo} controls autoPlay style={{ width: '100%', borderRadius: '8px' }} />
+          </VideoModal>
+        </VideoOverlay>
+      )}
     </ProgressSection>
   )
 }
@@ -247,6 +260,28 @@ const ProjectCard = styled.div`
   justify-content: flex-start;
   gap: 0.75rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.VideoButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #7c3aed, #5b21b6);
+
+  &:hover {
+  background: linear-gradient(to right, #5b21b6, #4c1d95);
+    transform: translateY(-0.125rem);
+  }
 }
 
 .LiveButton{
@@ -261,7 +296,7 @@ display: inline-flex;
   text-decoration: none;
   transition: all 300ms;
   cursor: pointer;
-  border: none; /* Ensure no default button border if 'as="button"' is used */
+  border: none;
   background: linear-gradient(to right, #3b82f6, #2563eb);
 
   &:hover {
@@ -335,4 +370,51 @@ const NoBannerText = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+`;
+
+const VideoOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const VideoModal = styled.div`
+  position: relative;
+  background: #111;
+  border-radius: 12px;
+  padding: 1.25rem;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+
+  .close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 1;
+
+    &:hover {
+      background: rgba(255,255,255,0.2);
+    }
+  }
 `;

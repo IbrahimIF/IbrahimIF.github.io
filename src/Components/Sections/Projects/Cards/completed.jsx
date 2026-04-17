@@ -6,6 +6,7 @@ import QuestionMessage from '../../Messages/QuestionScreen/QuestionMessage';
 function Completed({counter}) {
   const [showQuestionMessage, setShowQuestionMessage] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(null);
   const toggleShowMore = () => setShowMore(!showMore);
 
   const projects = [
@@ -31,10 +32,11 @@ function Completed({counter}) {
     {
       id: 33,
       banner: './assets/Projects/Banner-EC.png',
-      bgcolor: "#f0f0f0",
+      bgcolor: "#fafafa",
       title: "Encode AI Hackathon",
       description: "Autonomous ML Optimisation Platform (AutoResearch) built at the Encode Club AI Hackathon, Mar 2026.\nAn agent-driven system automating the machine learning development lifecycle end-to-end.",
       technologies: ["Python", "Machine Learning", "AutoML"],
+      videoLink: "./assets/Video/EAIH.mp4"
     },
     {
       id: 3,
@@ -48,7 +50,7 @@ function Completed({counter}) {
     {
       id: 4,
       banner: './assets/Projects/Banner-ATS.png',
-      bgcolor: "#1f2937",
+      bgcolor: "#111827",
       title: "Application Tracking System",
       description: "A desktop solution designed to replace spreadsheets for tracking and analysing job applications.\nIt helps visualise trends and manage recruitment metrics through a robust local database.",
       technologies: ["React + Vite", "Electron", "SQLite"],
@@ -76,7 +78,7 @@ function Completed({counter}) {
     {
       id: 34,
       banner: './assets/Projects/Banner-TC.png',
-      bgcolor: "#0d2b1a",
+      bgcolor: "#014719",
       title: "Trump Card",
       description: "A visual card deck for tracking everything you have going for you — plans, opportunities, connections, credentials and resources.\nBuilt so you never forget what's in your hand.",
       technologies: ["React + Vite", "TypeScript", "PWA"],
@@ -85,7 +87,8 @@ function Completed({counter}) {
     },
     {
       id: 7,
-      banner: 'Covelopers',
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",
       title: "Covelopers",
       description: "The official website for Covelopers, a software startup based in London.\nShowcases the team, services and projects with a clean, responsive interface.",
       technologies: ["React + Vite", "TypeScript", "Supabase"],
@@ -149,7 +152,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-PSA.png',
       title: "Pinnacle Studio Architecture",
       description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
-      technologies: ["React + Vite", "JavaScript", "CSS"],
+      technologies: ["React + Vite", "JavaScript", "CSS"]
     },
     {
       id: 15,
@@ -239,9 +242,9 @@ function Completed({counter}) {
     { 
       id: 24,
       banner: './assets/Projects/Banner-WLS.png',
-      bgcolor: "#000000", 
-      title: "Watchlist Shelf", 
-      description: "A desktop application for tracking watched films and series with a Netflix style interface.", 
+      bgcolor: "#000000",
+      title: "Watchlist Shelf",
+      description: "A desktop application for tracking watched films and series with a Netflix style interface.",
       technologies: ["React + Vite", "Electron", "SQLite"],
       githubLink: "https://github.com/IbrahimIF/watchlist-shelf"
     },
@@ -380,6 +383,11 @@ function Completed({counter}) {
                       <FaGithub className="icon" /> &nbsp; <div> Github </div>
                     </a>
                   )}
+                  {project.videoLink && (
+                    <button className="VideoButton" onClick={() => setActiveVideo(project.videoLink)}>
+                      Video
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -395,6 +403,15 @@ function Completed({counter}) {
             </div>
 
       {showQuestionMessage && <QuestionMessage />}
+
+      {activeVideo && (
+        <VideoOverlay onClick={() => setActiveVideo(null)}>
+          <VideoModal onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setActiveVideo(null)}>✕</button>
+            <video src={activeVideo} controls autoPlay style={{ width: '100%', borderRadius: '8px' }} />
+          </VideoModal>
+        </VideoOverlay>
+      )}
     </CompletedSection>
   );
 }
@@ -528,6 +545,28 @@ const ProjectCard = styled.div`
   justify-content: flex-start;
   gap: 0.75rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.VideoButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #7c3aed, #5b21b6);
+
+  &:hover {
+  background: linear-gradient(to right, #5b21b6, #4c1d95);
+    transform: translateY(-0.125rem);
+  }
 }
 
 .LiveButton{
@@ -638,4 +677,51 @@ const NoBannerText = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+`;
+
+const VideoOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const VideoModal = styled.div`
+  position: relative;
+  background: #111;
+  border-radius: 12px;
+  padding: 1.25rem;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+
+  .close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 1;
+
+    &:hover {
+      background: rgba(255,255,255,0.2);
+    }
+  }
 `;

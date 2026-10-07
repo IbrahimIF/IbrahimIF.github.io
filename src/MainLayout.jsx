@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CanvasBackground from './Styles/CanvasBackgroundAlt';
+import KonamiOverlay from './Components/KonamiOverlay';
 
 import Home from './Components/Sections/Home/home'
 import Overview from './Components/Sections/Overview/overview'
@@ -13,20 +14,56 @@ import Navbar from './Components/navbar'
 import Footer from './Components/footer'
 import Socials from './Components/socials'
 
+const KONAMI_CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
 function MainLayout() {
   const [counter, setCounter] = useState(0);
+  const [shipsActive, setShipsActive] = useState(false);
+  const [showKonami, setShowKonami] = useState(false);
+
+  // Console log on page load - stays out of the way for anyone just
+  // browsing normally, but a small hint for anyone who opens devtools.
+  useEffect(() => {
+    console.log(
+      '%cIbrahim Farrah',
+      'font-size: 20px; font-weight: bold; color: #cfcfcf;'
+    );
+    console.log('%cSoftware Engineer | TypeScript, Python, Java and React', 'color: #7a7a7a;');
+    console.log('%cSomething on this page holds still for 3 seconds.', 'color: #4a4a6a; font-style: italic;');
+  }, []);
+
+  // Konami code listener - ↑↑↓↓←→←→BA
+  useEffect(() => {
+    let progress = 0;
+    const handleKeyDown = (e) => {
+      const expected = KONAMI_CODE[progress];
+      const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      if (key === expected) {
+        progress += 1;
+        if (progress === KONAMI_CODE.length) {
+          setShowKonami(true);
+          setTimeout(() => setShowKonami(false), 2500);
+          progress = 0;
+        }
+      } else {
+        progress = key === KONAMI_CODE[0] ? 1 : 0;
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   return (
     <Fadein id="fade-in" className="fadein">
+      {showKonami && <KonamiOverlay/>}
       <FixedElementsWrapper id="FixedElementWrapper">
         <Navbar counter={counter} setCounter={setCounter}/>
         <Socials counter={counter} setCounter={setCounter} />
       </FixedElementsWrapper>
 
       <Background id="Background">
-        {counter > 10 && <CanvasBackground/>}
-        <Home counter={counter} />
+        {shipsActive && <CanvasBackground/>}
+        <Home counter={counter} onLogoHold={() => setShipsActive(true)} />
         <Projects counter={counter} setCounter={setCounter}/>
         <Overview/>
         <Experience counter={counter} setCounter={setCounter}/>

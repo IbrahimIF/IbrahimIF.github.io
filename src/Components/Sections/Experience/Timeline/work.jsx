@@ -15,6 +15,21 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="Mar 2026 - Sep 2026"
+        iconStyle={{ background: 'rgb(70, 70, 90)', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/tcc.png" alt="The Cloud Crew Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">Cloud Crew</h3>
+        <h4 className="vertical-timeline-element-subtitle">London | Consultancy</h4>
+        <p>
+          <strong>Position</strong> | Junior Consultant <br />
+          <strong>Skills</strong> | Python, FastAPI, Client Delivery
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
         date="Jul 2025 - Present"
         iconStyle={{ background: 'rgb(0, 36, 57)', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/coveloper.png" alt="covelopers Logo" className="img"/></div>}
@@ -30,7 +45,7 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Jun 2025 - Present"
+        date="Jun 2025 - May 2026"
         iconStyle={{ background: 'rgb(30, 49, 97)', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/salesforce.png" alt="Salesforce Logo" className="img"/></div>}
       >

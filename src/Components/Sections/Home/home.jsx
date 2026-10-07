@@ -1,15 +1,32 @@
 import styled from 'styled-components';
 import { FaGithub, FaDownload } from "react-icons/fa6";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 
-function Home({ counter }) {
+function Home({ counter, onLogoHold }) {
   const [isHovered, setIsHovered] = useState(false);
   const easterEggUnlocked = counter > 12;
+  const holdTimer = useRef(null);
+
+  const startHold = () => {
+    holdTimer.current = setTimeout(() => {
+      onLogoHold?.();
+    }, 3000);
+  };
+
+  const cancelHold = () => {
+    clearTimeout(holdTimer.current);
+  };
 
   return (
     <HomeSection id="Home">
-      <Logo>
+      <Logo
+        onMouseDown={startHold}
+        onMouseUp={cancelHold}
+        onMouseLeave={cancelHold}
+        onTouchStart={startHold}
+        onTouchEnd={cancelHold}
+      >
         <img src="/assets/Logo.png" alt="logo" className="image" />
       </Logo>
       <div className="box">

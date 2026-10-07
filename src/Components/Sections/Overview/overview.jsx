@@ -22,7 +22,7 @@ function Overview() {
                 I am comfortable using Git and GitHub for version control and collaboration. Teaching coding to beginners strengthened my ability to explain technical concepts clearly.
                 <br/>
                 <br/>
-                I have developed hands-on experience with Linux, networking and core AWS services through the AWS re/Start programme. Alongside my studies, I am currently working as a Software Engineer at Covelopers, building real products for clients, and as a Salesforce Trainee, developing CRM and Apex skills.
+                I have developed hands-on experience with Linux, networking and core AWS services through the AWS re/Start programme. I am currently working as a Software Engineer at Covelopers, building real products for clients, and completed a Salesforce Trainee programme, developing CRM and Apex skills.
                 <br/>
                 I am seeking a graduate or junior role where I can contribute to a technical team, continue developing my software and cloud skills, and work on real-world problems.
               </p>
@@ -54,28 +54,6 @@ function Overview() {
           </div>
         </div>
 
-        <div className="mid-row">
-          <div className="grid-container">
-            <a
-              href="https://www.credly.com/users/ibrahimif"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="credly-container"
-            >
-              <div>
-                <h2 className="grid-headtext">Certificates</h2>
-                <div className="image-container">
-                  <img src="/assets/Courses/aws_cloud_practitioner.png" alt="grid-1" className="course-image"/>
-                  <img src="/assets/Courses/platform_administrator.png" alt="grid-1" className="course-image"/>
-                  <img src="/assets/Courses/aws_ai_practitioner.png" alt="grid-1" className="course-image"/>
-                  <img src="/assets/Courses/aws_restart.png" alt="grid-1" className="course-image"/>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        
         <div className="bottom-col-xl">
           <div className="grid-container">
             <h2 className="grid-headtext">Events & Hackathons</h2>
@@ -151,7 +129,7 @@ const OverviewSection = styled.section`
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .mid-col-xl {
-      grid-column: span 2;
+      grid-column: span 3;
     }
     .bottom-col-xl{
       grid-column: span 3;

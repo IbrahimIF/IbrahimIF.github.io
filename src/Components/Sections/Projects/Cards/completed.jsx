@@ -54,7 +54,8 @@ function Completed({counter}) {
       title: "Application Tracking System",
       description: "A desktop solution designed to replace spreadsheets for tracking and analysing job applications.\nIt helps visualise trends and manage recruitment metrics through a robust local database.",
       technologies: ["React + Vite", "Electron", "SQLite"],
-      githubLink: "https://github.com/IbrahimIF/Application-Tracker"
+      githubLink: "https://github.com/IbrahimIF/Application-Tracker",
+      videoLink: "./assets/Video/ATS.mp4"
     },
     {
       id: 5,
@@ -101,7 +102,7 @@ function Completed({counter}) {
       title: "Offdays-Accrual",
       description: "A project developed as part of my work with Offdays, where I built Accrual. \nHelps users calculate their accrued annual leave and pro-rata entitlement quickly and easily.",
       technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays.co.uk/",
+      demoLink: "https://offdays.io/",
     },
     {
       id: 9,
@@ -109,7 +110,7 @@ function Completed({counter}) {
       title: "Offdays-Toolkit",
       description: "A project developed as part of my work with Offdays, where I built Toolkit. \nServes as a central hub to showcase and access various Offdays tools, improving discoverability and usability for users.",
       technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays-toolkit.vercel.app/",
+      demoLink: "https://offdays.io/",
     },
     {
       id: 10,
@@ -117,7 +118,7 @@ function Completed({counter}) {
       title: "Offdays-Shareables",
       description: "A project developed as part of my work with Offdays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office status.",
       technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays.co.uk/",
+      demoLink: "https://offdays.io/",
     },
     {
       id: 11,
@@ -246,7 +247,8 @@ function Completed({counter}) {
       title: "Watchlist Shelf",
       description: "A desktop application for tracking watched films and series with a Netflix style interface.",
       technologies: ["React + Vite", "Electron", "SQLite"],
-      githubLink: "https://github.com/IbrahimIF/watchlist-shelf"
+      githubLink: "https://github.com/IbrahimIF/watchlist-shelf",
+      videoLink: "./assets/Video/WLS.mp4"
     },
     {
       id: 25,

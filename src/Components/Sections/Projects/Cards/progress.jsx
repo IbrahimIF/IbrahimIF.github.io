@@ -15,8 +15,8 @@ function InProgress() {
       bgcolor: "#ffffffff",
       title: "CV Mix and Match",
       description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
-      technologies: ["React + Vite", "Django", "Postgres"],
-      githubLink: "#"
+      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
+      videoLink: "./assets/Video/CVMM.mp4"
     },
     {
       id: 2,
@@ -46,15 +46,15 @@ function InProgress() {
       banner: 'Project Harvester',
       title: "Project Harvester",
       description: "A Full-Stack web scraper application that searches for Vercel websites, filtering using keywords from the name.",
-      technologies: ["React.ts + Vite", "Python", "AWS"],
-      githubLink: "#"
+      technologies: ["React.ts + Vite", "Python", "AWS"]
     },
     {
       id: 6,
       banner: 'Project Tracking System',
       title: "Project Tracking System",
       description: "A desktop application for tracking and managing personal projects, tasks, and development goals with a clean local-first interface.",
-      technologies: ["React + Vite", "Electron", "SQLite"]
+      technologies: ["React + Vite", "Electron", "SQLite"],
+      videoLink: "./assets/Video/PTS.mp4"
     },
   ];
 

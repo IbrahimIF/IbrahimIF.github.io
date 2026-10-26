@@ -10,23 +10,6 @@ function InProgress() {
 
   const projects = [
     {
-      id: 1,
-      banner: './assets/Projects/Banner-CVMM.png',
-      bgcolor: "#ffffffff",
-      title: "CV Mix and Match",
-      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
-      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
-    },
-    {
-      id: 2,
-      banner: './assets/Projects/Banner-CDS.png',
-      bgcolor: "#002439",
-      title: "InterviewAI",
-      description: "An AI-powered tool to help users prepare for interviews by generating questions and providing feedback.",
-      technologies: ["React + Django", "AWS", "Python"],
-      githubLink: "https://github.com/Covelopers/interviewai-frontend",
-    },
-    {
       id: 3,
       banner: 'HijrLife',
       title: "HijrLife",
@@ -46,13 +29,6 @@ function InProgress() {
       title: "Project Harvester",
       description: "A Full-Stack web scraper application that searches for Vercel websites, filtering using keywords from the name.",
       technologies: ["React.ts + Vite", "Python", "AWS"]
-    },
-    {
-      id: 6,
-      banner: 'Project Tracking System',
-      title: "Project Tracking System",
-      description: "A desktop application for tracking and managing personal projects, tasks, and development goals with a clean local-first interface.",
-      technologies: ["React + Vite", "Electron", "SQLite"],
     },
   ];
 

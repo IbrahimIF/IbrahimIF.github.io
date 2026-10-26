@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaGithub, FaChevronDown, FaChevronUp, FaLinkedin } from "react-icons/fa6";
 import QuestionMessage from '../../Messages/QuestionScreen/QuestionMessage';
 
 function Completed({counter}) {
@@ -54,8 +54,7 @@ function Completed({counter}) {
       title: "Application Tracking System",
       description: "A desktop solution designed to replace spreadsheets for tracking and analysing job applications.\nIt helps visualise trends and manage recruitment metrics through a robust local database.",
       technologies: ["React + Vite", "Electron", "SQLite"],
-      githubLink: "https://github.com/IbrahimIF/Application-Tracker",
-      videoLink: "./assets/Video/ATS.mp4"
+      githubLink: "https://github.com/IbrahimIF/Application-Tracker"
     },
     {
       id: 5,
@@ -247,8 +246,22 @@ function Completed({counter}) {
       title: "Watchlist Shelf",
       description: "A desktop application for tracking watched films and series with a Netflix style interface.",
       technologies: ["React + Vite", "Electron", "SQLite"],
-      githubLink: "https://github.com/IbrahimIF/watchlist-shelf",
-      videoLink: "./assets/Video/WLS.mp4"
+      githubLink: "https://github.com/IbrahimIF/watchlist-shelf"
+    },
+    {
+      id: 37,
+      banner: './assets/Projects/Banner-CVMM.png',
+      bgcolor: "#ffffffff",
+      title: "CV Mix and Match",
+      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
+      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
+    },
+    {
+      id: 38,
+      banner: 'Project Tracking System',
+      title: "Project Tracking System",
+      description: "A desktop application for tracking and managing personal projects, tasks, and development goals with a clean local-first interface.",
+      technologies: ["React + Vite", "Electron", "SQLite"],
     },
     {
       id: 25,
@@ -383,6 +396,11 @@ function Completed({counter}) {
                   {project.githubLink && (
                     <a className="GithubButton" href={project.githubLink} target="_blank" rel="noopener noreferrer">
                       <FaGithub className="icon" /> &nbsp; <div> Github </div>
+                    </a>
+                  )}
+                  {project.linkedinLink && (
+                    <a className="LinkedInButton" href={project.linkedinLink} target="_blank" rel="noopener noreferrer">
+                      <FaLinkedin className="icon" /> &nbsp; <div> LinkedIn Post </div>
                     </a>
                   )}
                   {project.videoLink && (
@@ -606,10 +624,31 @@ display: inline-flex;
   cursor: pointer;
   border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #374151, #1f2937);
-  
+
 
   &:hover {
   background: linear-gradient(to right, #1f2937, #111827);
+    transform: translateY(-0.125rem);
+  }
+}
+
+.LinkedInButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #0a66c2, #004182);
+
+  &:hover {
+  background: linear-gradient(to right, #004182, #00336b);
     transform: translateY(-0.125rem);
   }
 }

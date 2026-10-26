@@ -88,6 +88,15 @@ function Hidden() {
       technologies: ["Python"],
       githubLink: "https://github.com/IbrahimIF/thermal-print-py"
     },
+    {
+      id: 11,
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",
+      title: "InterviewAI",
+      description: "An AI-powered tool to help users prepare for interviews by generating questions and providing feedback.",
+      technologies: ["React + Django", "AWS", "Python"],
+      githubLink: "https://github.com/Covelopers/interviewai-frontend",
+    },
   ];
 
   const visibleProjects = showMore ? projects : projects.slice(0, 6);

@@ -16,7 +16,6 @@ function InProgress() {
       title: "CV Mix and Match",
       description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
       technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
-      videoLink: "./assets/Video/CVMM.mp4"
     },
     {
       id: 2,
@@ -54,7 +53,6 @@ function InProgress() {
       title: "Project Tracking System",
       description: "A desktop application for tracking and managing personal projects, tasks, and development goals with a clean local-first interface.",
       technologies: ["React + Vite", "Electron", "SQLite"],
-      videoLink: "./assets/Video/PTS.mp4"
     },
   ];
 

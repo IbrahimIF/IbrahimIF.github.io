@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import QuestionMessage from '../../Messages/QuestionScreen/QuestionMessage';
+
+function getActionButtons(project) {
+  return [
+    project.linkedinLink && { type: 'linkedin', link: project.linkedinLink },
+    project.demoLink && { type: 'demo', link: project.demoLink },
+    project.githubLink && { type: 'github', link: project.githubLink },
+    project.videoLink && { type: 'video', link: project.videoLink },
+  ].filter(Boolean).slice(0, 2);
+}
 
 function Completed({counter}) {
   const [showQuestionMessage, setShowQuestionMessage] = useState(false);
@@ -27,6 +36,7 @@ function Completed({counter}) {
       title: " Team Catalyst - Media Analysis Platform",
       description: "AI-powered platform for processing and summarising Royal Society of Chemistry Faraday Discussions using AWS services and Bedrock.",
       technologies: ["AWS Services", "AWS Bedrock", "Python"],
+      linkedinLink: "https://lnkd.in/p/eQgSQiZM",
       githubLink: "https://github.com/djoguns/breakingbarrier-catalyst-lon23"
     },
     {
@@ -45,6 +55,7 @@ function Completed({counter}) {
       title: "Client Medical Database",
       description: "Built an offline patient database application using TypeScript and SQLite for remote healthcare delivery. \nImplemented secure local persistence and a modular MVP architecture to ensure field-ready scalability.",
       technologies: ["T3", "TypeScript", "SQLite"],
+      linkedinLink: "https://lnkd.in/p/eWCYqV_W",
       githubLink: "https://github.com/Covelopers/Client-Database-Application",
     },
     {
@@ -54,7 +65,8 @@ function Completed({counter}) {
       title: "Application Tracking System",
       description: "A desktop solution designed to replace spreadsheets for tracking and analysing job applications.\nIt helps visualise trends and manage recruitment metrics through a robust local database.",
       technologies: ["React + Vite", "Electron", "SQLite"],
-      githubLink: "https://github.com/IbrahimIF/Application-Tracker"
+      githubLink: "https://github.com/IbrahimIF/Application-Tracker",
+      videoLink: "./assets/Video/ATS.mp4"
     },
     {
       id: 5,
@@ -86,6 +98,22 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/trump-card",
     },
     {
+      id: 35,
+      banner: './assets/Projects/Banner-CAI.png',
+      bgcolor: "#0d1b2a",
+      title: "CricketAI",
+      description: "Delivered an AI powered assessment platform for an early-stage EdTech client, through The Cloud Crew, a Capgemini partner, with technical coaching from a Capgemini Technical Coach.\nTakes student essay submissions in PDF form, validates and scores them against a set of competencies, and serves results through a REST API.",
+      technologies: ["FastAPI", "OpenAI API", "SQLite"],
+    },
+    {
+      id: 36,
+      banner: './assets/Projects/Banner-CVA.png',
+      bgcolor: "#1a1a2e",
+      title: "Claude Voice Assistant",
+      description: "A standalone desktop application for real time voice conversation with Claude.\nHandles speech to text and text to speech so you can talk to Claude naturally instead of typing.",
+      technologies: ["Electron", "ElevenLabs API", "Node.js"],
+    },
+    {
       id: 7,
       banner: './assets/Projects/Banner-CDS.png',
       bgcolor: "#002439",
@@ -96,12 +124,22 @@ function Completed({counter}) {
       demoLink: "https://covelopers.com/",
     },
     {
+      id: 37,
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",
+      title: "Covelopers Portal",
+      description: "The member portal for Covelopers, where the community accesses resources, projects and progress tracking.",
+      technologies: ["React + Vite", "TypeScript", "Supabase"],
+      linkedinLink: "https://lnkd.in/p/eFnSK54B",
+      demoLink: "https://portal.covelopers.com/",
+    },
+    {
       id: 8,
       banner: './assets/Projects/Banner-OA.png',
       title: "Offdays-Accrual",
       description: "A project developed as part of my work with Offdays, where I built Accrual. \nHelps users calculate their accrued annual leave and pro-rata entitlement quickly and easily.",
       technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays.co.uk/",
+      demoLink: "https://offdays.io/",
     },
     {
       id: 9,
@@ -109,7 +147,7 @@ function Completed({counter}) {
       title: "Offdays-Toolkit",
       description: "A project developed as part of my work with Offdays, where I built Toolkit. \nServes as a central hub to showcase and access various Offdays tools, improving discoverability and usability for users.",
       technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays-toolkit.vercel.app/",
+      demoLink: "https://offdays.io/",
     },
     {
       id: 10,
@@ -117,7 +155,7 @@ function Completed({counter}) {
       title: "Offdays-Shareables",
       description: "A project developed as part of my work with Offdays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office status.",
       technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays.co.uk/",
+      demoLink: "https://offdays.io/",
     },
     {
       id: 11,
@@ -145,6 +183,7 @@ function Completed({counter}) {
       bgcolor: "Orange",
       description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
       technologies: ["Figma", "Trello"],
+      linkedinLink: "https://lnkd.in/p/eGA73M9v",
       demoLink: "https://www.orangetrust.co.uk/",
     },
     {
@@ -152,7 +191,8 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-PSA.png',
       title: "Pinnacle Studio Architecture",
       description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
-      technologies: ["React + Vite", "JavaScript", "CSS"]
+      technologies: ["React + Vite", "JavaScript", "CSS"],
+      linkedinLink: "https://lnkd.in/p/eHw3S-Mp"
     },
     {
       id: 15,
@@ -246,11 +286,13 @@ function Completed({counter}) {
       title: "Watchlist Shelf",
       description: "A desktop application for tracking watched films and series with a Netflix style interface.",
       technologies: ["React + Vite", "Electron", "SQLite"],
-      githubLink: "https://github.com/IbrahimIF/watchlist-shelf"
+      githubLink: "https://github.com/IbrahimIF/watchlist-shelf",
+      videoLink: "./assets/Video/WLS.mp4"
     },
     {
       id: 25,
-      banner: 'Pneumonia-Detection',
+      banner: './assets/Projects/Banner-PD.png',
+      bgcolor: "#002b52",
       title: "pneumonia-detection",
       description: "An AI module university assignment focused on accurately detecting pneumonia from X-ray images.\nThis project trains and optimises a deep learning model to differentiate between images.",
       technologies: ["Python", "Jupyter Notebook"],
@@ -258,7 +300,8 @@ function Completed({counter}) {
     },
     {
       id: 26,
-      banner: 'Airport System',
+      banner: './assets/Projects/Banner-AS.png',
+      bgcolor: "#002b52",
       title: "Airport System",
       description: "A first-year university group project developing an Airport System, including a seating-plan component.\nThis project enhanced Java expertise, testing, and collaborative workflow using Git.",
       technologies: ["Java", "JFrame", "Eclipse"],
@@ -266,7 +309,8 @@ function Completed({counter}) {
     },
     {
       id: 27,
-      banner: 'Car-Park-App',
+      banner: './assets/Projects/Banner-CPA.png',
+      bgcolor: "#002b52",
       title: "Car-Park-App",
       description: "A multi-threaded Java client-server application demonstrating a car park management system.\nIt showcases robust network computing, including concurrent access control and socket communication.",
       technologies: ["Java", "Eclipse"],
@@ -284,7 +328,7 @@ function Completed({counter}) {
     },
     {
       id: 29,
-      banner: 'Starship Canvas Animation',
+      banner: './assets/Projects/Banner-SCA.png',
       title: "Starship-Canvas-Animation",
       description: "An animated background featuring iconic Star Wars cruisers and Star Destroyers.\nThis project creates an engaging visual effect using JavaScript",
       technologies: ["JavaScript", "HTML", "CSS"],
@@ -366,28 +410,41 @@ function Completed({counter}) {
                 )}
 
                 <div className="action-buttons">
-                  {project.demoLink && (
-                    project.demoLink === "__question__" ? (
-                      <StyledButton onClick={() => handleDemoClick(project.demoLink)}>
-                        Live Demo
-                      </StyledButton>
-                    ) : (
-                      <a className="LiveButton" href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                        Live Demo
-                      </a>
-                    )
-                  )}
-
-                  {project.githubLink && (
-                    <a className="GithubButton" href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      <FaGithub className="icon" /> &nbsp; <div> Github </div>
-                    </a>
-                  )}
-                  {project.videoLink && (
-                    <button className="VideoButton" onClick={() => setActiveVideo(project.videoLink)}>
-                      Video
-                    </button>
-                  )}
+                  {getActionButtons(project).map((btn) => {
+                    if (btn.type === 'linkedin') {
+                      return (
+                        <a key="linkedin" className="LinkedinButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          <FaLinkedin className="icon" /> &nbsp; <div> LinkedIn </div>
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'demo') {
+                      return btn.link === "__question__" ? (
+                        <StyledButton key="demo" onClick={() => handleDemoClick(btn.link)}>
+                          Live Demo
+                        </StyledButton>
+                      ) : (
+                        <a key="demo" className="LiveButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          Live Demo
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'github') {
+                      return (
+                        <a key="github" className="GithubButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          <FaGithub className="icon" /> &nbsp; <div> Github </div>
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'video') {
+                      return (
+                        <button key="video" className="VideoButton" onClick={() => setActiveVideo(btn.link)}>
+                          Video
+                        </button>
+                      )
+                    }
+                    return null
+                  })}
                 </div>
               </div>
             </div>
@@ -590,6 +647,27 @@ display: inline-flex;
   }
 }
 
+.LinkedinButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #0a66c2, #004182);
+
+  &:hover {
+  background: linear-gradient(to right, #004182, #002c57);
+    transform: translateY(-0.125rem);
+  }
+}
+
 .GithubButton{
 display: inline-flex;
   align-items: center;
@@ -604,7 +682,7 @@ display: inline-flex;
   cursor: pointer;
   border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #374151, #1f2937);
-  
+
 
   &:hover {
   background: linear-gradient(to right, #1f2937, #111827);

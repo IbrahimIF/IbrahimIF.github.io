@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+
+function getActionButtons(project) {
+  return [
+    project.linkedinLink && { type: 'linkedin', link: project.linkedinLink },
+    project.demoLink && { type: 'demo', link: project.demoLink },
+    project.githubLink && { type: 'github', link: project.githubLink },
+    project.videoLink && { type: 'video', link: project.videoLink },
+  ].filter(Boolean).slice(0, 2);
+}
 
 function Hidden() {
     const [showMore, setShowMore] = useState(false);
@@ -123,16 +132,30 @@ return (
                 )}
 
                 <div className="action-buttons">
-                  {project.demoLink && (
-                    <a className="LiveButton" href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                      Live Demo
-                    </a>
-                  )}
-                  {project.githubLink && (
-                    <a className="GithubButton" href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      <FaGithub className="icon" /> &nbsp; <div> Github </div>
-                    </a>
-                  )}
+                  {getActionButtons(project).map((btn) => {
+                    if (btn.type === 'linkedin') {
+                      return (
+                        <a key="linkedin" className="LinkedinButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          <FaLinkedin className="icon" /> &nbsp; <div> LinkedIn </div>
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'demo') {
+                      return (
+                        <a key="demo" className="LiveButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          Live Demo
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'github') {
+                      return (
+                        <a key="github" className="GithubButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          <FaGithub className="icon" /> &nbsp; <div> Github </div>
+                        </a>
+                      )
+                    }
+                    return null
+                  })}
                 </div>
               </div>
             </div>
@@ -300,6 +323,27 @@ display: inline-flex;
   }
 }
 
+.LinkedinButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #0a66c2, #004182);
+
+  &:hover {
+  background: linear-gradient(to right, #004182, #002c57);
+    transform: translateY(-0.125rem);
+  }
+}
+
 .GithubButton{
 display: inline-flex;
   align-items: center;
@@ -314,7 +358,7 @@ display: inline-flex;
   cursor: pointer;
   border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #374151, #1f2937);
-  
+
 
   &:hover {
   background: linear-gradient(to right, #1f2937, #111827);

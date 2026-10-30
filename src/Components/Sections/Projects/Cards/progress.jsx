@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import { FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
+function getActionButtons(project) {
+  return [
+    project.linkedinLink && { type: 'linkedin', link: project.linkedinLink },
+    project.demoLink && { type: 'demo', link: project.demoLink },
+    project.githubLink && { type: 'github', link: project.githubLink },
+    project.videoLink && { type: 'video', link: project.videoLink },
+  ].filter(Boolean).slice(0, 2);
+}
 
 function InProgress() {
   const [showMore, setShowMore] = useState(false);
@@ -15,8 +23,8 @@ function InProgress() {
       bgcolor: "#ffffffff",
       title: "CV Mix and Match",
       description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
-      technologies: ["React + Vite", "Django", "Postgres"],
-      githubLink: "#"
+      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
+      videoLink: "./assets/Video/CVMM.mp4",
     },
     {
       id: 2,
@@ -29,32 +37,32 @@ function InProgress() {
     },
     {
       id: 3,
-      banner: 'HijrLife',
+      banner: './assets/Projects/Banner-HJL.png',
       title: "HijrLife",
       description: "Similar to neal.fun life stats, it is Islamic stats based on your lunar birth date.",
       technologies: ["React + Vite", "JavaScript", "CSS"],
     },
     {
       id: 4,
-      banner: 'Project Scribe',
+      banner: './assets/Projects/Banner-PSC.png',
       title: "Project Scribe",
       description: "A discord bot assistant to help organise and sort links, messages and code snippets in private servers.",
       technologies: ["Python", "Discord"]
     },
     {
       id: 5,
-      banner: 'Project Harvester',
+      banner: './assets/Projects/Banner-PHV.png',
       title: "Project Harvester",
       description: "A Full-Stack web scraper application that searches for Vercel websites, filtering using keywords from the name.",
       technologies: ["React.ts + Vite", "Python", "AWS"],
-      githubLink: "#"
     },
     {
       id: 6,
       banner: 'Project Tracking System',
       title: "Project Tracking System",
       description: "A desktop application for tracking and managing personal projects, tasks, and development goals with a clean local-first interface.",
-      technologies: ["React + Vite", "Electron", "SQLite"]
+      technologies: ["React + Vite", "Electron", "SQLite"],
+      videoLink: "./assets/Video/PTS.mp4"
     },
   ];
 
@@ -91,21 +99,37 @@ return (
                 )}
 
                 <div className="action-buttons">
-                  {project.demoLink && (
-                    <a className="LiveButton" href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                      Live Demo
-                    </a>
-                  )}
-                  {project.githubLink && (
-                    <a className="GithubButton" href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      <FaGithub /> &nbsp; <div> Github </div>
-                    </a>
-                  )}
-                  {project.videoLink && (
-                    <button className="VideoButton" onClick={() => setActiveVideo(project.videoLink)}>
-                      Video
-                    </button>
-                  )}
+                  {getActionButtons(project).map((btn) => {
+                    if (btn.type === 'linkedin') {
+                      return (
+                        <a key="linkedin" className="LinkedinButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          <FaLinkedin className="icon" /> &nbsp; <div> LinkedIn </div>
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'demo') {
+                      return (
+                        <a key="demo" className="LiveButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          Live Demo
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'github') {
+                      return (
+                        <a key="github" className="GithubButton" href={btn.link} target="_blank" rel="noopener noreferrer">
+                          <FaGithub /> &nbsp; <div> Github </div>
+                        </a>
+                      )
+                    }
+                    if (btn.type === 'video') {
+                      return (
+                        <button key="video" className="VideoButton" onClick={() => setActiveVideo(btn.link)}>
+                          Video
+                        </button>
+                      )
+                    }
+                    return null
+                  })}
                 </div>
               </div>
             </div>
@@ -305,6 +329,27 @@ display: inline-flex;
   }
 }
 
+.LinkedinButton{
+display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 300ms;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #0a66c2, #004182);
+
+  &:hover {
+  background: linear-gradient(to right, #004182, #002c57);
+    transform: translateY(-0.125rem);
+  }
+}
+
 .GithubButton{
 display: inline-flex;
   align-items: center;
@@ -319,7 +364,7 @@ display: inline-flex;
   cursor: pointer;
   border: none; /* Ensure no default button border if 'as="button"' is used */
   background: linear-gradient(to right, #374151, #1f2937);
-  
+
 
   &:hover {
   background: linear-gradient(to right, #1f2937, #111827);

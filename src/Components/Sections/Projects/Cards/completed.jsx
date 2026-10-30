@@ -75,7 +75,7 @@ function Completed({counter}) {
     {
       id: 2,
       banner: './assets/Projects/Banner-BBC.png',
-      bgcolor: "#c6f8a1",
+      bgcolor: "linear-gradient(135deg, rgb(240,249,122), rgb(174,236,221))",
       title: " Team Catalyst - Media Analysis Platform",
       description: "AI-powered platform for processing and summarising Royal Society of Chemistry Faraday Discussions using AWS services and Bedrock.",
       technologies: ["AWS Services", "AWS Bedrock", "Python"],
@@ -92,14 +92,13 @@ function Completed({counter}) {
       videoLink: "./assets/Video/EAIH.mp4"
     },
     {
-      id: 34,
-      banner: './assets/Projects/Banner-TC.png',
-      bgcolor: "#03431a",
-      title: "Trump Card",
-      description: "A visual card deck for tracking everything you have going for you — plans, opportunities, connections, credentials and resources.\nBuilt so you never forget what's in your hand.",
-      technologies: ["React + Vite", "TypeScript", "PWA"],
-      demoLink: "https://trump1card.netlify.app/",
-      githubLink: "https://github.com/IbrahimIF/trump-card",
+      id: 38,
+      banner: './assets/Projects/Banner-CVMM.png',
+      bgcolor: "#ffffffff",
+      title: "CV Mix and Match",
+      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
+      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
+      videoLink: "./assets/Video/CVMM.mp4",
     },
     {
       id: 36,
@@ -108,33 +107,6 @@ function Completed({counter}) {
       title: "Claude Voice Assistant",
       description: "A standalone desktop application for real time voice conversation with Claude.\nHandles speech to text and text to speech so you can talk to Claude naturally instead of typing.",
       technologies: ["Electron", "ElevenLabs API", "Node.js"],
-    },
-    {
-      id: 13,
-      banner: './assets/Events/the_orange_trust.png',
-      title: "The Orange Trust Site",
-      bgcolor: "Orange",
-      description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
-      technologies: ["Figma", "Trello"],
-      linkedinLink: "https://lnkd.in/p/eGA73M9v",
-      demoLink: "https://www.orangetrust.co.uk/",
-    },
-    {
-      id: 14,
-      banner: './assets/Projects/Banner-PSA.png',
-      title: "Pinnacle Studio Architecture",
-      description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
-      technologies: ["React + Vite", "JavaScript", "CSS"],
-      linkedinLink: "https://lnkd.in/p/eHw3S-Mp"
-    },
-    {
-      id: 38,
-      banner: './assets/Projects/Banner-CVMM.png',
-      bgcolor: "#ffffffff",
-      title: "CV Mix and Match",
-      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
-      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
-      videoLink: "./assets/Video/CVMM.mp4",
     },
     {
       id: 8,
@@ -161,6 +133,33 @@ function Completed({counter}) {
       demoLink: "https://offdays.io/",
     },
     {
+      id: 13,
+      banner: './assets/Events/the_orange_trust.png',
+      title: "The Orange Trust Site",
+      bgcolor: "Orange",
+      description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
+      technologies: ["Figma", "Trello"],
+      linkedinLink: "https://lnkd.in/p/eGA73M9v",
+      demoLink: "https://www.orangetrust.co.uk/",
+    },
+    {
+      id: 14,
+      banner: './assets/Projects/Banner-PSA.png',
+      title: "Pinnacle Studio Architecture",
+      description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
+      technologies: ["React + Vite", "JavaScript", "CSS"],
+      linkedinLink: "https://lnkd.in/p/eHw3S-Mp"
+    },
+    {
+      id: 5,
+      banner: './assets/Projects/Banner-QY.png',
+      bgcolor: "black",
+      title: "Qiyaas",
+      description: "Daily number game — a logic-driven take on Hangman. Contributed through bug fixing and code quality review, and was recognised as a contributor by the team.",
+      technologies: ["Next.js", "TypeScript", "Tailwind"],
+      demoLink: "https://www.qiyaasgame.com/"
+    },
+    {
       id: 4,
       banner: './assets/Projects/Banner-ATS.png',
       bgcolor: "#111827",
@@ -171,13 +170,14 @@ function Completed({counter}) {
       videoLink: "./assets/Video/ATS.mp4"
     },
     {
-      id: 5,
-      banner: './assets/Projects/Banner-QY.png',
-      bgcolor: "black",
-      title: "Qiyaas",
-      description: "Daily number game — a logic-driven take on Hangman. Contributed through bug fixing and code quality review, and was recognised as a contributor by the team.",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
-      demoLink: "https://www.qiyaasgame.com/"
+      id: 34,
+      banner: './assets/Projects/Banner-TC.png',
+      bgcolor: "#03431a",
+      title: "Trump Card",
+      description: "A visual card deck for tracking everything you have going for you — plans, opportunities, connections, credentials and resources.\nBuilt so you never forget what's in your hand.",
+      technologies: ["React + Vite", "TypeScript", "PWA"],
+      demoLink: "https://trump1card.netlify.app/",
+      githubLink: "https://github.com/IbrahimIF/trump-card",
     },
     {
       id: 6,
@@ -268,7 +268,7 @@ function Completed({counter}) {
     {
       id: 21,
       banner: './assets/Projects/Banner-CC.png',
-      bgcolor: "#f0f0f0",
+      bgcolor: "#f4f3ee",
       title: "CopyCat",
       description: "A Python project that listens to microphone input, processes speech, and responds via Text-to-Speech.\nIt records audio, converts it to text, and generates spoken replies using the ElevenLabs API.",
       technologies: ["Python", "ElevenLabs", "Pyaudio"],
@@ -333,7 +333,7 @@ function Completed({counter}) {
     {
       id: 28,
       banner: './assets/Projects/Banner-PC.png',
-      bgcolor: "#142446",
+      bgcolor: "#081c34",
       title: "Paradox-Chrono",
       description: "My first game project, a vibrant 3D platformer developed using Unity and C#.\nThis old assignment evolved into a personal project with custom-created assets.",
       technologies: ["C#", "Unity", "Blender"],

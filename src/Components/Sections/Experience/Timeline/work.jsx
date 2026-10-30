@@ -16,7 +16,7 @@ function Work({ counter }) {
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
         date="Mar 2026 - Sep 2026"
-        iconStyle={{ background: 'rgb(70, 70, 90)', color: '#fff' }}
+        iconStyle={{ background: '#ffffff', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/tcc.png" alt="The Cloud Crew Logo" className="img"/></div>}
       >
         <h3 className="vertical-timeline-element-title">Cloud Crew</h3>

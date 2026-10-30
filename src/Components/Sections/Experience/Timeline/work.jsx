@@ -15,36 +15,6 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Mar 2026 - Sep 2026"
-        iconStyle={{ background: '#ffffff', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/tcc.png" alt="The Cloud Crew Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">Cloud Crew</h3>
-        <h4 className="vertical-timeline-element-subtitle">London | Consultancy</h4>
-        <p>
-          <strong>Position</strong> | Junior Consultant <br />
-          <strong>Skills</strong> | Python, FastAPI, Client Delivery
-        </p>
-      </VerticalTimelineElement>
-
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Sep 2025 - Dec 2025"
-        iconStyle={{ background: '#161d27', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/aws.jpg" alt="AWS Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">Amazon Web Services (AWS)</h3>
-        <h4 className="vertical-timeline-element-subtitle">London, England | Trainee</h4>
-        <p>
-          <strong>Position</strong> | AWS re/Start Program Trainee <br />
-          <strong>Skills</strong> | AWS, Linux, Python
-        </p>
-      </VerticalTimelineElement>
-
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
         date="Jul 2025 - Present"
         iconStyle={{ background: 'rgb(0, 36, 57)', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/coveloper.png" alt="covelopers Logo" className="img"/></div>}
@@ -60,6 +30,21 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="Mar 2026 - Sep 2026"
+        iconStyle={{ background: '#ffffff', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/tcc.png" alt="The Cloud Crew Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">Cloud Crew</h3>
+        <h4 className="vertical-timeline-element-subtitle">London | Consultancy</h4>
+        <p>
+          <strong>Position</strong> | Junior Consultant <br />
+          <strong>Skills</strong> | Python, FastAPI, Client Delivery
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
         date="Jun 2025 - May 2026"
         iconStyle={{ background: 'rgb(30, 49, 97)', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/salesforce.png" alt="Salesforce Logo" className="img"/></div>}
@@ -69,6 +54,21 @@ function Work({ counter }) {
         <p>
           <strong>Position</strong> | Salesforce Trainee <br />
           <strong>Skills</strong> | Salesforce, CRM, Apex
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="Sep 2025 - Dec 2025"
+        iconStyle={{ background: '#161d27', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/aws.jpg" alt="AWS Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">Amazon Web Services (AWS)</h3>
+        <h4 className="vertical-timeline-element-subtitle">London, England | Trainee</h4>
+        <p>
+          <strong>Position</strong> | AWS re/Start Program Trainee <br />
+          <strong>Skills</strong> | AWS, Linux, Python
         </p>
       </VerticalTimelineElement>
 
@@ -105,6 +105,21 @@ function Work({ counter }) {
       <VerticalTimelineElement
         contentStyle={{ background: "#010017", color: "#fff" }}
         contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+        date="Jun 2023 - Mar 2025"
+        iconStyle={{ background: '#faaf49', color: '#fff' }}
+        icon={ <div className="img-container"><img src="/assets/Company/orange_trust.jpg" alt="The Orange Trust Logo" className="img"/></div>}
+      >
+        <h3 className="vertical-timeline-element-title">The Orange Trust</h3>
+        <h4 className="vertical-timeline-element-subtitle">London | Volunteering</h4>
+        <p>
+          <strong>Position</strong> | Software Developer <br />
+          <strong>Skills</strong> | Client Communication, Collaboration, React Development
+        </p>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement
+        contentStyle={{ background: "#010017", color: "#fff" }}
+        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
         date="Jan 2025 - Feb 2025"
         iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
         icon={ <div className="img-container"><img src="/assets/Company/innovation_pod.jpg" alt="Innovation Pod Logo" className="img"/></div>}
@@ -117,23 +132,23 @@ function Work({ counter }) {
         </p>
       </VerticalTimelineElement>
 
-      <VerticalTimelineElement
-        contentStyle={{ background: "#010017", color: "#fff" }}
-        contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-        date="Nov 2024 - Feb 2025"
-        iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
-        icon={ <div className="img-container"><img src="/assets/Company/el_waterworks.jpg" alt="East London Waterworks Park Logo" className="img"/></div>}
-      >
-        <h3 className="vertical-timeline-element-title">East London Waterworks Park</h3>
-        <h4 className="vertical-timeline-element-subtitle">Online | Volunteering</h4>
-        <p>
-          <strong>Position</strong> | Volunteer Web Developer <br />
-          <strong>Skills</strong> | Web Applications, PHP, SQL
-        </p>
-      </VerticalTimelineElement>
-
       {showMore && (
         <>
+        <VerticalTimelineElement
+          contentStyle={{ background: "#010017", color: "#fff" }}
+          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
+          date="Nov 2024 - Feb 2025"
+          iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
+          icon={ <div className="img-container"><img src="/assets/Company/el_waterworks.jpg" alt="East London Waterworks Park Logo" className="img"/></div>}
+        >
+          <h3 className="vertical-timeline-element-title">East London Waterworks Park</h3>
+          <h4 className="vertical-timeline-element-subtitle">Online | Volunteering</h4>
+          <p>
+            <strong>Position</strong> | Volunteer Web Developer <br />
+            <strong>Skills</strong> | Web Applications, PHP, SQL
+          </p>
+        </VerticalTimelineElement>
+
         <VerticalTimelineElement
           contentStyle={{ background: "#010017", color: "#fff" }}
           contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
@@ -161,21 +176,6 @@ function Work({ counter }) {
           <p>
             <strong>Position</strong> | Technical Secretary <br />
             <strong>Skills</strong> | Society Management, Documentation, Coordination
-          </p>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          contentStyle={{ background: "#010017", color: "#fff" }}
-          contentArrowStyle={{ borderRight: '10px solid rgb(255, 255, 255)' }}
-          date="Jun 2023 - Mar 2025"
-          iconStyle={{ background: '#faaf49', color: '#fff' }}
-          icon={ <div className="img-container"><img src="/assets/Company/orange_trust.jpg" alt="The Orange Trust Logo" className="img"/></div>}
-        >
-          <h3 className="vertical-timeline-element-title">The Orange Trust</h3>
-          <h4 className="vertical-timeline-element-subtitle">London | Volunteering</h4>
-          <p>
-            <strong>Position</strong> | Software Developer <br />
-            <strong>Skills</strong> | Client Communication, Collaboration, React Development
           </p>
         </VerticalTimelineElement>
 

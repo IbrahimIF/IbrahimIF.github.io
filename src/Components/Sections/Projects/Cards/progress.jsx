@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 function getActionButtons(project) {
@@ -15,6 +15,11 @@ function InProgress() {
   const [showMore, setShowMore] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
   const toggleShowMore = () => setShowMore(!showMore);
+
+  useEffect(() => {
+    document.body.classList.toggle('video-modal-open', !!activeVideo);
+    return () => document.body.classList.remove('video-modal-open');
+  }, [activeVideo]);
 
   const projects = [
     {
@@ -38,6 +43,7 @@ function InProgress() {
     {
       id: 3,
       banner: './assets/Projects/Banner-HJL.png',
+      bgcolor: "#ffffff",
       title: "HijrLife",
       description: "Similar to neal.fun life stats, it is Islamic stats based on your lunar birth date.",
       technologies: ["React + Vite", "JavaScript", "CSS"],
@@ -45,6 +51,7 @@ function InProgress() {
     {
       id: 4,
       banner: './assets/Projects/Banner-PSC.png',
+      bgcolor: "#ffffff",
       title: "Project Scribe",
       description: "A discord bot assistant to help organise and sort links, messages and code snippets in private servers.",
       technologies: ["Python", "Discord"]
@@ -52,6 +59,7 @@ function InProgress() {
     {
       id: 5,
       banner: './assets/Projects/Banner-PHV.png',
+      bgcolor: "#ffffff",
       title: "Project Harvester",
       description: "A Full-Stack web scraper application that searches for Vercel websites, filtering using keywords from the name.",
       technologies: ["React.ts + Vite", "Python", "AWS"],

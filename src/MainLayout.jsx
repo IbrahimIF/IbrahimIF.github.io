@@ -99,6 +99,14 @@ const FixedElementsWrapper = styled.div`
   & > * {
     pointer-events: auto;
   }
+
+  /* Hidden while a project video is open - the video overlay lives inside
+     Background (z-index: -1) so it can never stack above this wrapper
+     (z-index: 100) on its own, and the nav/burger button was sitting on
+     top of the video's seek bar, blocking it. */
+  body.video-modal-open & {
+    display: none;
+  }
 `;
 
 const Background = styled.div`

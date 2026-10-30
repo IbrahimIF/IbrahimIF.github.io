@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedin, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import QuestionMessage from '../../Messages/QuestionScreen/QuestionMessage';
@@ -17,6 +17,11 @@ function Completed({counter}) {
   const [showMore, setShowMore] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
   const toggleShowMore = () => setShowMore(!showMore);
+
+  useEffect(() => {
+    document.body.classList.toggle('video-modal-open', !!activeVideo);
+    return () => document.body.classList.remove('video-modal-open');
+  }, [activeVideo]);
 
   const projects = [
     {
@@ -90,7 +95,7 @@ function Completed({counter}) {
     {
       id: 34,
       banner: './assets/Projects/Banner-TC.png',
-      bgcolor: "#014719",
+      bgcolor: "#065221",
       title: "Trump Card",
       description: "A visual card deck for tracking everything you have going for you — plans, opportunities, connections, credentials and resources.\nBuilt so you never forget what's in your hand.",
       technologies: ["React + Vite", "TypeScript", "PWA"],
@@ -100,7 +105,7 @@ function Completed({counter}) {
     {
       id: 35,
       banner: './assets/Projects/Banner-CAI.png',
-      bgcolor: "#0d1b2a",
+      bgcolor: "#ffffff",
       title: "CricketAI",
       description: "Delivered an AI powered assessment platform for an early-stage EdTech client, through The Cloud Crew, a Capgemini partner, with technical coaching from a Capgemini Technical Coach.\nTakes student essay submissions in PDF form, validates and scores them against a set of competencies, and serves results through a REST API.",
       technologies: ["FastAPI", "OpenAI API", "SQLite"],
@@ -108,7 +113,7 @@ function Completed({counter}) {
     {
       id: 36,
       banner: './assets/Projects/Banner-CVA.png',
-      bgcolor: "#1a1a2e",
+      bgcolor: "#ffffff",
       title: "Claude Voice Assistant",
       description: "A standalone desktop application for real time voice conversation with Claude.\nHandles speech to text and text to speech so you can talk to Claude naturally instead of typing.",
       technologies: ["Electron", "ElevenLabs API", "Node.js"],
@@ -329,6 +334,7 @@ function Completed({counter}) {
     {
       id: 29,
       banner: './assets/Projects/Banner-SCA.png',
+      bgcolor: "#ffffff",
       title: "Starship-Canvas-Animation",
       description: "An animated background featuring iconic Star Wars cruisers and Star Destroyers.\nThis project creates an engaging visual effect using JavaScript",
       technologies: ["JavaScript", "HTML", "CSS"],

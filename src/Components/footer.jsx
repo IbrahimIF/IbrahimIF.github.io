@@ -73,8 +73,8 @@ function Foot({counter}) {
             </Socials>
           </div>
         </div>
-        <Circle id="Circle"> 
-          <p>Lol</p> 
+        <Circle id="Circle">
+          <p>lol</p>
         </Circle>
       </Footer>
   )

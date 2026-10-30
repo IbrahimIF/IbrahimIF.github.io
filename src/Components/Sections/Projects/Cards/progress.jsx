@@ -23,15 +23,6 @@ function InProgress() {
 
   const projects = [
     {
-      id: 1,
-      banner: './assets/Projects/Banner-CVMM.png',
-      bgcolor: "#ffffffff",
-      title: "CV Mix and Match",
-      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
-      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
-      videoLink: "./assets/Video/CVMM.mp4",
-    },
-    {
       id: 2,
       banner: './assets/Projects/Banner-CDS.png',
       bgcolor: "#002439",

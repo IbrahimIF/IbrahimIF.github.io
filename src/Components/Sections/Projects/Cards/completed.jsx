@@ -35,6 +35,44 @@ function Completed({counter}) {
       githubLink: "https://github.com/IbrahimIF/IbrahimIF.github.io"
     },
     {
+      id: 35,
+      banner: './assets/Projects/Banner-CAI.png',
+      bgcolor: "#ffffff",
+      title: "CricketAI",
+      description: "Delivered an AI powered assessment platform for an early-stage EdTech client, through The Cloud Crew, a Capgemini partner, with technical coaching from a Capgemini Technical Coach.\nTakes student essay submissions in PDF form, validates and scores them against a set of competencies, and serves results through a REST API.",
+      technologies: ["FastAPI", "OpenAI API", "SQLite"],
+    },
+    {
+      id: 3,
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",
+      title: "Client Medical Database",
+      description: "Built an offline patient database application using TypeScript and SQLite for remote healthcare delivery. \nImplemented secure local persistence and a modular MVP architecture to ensure field-ready scalability.",
+      technologies: ["T3", "TypeScript", "SQLite"],
+      linkedinLink: "https://lnkd.in/p/eWCYqV_W",
+      githubLink: "https://github.com/Covelopers/Client-Database-Application",
+    },
+    {
+      id: 7,
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",
+      title: "Covelopers",
+      description: "The official website for Covelopers, a software startup based in London.\nShowcases the team, services and projects with a clean, responsive interface.",
+      technologies: ["React + Vite", "TypeScript", "Supabase"],
+      githubLink: "https://github.com/Covelopers/Main-Site",
+      demoLink: "https://covelopers.com/",
+    },
+    {
+      id: 37,
+      banner: './assets/Projects/Banner-CDS.png',
+      bgcolor: "#002439",
+      title: "Covelopers Portal",
+      description: "The member portal for Covelopers, where the community accesses resources, projects and progress tracking.",
+      technologies: ["React + Vite", "TypeScript", "Supabase"],
+      linkedinLink: "https://lnkd.in/p/eFnSK54B",
+      demoLink: "https://portal.covelopers.com/",
+    },
+    {
       id: 2,
       banner: './assets/Projects/Banner-BBC.png',
       bgcolor: "#c6f8a1",
@@ -54,14 +92,73 @@ function Completed({counter}) {
       videoLink: "./assets/Video/EAIH.mp4"
     },
     {
-      id: 3,
-      banner: './assets/Projects/Banner-CDS.png',
-      bgcolor: "#002439",
-      title: "Client Medical Database",
-      description: "Built an offline patient database application using TypeScript and SQLite for remote healthcare delivery. \nImplemented secure local persistence and a modular MVP architecture to ensure field-ready scalability.",
-      technologies: ["T3", "TypeScript", "SQLite"],
-      linkedinLink: "https://lnkd.in/p/eWCYqV_W",
-      githubLink: "https://github.com/Covelopers/Client-Database-Application",
+      id: 34,
+      banner: './assets/Projects/Banner-TC.png',
+      bgcolor: "#03431a",
+      title: "Trump Card",
+      description: "A visual card deck for tracking everything you have going for you — plans, opportunities, connections, credentials and resources.\nBuilt so you never forget what's in your hand.",
+      technologies: ["React + Vite", "TypeScript", "PWA"],
+      demoLink: "https://trump1card.netlify.app/",
+      githubLink: "https://github.com/IbrahimIF/trump-card",
+    },
+    {
+      id: 36,
+      banner: './assets/Projects/Banner-CVA.png',
+      bgcolor: "#ffffff",
+      title: "Claude Voice Assistant",
+      description: "A standalone desktop application for real time voice conversation with Claude.\nHandles speech to text and text to speech so you can talk to Claude naturally instead of typing.",
+      technologies: ["Electron", "ElevenLabs API", "Node.js"],
+    },
+    {
+      id: 13,
+      banner: './assets/Events/the_orange_trust.png',
+      title: "The Orange Trust Site",
+      bgcolor: "Orange",
+      description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
+      technologies: ["Figma", "Trello"],
+      linkedinLink: "https://lnkd.in/p/eGA73M9v",
+      demoLink: "https://www.orangetrust.co.uk/",
+    },
+    {
+      id: 14,
+      banner: './assets/Projects/Banner-PSA.png',
+      title: "Pinnacle Studio Architecture",
+      description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
+      technologies: ["React + Vite", "JavaScript", "CSS"],
+      linkedinLink: "https://lnkd.in/p/eHw3S-Mp"
+    },
+    {
+      id: 38,
+      banner: './assets/Projects/Banner-CVMM.png',
+      bgcolor: "#ffffffff",
+      title: "CV Mix and Match",
+      description: "A tool that lets users mix and match different sections to tailor their CV for specific companies or roles.",
+      technologies: ["React + Vite", "FastAPI", "PostgreSQL"],
+      videoLink: "./assets/Video/CVMM.mp4",
+    },
+    {
+      id: 8,
+      banner: './assets/Projects/Banner-OA.png',
+      title: "Offdays-Accrual",
+      description: "A project developed as part of my work with Offdays, where I built Accrual. \nHelps users calculate their accrued annual leave and pro-rata entitlement quickly and easily.",
+      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
+      demoLink: "https://offdays.io/",
+    },
+    {
+      id: 9,
+      banner: './assets/Projects/Banner-OT.png',
+      title: "Offdays-Toolkit",
+      description: "A project developed as part of my work with Offdays, where I built Toolkit. \nServes as a central hub to showcase and access various Offdays tools, improving discoverability and usability for users.",
+      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
+      demoLink: "https://offdays.io/",
+    },
+    {
+      id: 10,
+      banner: './assets/Projects/Banner-OS.png',
+      title: "Offdays-Shareables",
+      description: "A project developed as part of my work with Offdays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office status.",
+      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
+      demoLink: "https://offdays.io/",
     },
     {
       id: 4,
@@ -93,76 +190,6 @@ function Completed({counter}) {
       demoLink: "https://adkhardaily.netlify.app/"
     },
     {
-      id: 34,
-      banner: './assets/Projects/Banner-TC.png',
-      bgcolor: "#065221",
-      title: "Trump Card",
-      description: "A visual card deck for tracking everything you have going for you — plans, opportunities, connections, credentials and resources.\nBuilt so you never forget what's in your hand.",
-      technologies: ["React + Vite", "TypeScript", "PWA"],
-      demoLink: "https://trump1card.netlify.app/",
-      githubLink: "https://github.com/IbrahimIF/trump-card",
-    },
-    {
-      id: 35,
-      banner: './assets/Projects/Banner-CAI.png',
-      bgcolor: "#ffffff",
-      title: "CricketAI",
-      description: "Delivered an AI powered assessment platform for an early-stage EdTech client, through The Cloud Crew, a Capgemini partner, with technical coaching from a Capgemini Technical Coach.\nTakes student essay submissions in PDF form, validates and scores them against a set of competencies, and serves results through a REST API.",
-      technologies: ["FastAPI", "OpenAI API", "SQLite"],
-    },
-    {
-      id: 36,
-      banner: './assets/Projects/Banner-CVA.png',
-      bgcolor: "#ffffff",
-      title: "Claude Voice Assistant",
-      description: "A standalone desktop application for real time voice conversation with Claude.\nHandles speech to text and text to speech so you can talk to Claude naturally instead of typing.",
-      technologies: ["Electron", "ElevenLabs API", "Node.js"],
-    },
-    {
-      id: 7,
-      banner: './assets/Projects/Banner-CDS.png',
-      bgcolor: "#002439",
-      title: "Covelopers",
-      description: "The official website for Covelopers, a software startup based in London.\nShowcases the team, services and projects with a clean, responsive interface.",
-      technologies: ["React + Vite", "TypeScript", "Supabase"],
-      githubLink: "https://github.com/Covelopers/Main-Site",
-      demoLink: "https://covelopers.com/",
-    },
-    {
-      id: 37,
-      banner: './assets/Projects/Banner-CDS.png',
-      bgcolor: "#002439",
-      title: "Covelopers Portal",
-      description: "The member portal for Covelopers, where the community accesses resources, projects and progress tracking.",
-      technologies: ["React + Vite", "TypeScript", "Supabase"],
-      linkedinLink: "https://lnkd.in/p/eFnSK54B",
-      demoLink: "https://portal.covelopers.com/",
-    },
-    {
-      id: 8,
-      banner: './assets/Projects/Banner-OA.png',
-      title: "Offdays-Accrual",
-      description: "A project developed as part of my work with Offdays, where I built Accrual. \nHelps users calculate their accrued annual leave and pro-rata entitlement quickly and easily.",
-      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays.io/",
-    },
-    {
-      id: 9,
-      banner: './assets/Projects/Banner-OT.png',
-      title: "Offdays-Toolkit",
-      description: "A project developed as part of my work with Offdays, where I built Toolkit. \nServes as a central hub to showcase and access various Offdays tools, improving discoverability and usability for users.",
-      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays.io/",
-    },
-    {
-      id: 10,
-      banner: './assets/Projects/Banner-OS.png',
-      title: "Offdays-Shareables",
-      description: "A project developed as part of my work with Offdays, where I built Shareables. \nHelps users easily create branded, social-media-friendly images to announce their out-of-office status.",
-      technologies: ["React + Vite", "TypeScript", "Chakra-UI"],
-      demoLink: "https://offdays.io/",
-    },
-    {
       id: 11,
       banner: './assets/Projects/Banner-F.png',
       bgcolor: "black",
@@ -172,7 +199,7 @@ function Completed({counter}) {
       demoLink: "https://frictionless-beta.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Frictionless"
     },
-    { 
+    {
       id: 12,
       banner: './assets/Projects/Banner-TS.png',
       title: "ToolShed",
@@ -180,24 +207,6 @@ function Completed({counter}) {
       technologies: ["React + Vite", "Firestore", "Javascript"],
       demoLink: "https://tool-shed.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/ToolShed"
-    },
-    {
-      id: 13,
-      banner: './assets/Events/the_orange_trust.png',
-      title: "The Orange Trust Site",
-      bgcolor: "Orange",
-      description: "An interactive website developed for The Orange Trust, an official NGO aiding disadvantaged communities.\nSignificantly increased brand awareness, social engagement, and client interaction for the charity.",
-      technologies: ["Figma", "Trello"],
-      linkedinLink: "https://lnkd.in/p/eGA73M9v",
-      demoLink: "https://www.orangetrust.co.uk/",
-    },
-    {
-      id: 14,
-      banner: './assets/Projects/Banner-PSA.png',
-      title: "Pinnacle Studio Architecture",
-      description: "A responsive website developed for a private client, showcasing their various architectural projects.\nLed the agile development, managing design and implementation to client specifications.",
-      technologies: ["React + Vite", "JavaScript", "CSS"],
-      linkedinLink: "https://lnkd.in/p/eHw3S-Mp"
     },
     {
       id: 15,
@@ -208,12 +217,12 @@ function Completed({counter}) {
       technologies: ["React", "MySQL", "Node.js"],
       githubLink: "https://github.com/IbrahimIF/Ziphon-LTD"
     },
-    { 
+    {
       id: 16,
-      banner: './assets/Projects/Banner-SERN.png', 
+      banner: './assets/Projects/Banner-SERN.png',
       bgcolor: "#26c3a5",
-      title: "Full-Stack Chat-App", 
-      description: "A simple Full-stack chat app to send and receive messages.", 
+      title: "Full-Stack Chat-App",
+      description: "A simple Full-stack chat app to send and receive messages.",
       technologies: ["React + Vite", "Node.js", "Socket.io"],
       demoLink: "https://fs-chat-app.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/FS-Chat-App"
@@ -247,12 +256,12 @@ function Completed({counter}) {
       technologies: ["Python", "Discord", "Pyaudio"],
       githubLink: "https://github.com/IbrahimIF/Discord-Mute-Yourself"
     },
-    { 
+    {
       id: 20,
       banner: './assets/Projects/Banner-TG.gif',
-      bgcolor: "#000",  
-      title: "Terminal Games", 
-      description: "Repository showcasing python made games that can be played in the terminal of an IDE.", 
+      bgcolor: "#000",
+      title: "Terminal Games",
+      description: "Repository showcasing python made games that can be played in the terminal of an IDE.",
       technologies: ["Python", "tkinter", "Curses"],
       githubLink: "https://github.com/IbrahimIF/Terminal-Games"
     },
@@ -267,24 +276,24 @@ function Completed({counter}) {
     },
     {
       id: 22,
-      banner: './assets/Projects/Banner-TCC.png',   
-      title: "Twitch-Chat-Clone", 
-      description: "A twitch chat clone with React, TypeScript, Tailwind CSS and Socket.io.", 
+      banner: './assets/Projects/Banner-TCC.png',
+      title: "Twitch-Chat-Clone",
+      description: "A twitch chat clone with React, TypeScript, Tailwind CSS and Socket.io.",
       technologies: ["TypeScript", "Tailwind CSS", "Socket.io"],
       demoLink: "https://twitch-chat-clone-chi.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Twitch-Chat-Clone"
     },
-    { 
+    {
       id: 23,
       banner: './assets/Projects/Banner-P.png',
-      bgcolor: "#ff474d", 
-      title: "Pokedex", 
-      description: "A replica of the pokedex from the pokemon anime.", 
+      bgcolor: "#ff474d",
+      title: "Pokedex",
+      description: "A replica of the pokedex from the pokemon anime.",
       technologies: ["React + Vite", "Tailwind CSS", "PokeAPI"],
       demoLink: "https://pokedex-bice-zeta.vercel.app/",
       githubLink: "https://github.com/IbrahimIF/Pokedex"
     },
-    { 
+    {
       id: 24,
       banner: './assets/Projects/Banner-WLS.png',
       bgcolor: "#000000",
@@ -382,7 +391,7 @@ function Completed({counter}) {
     }
   };
 
-  
+
 
   return (
     <CompletedSection id="completed">
@@ -514,8 +523,8 @@ const ProjectCard = styled.div`
 
   &:hover {
     box-shadow: 0px 0px 30px 1px rgba(0, 73, 198, 0.3);
-  }  
-    
+  }
+
 .project-card {
   width: 100%;
   height: 100%;

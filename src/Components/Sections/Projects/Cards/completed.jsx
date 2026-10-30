@@ -39,7 +39,7 @@ function Completed({counter}) {
       banner: './assets/Projects/Banner-CAI.png',
       bgcolor: "#ffffff",
       title: "CricketAI",
-      description: "Delivered an AI powered assessment platform for an early-stage EdTech client, through The Cloud Crew, a Capgemini partner, with technical coaching from a Capgemini Technical Coach.\nTakes student essay submissions in PDF form, validates and scores them against a set of competencies, and serves results through a REST API.",
+      description: "Delivered an AI powered assessment platform for an early-stage EdTech client, via The Cloud Crew, a Capgemini partner.\nScores student essay submissions against a set of competencies and serves results through a REST API.",
       technologies: ["FastAPI", "OpenAI API", "SQLite"],
     },
     {

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Not-yet-finished project videos - kept locally for review, not pushed
+public/assets/Video/WLS.mp4

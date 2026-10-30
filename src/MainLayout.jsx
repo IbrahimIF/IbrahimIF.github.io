@@ -43,6 +43,11 @@ function MainLayout() {
         if (progress === KONAMI_CODE.length) {
           setShowKonami(true);
           setTimeout(() => setShowKonami(false), 2500);
+          // Unlock every click-counter gated secret at once (hidden
+          // projects tab, rare nav items, footer secrets) plus the
+          // starfield background, rather than making you hunt for each one.
+          setCounter(18);
+          setShipsActive(true);
           progress = 0;
         }
       } else {

@@ -292,7 +292,6 @@ function Completed({counter}) {
       description: "A desktop application for tracking watched films and series with a Netflix style interface.",
       technologies: ["React + Vite", "Electron", "SQLite"],
       githubLink: "https://github.com/IbrahimIF/watchlist-shelf",
-      videoLink: "./assets/Video/WLS.mp4"
     },
     {
       id: 25,
